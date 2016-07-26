@@ -35,7 +35,7 @@
     <!--/Map JS files-->
 
 	<!--Pie chart JS files-->
-	<script type="text/javascript" src="assets/js/charts/d3/pies/pie_entry_animation.js"></script>
+	<script type="text/javascript" src="assets/js/charts/d3/pies/pie_update.js"></script>
 	<!--/Pie chart JS files-->
 
     <!-- Theme JS files -->
@@ -1117,17 +1117,22 @@
 						<!-- Pie Chart -->
 						<div class="panel panel-flat">
 							<div class="panel-heading">
-								<h5 class="panel-title">Pie charts</h5>
+								<h5 class="panel-title">File Type Percentage</h5>
 							</div>
 
 							<div class="panel-body">
 								<div class="content-group">
-									<h6 class="text-semibold">Pie entry transition</h6>
-									<p class="content-group">Example of simple entry transition of a <code>pie chart</code>. A transition is a special type of selection where the operators apply smoothly over time rather than instantaneously. You derive a transition from a selection using the transition operator.</p>
+									<!--<h6 class="text-semibold">Pie entry transition</h6>-->
+									<p class="content-group">This pie chart shows the <code>percentage</code> of different file type using different colors.</p>
+									<p class="content-group">You can choose to view the percentage by <code>week</code> or by <code>month</code>.</p>
 
 									<div class="chart-container text-center">
-										<button type="button" class="btn btn-primary btn-xs pie-animation content-group">Animate</button>
-										<div class="chart svg-center" id="d3-pie-entry-animation"></div>
+										<div class="pie-radios content-group">
+											<label class="radio-inline"><input type="radio" name="pie-dataset" value="Weekly" checked="checked"> Weekly</label>
+											<label class="radio-inline"><input type="radio" name="pie-dataset" value="Monthly"> Monthly</label>
+										</div>
+
+										<div class="chart svg-center" id="d3-pie-update"></div>
 									</div>
 								</div>
 							</div>
