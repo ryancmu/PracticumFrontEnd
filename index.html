@@ -25,7 +25,17 @@
 	<script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
 	<!-- /core JS files -->
 
-	<!-- Theme JS files -->
+    <!-- Map JS files -->
+    <script type="text/javascript" src="assets/js/plugins/maps/jvectormap/jvectormap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/maps/jvectormap/map_files/world.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/maps/jvectormap/map_files/countries/usa.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/maps/jvectormap/map_files/countries/germany.js"></script>
+    <script type="text/javascript" src="assets/demo_data/maps/vector/gdp_demo_data.js"></script>
+    <script type="text/javascript" src="assets/js/maps/vector/vector_maps_demo.js"></script>
+    <!--/Map JS files-->
+
+
+    <!-- Theme JS files -->
 	<script type="text/javascript" src="assets/js/plugins/visualization/d3/d3.min.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>
@@ -39,6 +49,7 @@
 
 	<script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
 	<!-- /theme JS files -->
+
 
 </head>
 
@@ -1081,6 +1092,27 @@
 
 			<!-- Main content -->
 			<div class="content-wrapper">
+
+                <!-- Choropleth map -->
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Choropleth map</h5>
+                        <div class="heading-elements">
+                            <ul class="icons-list">
+                                <li><a data-action="collapse"></a></li>
+                                <li><a data-action="reload"></a></li>
+                                <li><a data-action="close"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <p class="content-group">Example of a <code>choropleth</code> world map. A choropleth map is a thematic map in which areas are shaded or patterned in proportion to the measurement of the statistical variable being displayed on the map. The choropleth map provides an easy way to visualize how a measurement varies across a geographic area or it shows the level of variability within a region. This example displays GDP by country, data stored in <code>json</code> file.</p>
+
+                        <div class="map-container map-choropleth"></div>
+                    </div>
+                </div>
+                <!-- /choropleth map -->
 
 				<!-- Main charts -->
 				<div class="row">
@@ -2170,74 +2202,75 @@
 					<div class="col-lg-4">
 
 						<!-- Progress counters -->
-						<div class="row">
-							<div class="col-md-6">
 
-								<!-- Available hours -->
-								<div class="panel text-center">
-									<div class="panel-body">
-										<div class="heading-elements">
-											<ul class="icons-list">
-						                		<li class="dropdown text-muted">
-						                			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog3"></i> <span class="caret"></span></a>
-													<ul class="dropdown-menu dropdown-menu-right">
-														<li><a href="#"><i class="icon-sync"></i> Update data</a></li>
-														<li><a href="#"><i class="icon-list-unordered"></i> Detailed log</a></li>
-														<li><a href="#"><i class="icon-pie5"></i> Statistics</a></li>
-														<li><a href="#"><i class="icon-cross3"></i> Clear list</a></li>
-													</ul>
-						                		</li>
-						                	</ul>
-					                	</div>
+						<!--<div class="row">-->
+							<!--<div class="col-md-6">-->
 
-					                	<!-- Progress counter -->
-										<div class="content-group-sm svg-center position-relative" id="hours-available-progress"></div>
-										<!-- /progress counter -->
+								<!--&lt;!&ndash; Available hours &ndash;&gt;-->
+								<!--<div class="panel text-center">-->
+									<!--<div class="panel-body">-->
+										<!--<div class="heading-elements">-->
+											<!--<ul class="icons-list">-->
+						                		<!--<li class="dropdown text-muted">-->
+						                			<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog3"></i> <span class="caret"></span></a>-->
+													<!--<ul class="dropdown-menu dropdown-menu-right">-->
+														<!--<li><a href="#"><i class="icon-sync"></i> Update data</a></li>-->
+														<!--<li><a href="#"><i class="icon-list-unordered"></i> Detailed log</a></li>-->
+														<!--<li><a href="#"><i class="icon-pie5"></i> Statistics</a></li>-->
+														<!--<li><a href="#"><i class="icon-cross3"></i> Clear list</a></li>-->
+													<!--</ul>-->
+						                		<!--</li>-->
+						                	<!--</ul>-->
+					                	<!--</div>-->
+
+					                	<!--&lt;!&ndash; Progress counter &ndash;&gt;-->
+										<!--<div class="content-group-sm svg-center position-relative" id="hours-available-progress"></div>-->
+										<!--&lt;!&ndash; /progress counter &ndash;&gt;-->
 
 
-										<!-- Bars -->
-										<div id="hours-available-bars"></div>
-										<!-- /bars -->
+										<!--&lt;!&ndash; Bars &ndash;&gt;-->
+										<!--<div id="hours-available-bars"></div>-->
+										<!--&lt;!&ndash; /bars &ndash;&gt;-->
 
-									</div>
-								</div>
-								<!-- /available hours -->
+									<!--</div>-->
+								<!--</div>-->
+								<!--&lt;!&ndash; /available hours &ndash;&gt;-->
 
-							</div>
+							<!--</div>-->
 
-							<div class="col-md-6">
+							<!--<div class="col-md-6">-->
 
-								<!-- Productivity goal -->
-								<div class="panel text-center">
-									<div class="panel-body">
-										<div class="heading-elements">
-											<ul class="icons-list">
-						                		<li class="dropdown text-muted">
-						                			<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog3"></i> <span class="caret"></span></a>
-													<ul class="dropdown-menu dropdown-menu-right">
-														<li><a href="#"><i class="icon-sync"></i> Update data</a></li>
-														<li><a href="#"><i class="icon-list-unordered"></i> Detailed log</a></li>
-														<li><a href="#"><i class="icon-pie5"></i> Statistics</a></li>
-														<li><a href="#"><i class="icon-cross3"></i> Clear list</a></li>
-													</ul>
-						                		</li>
-						                	</ul>
-										</div>
+								<!--&lt;!&ndash; Productivity goal &ndash;&gt;-->
+								<!--<div class="panel text-center">-->
+									<!--<div class="panel-body">-->
+										<!--<div class="heading-elements">-->
+											<!--<ul class="icons-list">-->
+						                		<!--<li class="dropdown text-muted">-->
+						                			<!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog3"></i> <span class="caret"></span></a>-->
+													<!--<ul class="dropdown-menu dropdown-menu-right">-->
+														<!--<li><a href="#"><i class="icon-sync"></i> Update data</a></li>-->
+														<!--<li><a href="#"><i class="icon-list-unordered"></i> Detailed log</a></li>-->
+														<!--<li><a href="#"><i class="icon-pie5"></i> Statistics</a></li>-->
+														<!--<li><a href="#"><i class="icon-cross3"></i> Clear list</a></li>-->
+													<!--</ul>-->
+						                		<!--</li>-->
+						                	<!--</ul>-->
+										<!--</div>-->
 
-										<!-- Progress counter -->
-										<div class="content-group-sm svg-center position-relative" id="goal-progress"></div>
-										<!-- /progress counter -->
+										<!--&lt;!&ndash; Progress counter &ndash;&gt;-->
+										<!--<div class="content-group-sm svg-center position-relative" id="goal-progress"></div>-->
+										<!--&lt;!&ndash; /progress counter &ndash;&gt;-->
 
-										<!-- Bars -->
-										<div id="goal-bars"></div>
-										<!-- /bars -->
+										<!--&lt;!&ndash; Bars &ndash;&gt;-->
+										<!--<div id="goal-bars"></div>-->
+										<!--&lt;!&ndash; /bars &ndash;&gt;-->
 
-									</div>
-								</div>
-								<!-- /productivity goal -->
+									<!--</div>-->
+								<!--</div>-->
+								<!--&lt;!&ndash; /productivity goal &ndash;&gt;-->
 
-							</div>
-						</div>
+							<!--</div>-->
+						<!--</div>-->
 						<!-- /progress counters -->
 
 
