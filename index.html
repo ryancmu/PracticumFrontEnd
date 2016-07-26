@@ -34,6 +34,9 @@
     <script type="text/javascript" src="assets/js/maps/vector/vector_maps_demo.js"></script>
     <!--/Map JS files-->
 
+	<!--Pie chart JS files-->
+	<script type="text/javascript" src="assets/js/charts/d3/pies/pie_entry_animation.js"></script>
+	<!--/Pie chart JS files-->
 
     <!-- Theme JS files -->
 	<script type="text/javascript" src="assets/js/plugins/visualization/d3/d3.min.js"></script>
@@ -1111,77 +1114,25 @@
 				<div class="row">
 					<div class="col-lg-7">
 
-						<!-- Traffic sources -->
+						<!-- Pie Chart -->
 						<div class="panel panel-flat">
 							<div class="panel-heading">
-								<h5 class="panel-title">Traffic sources</h5>
-								<div class="heading-elements">
-									<form class="heading-form" action="#">
-										<div class="form-group">
-											<label class="checkbox-inline checkbox-switchery checkbox-right switchery-xs">
-												<input type="checkbox" class="switch" checked="checked">
-												Live update:
-											</label>
-										</div>
-									</form>
-								</div>
+								<h5 class="panel-title">Pie charts</h5>
 							</div>
 
-							<div class="container-fluid">
-								<div class="row">
-									<div class="col-lg-4">
-										<ul class="list-inline text-center">
-											<li>
-												<a href="#" class="btn border-teal text-teal btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i class="icon-plus3"></i></a>
-											</li>
-											<li class="text-left">
-												<div class="text-semibold">New visitors</div>
-												<div class="text-muted">2,349 avg</div>
-											</li>
-										</ul>
+							<div class="panel-body">
+								<div class="content-group">
+									<h6 class="text-semibold">Pie entry transition</h6>
+									<p class="content-group">Example of simple entry transition of a <code>pie chart</code>. A transition is a special type of selection where the operators apply smoothly over time rather than instantaneously. You derive a transition from a selection using the transition operator.</p>
 
-										<div class="col-lg-10 col-lg-offset-1">
-											<div class="content-group" id="new-visitors"></div>
-										</div>
-									</div>
-
-									<div class="col-lg-4">
-										<ul class="list-inline text-center">
-											<li>
-												<a href="#" class="btn border-warning-400 text-warning-400 btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i class="icon-watch2"></i></a>
-											</li>
-											<li class="text-left">
-												<div class="text-semibold">New sessions</div>
-												<div class="text-muted">08:20 avg</div>
-											</li>
-										</ul>
-
-										<div class="col-lg-10 col-lg-offset-1">
-											<div class="content-group" id="new-sessions"></div>
-										</div>
-									</div>
-
-									<div class="col-lg-4">
-										<ul class="list-inline text-center">
-											<li>
-												<a href="#" class="btn border-indigo-400 text-indigo-400 btn-flat btn-rounded btn-icon btn-xs valign-text-bottom"><i class="icon-people"></i></a>
-											</li>
-											<li class="text-left">
-												<div class="text-semibold">Total online</div>
-												<div class="text-muted"><span class="status-mark border-success position-left"></span> 5,378 avg</div>
-											</li>
-										</ul>
-
-										<div class="col-lg-10 col-lg-offset-1">
-											<div class="content-group" id="total-online"></div>
-										</div>
+									<div class="chart-container text-center">
+										<button type="button" class="btn btn-primary btn-xs pie-animation content-group">Animate</button>
+										<div class="chart svg-center" id="d3-pie-entry-animation"></div>
 									</div>
 								</div>
 							</div>
-
-							<div class="position-relative" id="traffic-sources"></div>
 						</div>
-						<!-- /traffic sources -->
+						<!-- /Pie chart -->
 
 					</div>
 
