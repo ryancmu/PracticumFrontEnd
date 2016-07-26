@@ -202,13 +202,13 @@ $(function() {
         backgroundColor: 'transparent',
         series: {
             regions: [{
-                values: gdpData,
+                values: malwareData,
                 scale: ['#C8EEFF', '#0071A4'],
                 normalizeFunction: 'polynomial'
             }]
         },
         onRegionLabelShow: function(e, el, code){
-            el.html(el.html()+'<br>'+'GDP - '+gdpData[code]);
+            el.html(el.html()+'<br>'+'Number - '+malwareData[code]);
         }
     });
 
