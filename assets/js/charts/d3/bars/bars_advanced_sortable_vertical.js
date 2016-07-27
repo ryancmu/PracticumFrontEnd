@@ -32,7 +32,8 @@ $(function () {
             height = height - margin.top - margin.bottom - 5;
 
         // Format data
-        var formatPercent = d3.format(".0%");
+        // var formatPercent = d3.format(".0%");
+        var formatPercent = d3.format("");
 
 
 
@@ -129,7 +130,7 @@ $(function () {
                 .style("text-anchor", "end")
                 .style("fill", "#999")
                 .style("font-size", 12)
-                .text("Frequency");
+                .text("Amount");
 
 
             // Append bars
@@ -196,9 +197,9 @@ $(function () {
         $('.sidebar-control').on('click', resize);
 
         // Resize function
-        // 
+        //
         // Since D3 doesn't support SVG resize by default,
-        // we need to manually specify parts of the graph that need to 
+        // we need to manually specify parts of the graph that need to
         // be updated on window resize
         function resize() {
 

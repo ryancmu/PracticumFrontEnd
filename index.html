@@ -34,13 +34,23 @@
     <script type="text/javascript" src="assets/js/maps/vector/vector_maps_demo.js"></script>
     <!--/Map JS files-->
 
+    <!-- Theme JS files -->
+	<script type="text/javascript" src="assets/js/plugins/visualization/d3/d3.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+
 	<!--Pie chart JS files-->
 	<script type="text/javascript" src="assets/js/charts/d3/pies/pie_update.js"></script>
 	<!--/Pie chart JS files-->
 
-    <!-- Theme JS files -->
-	<script type="text/javascript" src="assets/js/plugins/visualization/d3/d3.min.js"></script>
-	<script type="text/javascript" src="assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
+	<!--sortable vertical bar JS files -->
+	<script type="text/javascript" src="assets/js/charts/d3/bars/bars_advanced_sortable_vertical.js"></script>
+	<!--/sortable vertical bar JS files -->
+
+	<!--eChart JS files -->
+	<script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+	<script type="text/javascript" src="assets/js/charts/echarts/pies_donuts.js"></script>
+	<!--/eChart JS files -->
+
 	<script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/forms/selects/bootstrap_multiselect.js"></script>
@@ -52,6 +62,8 @@
 
 	<script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
 	<!-- /theme JS files -->
+
+
 
 
 </head>
@@ -1112,7 +1124,7 @@
 
 				<!-- Main charts -->
 				<div class="row">
-					<div class="col-lg-7">
+					<div class="col-lg-6">
 
 						<!-- Pie Chart -->
 						<div class="panel panel-flat">
@@ -1134,6 +1146,7 @@
 
 										<div class="chart svg-center" id="d3-pie-update"></div>
 									</div>
+
 								</div>
 							</div>
 						</div>
@@ -1141,61 +1154,50 @@
 
 					</div>
 
-					<div class="col-lg-5">
-
-						<!-- Sales stats -->
+					<div class="col-lg-6">
+						<!-- Basic pie chart -->
 						<div class="panel panel-flat">
 							<div class="panel-heading">
-								<h5 class="panel-title">Sales statistics</h5>
-								<div class="heading-elements">
-									<form class="heading-form" action="#">
-										<div class="form-group">
-											<select class="change-date select-sm" id="select_date">
-												<optgroup label="<i class='icon-watch pull-right'></i> Time period">
-													<option value="val1">June, 29 - July, 5</option>
-													<option value="val2">June, 22 - June 28</option>
-													<option value="val3" selected="selected">June, 15 - June, 21</option>
-													<option value="val4">June, 8 - June, 14</option>
-												</optgroup>
-											</select>
-										</div>
-									</form>
-			                	</div>
+								<h5 class="panel-title">Basic pie chart</h5>
 							</div>
 
-							<div class="container-fluid">
-								<div class="row text-center">
-									<div class="col-md-4">
-										<div class="content-group">
-											<h5 class="text-semibold no-margin"><i class="icon-calendar5 position-left text-slate"></i> 5,689</h5>
-											<span class="text-muted text-size-small">orders weekly</span>
-										</div>
-									</div>
-
-									<div class="col-md-4">
-										<div class="content-group">
-											<h5 class="text-semibold no-margin"><i class="icon-calendar52 position-left text-slate"></i> 32,568</h5>
-											<span class="text-muted text-size-small">orders monthly</span>
-										</div>
-									</div>
-
-									<div class="col-md-4">
-										<div class="content-group">
-											<h5 class="text-semibold no-margin"><i class="icon-cash3 position-left text-slate"></i> $23,464</h5>
-											<span class="text-muted text-size-small">average revenue</span>
-										</div>
-									</div>
+							<div class="panel-body">
+								<div class="chart-container has-scroll">
+									<div class="chart has-fixed-height has-minimum-width" id="basic_pie"></div>
 								</div>
 							</div>
-
-							<div class="content-group-sm" id="app_sales"></div>
-							<div id="monthly-sales-stats"></div>
 						</div>
-						<!-- /sales stats -->
+						<!-- /bacis pie chart -->
+					</div>
+
+				</div>
+				<!-- /main charts -->
+
+				<div class="row">
+					<div class="col-lg-12">
+
+					<!-- sortable vertical bar -->
+					<div class="panel panel-flat">
+						<div class="panel-heading">
+							<h5 class="panel-title">Top 10 User Agent</h5>
+						</div>
+
+						<div class="panel-body">
+							<p class="content-group">They are displayed alphabetically, but you can <code>sort</code> them by values.</p>
+
+							<div class="checkbox content-group">
+								<label><input type="checkbox" class="toggle-sort"> Sort values</label>
+							</div>
+
+							<div class="chart-container">
+								<div class="chart" id="d3-bar-sortable-vertical"></div>
+							</div>
+						</div>
+					</div>
+					<!-- /sortable vertical bar -->
 
 					</div>
 				</div>
-				<!-- /main charts -->
 
 
 				<!-- Dashboard content -->

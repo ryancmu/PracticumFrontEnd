@@ -100,11 +100,16 @@ $(function () {
             function change() {
                 var value = this.value;
                 clearTimeout(timeout);
-                pie.value(function(d) { return d[value]; }); // change the value function
+                pie.value(function (d) {
+                    return d[value];
+                }); // change the value function
                 path = path.data(pie); // compute the new angles
                 path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
             }
         });
+
+
+
 
 
         // Store the displayed angles in _current.
