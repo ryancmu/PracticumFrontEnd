@@ -1,3 +1,6 @@
+/**
+ * Created by ryan on 7/26/16.
+ */
 /* ------------------------------------------------------------------------------
  *
  *  # D3.js - pie chart update animation
@@ -42,7 +45,7 @@ $(function () {
             .attr("width", radius * 2)
             .attr("height", radius * 2)
             .append("g")
-                .attr("transform", "translate(" + radius + "," + radius + ")");
+            .attr("transform", "translate(" + radius + "," + radius + ")");
 
 
         // Construct chart layout
@@ -61,10 +64,32 @@ $(function () {
 
         // Load data
         // ------------------------------
+        /*
+         apples	oranges
+         53245	200
+         28479
+         19697	200
+         24037
+         40245	200
+         */
+        var fruitData = {fruitData: [
+            {"apples":53245, "oranges": 200},
+            {"apples":43245, "oranges": 200},
+            {"apples":63245, "oranges": 200},
+            {"apples":35409, "oranges": 0}
+        ]};
 
-        d3.tsv("assets/demo_data/d3/pies/pies_update.tsv", function(error, data) {
+        //d3.tsv("assets/demo_data/d3/pies/pies_update.tsv", function(error, data) {
+        //d3.json("assets/data/pie_type/type_total.json", function(error, data){
 
+        //d3.json(fruitData, function(error, data){
             // Pull out values
+            //var data = JSON.parse(fruitData);
+        // $(function(){
+        //
+        // });
+            var data = fruitData.fruitData;
+            console.log(data);
             data.forEach(function(d) {
                 d.apples = +d.apples || 0;
                 d.oranges = +d.oranges || 0;
@@ -81,10 +106,10 @@ $(function () {
                 .data(pie)
                 .enter()
                 .append("path")
-                    .attr("d", arc)
-                    .style("stroke", "#fff")
-                    .style("fill", function(d, i) { return color(i); })
-                    .each(function(d) { this._current = d; }); // store the initial angles
+                .attr("d", arc)
+                .style("stroke", "#fff")
+                .style("fill", function(d, i) { return color(i); })
+                .each(function(d) { this._current = d; }); // store the initial angles
 
 
             // Apply change event
@@ -92,7 +117,7 @@ $(function () {
 
             // Change values on page load
             var timeout = setTimeout(function() {
-                d3.select("input[value=\"Monthly\"]").property("checked", true).each(change);
+                d3.select("input[value=\"oranges\"]").property("checked", true).each(change);
                 $.uniform.update();
             }, 2000);
 
@@ -100,15 +125,11 @@ $(function () {
             function change() {
                 var value = this.value;
                 clearTimeout(timeout);
-                pie.value(function (d) {
-                    return d[value];
-                }); // change the value function
+                pie.value(function(d) { return d[value]; }); // change the value function
                 path = path.data(pie); // compute the new angles
                 path.transition().duration(750).attrTween("d", arcTween); // redraw the arcs
             }
-        });
-
-
+        //});
 
 
 
