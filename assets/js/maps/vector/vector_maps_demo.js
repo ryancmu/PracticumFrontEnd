@@ -208,7 +208,7 @@ $(function() {
             }]
         },
         onRegionLabelShow: function(e, el, code){
-            el.html(el.html()+'<br>'+'Number - '+malwareData[code]);
+            el.html(el.html()+'<br>'+'Number : '+malwareData[code]);
         }
     });
 
