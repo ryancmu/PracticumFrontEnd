@@ -86,8 +86,9 @@ $(function () {
         // Load data
         // ------------------------------
 
-        d3.tsv("assets/demo_data/d3/bars/bars_basic.tsv", function(error, data) {
+        d3.json("assets/data/bar_user_agent/user_agent.json", function(error, data) {
 
+            data = data.uaData;
             // Pull out values
             data.forEach(function(d) {
                 d.frequency = +d.frequency;

@@ -28,20 +28,21 @@ $(function () {
         [
             'echarts',
             'echarts/theme/limitless',
+            'echarts/theme/shine',
             'echarts/chart/pie',
             'echarts/chart/funnel'
         ],
 
 
         // Charts setup
-        function (ec, limitless) {
+        function (ec, limitless, shine) {
 
 
             // Initialize charts
             // ------------------------------
 
             var basic_pie_type = ec.init(document.getElementById('basic_pie_type'), limitless);
-            var basic_pie_protocol = ec.init(document.getElementById('basic_pie_protocol'), limitless);
+            var basic_pie_protocol = ec.init(document.getElementById('basic_pie_protocol'), shine);
             // var nested_pie = ec.init(document.getElementById('nested_pie'), limitless);
             // var infographic_donut = ec.init(document.getElementById('infographic_donut'), limitless);
             // var rose_diagram_hidden = ec.init(document.getElementById('rose_diagram_hidden'), limitless);
@@ -52,7 +53,7 @@ $(function () {
 
 
             // Charts setup
-            // ------------------------------                    
+            // ------------------------------
 
             //
             // Basic pie options
@@ -62,22 +63,22 @@ $(function () {
 
                 // Add title
                 title: {
-                    text: 'Browser popularity',
-                    subtext: 'Open source information',
+                    text: 'File Type Percentage (Top 5)',
+                    // subtext: 'Open source information',
                     x: 'center'
                 },
 
                 // Add tooltip
                 tooltip: {
                     trigger: 'item',
-                    formatter: "{a} <br/>{b}: {c} ({d}%)"
+                    formatter: "{a} <br/>{b}: {c} ({d}%)",
                 },
 
                 // Add legend
                 legend: {
                     orient: 'vertical',
                     x: 'left',
-                    data: ['IE', 'Opera', 'Safari', 'Firefox', 'Chrome']
+                    data: ['exe', 'zip', 'dll', 'rar', 'VBS']
                 },
 
                 // Display toolbox
@@ -113,7 +114,7 @@ $(function () {
                                     width: '50%',
                                     height: '70%',
                                     funnelAlign: 'left',
-                                    max: 1548
+                                    max: 6606435
                                 }
                             }
                         },
@@ -136,14 +137,14 @@ $(function () {
                 series: [{
                     name: 'Type',
                     type: 'pie',
-                    radius: '70%',
+                    radius: '60%',
                     center: ['50%', '57.5%'],
                     data: [
-                        {value: 335, name: 'IE'},
-                        {value: 310, name: 'Opera'},
-                        {value: 234, name: 'Safari'},
-                        {value: 135, name: 'Firefox'},
-                        {value: 1548, name: 'Chrome'}
+                        {value: 6606435, name: 'exe'},
+                        {value: 2962102, name: 'zip'},
+                        {value: 219115, name: 'dll'},
+                        {value: 51100, name: 'rar'},
+                        {value: 21563, name: 'VBS'}
                     ]
                 }]
             };
@@ -152,8 +153,8 @@ $(function () {
 
                 // Add title
                 title: {
-                    text: 'Browser popularity',
-                    subtext: 'Open source information',
+                    text: 'Infection Percentage (top 5)',
+                    // subtext: 'Open source information',
                     x: 'center'
                 },
 
@@ -167,7 +168,7 @@ $(function () {
                 legend: {
                     orient: 'vertical',
                     x: 'left',
-                    data: ['IE', 'Opera', 'Safari', 'Firefox', 'Chrome']
+                    data: ['BackDoor', 'GenericR', 'W32/HLLP', 'W32/Sality', 'Generic BackDoor']
                 },
 
                 // Display toolbox
@@ -203,7 +204,7 @@ $(function () {
                                     width: '50%',
                                     height: '70%',
                                     funnelAlign: 'left',
-                                    max: 1548
+                                    max: 1221527
                                 }
                             }
                         },
@@ -226,14 +227,14 @@ $(function () {
                 series: [{
                     name: 'Protocol',
                     type: 'pie',
-                    radius: '70%',
+                    radius: '60%',
                     center: ['50%', '57.5%'],
                     data: [
-                        {value: 335, name: 'IE'},
-                        {value: 310, name: 'Opera'},
-                        {value: 234, name: 'Safari'},
-                        {value: 135, name: 'Firefox'},
-                        {value: 1548, name: 'Chrome'}
+                        {value: 1221527, name: 'BackDoor'},
+                        {value: 1004587, name: 'GenericR'},
+                        {value: 406533, name: 'W32/HLLP'},
+                        {value: 369860, name: 'W32/Sality'},
+                        {value: 354955, name: 'Generic BackDoor'}
                     ]
                 }]
             };
