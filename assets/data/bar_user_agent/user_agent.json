@@ -6,8 +6,10 @@
     {"letter": "LimeWire/4.12.11", "frequency": 1700},
     {"letter": "LimeWire/4.12.15", "frequency": 1079},
     {"letter": "LimeWire/4.12.6", "frequency": 793},
-    {"letter": "LimeWire/4.18.8", "frequency": 734},
-    {"letter": "Shareaza 2.7.6.0", "frequency": 593}
-
+    {"letter": "LimeWire/4.18.7", "frequency": 734},
+    {"letter": "Shareaza 2.7.6.0", "frequency": 593},
+    {"letter": "LimeWire/4.12.12", "frequency": 1034},
+    {"letter": "LimeWire/4.18.6", "frequency": 869},
+    {"letter": "Shareaza 2.7.5.0", "frequency": 698}
   ]
 }
