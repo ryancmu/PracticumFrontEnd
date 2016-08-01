@@ -30,6 +30,10 @@
     <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
     <!-- /theme JS files -->
 
+    <!-- searchBy JS File --->
+    <script type="text/javascript" src="assets/js/searchBy.js"></script>
+    <!-- !searchBy JS File --->
+
 </head>
 <body>
     <div class="page-header page-header-inverse bg-indigo">
@@ -229,48 +233,32 @@
 
                              <div class="panel-body">
                                  <div class="row">
-                                     <form action="#" class="main-search">
-                                         <div class="input-group content-group">
-
-                                             <div class="col-md-2">
-                                                 <ul class="list-inline list-inline-condensed no-margin-bottom">
-                                                     <li class="dropdown">
-                                                         <a href="#" class="btn btn-link btn-md dropdown-toggle" data-toggle="dropdown">
-                                                             <i class="icon-stack2 position-left"></i> Search by <span class="caret"></span>
-                                                         </a>
-                                                         <ul class="dropdown-menu">
-                                                             <li><a href="#"><i class="icon-address-book"></i> IP</a></li>
-                                                             <li><a href="#"><i class="icon-file-eye"></i> File Name</a></li>
-                                                             <li><a href="#"><i class="icon-location3"></i> Country</a></li>
-                                                             <li><a href="#"><i class="icon-location4"></i> State</a></li>
-                                                             <li><a href="#"><i class="icon-warning"></i> Infection Type</a></li>
-                                                             <li class="divider"></li>
-                                                             <li><a target="_blank" href="http://tiversa.com/contact/"><i class="icon-mail-read"></i> Contact Tiversa for additional info</a></li>
-                                                         </ul>
-                                                 </ul>
-                                             </div>
-
-                                             <div class="col-md-7">
-
-                                                 <div class="has-feedback has-feedback-left">
-                                                     <!--<div class="form-control-feedback">-->
-                                                     <!--<i class="icon-search4 text-muted text-size-base"></i>-->
-                                                     <!--</div>-->
-                                                     <input type="text" class="form-control input-xlg" placeholder="IP address">
+                                     <div class="col-xs-8 col-xs-offset-2">
+                                         <form action="sumbit" class="form-group">
+                                             <div class="input-group">
+                                                 <div class="input-group-btn search-panel">
+                                                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                                         <span id="search_concept"><i class="icon-stack2 position-left"></i>Search by</span> <span class="caret"></span>
+                                                     </button>
+                                                     <ul class="dropdown-menu" role="menu">
+                                                         <li><a href="#ip"><i class="icon-address-book"></i> IP</a></li>
+                                                         <li><a href="#file_name"><i class="icon-file-eye"></i> File Name</a></li>
+                                                         <li><a href="#country"><i class="icon-location3"></i> Country</a></li>
+                                                         <li><a href="#state"><i class="icon-location4"></i> State</a></li>
+                                                         <li><a href="#infection"><i class="icon-warning"></i> Infection Type</a></li>
+                                                     </ul>
                                                  </div>
+                                                 <input type="hidden" name="search_param" value="all" id="search_param">
+                                                 <input type="text" class="form-control" name="x" placeholder="Search IP...">
+                                                 <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                                             </span>
                                              </div>
-
-
-                                             <div class="col-md-1">
-                                                 <div class="input-group-btn">
-                                                     <button type="submit" class="btn btn-primary btn-xlg">Search</button>
-                                                 </div>
-                                             </div>
-
-                                         </div>
-                                     </form>
+                                         </form>
+                                     </div>
                                  </div>
                              </div>
+
                          </div>
                          <!-- /search field -->
 
