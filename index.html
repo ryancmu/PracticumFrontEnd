@@ -321,9 +321,11 @@
 							</div>
 						</div>
 
-						<div class="panel-body">
+
+						<div  class="panel-body">
 							<div class="row">
-								<div class="col-xs-8 col-xs-offset-2">
+								<div id = "wrapper" class="col-xs-8 col-xs-offset-2">
+									<div class="multiSearch">
 									<form action="sumbit" class="form-group">
 										<div class="input-group">
 											<div class="input-group-btn search-panel">
@@ -341,14 +343,17 @@
 											<input type="hidden" name="search_param_multi" value="all" id="search_param_multi">
 											<input type="text" class="form-control" name="x" placeholder="Search...">
 											<span class="input-group-btn">
-                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button id="testButton" class="btn btn-default" type="button" onclick="add()"><span class="glyphicon glyphicon-plus"></span></button>
                                              </span>
 										</div>
 									</form>
+
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
+
                 <!-- Choropleth map -->
                 <div class="panel panel-flat">
                     <div class="panel-heading">
