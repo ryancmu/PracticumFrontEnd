@@ -29,13 +29,9 @@
     <script type="text/javascript" src="assets/js/core/app.js"></script>
     <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
     <!-- /theme JS files -->
-
-    <!-- searchBy JS File --->
-    <script type="text/javascript" src="assets/js/searchBy.js"></script>
-    <!-- !searchBy JS File --->
-
 </head>
 <body>
+
     <div class="page-header page-header-inverse bg-indigo">
 
     <!-- Main navbar -->
@@ -168,43 +164,44 @@
     <!-- /second navbar -->
 
 
-        <!-- Floating menu -->
-        <ul class="fab-menu fab-menu-top-right" data-fab-toggle="click">
-            <li>
-                <a class="fab-menu-btn btn bg-pink-300 btn-float btn-rounded btn-icon">
-                    <i class="fab-icon-open icon-plus3"></i>
-                    <i class="fab-icon-close icon-cross2"></i>
-                </a>
+    <!-- Floating menu -->
+    <ul class="fab-menu fab-menu-top-right" data-fab-toggle="click">
+        <li>
+            <a class="fab-menu-btn btn bg-pink-300 btn-float btn-rounded btn-icon">
+                <i class="fab-icon-open icon-plus3"></i>
+                <i class="fab-icon-close icon-cross2"></i>
+            </a>
 
-                <ul class="fab-menu-inner">
-                    <li>
-                        <div data-fab-label="Compose email">
-                            <a href="#" class="btn btn-default btn-rounded btn-icon btn-float">
-                                <i class="icon-pencil"></i>
-                            </a>
-                        </div>
-                    </li>
-                    <li>
-                        <div data-fab-label="Conversations">
-                            <a href="#" class="btn btn-default btn-rounded btn-icon btn-float">
-                                <i class="icon-bubbles7"></i>
-                            </a>
-                            <span class="badge bg-primary-400">5</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div data-fab-label="Chat with Jack">
-                            <a href="#" class="btn bg-pink-400 btn-rounded btn-icon btn-float">
-                                <img src="assets/images/placeholder.jpg" class="img-responsive" alt="">
-                            </a>
-                            <span class="status-mark border-pink-400"></span>
-                        </div>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        <!-- /floating menu -->
-    </div>
+            <ul class="fab-menu-inner">
+                <li>
+                    <div data-fab-label="Compose email">
+                        <a href="#" class="btn btn-default btn-rounded btn-icon btn-float">
+                            <i class="icon-pencil"></i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div data-fab-label="Conversations">
+                        <a href="#" class="btn btn-default btn-rounded btn-icon btn-float">
+                            <i class="icon-bubbles7"></i>
+                        </a>
+                        <span class="badge bg-primary-400">5</span>
+                    </div>
+                </li>
+                <li>
+                    <div data-fab-label="Chat with Jack">
+                        <a href="#" class="btn bg-pink-400 btn-rounded btn-icon btn-float">
+                            <img src="assets/images/placeholder.jpg" class="img-responsive" alt="">
+                        </a>
+                        <span class="status-mark border-pink-400"></span>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!-- /floating menu -->
+</div>
+
 
 
     <!-- page container --->
@@ -216,54 +213,23 @@
             <!-- content wrapper --->
             <div class="content-wrapper">
 
+                <!-- profile selection --->
                 <div class="row">
-                     <div class="col-lg-12">
+                    <div class="col-md-3">
 
-                         <!-- Search field -->
-                         <div class="panel panel-flat">
-                             <div class="panel-heading">
-                                 <h5 class="panel-title">Search</h5>
-                                 <div class="heading-elements">
-                                     <ul class="icons-list">
-                                         <!--<li><a data-action="collapse"></a></li>-->
-                                         <!--<li><a data-action="close"></a></li>-->
-                                     </ul>
-                                 </div>
-                             </div>
+                    </div>
+                    <div class="col-md-3">
 
-                             <div class="panel-body">
-                                 <div class="row">
-                                     <div class="col-xs-8 col-xs-offset-2">
-                                         <form action="sumbit" class="form-group">
-                                             <div class="input-group">
-                                                 <div class="input-group-btn search-panel">
-                                                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                                         <span id="search_concept"><i class="icon-stack2 position-left"></i>Search by</span> <span class="caret"></span>
-                                                     </button>
-                                                     <ul class="dropdown-menu" role="menu">
-                                                         <li><a href="#ip"><i class="icon-address-book"></i> IP</a></li>
-                                                         <li><a href="#file_name"><i class="icon-file-eye"></i> File Name</a></li>
-                                                         <li><a href="#country"><i class="icon-location3"></i> Country</a></li>
-                                                         <li><a href="#state"><i class="icon-location4"></i> State</a></li>
-                                                         <li><a href="#infection"><i class="icon-warning"></i> Infection Type</a></li>
-                                                     </ul>
-                                                 </div>
-                                                 <input type="hidden" name="search_param" value="all" id="search_param">
-                                                 <input type="text" class="form-control" name="x" placeholder="Search...">
-                                                 <span class="input-group-btn">
-                                                <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
-                                             </span>
-                                             </div>
-                                         </form>
-                                     </div>
-                                 </div>
-                             </div>
+                    </div>
+                    <div class="col-md-3">
 
-                         </div>
-                         <!-- /search field -->
+                    </div>
+                    <div class="col-md-3">
 
-                     </div>
+                    </div>
                 </div>
+                <!-- !profile selection --->
+
 
             </div>
             <!-- /content warpper --->
@@ -273,7 +239,6 @@
 
     </div>
     <!-- /page container --->
-
 
     <!-- Footer -->
     <div class="navbar navbar-default navbar-fixed-bottom footer">
