@@ -10,3 +10,4 @@ $(document).ready(function(e){
         $('.input-group #search_param').val(param);
     });
 });
+
