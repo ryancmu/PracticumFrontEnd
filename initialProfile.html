@@ -13,6 +13,8 @@
     <link href="assets/css/core.css" rel="stylesheet" type="text/css">
     <link href="assets/css/components.css" rel="stylesheet" type="text/css">
     <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+    <!--<link href="assets/less/components/plugins/forms/checkboxes/bootstrap-switch.less" rel="stylesheet" type="text/css">-->
+
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -29,15 +31,25 @@
     <script type="text/javascript" src="assets/js/core/app.js"></script>
     <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
     <!-- /theme JS files -->
+
+    <!-- bootstrap slide JS file -->
+    <!--<script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>-->
+    <!--<script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>-->
+    <script type="text/javascript" src="assets/js/plugins/forms/styling/switch.min.js"></script>
+    <script type="text/javascript" src="assets/js/pages/form_checkboxes_radios.js"></script>
+    <!--<script type="text/javascript" src="assets/less/components/plugins/forms/checkboxes/bootstrap-switch.less"></script>-->
+    <!-- bootstrap slide JS file -->
+
 </head>
 <body>
 
-    <div class="page-header page-header-inverse bg-indigo">
+    <!-- navigation menu-->
+    <div class="page-header page-header-inverse bg-grey-800">
 
     <!-- Main navbar -->
     <div class="navbar navbar-inverse navbar-transparent">
         <div class="navbar-header">
-            <!--<a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>-->
+            <a class="navbar-brand" href="index.html"><img src="assets/images/tiversa_logo.jpg" alt=""></a>
 
             <ul class="nav navbar-nav pull-right visible-xs-block">
                 <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
@@ -45,7 +57,7 @@
         </div>
 
         <div class="navbar-collapse collapse" id="navbar-mobile">
-            <p class="navbar-text">Tiversa</p>
+            <!--<p class="navbar-text">Tiversa</p>-->
             <p class="navbar-text"><span class="label bg-success-400">Premium</span></p>
 
             <ul class="nav navbar-nav">
@@ -54,58 +66,6 @@
 
             <div class="navbar-right">
                 <ul class="nav navbar-nav">
-
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-bubble8"></i>
-                            <span class="visible-xs-inline-block position-right">Messages</span>
-                        </a>
-
-                        <div class="dropdown-menu dropdown-content width-350">
-                            <div class="dropdown-content-heading">
-                                Messages
-                                <ul class="icons-list">
-                                    <li><a href="#"><i class="icon-menu7"></i></a></li>
-                                </ul>
-                            </div>
-
-                            <ul class="media-list dropdown-content-body">
-                                <li class="media">
-                                    <div class="media-left">
-                                        <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
-                                        <span class="badge bg-danger-400 media-badge">5</span>
-                                    </div>
-
-                                    <div class="media-body">
-                                        <a href="#" class="media-heading">
-                                            <span class="text-semibold">Andy</span>
-                                            <span class="media-annotation pull-right">09:58</span>
-                                        </a>
-
-                                        <span class="text-muted">Do you want to discuss the plan...</span>
-                                    </div>
-                                </li>
-
-                                <li class="media">
-                                    <div class="media-left">
-                                        <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
-                                        <span class="badge bg-danger-400 media-badge">4</span>
-                                    </div>
-
-                                    <div class="media-body">
-                                        <a href="#" class="media-heading">
-                                            <span class="text-semibold">Bridget Green</span>
-                                            <span class="media-annotation pull-right">12:16</span>
-                                        </a>
-
-                                        <span class="text-muted">Do you want to go over the report...</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-
                     <li class="dropdown dropdown-user">
                         <a class="dropdown-toggle" data-toggle="dropdown">
                             <img src="assets/images/placeholder.jpg" alt="">
@@ -146,21 +106,21 @@
 
 
     <!-- Second navbar -->
-    <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
-        <ul class="nav navbar-nav visible-xs-block">
-            <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
-        </ul>
+    <!--<div class="navbar navbar-inverse navbar-transparent" id="navbar-second">-->
+        <!--<ul class="nav navbar-nav visible-xs-block">-->
+            <!--<li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>-->
+        <!--</ul>-->
 
-        <div class="navbar-collapse collapse" id="navbar-second-toggle">
-            <ul class="nav navbar-nav navbar-nav-material">
-                <li><a href="index.html">Dashboard</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-nav-material">
-                <li class="active"><a href="clientSearch.html">Search</a></li>
-            </ul>
+        <!--<div class="navbar-collapse collapse" id="navbar-second-toggle">-->
+            <!--<ul class="nav navbar-nav navbar-nav-material">-->
+                <!--<li><a href="index.html">Dashboard</a></li>-->
+            <!--</ul>-->
+            <!--<ul class="nav navbar-nav navbar-nav-material">-->
+                <!--<li class="active"><a href="clientSearch.html">Search</a></li>-->
+            <!--</ul>-->
 
-        </div>
-    </div>
+        <!--</div>-->
+    <!--</div>-->
     <!-- /second navbar -->
 
 
@@ -201,8 +161,7 @@
     </ul>
     <!-- /floating menu -->
 </div>
-
-
+    <!-- !navigation menu-->
 
     <!-- page container --->
     <div class="page-container">
@@ -216,21 +175,82 @@
                 <!-- profile selection --->
                 <form class="form-group" action="submit">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class = "col-sm-6 col-md-3">
+                            <div class = "thumbnail">
+                                <img src = "/bootstrap/images/kittens.jpg" alt = "Generic placeholder thumbnail">
+                            </div>
 
+                            <div class = "caption">
+                                <h3>File Type</h3>
+                                <p>Statistics for different file type malware dowloaded</p>
+
+                                <p>
+                                    <div class="checkbox checkbox-switch">
+                                        <label>
+                                            <input type="checkbox" class="switch" data-on-text="On" data-off-text="Off" name="my-checkbox" checked="checked">
+                                        </label>
+                                    </div>
+                                </p>
+
+                            </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class = "col-sm-6 col-md-3">
+                            <div class = "thumbnail">
+                                <img src = "/bootstrap/images/kittens.jpg" alt = "Generic placeholder thumbnail">
+                            </div>
 
+                            <div class = "caption">
+                                <h3>Infection Type</h3>
+                                <p>Statistics for different infection of the malware detected</p>
+
+                                <p>
+                                    <div class="checkbox checkbox-switch">
+                                        <label>
+                                            <input type="checkbox" class="switch" data-on-text="On" data-off-text="Off" name="my-checkbox" checked="checked">
+                                        </label>
+                                    </div>
+                                </p>
+
+                            </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class = "col-sm-6 col-md-3">
+                            <div class = "thumbnail">
+                                <img src = "/bootstrap/images/kittens.jpg" alt = "Generic placeholder thumbnail">
+                            </div>
 
+                            <div class = "caption">
+                                <h3>User Agent</h3>
+                                <p>Statistics for different user agent the malwares are downloaded</p>
+
+                                <p>
+                                    <div class="checkbox checkbox-switch">
+                                        <label>
+                                            <input type="checkbox" class="switch" data-on-text="On" data-off-text="Off" name="my-checkbox" checked="checked">
+                                        </label>
+                                    </div>
+                                </p>
+
+                            </div>
                         </div>
-                        <div class="col-md-3">
+                        <div class = "col-sm-6 col-md-3">
+                            <div class = "thumbnail">
+                                <img src = "/bootstrap/images/kittens.jpg" alt = "Generic placeholder thumbnail">
+                            </div>
 
+                            <div class = "caption">
+                                <h3>Location (Country & State)</h3>
+                                <p>Statistics based on locations where the malwares are downloaded</p>
+                                <p>
+                                    <div class="checkbox checkbox-switch">
+                                        <label>
+                                            <input type="checkbox" class="switch" data-on-text="On" data-off-text="Off" name="my-checkbox" checked="checked">
+                                        </label>
+                                    </div>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </form>
-                <!-- !profile selection --->
 
 
             </div>
@@ -254,7 +274,7 @@
             </div> -->
 
             <div class="navbar-text">
-                &copy; 2016. <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon Uniersity eBiz</a>
+                &copy; 2016. <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon University eBiz</a>
             </div>
 
             <div class="navbar-right">
