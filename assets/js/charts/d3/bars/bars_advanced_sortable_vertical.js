@@ -157,7 +157,7 @@ $(function () {
 
             // Sort values on page load with delay
             var sortTimeout = setTimeout(function() {
-                d3.select(".toggle-sort").property("checked", true).each(change);
+                d3.select(".toggle-sort").property("checked", false).each(change);
                 $.uniform.update();
             }, 2000);
 

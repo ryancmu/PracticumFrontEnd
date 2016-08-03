@@ -203,7 +203,8 @@ $(function() {
         series: {
             regions: [{
                 values: malwareData,
-                scale: ['#C8EEFF', '#0071A4'],
+                // scale: ['#C8EEFF', '#0071A4'],
+                scale: ['#ffd6cc', '#e62e00'],
                 normalizeFunction: 'polynomial'
             }]
         },
