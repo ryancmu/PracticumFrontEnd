@@ -4,3 +4,9 @@
 function add() {
         $(".multiSearch:first").clone(true).appendTo("#wrapper");
 }
+
+function del() {
+    $(".multiSearch:first").remove();
+}
+
+
