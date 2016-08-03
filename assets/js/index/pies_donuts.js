@@ -153,7 +153,7 @@ $(function () {
 
                 // Add title
                 title: {
-                    text: 'Infection Percentage (top 5)',
+                    text: 'Infection Percentage (Top 5)',
                     // subtext: 'Open source information',
                     x: 'center'
                 },
