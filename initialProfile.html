@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tiversa - Detail Page</title>
+    <title>Tiversa - Initial Configuration</title>
 
     <!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -13,8 +13,6 @@
     <link href="assets/css/core.css" rel="stylesheet" type="text/css">
     <link href="assets/css/components.css" rel="stylesheet" type="text/css">
     <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
-    <!--<link href="assets/less/components/plugins/forms/checkboxes/bootstrap-switch.less" rel="stylesheet" type="text/css">-->
-
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -36,10 +34,6 @@
     <script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
     <script type="text/javascript" src="assets/js/pages/form_layouts.js"></script>
     <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
-    <!--<script type="text/javascript" src="assets/js/plugins/forms/styling/switchery.min.js"></script>-->
-    <!--<script type="text/javascript" src="assets/js/plugins/forms/styling/switch.min.js"></script>-->
-    <!--<script type="text/javascript" src="assets/js/pages/form_checkboxes_radios.js"></script>-->
-    <!--<script type="text/javascript" src="assets/less/components/plugins/forms/checkboxes/bootstrap-switch.less"></script>-->
     <!-- bootstrap slide JS file -->
 
     <style>
@@ -52,7 +46,7 @@
 <body>
 
     <!-- navigation menu-->
-    <div class="page-header page-header-inverse bg-grey-800">
+    <div class="page-header page-header-inverse bg-grey-600">
 
         <!-- Main navbar -->
         <div class="navbar navbar-inverse navbar-transparent">
@@ -83,10 +77,8 @@
 
                             <ul class="dropdown-menu dropdown-menu-right">
                                 <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-                                <!-- <li><a href="#"><i class="icon-coins"></i> My balance</a></li> -->
-                                <li><a href="#"><!-- <span class="badge bg-blue pull-right">10</span> --> <i class="icon-comment-discussion"></i> Messages</a></li>
+                                <li><a href="#"><i class="icon-comment-discussion"></i> Messages</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
                                 <li><a href="login_validation.html"><i class="icon-switch2"></i> Logout</a></li>
                             </ul>
                         </li>
@@ -117,283 +109,202 @@
             <!-- content wrapper --->
             <div class="content-wrapper">
 
-                <div class="row">
-                    <div class="col-md-6">
-                <!-- form select - File type -->
-                        <form action="#" class="form-horizontal">
-                            <div class="panel panel-flat">
-                                <div class="panel-heading">
-                                    <h5 class="panel-title">Basic layout</h5>
-                                </div>
-
-                                <div class="panel-body">
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label">Category:</label>
-                                        <div class="col-lg-9 control-label">
-                                            <label>File Type</label>
-                                        </div>
+                <!-- big form wrap the profile --->
+                <form action="POST" name="profileForm" class="form-horizontal">
+                    <!--- first row tables--->
+                    <div class="row">
+                        <div class="col-md-6">
+                    <!-- form select - File type -->
+                            <!--<form action="#" class="form-horizontal">-->
+                                <div class="panel panel-flat">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title form-wizard-title">Option 1</h5>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label">Description:</label>
-                                        <div class="col-lg-9 control-label">
-                                            <p>xxx</p>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label text-size-large">Category:</label>
+                                            <div class="col-lg-9 control-label">
+                                                <label class="text-size-large text-bold">File Type</label>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label">File types:</label>
-                                        <div class="col-lg-9">
-                                            <select name="fileTypeSelect" multiple="multiple" data-placeholder="Enter tags" class="select-icons">
-                                                <optgroup label="File types">
-                                                    <option value="exe" data-icon="file" selected="selected">EXE</option>
-                                                    <option value="zip" data-icon="file-zip" selected="selected">Zip</option>
-                                                    <option value="dll" data-icon="file-excel">Dll</option>
-                                                    <option value="jar" data-icon="file-jar">Jar</option>
-                                                    <option value="vbs" data-icon="file-openoffice">VBS</option>
-                                                </optgroup>
-                                                <!--<optgroup label="Browsers">-->
-                                                    <!--<option value="chrome" data-icon="chrome" selected="selected">Chrome</option>-->
-                                                    <!--<option value="firefox" data-icon="firefox" selected="selected">Firefox</option>-->
-                                                    <!--<option value="safari" data-icon="safari">Safari</option>-->
-                                                    <!--<option value="opera" data-icon="opera">Opera</option>-->
-                                                    <!--<option value="IE" data-icon="IE">IE</option>-->
-                                                <!--</optgroup>-->
-                                            </select>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label text-size-large">Description:</label>
+                                            <div class="col-lg-9 control-label">
+                                                <p class="text-size-large">xxx</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label text-size-large">File types:</label>
+                                            <div class="col-lg-9">
+                                                <select name="fileTypeSelect" multiple="multiple" data-placeholder="Choose your interests" class="select-icons">
+                                                    <optgroup label="File types">
+                                                        <option value="exe" data-icon="folder" selected="selected">EXE</option>
+                                                        <option value="zip" data-icon="file-zip" selected="selected">Zip</option>
+                                                        <option value="dll" data-icon="folder2">Dll</option>
+                                                        <option value="jar" data-icon="folder3">Jar</option>
+                                                        <option value="vbs" data-icon="folder4">VBS</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-                <!-- /form select - File type  -->
+                            <!--</form>-->
+                    <!-- /form select - File type  -->
+                        </div>
+
+                        <div class="col-md-6">
+                            <!-- form select - Infection type -->
+                            <!--<form action="#" class="form-horizontal">-->
+                                <div class="panel panel-flat">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title form-wizard-title">Option 2</h5>
+                                    </div>
+
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label text-size-large">Category:</label>
+                                            <div class="col-lg-9 control-label">
+                                                <label class="text-size-large text-bold">Infection Type</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label text-size-large">Description:</label>
+                                            <div class="col-lg-9 control-label">
+                                                <p class="text-size-large">xxx</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label text-size-large">Infection types:</label>
+                                            <div class="col-lg-9">
+                                                <select name="infectionTypeSelect" multiple="multiple" data-placeholder="Choose your interests" class="select-icons">
+                                                    <optgroup label="File types">
+                                                        <option value="trojan" data-icon="file-openoffice" selected="selected">Trojan</option>
+                                                        <option value="virus" data-icon="file-openoffice" selected="selected">Virus</option>
+                                                        <option value="genericatg" data-icon="file-openoffice">GenericATG</option>
+                                                        <option value="worm" data-icon="file-openoffice">Worm</option>
+                                                        <option value="backdoor" data-icon="file-openoffice">Backdoor</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!--</form>-->
+                            <!-- /form select - Infection type  -->
+                        </div>
+
                     </div>
+                    <!--- /first row tables--->
 
-                    <div class="col-md-6">
-                        <!-- form select - Infection type -->
-                        <form action="#" class="form-horizontal">
-                            <div class="panel panel-flat">
-                                <div class="panel-heading">
-                                    <h5 class="panel-title">Basic layout</h5>
+                    <!-- Second Row tables--->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <!-- form select - User Agent -->
+                            <!--<form action="#" class="form-horizontal">-->
+                                <div class="panel panel-flat">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title form-wizard-title">Option 3</h5>
+                                    </div>
+
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label text-size-large">Category:</label>
+                                            <div class="col-lg-9 control-label">
+                                                <label class="text-size-large text-bold">User Agent</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label text-size-large">Description:</label>
+                                            <div class="col-lg-9 control-label">
+                                                <p class="text-size-large">xxx</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label text-size-large">User Agents:</label>
+                                            <div class="col-lg-9">
+                                                <select multiple="multiple" data-placeholder="Choose your interests" class="select-icons">
+                                                    <optgroup label="File types">
+                                                        <option value="direct" data-icon="share" selected="selected">Direct Connect</option>
+                                                        <option value="limewire" data-icon="share" selected="selected">LimeWire</option>
+                                                        <option value="shareza" data-icon="share">Shareaza</option>
+                                                        <option value="limezilla" data-icon="share">LimeZilla</option>
+                                                        <option value="bitrope" data-icon="share">BitRope</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+
+                                    </div>
                                 </div>
+                            <!--</form>-->
+                            <!-- /form select - File type  -->
+                        </div>
 
-                                <div class="panel-body">
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label">Category:</label>
-                                        <div class="col-lg-9 control-label">
-                                            <label>Infection Type</label>
-                                        </div>
+                        <div class="col-md-6">
+                            <!-- form select - Location -->
+                            <!--<form action="#" class="form-horizontal">-->
+                                <div class="panel panel-flat">
+                                    <div class="panel-heading">
+                                        <h5 class="panel-title form-wizard-title">Option 4</h5>
                                     </div>
 
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label">Description:</label>
-                                        <div class="col-lg-9 control-label">
-                                            <p>xxx</p>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label text-size-large">Category:</label>
+                                            <div class="col-lg-9 control-label">
+                                                <label class="text-size-large text-bold">Location</label>
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label">Infection types:</label>
-                                        <div class="col-lg-9">
-                                            <select name="infectionTypeSelect" multiple="multiple" data-placeholder="Enter tags" class="select-icons">
-                                                <optgroup label="File types">
-                                                    <option value="trojan" selected="selected">Trojan</option>
-                                                    <option value="virus" selected="selected">Virus</option>
-                                                    <option value="genericatg">GenericATG</option>
-                                                    <option value="worm">Worm</option>
-                                                    <option value="backdoor">Backdoor</option>
-                                                </optgroup>
-                                            </select>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label text-size-large">Description:</label>
+                                            <div class="col-lg-9 control-label">
+                                                <p class="text-size-large">xxx</p>
+                                            </div>
                                         </div>
+
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label text-size-large">Locations:</label>
+                                            <div class="col-lg-9">
+                                                <select multiple="multiple" data-placeholder="Choose your interests" class="select-icons">
+                                                    <optgroup label="File types">
+                                                        <option value="russia" data-icon="location3" selected="selected">Russia</option>
+                                                        <option value="usa" data-icon="location3" selected="selected">USA</option>
+                                                        <option value="romania" data-icon="location3">Romania</option>
+                                                        <option value="ukraine" data-icon="location3">Ukraine</option>
+                                                        <option value="kazakhstan" data-icon="location3">Kazakhstan</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-                        <!-- /form select - Infection type  -->
+                            <!--</form>-->
+                            <!-- /form select - Infection type  -->
+                        </div>
+
                     </div>
+                    <!-- / Second Row tables--->
 
-
-                </div>
-
-                <!-- Second Row tables--->
-                <div class="row">
-                    <div class="col-md-6">
-                        <!-- form select - File type -->
-                        <form action="#" class="form-horizontal">
-                            <div class="panel panel-flat">
-                                <div class="panel-heading">
-                                    <h5 class="panel-title">Basic layout</h5>
-                                </div>
-
-                                <div class="panel-body">
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label">Category:</label>
-                                        <div class="col-lg-9 control-label">
-                                            <label>User Agent</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label">Description:</label>
-                                        <div class="col-lg-9 control-label">
-                                            <p>xxx</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label">User Agent:</label>
-                                        <div class="col-lg-9">
-                                            <select multiple="multiple" data-placeholder="Enter tags" class="select-icons">
-                                                <optgroup label="File types">
-                                                    <option value="direct" selected="selected">Direct Connect</option>
-                                                    <option value="limewire" selected="selected">LimeWire</option>
-                                                    <option value="shareza" >Shareaza</option>
-                                                    <option value="limezilla" >LimeZilla</option>
-                                                    <option value="bitrope" >BitRope</option>
-                                                </optgroup>
-                                                <!--<optgroup label="Browsers">-->
-                                                <!--<option value="chrome" data-icon="chrome" selected="selected">Chrome</option>-->
-                                                <!--<option value="firefox" data-icon="firefox" selected="selected">Firefox</option>-->
-                                                <!--<option value="safari" data-icon="safari">Safari</option>-->
-                                                <!--<option value="opera" data-icon="opera">Opera</option>-->
-                                                <!--<option value="IE" data-icon="IE">IE</option>-->
-                                                <!--</optgroup>-->
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </form>
-                        <!-- /form select - File type  -->
+                    <!--- submit button div--->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <button type="submit" class="btn btn-primary btn-xlg pull-right-lg" value="submit">Submit</button>
+                        </div>
                     </div>
+                    <!--- /submit button div--->
+                </form>
+                <!-- /big form wrap the profile --->
 
-                    <div class="col-md-6">
-                        <!-- form select - Infection type -->
-                        <form action="#" class="form-horizontal">
-                            <div class="panel panel-flat">
-                                <div class="panel-heading">
-                                    <h5 class="panel-title">Basic layout</h5>
-                                </div>
-
-                                <div class="panel-body">
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label">Category:</label>
-                                        <div class="col-lg-9 control-label">
-                                            <label>Location</label>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label">Description:</label>
-                                        <div class="col-lg-9 control-label">
-                                            <p>xxx</p>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="col-lg-3 control-label">Location:</label>
-                                        <div class="col-lg-9">
-                                            <select multiple="multiple" data-placeholder="Enter tags" class="select-icons">
-                                                <optgroup label="File types">
-                                                    <option value="russia" selected="selected">Russia</option>
-                                                    <option value="usa" selected="selected">USA</option>
-                                                    <option value="romania">Romania</option>
-                                                    <option value="ukraine">Ukraine</option>
-                                                    <option value="kazakhstan">Kazakhstan</option>
-                                                </optgroup>
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </form>
-                        <!-- /form select - Infection type  -->
-                    </div>
-
-
-                </div>
-                <!-- / Second Row tables--->
-
-                <!-- profile selection --->
-                <!--<form class="form-group" action="submit">-->
-                    <!--<div class="row">-->
-                        <!--<div class = "col-sm-6 col-md-3">-->
-                            <!--<div class = "thumbnail">-->
-                                <!--<img src = "assets/images/profiles/filetypes.png" alt = "Generic placeholder thumbnail">-->
-                            <!--</div>-->
-
-                            <!--<div class = "caption">-->
-                                <!--<h3>File Type</h3>-->
-                                <!--<p>Statistics for different file type malware dowloaded</p>-->
-
-                                <!--<p>-->
-                                    <!--<div class="checkbox checkbox-switch">-->
-                                        <!--<label>-->
-                                            <!--<input type="checkbox" class="switch" data-on-text="On" data-off-text="Off" name="my-checkbox" checked="checked">-->
-                                        <!--</label>-->
-                                    <!--</div>-->
-                                <!--</p>-->
-
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class = "col-sm-6 col-md-3">-->
-                            <!--<div class = "thumbnail">-->
-                                <!--<img src = "/bootstrap/images/kittens.jpg" alt = "Generic placeholder thumbnail">-->
-                            <!--</div>-->
-
-                            <!--<div class = "caption">-->
-                                <!--<h3>Infection Type</h3>-->
-                                <!--<p>Statistics for different infection of the malware detected</p>-->
-
-                                <!--<p>-->
-                                    <!--<div class="checkbox checkbox-switch">-->
-                                        <!--<label>-->
-                                            <!--<input type="checkbox" class="switch" data-on-text="On" data-off-text="Off" name="my-checkbox" checked="checked">-->
-                                        <!--</label>-->
-                                    <!--</div>-->
-                                <!--</p>-->
-
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class = "col-sm-6 col-md-3">-->
-                            <!--<div class = "thumbnail">-->
-                                <!--<img src = "/bootstrap/images/kittens.jpg" alt = "Generic placeholder thumbnail">-->
-                            <!--</div>-->
-
-                            <!--<div class = "caption">-->
-                                <!--<h3>User Agent</h3>-->
-                                <!--<p>Statistics for different user agent the malwares are downloaded</p>-->
-
-                                <!--<p>-->
-                                    <!--<div class="checkbox checkbox-switch">-->
-                                        <!--<label>-->
-                                            <!--<input type="checkbox" class="switch" data-on-text="On" data-off-text="Off" name="my-checkbox" checked="checked">-->
-                                        <!--</label>-->
-                                    <!--</div>-->
-                                <!--</p>-->
-
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class = "col-sm-6 col-md-3">-->
-                            <!--<div class = "thumbnail">-->
-                                <!--<img src = "assets/images/profiles/location-icon.png" alt = "Generic placeholder thumbnail" >-->
-                            <!--</div>-->
-
-                            <!--<div class = "caption">-->
-                                <!--<h3>Location (Country & State)</h3>-->
-                                <!--<p>Statistics based on locations where the malwares are downloaded</p>-->
-                                <!--<p>-->
-                                    <!--<div class="checkbox checkbox-switch">-->
-                                        <!--<label>-->
-                                            <!--<input type="checkbox" class="switch" data-on-text="On" data-off-text="Off" name="my-checkbox" checked="checked">-->
-                                        <!--</label>-->
-                                    <!--</div>-->
-                                <!--</p>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</form>-->
 
 
             </div>
@@ -406,7 +317,7 @@
     <!-- /page container --->
 
     <!-- Footer -->
-    <div class="navbar navbar-default navbar-fixed-bottom footer">
+    <div class="navbar navbar-default navbar-fixed-bottom footer  bg-grey-600">
         <ul class="nav navbar-nav visible-xs-block">
             <li><a class="text-center collapsed" data-toggle="collapse" data-target="#footer"><i class="icon-circle-up2"></i></a></li>
         </ul>
@@ -417,14 +328,14 @@
             </div> -->
 
             <div class="navbar-text">
-                &copy; 2016. <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon University eBiz</a>
+                <span class="text-white">&copy; 2016. </span> <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon University eBiz</a>
             </div>
 
             <div class="navbar-right">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="http://tiversa.com/contact/">Contact</a></li>
+                    <li><a href="#" class="text-white">About</a></li>
+                    <li><a href="#" class="text-white">Terms</a></li>
+                    <li><a href="http://tiversa.com/contact/" class="text-white">Contact</a></li>
                 </ul>
             </div>
         </div>
