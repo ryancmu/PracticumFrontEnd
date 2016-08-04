@@ -69,6 +69,7 @@
 	<!-- searchBy JS File --->
 	<script type="text/javascript" src="assets/js/searchBy.js"></script>
 	<!-- !searchBy JS File --->
+	<script type="text/javascript" src="assets/js/jquery.vticker.js"></script>
 
 
 </head>
@@ -467,76 +468,47 @@
 						<!-- IP list table-->
 						<div class="table-responsive">
 							<table class="table text-nowrap">
-								<thead>
-									<tr>
-										<th class="col-sm-1">Country</th>
-										<th class="col-sm-1">state</th>
-										<th class="col-md-3">IP</th>
-										<th class="col-sm-2">Port</th>
-										<th class="col-md-4">File Name</th>
-										<th class="col-md-4">Infection Type</th>
-									</tr>
-								</thead>
+								<th class="col-sm-1">Country</th>
+								<th class="col-sm-1">State</th>
+								<th class="col-md-3">IP</th>
+								<th class="col-sm-2">Port</th>
+								<th class="col-md-4">File Name</th>
+								<th class="col-md-4">Infection Type</th>
+								<tr>
+									<td>
+										<div id='countryLive'>
+											<ul>
+												<li><img src="assets/images/flags/ch.png"> Switzerland</li>
+												<li><img src="assets/images/flags/us.png"> United States</li>
+												<li><img src="assets/images/flags/sa.png"> Saudi Arabia</li>
+												<li><img src="assets/images/flags/cn.png"> China</li>
+												<li><img src="assets/images/flags/ru.png"> Russia</li>
+											</ul>
+										</div>
+									</td>
+									<td>
+										<div id='stateLive'>
+											<ul>
+												<li>Geneva</li>
+												<li>Virginia</li>
+												<li>Riyadh </li>
+												<li>Shanghai </li>
+												<li>Moscow</li>
+											</ul>
+										</div>
+									</td>
 
-								<tbody>
-									<tr>
-										<td>
-											<div class="media-left media-middle">
-												<a href="#"><img src="assets/images/flags/ru.png" class="img-circle img-xs" alt=""></a>
-											</div>
-											<div class="media-left media-middle">
-												<div class=""><a href="#" class="text-default text-semibold">Russia</a></div>
-											</div>
-										</td>
-										<td><span class="text-muted">Moscow</span></td>
-										<td><span class="text-muted">129.98.212.123</span></td>
-										<td><span class="text-success-600">35627</span></td>
-										<td><h6 class="text-semibold">Cat Run(2011).EXE</h6></td>
-										<td><span class="label bg-blue">Trojan</span></td>
-										<td class="text-center">
 
-										</td>
-									</tr>
 
-									<tr>
-										<td>
-											<div class="media-left media-middle">
-												<a href="#"><img src="assets/images/flags/us.png" class="img-circle img-xs" alt=""></a>
-											</div>
-											<div class="media-left media-middle">
-												<div class=""><a href="#" class="text-default text-semibold">United States</a></div>
-											</div>
-										</td>
-										<td><span class="text-muted">Oregon</span></td>
-										<td><span class="text-muted">198.80.19.231</span></td>
-										<td><span class="text-success-600">29874</span></td>
-										<td><h6 class="text-semibold">Furious 2013.EXE</h6></td>
-										<td><span class="label bg-blue">Trojan</span></td>
-										<td class="text-center">
 
-										</td>
-									</tr>
 
-									<tr>
-										<td>
-											<div class="media-left media-middle">
-												<a href="#"><img src="assets/images/flags/cn.png" class="img-circle img-xs" alt=""></a>
-											</div>
-											<div class="media-left media-middle">
-												<div class=""><a href="#" class="text-default text-semibold">China</a></div>
-											</div>
-										</td>
-										<td><span class="text-muted">Beijing</span></td>
-										<td><span class="text-muted">89.29.81.211</span></td>
-										<td><span class="text-success-600">23654</span></td>
-										<td><h6 class="text-semibold">Tennis Game.EXE</h6></td>
-										<td><span class="label bg-blue">Trojan</span></td>
-										<td class="text-center">
 
-										</td>
-									</tr>
 
-								</tbody>
+
+
+
+								</tr>
+
 							</table>
 						</div>
 						<!-- /IP list table-->
