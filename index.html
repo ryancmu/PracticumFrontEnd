@@ -23,6 +23,8 @@
 	<script type="text/javascript" src="assets/js/plugins/ui/nicescroll.min.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/ui/drilldown.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
+
+	<script type="text/javascript" src="assets/js/addMultiSearch.js"></script>
 	<!-- /core JS files -->
 
     <!-- Map JS files -->
@@ -71,8 +73,6 @@
 
 	<script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
 	<!-- /theme JS files -->
-
-
 
 
 
@@ -262,7 +262,62 @@
 						<!-- /search field -->
 
 					</div>
+
 				</div>
+
+				<!--Multi Search below-->
+
+				<div>
+					<div class="panel panel-flat">
+						<div class="panel-heading">
+							<h5 class="panel-title">Multi Field Search</h5>
+							<div class="heading-elements">
+								<ul class="icons-list">
+									<!--<li><a data-action="collapse"></a></li>-->
+									<!--<li><a data-action="close"></a></li>-->
+								</ul>
+							</div>
+						</div>
+
+
+						<div  class="panel-body">
+							<div class="row">
+								<div id = "wrapper" class="col-xs-8 col-xs-offset-2">
+									<div class="multiSearch">
+									<form action="sumbit" class="form-group">
+										<div class="input-group">
+											<div class="input-group-btn search-panel">
+												<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+													<span id="search_concept_multi"><i class="icon-stack2 position-left"></i>Choose criteria</span> <span class="caret"></span>
+												</button>
+												<ul class="dropdown-menu" role="menu">
+													<li><a href="#ip_multi"><i class="icon-address-book"></i> IP</a></li>
+													<li><a href="#file_name_multi"><i class="icon-file-eye"></i> File Name</a></li>
+													<li><a href="#country_multi"><i class="icon-location3"></i> Country</a></li>
+													<li><a href="#state_multi"><i class="icon-location4"></i> State</a></li>
+													<li><a href="#infection_multi"><i class="icon-warning"></i> Infection Type</a></li>
+												</ul>
+											</div>
+											<input type="hidden" name="search_param_multi" value="all" id="search_param_multi">
+											<input type="text" class="form-control" name="x" placeholder="Search...">
+											<span class="input-group-btn">
+                                                <button id="testButton" class="btn btn-default" type="button" onclick="add()"><span class="glyphicon glyphicon-plus"></span></button>
+                                             </span>
+											<span class="input-group-btn">
+                                                <button id="testButtonRemove" class="btn btn-default" type="button" onclick="del()"><span class="glyphicon glyphicon-minus"></span></button>
+                                             </span>
+										</div>
+									</form>
+									</div>
+
+								</div>
+
+							</div>
+							<span align="center" class="input-group-btn">
+                                                <button id="submitMultiSearch" class="btn btn-default" type="button" onclick=""><span class="glyphicon glyphicon-search"></span></button>
+                                             </span>
+						</div>
+					</div>
 
 
                 <!-- Choropleth map -->
@@ -381,8 +436,6 @@
 									</tr>
 								</thead>
 
-
-
 								<tbody>
 									<tr>
 										<td>
@@ -461,7 +514,6 @@
 									</tr>
 
 								</tbody>
-
 							</table>
 						</div>
 						<!-- /IP list table-->
