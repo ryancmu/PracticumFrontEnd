@@ -16,7 +16,7 @@ $(function () {
 
 
     // Initialize chart
-    sortableVertical('#d3-bar-sortable-vertical', 400);
+    sortableVertical('#user_agent_sortable', 400);
 
     // Chart setup
     function sortableVertical(element, height) {

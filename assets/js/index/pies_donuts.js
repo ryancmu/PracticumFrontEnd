@@ -41,8 +41,8 @@ $(function () {
             // Initialize charts
             // ------------------------------
 
-            var basic_pie_type = ec.init(document.getElementById('basic_pie_type'), limitless);
-            var basic_pie_protocol = ec.init(document.getElementById('basic_pie_protocol'), shine);
+            var basic_pie_filetype = ec.init(document.getElementById('basic_pie_filetype'), limitless);
+            var basic_pie_infection = ec.init(document.getElementById('basic_pie_infection'), shine);
             // var nested_pie = ec.init(document.getElementById('nested_pie'), limitless);
             // var infographic_donut = ec.init(document.getElementById('infographic_donut'), limitless);
             // var rose_diagram_hidden = ec.init(document.getElementById('rose_diagram_hidden'), limitless);
@@ -59,7 +59,7 @@ $(function () {
             // Basic pie options
             //
 
-            basic_pie_type_options = {
+            basic_pie_filetype_options = {
 
                 // Add title
                 title: {
@@ -149,7 +149,7 @@ $(function () {
                 }]
             };
 
-            basic_pie_protocol_options = {
+            basic_pie_infection_options = {
 
                 // Add title
                 title: {
@@ -242,8 +242,8 @@ $(function () {
             // Apply options
             // ------------------------------
 
-            basic_pie_type.setOption(basic_pie_type_options);
-            basic_pie_protocol.setOption(basic_pie_protocol_options);
+            basic_pie_filetype.setOption(basic_pie_filetype_options);
+            basic_pie_infection.setOption(basic_pie_infection_options);
 
 
             // Resize charts
@@ -251,8 +251,8 @@ $(function () {
 
             window.onresize = function () {
                 setTimeout(function (){
-                    basic_pie_type.resize();
-                    basic_pie_protocol.resize();
+                    basic_pie_filetype.resize();
+                    basic_pie_infection.resize();
                 }, 200);
             }
         }
