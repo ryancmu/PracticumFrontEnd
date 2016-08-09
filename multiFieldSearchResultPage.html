@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/nicescroll.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/drilldown.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
+    <script type="text/javascript" src="assets/js/charts/canvas/canvasjs.min.js"></script>
+    <!-- /core JS files -->
+
+    <!-- Theme JS files -->
+    <script type="text/javascript" src="assets/js/core/app.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
+    <!-- /theme JS files -->
+
+    <!--Pie chart JS files-->
+    <!--<script type="text/javascript" src="assets/js/charts/d3/pies/pie_update.js"></script>-->
+    <script type="text/javascript" src="assets/js/index/pie_type.js"></script>
+    <!--/Pie chart JS files-->
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+</head>
+
+<body class="navbar-bottom">
+
+<!-- Page header -->
+<div class="page-header page-header-inverse bg-grey-600">
+
+    <!-- Main navbar -->
+    <div class="navbar navbar-inverse navbar-transparent">
+        <div class="navbar-header">
+            <!--<a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>-->
+
+            <ul class="nav navbar-nav pull-right visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            <p class="navbar-text">Tiversa</p>
+            <p class="navbar-text"><span class="label bg-success-400">Premium</span></p>
+
+            <ul class="nav navbar-nav">
+                <li><a href="#">Upgrade</a></li>
+            </ul>
+
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-bubble8"></i>
+                            <span class="visible-xs-inline-block position-right">Messages</span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-content width-350">
+                            <div class="dropdown-content-heading">
+                                Messages
+                                <ul class="icons-list">
+                                    <li><a href="#"><i class="icon-menu7"></i></a></li>
+                                </ul>
+                            </div>
+
+                            <ul class="media-list dropdown-content-body">
+                                <li class="media">
+                                    <div class="media-left">
+                                        <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <span class="badge bg-danger-400 media-badge">5</span>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Andy</span>
+                                            <span class="media-annotation pull-right">09:58</span>
+                                        </a>
+
+                                        <span class="text-muted">Do you want to discuss the plan...</span>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <span class="badge bg-danger-400 media-badge">4</span>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Bridget Green</span>
+                                            <span class="media-annotation pull-right">12:16</span>
+                                        </a>
+
+                                        <span class="text-muted">Do you want to go over the report...</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="dropdown dropdown-user">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="assets/images/placeholder.jpg" alt="">
+                            <span>Victor</span>
+                            <i class="caret"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                            <li><a href="#"><i class="icon-comment-discussion"></i> Messages</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login_validation.html"><i class="icon-switch2"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /main navbar -->
+
+
+    <!-- Page header content -->
+    <div class="page-header-content">
+        <div class="page-title">
+            <h4>Dashboard <small>Good afternoon , Victor!</small></h4>
+        </div>
+
+    </div>
+
+    <!-- /page header content -->
+
+
+    <!-- Second navbar -->
+    <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
+        <ul class="nav navbar-nav visible-xs-block">
+            <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+        </ul>
+
+        <div class="navbar-collapse collapse" id="navbar-second-toggle">
+            <ul class="nav navbar-nav navbar-nav-material">
+                <li class="active"><a href="index.html">Dashboard</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- /second navbar -->
+
+</div>
+<!-- /page header -->
+
+<!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+            <div id="chartContainer" style="height: 300px; width: 100%;">
+                <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            </div>
+
+            <!-- Put all your code here --
+            <!-- /put all your code here -->
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+</div>
+<!-- /page container -->
+
+<!-- Footer -->
+<div class="navbar navbar-default navbar-fixed-bottom footer  bg-grey-600">
+    <ul class="nav navbar-nav visible-xs-block">
+        <li><a class="text-center collapsed" data-toggle="collapse" data-target="#footer"><i class="icon-circle-up2"></i></a></li>
+    </ul>
+
+    <div class="navbar-collapse collapse" id="footer">
+        <!-- <div class="navbar-text">
+            &copy; 2015. <a href="#" class="navbar-link">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" class="navbar-link" target="_blank">Eugene Kopyov</a>
+        </div> -->
+
+        <div class="navbar-text">
+            <span class="text-white">&copy; 2016. </span> <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon University eBiz</a>
+        </div>
+
+        <div class="navbar-right">
+            <ul class="nav navbar-nav">
+                <li><a href="#" class="text-white">About</a></li>
+                <li><a href="#" class="text-white">Terms</a></li>
+                <li><a href="http://tiversa.com/contact/" class="text-white">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /footer -->
+
+</body>
+
+<script type="text/javascript">
+    $(function () {
+        var processed_json = new Array();
+        $.getJSON('https://api.myjson.com/bins/33oc5', function (data) {
+            for (i = 0; i < data.length; i++){
+                processed_json.push([data[i].date, data[i].count]);
+            }
+
+            $('#container').highcharts({
+                chart: {
+                    zoomType: 'x'
+                },
+                title: {
+                    text: 'IP Activity for 75.185.167.245'
+                },
+                subtitle: {
+                    text: document.ontouchstart === undefined ?
+                            'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
+                },
+                xAxis: {
+                    type: 'datetime'
+                },
+                yAxis: {
+                    title: {
+                        text: 'Malware Count'
+                    }
+                },
+                legend: {
+                    enabled: false
+                },
+                plotOptions: {
+                    area: {
+                        fillColor: {
+                            linearGradient: {
+                                x1: 0,
+                                y1: 0,
+                                x2: 0,
+                                y2: 1
+                            },
+                            stops: [
+                                [0, Highcharts.getOptions().colors[0]],
+                                [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                            ]
+                        },
+                        marker: {
+                            radius: 2
+                        },
+                        lineWidth: 3,
+                        states: {
+                            hover: {
+                                lineWidth: 3
+                            }
+                        },
+                        threshold: null
+                    }
+                },
+
+                series: [{
+                    type: 'area',
+                    name: 'Malware Count',
+                    data: processed_json
+                }]
+            });
+        });
+    });
+</script>
+
+<script>
+    /**
+     * Sand-Signika theme for Highcharts JS
+     * @author Torstein Honsi
+     */
+
+// Load the fonts
+    Highcharts.createElement('link', {
+        href: 'https://fonts.googleapis.com/css?family=Signika:400,700',
+        rel: 'stylesheet',
+        type: 'text/css'
+    }, null, document.getElementsByTagName('head')[0]);
+
+    // Add the background image to the container
+    Highcharts.wrap(Highcharts.Chart.prototype, 'getContainer', function (proceed) {
+        proceed.call(this);
+        this.container.style.background = 'url(http://www.highcharts.com/samples/graphics/sand.png)';
+    });
+
+
+    Highcharts.theme = {
+        colors: ["#f45b5b", "#8085e9", "#8d4654", "#7798BF", "#aaeeee", "#ff0066", "#eeaaee",
+            "#55BF3B", "#DF5353", "#7798BF", "#aaeeee"],
+        chart: {
+            backgroundColor: null,
+            style: {
+                fontFamily: "Signika, serif"
+            }
+        },
+        title: {
+            style: {
+                color: 'black',
+                fontSize: '16px',
+                fontWeight: 'bold'
+            }
+        },
+        subtitle: {
+            style: {
+                color: 'black'
+            }
+        },
+        tooltip: {
+            borderWidth: 0
+        },
+        legend: {
+            itemStyle: {
+                fontWeight: 'bold',
+                fontSize: '13px'
+            }
+        },
+        xAxis: {
+            labels: {
+                style: {
+                    color: '#6e6e70'
+                }
+            }
+        },
+        yAxis: {
+            labels: {
+                style: {
+                    color: '#6e6e70'
+                }
+            }
+        },
+        plotOptions: {
+            series: {
+                shadow: true
+            },
+            candlestick: {
+                lineColor: '#404048'
+            },
+            map: {
+                shadow: false
+            }
+        },
+
+        // Highstock specific
+        navigator: {
+            xAxis: {
+                gridLineColor: '#D0D0D8'
+            }
+        },
+        rangeSelector: {
+            buttonTheme: {
+                fill: 'white',
+                stroke: '#C0C0C8',
+                'stroke-width': 1,
+                states: {
+                    select: {
+                        fill: '#D0D0D8'
+                    }
+                }
+            }
+        },
+        scrollbar: {
+            trackBorderColor: '#C0C0C8'
+        },
+
+        // General
+        background2: '#E0E0E8'
+
+    };
+
+    // Apply the theme
+    Highcharts.setOptions(Highcharts.theme);
+</script>
+
+
+</html>
