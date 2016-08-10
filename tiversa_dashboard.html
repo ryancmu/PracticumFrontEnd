@@ -194,11 +194,27 @@
 				<li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
 			</ul>
 
-			<div class="navbar-collapse collapse" id="navbar-second-toggle">
-				<ul class="nav navbar-nav navbar-nav-material">
-					<li class="active"><a href="index.html">Dashboard</a></li>
-				</ul>
-			</div>
+            <!--Tab-->
+            <div class="navbar-collapse collapse" id="navbar-second-toggle">
+                <ul class="nav navbar-nav navbar-nav-material">
+                    <li class="active"><a href="tiversa_dashboard.html">Dashboard</a></li>
+                    <li><a href="user_list.html"><i class="icon-display4 position-left"></i> Client Lists </a></li>
+<!--                    <li><a href="search_images.html"><i class="icon-image2 position-left"></i> Images</a></li>
+                    <li><a href="search_videos.html"><i class="icon-file-play position-left"></i> Videos</a></li>
+                    <li class="dropdown pull-right">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog3"></i> <span class="visible-xs-inline-block position-right">Options</span> <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more line</a></li>
+                        </ul>
+                    </li>-->
+                </ul>
+                </ul>
+            </div>
+            <!--Tab-->
 		</div>
 		<!-- /second navbar -->
 
@@ -270,10 +286,10 @@
 				<div>
 					<div class="panel panel-flat">
 						<div class="panel-heading">
-							<h5 class="panel-title">Multi Field Search</h5>
+							<h5 class="panel-title">Search</h5>
 							<div class="heading-elements">
 								<ul class="icons-list">
-									<!--<li><a data-action="collapse"></a></li>-->
+									<li><a data-action="collapse"></a></li>
 									<!--<li><a data-action="close"></a></li>-->
 								</ul>
 							</div>
@@ -324,6 +340,12 @@
                 <div class="panel panel-flat">
                     <div class="panel-heading">
                         <h5 class="panel-title">Malware Global Distribution</h5>
+						<div class="heading-elements">
+							<ul class="icons-list">
+								<li><a data-action="collapse"></a></li>
+								<!--<li><a data-action="close"></a></li>-->
+							</ul>
+						</div>
                     </div>
 
                     <div class="panel-body">
@@ -342,11 +364,17 @@
 						<div class="panel panel-flat">
 							<div class="panel-heading">
 								<h5 class="panel-title">File Type</h5>
+								<div class="heading-elements">
+									<ul class="icons-list">
+										<li><a data-action="collapse"></a></li>
+										<!--<li><a data-action="close"></a></li>-->
+									</ul>
+								</div>
 							</div>
 
 							<div class="panel-body">
 								<div class="chart-container has-scroll">
-									<div class="chart has-fixed-height has-minimum-width" id="basic_pie_type"></div>
+									<div class="chart has-fixed-height has-minimum-width" id="basic_pie_filetype"></div>
 								</div>
 							</div>
 						</div>
@@ -359,11 +387,17 @@
 						<div class="panel panel-flat">
 							<div class="panel-heading">
 								<h5 class="panel-title">Infection</h5>
+								<div class="heading-elements">
+									<ul class="icons-list">
+										<li><a data-action="collapse"></a></li>
+										<!--<li><a data-action="close"></a></li>-->
+									</ul>
+								</div>
 							</div>
 
 							<div class="panel-body">
 								<div class="chart-container has-scroll">
-									<div class="chart has-fixed-height has-minimum-width" id="basic_pie_protocol"></div>
+									<div class="chart has-fixed-height has-minimum-width" id="basic_pie_infection"></div>
 								</div>
 							</div>
 						</div>
@@ -381,6 +415,12 @@
 					<div class="panel panel-flat">
 						<div class="panel-heading">
 							<h5 class="panel-title">Top 10 User Agent</h5>
+							<div class="heading-elements">
+								<ul class="icons-list">
+									<li><a data-action="collapse"></a></li>
+									<!--<li><a data-action="close"></a></li>-->
+								</ul>
+							</div>
 						</div>
 
 						<div class="panel-body">
@@ -537,7 +577,7 @@
 
 
 	<!-- Footer -->
-	<div class="navbar navbar-default navbar-fixed-bottom footer  bg-blue-600">
+	<div class="navbar navbar-default navbar-fixed-bottom footer  bg-grey-600">
 		<ul class="nav navbar-nav visible-xs-block">
 			<li><a class="text-center collapsed" data-toggle="collapse" data-target="#footer"><i class="icon-circle-up2"></i></a></li>
 		</ul>
