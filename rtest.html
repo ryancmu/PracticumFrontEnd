@@ -25,16 +25,16 @@
 	<script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
 	<!-- /core JS files -->
 
-	<!--eChart JS files -->
-	<script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
-	<script type="text/javascript" src="assets/js/index/pies_donuts.js"></script>
-	<!--/eChart JS files -->
+	<!-- Map JS files -->
+	<script type="text/javascript" src="assets/js/index/usa_map.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/maps/jvectormap/jvectormap.min.js"></script>
+	<script type="text/javascript" src="assets/js/plugins/maps/jvectormap/map_files/countries/usa.js"></script>
+	<!--/Map JS files-->
 
 	<!-- Theme JS files -->
 	<script type="text/javascript" src="assets/js/core/app.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
 	<!-- /theme JS files -->
-
 </head>
 
 <body class="navbar-bottom">
@@ -49,34 +49,19 @@
 			<!-- Main content -->
 			<div class="content-wrapper">
 
-				<!-- Main charts -->
-				<div class="row">
-					<div class="col-lg-6">
-						<!-- Basic pie chart -->
-						<!-- Basic pie chart -->
-						<div class="panel panel-flat">
-							<div class="panel-heading">
-								<h5 class="panel-title">Basic pie chart</h5>
-								<div class="heading-elements">
-									<ul class="icons-list">
-										<li><a data-action="collapse"></a></li>
-										<li><a data-action="reload"></a></li>
-										<li><a data-action="close"></a></li>
-									</ul>
-								</div>
-							</div>
-
-							<div class="panel-body">
-								<div class="chart-container has-scroll">
-									<div class="chart has-fixed-height has-minimum-width" id="basic_pie"></div>
-								</div>
-							</div>
-						</div>
-						<!-- /bacis pie chart -->
+				<!-- USA map -->
+				<div class="panel panel-flat">
+					<div class="panel-heading">
+						<h5 class="panel-title">U.S. Malware Distribution</h5>
 					</div>
 
+					<div class="panel-body">
+						<p class="content-group">The map shows the malware distribution across the globe within the pass week. The <code>darker</code> the state is, the more malware was downloaded from there.</p>
+
+						<div class="map-container usa_map"></div>
+					</div>
 				</div>
-				<!-- /main charts -->
+				<!-- /USA map -->
 
 			</div>
 			<!-- /main content -->

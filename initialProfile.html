@@ -9,13 +9,13 @@
     <!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
     <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css">-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="assets/css/core.css" rel="stylesheet" type="text/css">
     <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+    <!--<link href="assets/css/common_style/components.css" rel="stylesheet" type="text/css">-->
     <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
     <!-- /global stylesheets -->
-
-    <link href="assets/css/bootstrap-select.css" rel="stylesheet" type="text/css">
 
     <!-- Core JS files -->
     <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
@@ -32,9 +32,17 @@
     <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
     <!-- /theme JS files -->
 
-    <!-- bootstrap select JS file -->
-    <script type="text/javascript" src="assets/js/bootstrap-select.js"></script>
-    <!-- bootstrap select JS file -->
+    <!-- bootstrap slide JS file -->
+    <script type="text/javascript" src="assets/js/plugins/forms/selects/select2.min.js"></script>
+    <script type="text/javascript" src="assets/js/pages/form_layouts.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <!-- bootstrap slide JS file -->
+
+    <style>
+        .btn-mini{
+            font-size: 9px;
+        }
+    </style>
 
 </head>
 <body>
@@ -138,7 +146,7 @@
                                                                <div class="form-group">
                                                                    <label class="col-md-3 control-label text-size-large">File types:</label>
                                                                    <div class="col-md-9">
-                                                                       <select name="fileTypeSelect" multiple="multiple" data-actions-box="true" class="select-icons selectpicker">
+                                                                       <select id="file_type_select" data-placeholder="fileTypeSelect" multiple="multiple" class="select-icons">
                                                                            <optgroup label="File types">
                                                                                <option value="exe" data-icon="folder" selected="selected">exe</option>
                                                                                <option value="zip" data-icon="file-zip" selected="selected">zip</option>
@@ -147,8 +155,25 @@
                                                                                <option value="vbs" data-icon="folder4">vbs</option>
                                                                            </optgroup>
                                                                        </select>
+                                                                       <button id="file_type_select_all" class="btn btn-mini btn-primary" type="button">Select All</button>
+                                                                       <button id="file_type_remove_all" class="btn btn-mini btn-primary" type="button">Remove All</button>
                                                                    </div>
                                                                </div>
+
+                                                               <script>
+                                                                   $(function () {
+                                                                       $("#file_type_select_all").click(function () {
+                                                                           $("#file_type_select > optgroup > option").prop("selected", "selected");
+                                                                           $("#file_type_select").trigger("change");
+                                                                       });
+                                                                       $("#file_type_remove_all").click(function () {
+                                                                           $("#file_type_select > optgroup > option").removeAttr("selected");
+                                                                           $("#file_type_select").trigger("change");
+                                                                       })
+                                                                   })
+
+                                                               </script>
+
                                                            </div>
                                                        </div>
                                                    </div>
