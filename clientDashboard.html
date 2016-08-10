@@ -25,20 +25,38 @@
     <script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
     <!-- /core JS files -->
 
-    <!--eChart JS files -->
-    <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
-    <script type="text/javascript" src="assets/js/index/pies_donuts.js"></script>
-    <!--/eChart JS files -->
 
     <!--sortable vertical bar JS files -->
+    <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/visualization/d3/d3.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
     <script type="text/javascript" src="assets/js/charts/d3/bars/bars_advanced_sortable_vertical.js"></script>
     <!--/sortable vertical bar JS files -->
 
+    <!--d3 line JS files -->
+    <script type="text/javascript" src="assets/js/charts/d3/lines/lines_advanced_transitions.js"></script>
+    <script type="text/javascript" src="assets/js/charts/d3/lines/lines_basic.js"></script>
+    <!--/d3 line JS files -->
+
+
     <!-- Theme JS files -->
     <script type="text/javascript" src="assets/js/core/app.js"></script>
-    <script type="text/javascript" src="assets/js/pages/dashboard.js"></script>
     <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
     <!-- /theme JS files -->
+
+    <!--eChart JS files -->
+    <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+    <script type="text/javascript" src="assets/js/combinations.js"></script>
+    <script type="text/javascript" src="assets/js/index/pies_donuts.js"></script>
+    <!--/eChart JS files -->
+
+    <!--back to top JS files -->
+    <script type="text/javascript" src="assets/js/backToTop.js"></script>
+    <!--/back to top JS files -->
+
+    <!--live feed JS files -->
+    <script type="text/javascript" src="assets/js/liveFeed.js"></script>
+    <!--/live feed JS files -->
 
 </head>
 
@@ -165,7 +183,30 @@
         </div>
         <!-- /second navbar -->
 
+
+        <!-- Floating menu -->
+        <ul class="fab-menu fab-menu-top-right" data-fab-toggle="click">
+            <li>
+                <a class="fab-menu-btn btn bg-pink-300 btn-float btn-rounded btn-icon">
+                    <i class="fab-icon-open icon-plus3"></i>
+                    <i class="fab-icon-close icon-cross2"></i>
+                </a>
+
+                <ul class="fab-menu-inner">
+                    <li>
+                        <div data-fab-label="Live Feed" id="showlivefeed">
+                            <a href="#livefeed" class="btn btn-default btn-rounded btn-icon btn-float">
+                                <i class="icon-graph"></i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <!-- /Floating menu -->
+
     </div>
+
     <!-- /page header -->
 
     <!-- Page container -->
@@ -187,53 +228,68 @@
 
                     <!--charts-->
                     <div class="">
-                        <!--file type & infection -->
-                        <div class="row">
-                            <div class="col-lg-6">
 
-                                <!-- file type pie chart -->
-                                <div class="panel panel-flat">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">File Type</h3>
+
+                        <!-- file type - Combination and connection -->
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">File Type</h5>
+                                <div class="heading-elements">
+                                    <ul class="icons-list">
+                                        <li><a data-action="collapse"></a></li>
+                                        <li><a data-action="reload"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="chart-container">
+                                            <div class="chart has-fixed-height" id="connect_pie"></div>
+                                        </div>
                                     </div>
 
-                                    <div class="panel-body">
-                                        <div class="chart-container has-scroll">
-                                            <div class="chart has-fixed-height has-minimum-width" id="basic_pie_filetype"></div>
+                                    <div class="col-lg-6">
+                                        <div class="chart-container">
+                                            <div class="chart has-fixed-height" id="connect_column"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- /file type pie chart -->
-
                             </div>
-
-                            <div class="col-lg-6">
-                                <!-- infection type pie chart -->
-                                <div class="panel panel-flat">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">Infection</h3>
-                                    </div>
-
-                                    <div class="panel-body">
-                                        <div class="chart-container has-scroll">
-                                            <div class="chart has-fixed-height has-minimum-width" id="basic_pie_infection"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /infection type pie chart -->
-                            </div>
-
                         </div>
-                        <!--file type & infection -->
+                        <!-- /file type - combination and connection -->
 
-                        <!--user agent bar char-->
+                        <!-- user agent - Column and pie combination -->
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">User Agent</h5>
+                                <div class="heading-elements">
+                                    <ul class="icons-list">
+                                        <li><a data-action="collapse"></a></li>
+                                        <li><a data-action="reload"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="panel-body">
+                                <div class="chart-container">
+                                    <div class="chart has-fixed-height" id="column_pie"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /user agent - column and pie combination -->
+
+
+
+
+                        <!--infection bar char-->
                         <div class="row">
+                            <!-- sortable vertical bar -->
                             <div class="col-lg-12">
-
-                                <!-- sortable vertical bar -->
                                 <div class="panel panel-flat">
                                     <div class="panel-heading">
-                                        <h3 class="panel-title">User Agent</h3>
+                                        <h3 class="panel-title">Infection Type</h3>
                                         <div class="heading-elements">
                                             <div class="dropdown dropdown-menu-left">
                                                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Whole year
@@ -242,15 +298,15 @@
                                                     <li><a href="#january">January</a></li>
                                                     <li><a href="#febuary">Febuary</a></li>
                                                     <li><a href="#march">March</a></li>
-                                                    <li><a href="#january">April</a></li>
-                                                    <li><a href="#febuary">May</a></li>
-                                                    <li><a href="#march">June</a></li>
-                                                    <li><a href="#january">July</a></li>
-                                                    <li><a href="#febuary">August</a></li>
-                                                    <li><a href="#march">September</a></li>
-                                                    <li><a href="#january">October</a></li>
-                                                    <li><a href="#febuary">November</a></li>
-                                                    <li><a href="#march">December</a></li>
+                                                    <li><a href="#april">April</a></li>
+                                                    <li><a href="#may">May</a></li>
+                                                    <li><a href="#june">June</a></li>
+                                                    <li><a href="#july">July</a></li>
+                                                    <li><a href="#august">August</a></li>
+                                                    <li><a href="#september">September</a></li>
+                                                    <li><a href="#october">October</a></li>
+                                                    <li><a href="#november">November</a></li>
+                                                    <li><a href="#december">December</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -264,36 +320,99 @@
                                         </div>
 
                                         <div class="chart-container">
-                                            <div class="chart" id="user_agent_sortable"></div>
+                                            <div class="chart" id="d3-bar-sortable-vertical"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- /sortable vertical bar -->
-
                             </div>
+                            <!-- /sortable vertical bar -->
                         </div>
-                        <!--user agent bar char-->
+                        <!--/infection bar char-->
 
                         <!-- location: state month line chart -->
-                        <div class="">
+                            <!-- Chained transitions -->
+                            <div class="panel panel-flat">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">State Trending</h5>
+                                    <div class="heading-elements">
+                                        <ul class="icons-list">
+                                            <li><a data-action="collapse"></a></li>
+                                            <li><a data-action="reload"></a></li>
+                                        </ul>
+                                    </div>
+                                    <!--<div class="heading-btn pull-right">-->
+                                        <div class="dropdown dropdown-menu-rihgt pull-right">
+                                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Whole year
+                                                <span class="caret"></span></button>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#january">January</a></li>
+                                                <li><a id="showfeb" href="#feb">Feburary</a></li>
+                                                <li><a href="#march">March</a></li>
+                                                <li><a href="#april">April</a></li>
+                                                <li><a href="#may">May</a></li>
+                                                <li><a href="#june">June</a></li>
+                                                <li><a href="#july">July</a></li>
+                                                <li><a href="#august">August</a></li>
+                                                <li><a href="#september">September</a></li>
+                                                <li><a href="#october">October</a></li>
+                                                <li><a href="#november">November</a></li>
+                                                <li><a href="#december">December</a></li>
+                                            </ul>
+                                        </div>
+                                    <!--</div>-->
+                                </div>
 
-                        </div>
-                        <!-- location: state month line chart -->
+                                <div class="panel-body">
+                                    <p class="content-group">This variation of a line chart demonstrates a sequence of <code>chained transitions</code>. Clicking on the radio buttons changes the displayed metric.</p>
+                                    <p>
+                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="New York" checked="checked"> Oregon</label>
+                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="San Francisco"> Florida</label>
+                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="New York" checked="checked"> Texas</label>
+                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="San Francisco"> Washington</label>
+                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="New York"> Pennsylvania</label>
+                                    </p>
+                                    <div class="chart-container">
+                                        <div class="chart" id="d3-chained-transitions"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /chained transitions -->
+                        <!-- /location: state month line chart -->
 
                         <!-- location: state daily line chart -->
-                        <div class="">
+                        <div id="feb">
+                            <!-- Simple line chart -->
+                            <div class="panel panel-flat">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">Feburary Oregon Trending</h5>
+                                    <div class="heading-elements">
+                                        <ul class="icons-list">
+                                            <li><a data-action="collapse"></a></li>
+                                            <li><a data-action="reload"></a></li>
+                                            <li><a data-action="close"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
 
+                                <div class="panel-body">
+                                    <p class="content-group">This is the line graph showing the trending within this month.</p>
+
+                                    <div class="chart-container">
+                                        <div class="chart" id="d3-line-basic"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /simple line chart -->
                         </div>
                         <!-- location: state daily line chart -->
-
 
                     </div>
                     <!--/charts-->
 
 
                     <!--live feed-->
-                    <div class="">
-
+                    <div id="livefeed">
+                          hello
                     </div>
                     <!--/live feed-->
 
@@ -307,6 +426,24 @@
 
     </div>
     <!-- /page container -->
+
+
+
+    <!-- back to top click--->
+    <div class="container">
+        <a id="back-to-top" href="#" class="btn btn-info btn-lg back-to-top pull-right" role="button" title="Back to Top" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+        <style type="text/css">
+            .back-to-top {
+                cursor: pointer;
+                position: fixed;
+                bottom: 0;
+                right: 20px;
+                display:none;
+            }
+        </style>
+    </div>
+    <!---/back to top click--->
+
 
     <!-- Footer -->
     <div class="navbar navbar-default navbar-fixed-bottom footer  bg-grey-600">

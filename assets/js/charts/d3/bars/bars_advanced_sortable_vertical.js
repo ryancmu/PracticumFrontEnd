@@ -16,7 +16,7 @@ $(function () {
 
 
     // Initialize chart
-    sortableVertical('#user_agent_sortable', 400);
+    sortableVertical('#d3-bar-sortable-vertical', 400);
 
     // Chart setup
     function sortableVertical(element, height) {
@@ -32,8 +32,7 @@ $(function () {
             height = height - margin.top - margin.bottom - 5;
 
         // Format data
-        // var formatPercent = d3.format(".0%");
-        var formatPercent = d3.format("");
+        var formatPercent = d3.format(".0%");
 
 
 
@@ -80,15 +79,14 @@ $(function () {
             .attr("width", width + margin.left + margin.right)
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
         // Load data
         // ------------------------------
 
-        d3.json("assets/data/bar_user_agent/user_agent.json", function(error, data) {
+        d3.tsv("assets/demo_data/d3/bars/bars_basic.tsv", function(error, data) {
 
-            data = data.uaData;
             // Pull out values
             data.forEach(function(d) {
                 d.frequency = +d.frequency;
@@ -131,7 +129,7 @@ $(function () {
                 .style("text-anchor", "end")
                 .style("fill", "#999")
                 .style("font-size", 12)
-                .text("Amount");
+                .text("Frequency");
 
 
             // Append bars
@@ -141,12 +139,12 @@ $(function () {
                 .data(data)
                 .enter()
                 .append("rect")
-                    .attr("class", "d3-bar")
-                    .attr("fill", function(d, i) { return colors(i); })
-                    .attr("x", function(d) { return x(d.letter); })
-                    .attr("width", x.rangeBand())
-                    .attr("y", function(d) { return y(d.frequency); })
-                    .attr("height", function(d) { return height - y(d.frequency); });
+                .attr("class", "d3-bar")
+                .attr("fill", function(d, i) { return colors(i); })
+                .attr("x", function(d) { return x(d.letter); })
+                .attr("width", x.rangeBand())
+                .attr("y", function(d) { return y(d.frequency); })
+                .attr("height", function(d) { return height - y(d.frequency); });
 
 
             // Change data sets
@@ -157,7 +155,7 @@ $(function () {
 
             // Sort values on page load with delay
             var sortTimeout = setTimeout(function() {
-                d3.select(".toggle-sort").property("checked", false).each(change);
+                d3.select(".toggle-sort").property("checked", true).each(change);
                 $.uniform.update();
             }, 2000);
 

@@ -100,7 +100,7 @@ $(function () {
 
         // Load data
         // ------------------------------
-        
+
         d3.tsv("assets/demo_data/d3/lines/lines_transitions.tsv", function(error, data) {
 
             // Pull out values
@@ -178,7 +178,7 @@ $(function () {
             var timeout = setTimeout(function() {
                 d3.select("input[value=\"San Francisco\"]").property("checked", true).each(change);
                 $.uniform.update();
-            }, 3000);
+            }, 2000);
 
             // Change function
             function change() {
@@ -215,9 +215,9 @@ $(function () {
             $('.sidebar-control').on('click', resize);
 
             // Resize function
-            // 
+            //
             // Since D3 doesn't support SVG resize by default,
-            // we need to manually specify parts of the graph that need to 
+            // we need to manually specify parts of the graph that need to
             // be updated on window resize
             function resize() {
 
