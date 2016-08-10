@@ -73,7 +73,7 @@ $(function () {
 
                 // Add title
                 title: {
-                    text: 'Browser popularity',
+                    text: 'Top ',
                     subtext: 'Open source data',
                     x: 'center'
                 },
@@ -88,7 +88,7 @@ $(function () {
                 legend: {
                     orient: 'vertical',
                     x: 'left',
-                    data: ['Internet Explorer','Opera','Safari','Firefox','Chrome']
+                    data: ['zip','exe','dll','rar','msi', 'Other']
                 },
 
                 // Enable drag recalculate
@@ -101,11 +101,12 @@ $(function () {
                     radius: '75%',
                     center: ['50%', '57.5%'],
                     data: [
-                        {value: 335, name: 'Internet Explorer'},
-                        {value: 310, name: 'Opera'},
-                        {value: 234, name: 'Safari'},
-                        {value: 135, name: 'Firefox'},
-                        {value: 1548, name: 'Chrome'}
+                        {value: 1253, name: 'zip'},
+                        {value: 5817, name: 'exe'},
+                        {value: 929, name: 'dll'},
+                        {value: 374, name: 'rar'},
+                        {value: 219, name: 'msi'},
+                        {value: 1271, name: 'Other'}
                     ]
                 }]
             };
@@ -131,7 +132,7 @@ $(function () {
 
                 // Add legend
                 legend: {
-                    data: ['Internet Explorer','Opera','Safari','Firefox','Chrome']
+                    data: ['zip','exe','dll','rar','msi', 'Other']
                 },
 
                 // Add toolbox
@@ -189,31 +190,37 @@ $(function () {
                 // Add series
                 series: [
                     {
-                        name: 'Internet Explorer',
+                        name: 'zip',
                         type: 'bar',
                         stack: 'Total',
                         data: [320, 332, 301, 334, 390, 330, 320]
                     },
                     {
-                        name: 'Opera',
+                        name: 'exe',
                         type: 'bar',
                         stack: 'Total',
                         data: [120, 132, 101, 134, 90, 230, 210]
                     },
                     {
-                        name: 'Safari',
+                        name: 'dll',
                         type: 'bar',
                         stack: 'Total',
                         data: [220, 182, 191, 234, 290, 330, 310]
                     },
                     {
-                        name: 'Firefox',
+                        name: 'rar',
                         type: 'bar',
                         stack: 'Total',
                         data: [150, 232, 201, 154, 190, 330, 410]
                     },
                     {
-                        name: 'Chrome',
+                        name: 'msi',
+                        type: 'bar',
+                        stack: 'Total',
+                        data: [820, 932, 901, 934, 1290, 1330, 1320]
+                    },
+                    {
+                        name: 'other',
                         type: 'bar',
                         stack: 'Total',
                         data: [820, 932, 901, 934, 1290, 1330, 1320]
@@ -250,7 +257,7 @@ $(function () {
 
                 // Add legend
                 legend: {
-                    data: ['Direct','Email','Print','Video','Search engine','Google','Bing','Yahoo','Other']
+                    data: ['Direct Connect','LimeWire','Shareaza','LimeWire Music','WinMX Music', 'Other']
                 },
 
                 // Horizontal axis
@@ -269,40 +276,45 @@ $(function () {
                 // Add series
                 series: [
                     {
-                        name: 'Direct',
-                        type: 'bar',
+                        name: 'Direct Connect',
+                        type: 'line',
                         data: [320, 332, 301, 334, 390, 330, 320]
                     },
                     {
-                        name: 'Email',
+                        name: 'LimeWire',
                         type: 'bar',
                         tooltip: {trigger: 'item'},
                         stack: 'Advertisement',
                         data: [120, 132, 101, 134, 90, 230, 210]
                     },
                     {
-                        name: 'Print',
+                        name: 'Shareaza',
                         type: 'bar',
                         tooltip: {trigger: 'item'},
                         stack: 'Advertisement',
                         data: [220, 182, 191, 234, 290, 330, 310]
                     },
                     {
-                        name: 'Video',
+                        name: 'LimeWire Music',
                         type: 'bar',
                         tooltip: {trigger: 'item'},
                         stack: 'Advertisement',
                         data: [150, 232, 201, 154, 190, 330, 410]
                     },
                     {
-                        name: 'Search engine',
-                        type: 'line',
+                        name: 'WinMX Music',
+                        type: 'bar',
+                        data: [862, 1018, 964, 1026, 1679, 1600, 1570]
+                    },
+                    {
+                        name: 'other',
+                        type: 'bar',
                         data: [862, 1018, 964, 1026, 1679, 1600, 1570]
                     },
 
                     // Pie
                     {
-                        name: 'Search engine',
+                        name: 'User Agent',
                         type: 'pie',
                         tooltip: {
                             trigger: 'item',
@@ -318,10 +330,12 @@ $(function () {
                             }
                         },
                         data: [
-                            {value: 1048, name: 'Google'},
-                            {value: 251, name: 'Bing'},
-                            {value: 147, name: 'Yahoo'},
-                            {value: 102, name: 'Other'}
+                            {value: 44962, name: 'Direct Connect'},
+                            {value: 18322, name: 'LimeWire'},
+                            {value: 2648, name: 'Shareaza'},
+                            {value: 1008, name: 'LimeWire Music'},
+                            {value: 493, name: 'WinMX Music'},
+                            {value: 1271, name: 'Other'}
                         ]
                     }
                 ]

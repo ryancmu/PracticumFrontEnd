@@ -180,3 +180,90 @@ select * from Ipmap where ip = '75.185.167.245';
 | 152751 | 75.185.167.245 | 1270458357 | US          | United States | Ohio  | Beachwood |  41.4645 | -81.50873 |
 +--------+----------------+------------+-------------+---------------+-------+-----------+----------+-----------+
 
+
+mysql> select  p.base_user_agent as bua, count(p.base_user_agent) as c from Pure p, Ipmap i where i.countryCode='US' and p.ip = i.ip group by bua order by c desc;
++-----------------------+---------+
+| bua                   | c       |
++-----------------------+---------+
+| Direct Connect        | 1744962 |
+| LimeWire              |   18322 |
+| Shareaza              |    2648 |
+| LimeWire Music        |    1008 |
+| WinMX Music           |     493 |
+| LimeWireTurbo         |     237 |
+| LimeZilla             |     226 |
+| LimeRunner            |     124 |
+| LimeSharePro          |     107 |
+| LemonWire             |      99 |
+| Emerald P2P UltraPeer |      69 |
+| TurboWire             |      66 |
+| Sharest               |      62 |
+| Addax                 |      61 |
+| DexterWire            |      49 |
+| MP3Torpedo            |      24 |
+| BearShare Turbo       |      24 |
+| WireStack             |      21 |
+| FrostWire             |      20 |
+| morph500              |      16 |
+| BitRope P2P           |      13 |
+| KoolWire              |      11 |
+| ShareWire             |       8 |
+| LimeWire MP3          |       8 |
+|                       |       7 |
+| GnutellaWire          |       7 |
+| PeerProject           |       5 |
+| MP3Suite              |       2 |
+| CitrixWire            |       2 |
+| giFT-Gnutella         |       2 |
+| Phex                  |       1 |
++-----------------------+---------+
+31 rows in set (3.66 sec)
+
+
+
+mysql> select p.infection, count(p.infection) as c from Pure p, Ipmap i where p.ip=i.ip and i.countryCode='US' group by p.infection order by c desc limit 20;
++--------------------------+---------+
+| infection                | c       |
++--------------------------+---------+
+| GenericR-ATG!hb          | 1120958 |
+| Trojan-FHPO!070E451597F0 |  133819 |
+| W32/HLLP.41472           |   77623 |
+| Artemis!0F26F85D76D4     |   61389 |
+| Artemis!BC9932D56280     |   39785 |
+| Trojan-FHPO!97D52F83A26F |   37124 |
+| Generic BackDoor.xa      |   31511 |
+| Artemis!3961DC89FBEF     |   21271 |
+| W32/Opanki.worm.gen      |   18011 |
+| Artemis!CB0335A79F92     |   16922 |
+| Generic FakeAlert.hg     |   14769 |
+| Trojan-FHPO!BEF0F00D6E47 |   14618 |
+| Artemis!85B2109C31B2     |   13316 |
+| Trojan-FHPO!2EACE98B9E15 |    7355 |
+| Artemis!BC32D5169D7F     |    6928 |
+| Generic Downloader.iv    |    3341 |
+| RDN/Generic BackDoor!bcd |    3262 |
+| Artemis!BBC80AF87D82     |    2384 |
+| RDN/Generic BackDoor!bdq |    2165 |
+| Generic PUP              |    1533 |
++--------------------------+---------+
+20 rows in set (13.09 sec)
+
+
+mysql> select substring_index(p.name,'.',-1) as n, count(substring_index(p.name,'.',-1)) as c from Pure p, Ipmap i where p.ip = i.ip and i.countryCode='US' group by n order by c desc limit 20;
++------+---------+
+| n    | c       |
++------+---------+
+| zip  | 1481253 |
+| exe  |  285817 |
+| dll  |     929 |
+| rar  |     374 |
+| msi  |     219 |
+| apk  |      40 |
+| msh  |      28 |
+| com  |      23 |
+| bat  |      12 |
+| scr  |       6 |
+| cab  |       2 |
+| 7z   |       1 |
++------+---------+
+12 rows in set (4.77 sec)
