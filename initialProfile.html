@@ -39,8 +39,10 @@
     <!-- bootstrap slide JS file -->
 
     <style>
-        .btn-mini{
-            font-size: 9px;
+        .panel-flat{
+            -webkit-box-shadow: 0px 10px 13px 0px rgba(83,83,87,1);
+            -moz-box-shadow: 0px 10px 13px 0px rgba(83,83,87,1);
+            box-shadow: 0px 10px 13px 0px rgba(83,83,87,1);
         }
     </style>
 
@@ -155,8 +157,8 @@
                                                                                <option value="vbs" data-icon="folder4">vbs</option>
                                                                            </optgroup>
                                                                        </select>
-                                                                       <button id="file_type_select_all" class="btn btn-mini btn-primary" type="button">Select All</button>
-                                                                       <button id="file_type_remove_all" class="btn btn-mini btn-primary" type="button">Remove All</button>
+                                                                       <label class="radio-inline"><input type="radio" id="file_type_select_all" name="file_type_radio">Select All</label>
+                                                                       <label class="radio-inline"><input type="radio" id="file_type_remove_all" name="file_type_radio">Remove All</label>
                                                                    </div>
                                                                </div>
 
@@ -207,7 +209,7 @@
                                                                <div class="form-group">
                                                                    <label class="col-lg-3 control-label text-size-large">Infection types:</label>
                                                                    <div class="col-lg-9">
-                                                                       <select class="selectpicker" name="infectionTypeSelect" multiple data-actions-box="true">
+                                                                       <select id="infection_select" class="select-icons" data-placeholder="Infection Type Select" multiple="multiple">
                                                                            <optgroup label="infection_types">
                                                                                <option value="trojan" data-icon="file-openoffice" selected="selected">Trojan</option>
                                                                                <option value="virus" data-icon="file-openoffice" selected="selected">Virus</option>
@@ -216,8 +218,25 @@
                                                                                <option value="backdoor" data-icon="file-openoffice">Backdoor</option>
                                                                            </optgroup>
                                                                        </select>
+                                                                       <label class="radio-inline"><input type="radio" id="infection_select_all" name="file_type_radio">Select All</label>
+                                                                       <label class="radio-inline"><input type="radio" id="infection_remove_all" name="file_type_radio">Remove All</label>
                                                                    </div>
                                                                </div>
+
+                                                               <script>
+                                                                   $(function () {
+                                                                       $("#infection_select_all").click(function () {
+                                                                           $("#infection_select > optgroup > option").prop("selected", "selected");
+                                                                           $("#infection_select").trigger("change");
+                                                                       });
+                                                                       $("#infection_remove_all").click(function () {
+                                                                           $("#infection_select > optgroup > option").removeAttr("selected");
+                                                                           $("#infection_select").trigger("change");
+                                                                       })
+                                                                   })
+
+                                                               </script>
+
                                                            </div>
                                                        </div>
                                                    </div>
@@ -250,7 +269,7 @@
                                                                <div class="form-group">
                                                                    <label class="col-lg-3 control-label text-size-large">User Agents:</label>
                                                                    <div class="col-lg-9">
-                                                                       <select class="selectpicker" name="infectionTypeSelect" multiple data-actions-box="true">
+                                                                       <select id="user_agent_select" class="select-icons" data-placeholder="User Agent Select" multiple="multiple">
                                                                            <optgroup label="user_agent">
                                                                                <option value="direct" data-icon="share" selected="selected">Direct Connect</option>
                                                                                <option value="limewire" data-icon="share" selected="selected">LimeWire</option>
@@ -259,8 +278,23 @@
                                                                                <option value="bitrope" data-icon="share">BitRope</option>
                                                                            </optgroup>
                                                                        </select>
+                                                                       <label class="radio-inline"><input type="radio" id="user_agent_select_all" name="file_type_radio">Select All</label>
+                                                                       <label class="radio-inline"><input type="radio" id="user_agent_remove_all" name="file_type_radio">Remove All</label>
                                                                    </div>
                                                                </div>
+                                                               <script>
+                                                                   $(function () {
+                                                                       $("#user_agent_select_all").click(function () {
+                                                                           $("#user_agent_select > optgroup > option").prop("selected", "selected");
+                                                                           $("#user_agent_select").trigger("change");
+                                                                       });
+                                                                       $("#user_agent_remove_all").click(function () {
+                                                                           $("#user_agent_select > optgroup > option").removeAttr("selected");
+                                                                           $("#user_agent_select").trigger("change");
+                                                                       })
+                                                                   })
+
+                                                               </script>
                                                            </div>
                                                        </div>
                                                    </div>
