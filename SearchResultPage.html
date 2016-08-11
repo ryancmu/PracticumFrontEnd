@@ -42,14 +42,18 @@
     <script>
         function showPage(id)
         {
-            var totalNumberOfPages = 5;
+            var totalNumberOfPages = 7;
             for(i=1; i<=totalNumberOfPages; i++)
             {
                 if(document.getElementById('page'+i))
                     document.getElementById('page'+i).style.display='none';
+                document.getElementById('list'+i).className = 'none';
             }
-            if(document.getElementById('page'+id))
+            if(document.getElementById('page'+id)) {
                 document.getElementById('page'+id).style.display='block';
+                document.getElementById('list'+id).className = 'active';
+            }
+
         }
     </script>
 
@@ -83,9 +87,10 @@ table thead th {
     background: linear-gradient(180deg,rgb(100,100,100), rgb(0,0,0));
     text-align: left;
     color: rgb(255,255,255);
+    //color: indianred;
 }
 table tbody tr:nth-child(odd) {
-    background-color: rgb(197,217,241);
+    background-color: palevioletred;
 }
 table tbody tr:nth-child(even) {
     background-color: rgb(255,255,255);
@@ -110,42 +115,11 @@ table tbody tr:hover {
     transition-property: background-color, width, height;
     transition-duration: 2s;
     transition-timing-function: ease;
-    background-color: rgb(255,255,0);
+    background-color: lightseagreen;
 
 }
-#section-contact input+input {
-    background-color: rgb(100,100,100);
-    color: rgb(255,255,255);
-}
-#section-contact input:nth-last-of-type(2) {
-    background-color: rgb(100,100,100);
-    color: rgb(255,255,255);
-}
-#section-contact div span{
-    color: rgb(255,0,0);
-}
-nav{
-    background-color: rgb(180,180,180);
-}
-li>a:link{
-    color: rgb(0,0,0);
-    text-decoration: none;
 
-}
-li>a:visited{
-    color: rgb(0,0,0);
-    text-decoration: none;
-
-}
-nav ul li{
-    list-style-type: none;
-    padding: 0.5em;
-}
-nav a:hover{
-    color: rgb(255,255,255);
-    text-decoration: underline;
-}
-main,nav,header,footer{
+main,header,footer{
     padding: 0.5em;
 }
 .ul.pagination {
@@ -320,46 +294,46 @@ ul.pagination li a:hover:not(.active) {background-color: #ddd;}
     <div id="user_adr" style="display:none"><!-- /Table container -->
 
         <section id="section-whatreading">
-            <h2 align = "center">File Activity Recorded</h2>
+            <h2 align = "center"><b><u>File Activity Recorded</u></b></h2>
             <div id="page1">
                 <table width = "100%" height = "90">
-                    <thead>
-                    <tr>
-                        <th class="table-header-title">File Name</th>
-                        <th class="table-header-author">Infection Type</th>
-                        <th class="table-header-isbn">User Agent</th>
-                        <th class="table-header-year">Port</th>
+                    <thead >
+                    <tr height = "50">
+                        <th><b>File Name</b></th>
+                        <th><b>Infection Type</b></th>
+                        <th><b>User Agent</b></th>
+                        <th><b>Port</b></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr height = "50">
-                        <td>The Catcher in the Rye</td>
+                        <td>KeyGen.exe</td>
                         <td>Adware-Adon!lnk </td>
-                        <td><a  target="_blank">TurboWire/4.5.0 </a></td>
+                        <td>TurboWire/4.5.0</td>
                         <td>1951</td>
                     </tr>
                     <tr height = "50">
-                        <td>The Great Gatsby</td>
+                        <td>FIFA14.exe</td>
                         <td>Trojan</td>
-                        <td><a href="http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567/" target="_blank">Direct Connect</a></td>
+                        <td>Direct Connect</td>
                         <td>1925</td>
                     </tr>
                     <tr height = "50">
-                        <td>A Separate Peace</td>
+                        <td>daemon.zip</td>
                         <td>AdClicker-C.gen.dr</td>
-                        <td><a href="http://www.amazon.com/A-Separate-Peace-John-Knowles/dp/0743253973/" target="_blank">LimeWireTurbo/7.1.0</a></td>
+                        <td>LimeWireTurbo/7.1.0</td>
                         <td>1959</td>
                     </tr>
                     <tr height = "50">
-                        <td>War and Peace</td>
+                        <td>toxic.gif</td>
                         <td>Artemis!009DECB1C5DA </td>
-                        <td><a href="http://www.amazon.com/War-Peace-Vintage-Classics-Tolstoy/dp/1400079985/" target="_blank">Shareaza 2.7.9.1  </a></td>
+                        <td>Shareaza 2.7.9.1</td>
                         <td>1869</td>
                     </tr>
                     <tr height = "50">
-                        <td>The Sun Also Rises</td>
+                        <td>KeyGen.exe</td>
                         <td>BackDoor-FDDQ!F3AD6BCF5EB2</td>
-                        <td><a href="http://www.amazon.com/Sun-Also-Rises-Ernest-Hemingway/dp/0743297334/" target="_blank">GnutellaWire/4.6.0 </a></td>
+                        <td>GnutellaWire/4.6.0</td>
                         <td>1926</td>
                     </tr>
                     </tbody>
@@ -367,42 +341,42 @@ ul.pagination li a:hover:not(.active) {background-color: #ddd;}
             <div id="page2" style="display: none;">
                 <table width = "100%" height = "90">
                     <thead>
-                    <tr>
-                        <th class="table-header-title">File Name</th>
-                        <th class="table-header-author">Infection Type</th>
-                        <th class="table-header-isbn">User Agent</th>
-                        <th class="table-header-year">Port</th>
+                    <tr height = "50">
+                        <th><b>File Name</b></th>
+                        <th><b>Infection Type</b></th>
+                        <th><b>User Agent</b></th>
+                        <th><b>Port</b></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr height = "50">
                         <td>File 6</td>
                         <td>Adware-Adon!lnk </td>
-                        <td><a  target="_blank">TurboWire/4.5.0 </a></td>
+                        <td>TurboWire/4.5.0</td>
                         <td>1951</td>
                     </tr>
                     <tr height = "50">
                         <td>File 7</td>
                         <td>Trojan</td>
-                        <td><a href="http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567/" target="_blank">Direct Connect</a></td>
+                        <td>Direct Connect</td>
                         <td>1925</td>
                     </tr>
                     <tr height = "50">
                         <td>File 8</td>
                         <td>AdClicker-C.gen.dr</td>
-                        <td><a href="http://www.amazon.com/A-Separate-Peace-John-Knowles/dp/0743253973/" target="_blank">LimeWireTurbo/7.1.0</a></td>
+                        <td>LimeWireTurbo/7.1.0</td>
                         <td>1959</td>
                     </tr>
                     <tr height = "50">
                         <td>File 9</td>
                         <td>Artemis!009DECB1C5DA </td>
-                        <td><a href="http://www.amazon.com/War-Peace-Vintage-Classics-Tolstoy/dp/1400079985/" target="_blank">Shareaza 2.7.9.1  </a></td>
+                        <td>Shareaza 2.7.9.1</td>
                         <td>1869</td>
                     </tr>
                     <tr height = "50">
                         <td>File 10</td>
                         <td>BackDoor-FDDQ!F3AD6BCF5EB2</td>
-                        <td><a href="http://www.amazon.com/Sun-Also-Rises-Ernest-Hemingway/dp/0743297334/" target="_blank">GnutellaWire/4.6.0 </a></td>
+                        <td>GnutellaWire/4.6.0</td>
                         <td>1926</td>
                     </tr>
                     </tbody>
@@ -411,42 +385,42 @@ ul.pagination li a:hover:not(.active) {background-color: #ddd;}
             <div id="page3" style="display: none;">
                 <table width = "100%" height = "90">
                     <thead>
-                    <tr>
-                        <th class="table-header-title">File Name</th>
-                        <th class="table-header-author">Infection Type</th>
-                        <th class="table-header-isbn">User Agent</th>
-                        <th class="table-header-year">Port</th>
+                    <tr height = "50">
+                        <th><b>File Name</b></th>
+                        <th><b>Infection Type</b></th>
+                        <th><b>User Agent</b></th>
+                        <th><b>Port</b></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr height = "50">
-                        <td>The Catcher in the Rye</td>
+                        <td>KeyGen.exe</td>
                         <td>Adware-Adon!lnk </td>
-                        <td><a  target="_blank">TurboWire/4.5.0 </a></td>
+                        <td>TurboWire/4.5.0 </td>
                         <td>1951</td>
                     </tr>
                     <tr height = "50">
-                        <td>The Great Gatsby</td>
+                        <td>FIFA14.exe</td>
                         <td>Trojan</td>
-                        <td><a href="http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567/" target="_blank">Direct Connect</a></td>
+                        <td>Direct Connect</td>
                         <td>1925</td>
                     </tr>
                     <tr height = "50">
-                        <td>A Separate Peace</td>
+                        <td>daemon.zip</td>
                         <td>AdClicker-C.gen.dr</td>
-                        <td><a href="http://www.amazon.com/A-Separate-Peace-John-Knowles/dp/0743253973/" target="_blank">LimeWireTurbo/7.1.0</a></td>
+                        <td>LimeWireTurbo/7.1.0</td>
                         <td>1959</td>
                     </tr>
                     <tr height = "50">
-                        <td>War and Peace</td>
+                        <td>toxic.gif</td>
                         <td>Artemis!009DECB1C5DA </td>
-                        <td><a href="http://www.amazon.com/War-Peace-Vintage-Classics-Tolstoy/dp/1400079985/" target="_blank">Shareaza 2.7.9.1  </a></td>
+                        <td>Shareaza 2.7.9.1</td>
                         <td>1869</td>
                     </tr>
                     <tr height = "50">
-                        <td>The Sun Also Rises</td>
+                        <td>KeyGen.exe</td>
                         <td>BackDoor-FDDQ!F3AD6BCF5EB2</td>
-                        <td><a href="http://www.amazon.com/Sun-Also-Rises-Ernest-Hemingway/dp/0743297334/" target="_blank">GnutellaWire/4.6.0 </a></td>
+                        <td>GnutellaWire/4.6.0</td>
                         <td>1926</td>
                     </tr>
                     </tbody>
@@ -455,42 +429,42 @@ ul.pagination li a:hover:not(.active) {background-color: #ddd;}
             <div id="page4" style="display: none;">
                 <table width = "100%" height = "90">
                     <thead>
-                    <tr>
-                        <th class="table-header-title">File Name</th>
-                        <th class="table-header-author">Infection Type</th>
-                        <th class="table-header-isbn">User Agent</th>
-                        <th class="table-header-year">Port</th>
+                    <tr height = "50">
+                        <th><b>File Name</b></th>
+                        <th><b>Infection Type</b></th>
+                        <th><b>User Agent</b></th>
+                        <th><b>Port</b></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr height = "50">
-                        <td>File 16</td>
+                        <td>File 6</td>
                         <td>Adware-Adon!lnk </td>
-                        <td><a  target="_blank">TurboWire/4.5.0 </a></td>
+                        <td>TurboWire/4.5.0</td>
                         <td>1951</td>
                     </tr>
                     <tr height = "50">
-                        <td>File 17</td>
+                        <td>File 7</td>
                         <td>Trojan</td>
-                        <td><a href="http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567/" target="_blank">Direct Connect</a></td>
+                        <td>Direct Connect</td>
                         <td>1925</td>
                     </tr>
                     <tr height = "50">
-                        <td>File 18</td>
+                        <td>File 8</td>
                         <td>AdClicker-C.gen.dr</td>
-                        <td><a href="http://www.amazon.com/A-Separate-Peace-John-Knowles/dp/0743253973/" target="_blank">LimeWireTurbo/7.1.0</a></td>
+                        <td>LimeWireTurbo/7.1.0</td>
                         <td>1959</td>
                     </tr>
                     <tr height = "50">
-                        <td>File 19</td>
+                        <td>File 9</td>
                         <td>Artemis!009DECB1C5DA </td>
-                        <td><a href="http://www.amazon.com/War-Peace-Vintage-Classics-Tolstoy/dp/1400079985/" target="_blank">Shareaza 2.7.9.1  </a></td>
+                        <td>Shareaza 2.7.9.1</td>
                         <td>1869</td>
                     </tr>
                     <tr height = "50">
-                        <td>File 20</td>
+                        <td>File 10</td>
                         <td>BackDoor-FDDQ!F3AD6BCF5EB2</td>
-                        <td><a href="http://www.amazon.com/Sun-Also-Rises-Ernest-Hemingway/dp/0743297334/" target="_blank">GnutellaWire/4.6.0 </a></td>
+                        <td>GnutellaWire/4.6.0</td>
                         <td>1926</td>
                     </tr>
                     </tbody>
@@ -499,42 +473,130 @@ ul.pagination li a:hover:not(.active) {background-color: #ddd;}
             <div id="page5" style="display: none;">
                 <table width = "100%" height = "90">
                     <thead>
-                    <tr>
-                        <th class="table-header-title">File Name</th>
-                        <th class="table-header-author">Infection Type</th>
-                        <th class="table-header-isbn">User Agent</th>
-                        <th class="table-header-year">Port</th>
+                    <tr height = "50">
+                        <th><b>File Name</b></th>
+                        <th><b>Infection Type</b></th>
+                        <th><b>User Agent</b></th>
+                        <th><b>Port</b></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr height = "50">
-                        <td>File 21</td>
+                        <td>KeyGen.exe</td>
                         <td>Adware-Adon!lnk </td>
-                        <td><a  target="_blank">TurboWire/4.5.0 </a></td>
+                        <td>TurboWire/4.5.0</td>
                         <td>1951</td>
                     </tr>
                     <tr height = "50">
-                        <td>File 22</td>
+                        <td>FIFA14.exe</td>
                         <td>Trojan</td>
-                        <td><a href="http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567/" target="_blank">Direct Connect</a></td>
+                        <td>Direct Connect</td>
                         <td>1925</td>
                     </tr>
                     <tr height = "50">
-                        <td>File 23</td>
+                        <td>daemon.zip</td>
                         <td>AdClicker-C.gen.dr</td>
-                        <td><a href="http://www.amazon.com/A-Separate-Peace-John-Knowles/dp/0743253973/" target="_blank">LimeWireTurbo/7.1.0</a></td>
+                        <td>LimeWireTurbo/7.1.0</td>
                         <td>1959</td>
                     </tr>
                     <tr height = "50">
-                        <td>File 24</td>
+                        <td>toxic.gif</td>
                         <td>Artemis!009DECB1C5DA </td>
-                        <td><a href="http://www.amazon.com/War-Peace-Vintage-Classics-Tolstoy/dp/1400079985/" target="_blank">Shareaza 2.7.9.1  </a></td>
+                        <td>Shareaza 2.7.9.1</td>
                         <td>1869</td>
                     </tr>
                     <tr height = "50">
-                        <td>File 25</td>
+                        <td>KeyGen.exe</td>
                         <td>BackDoor-FDDQ!F3AD6BCF5EB2</td>
-                        <td><a href="http://www.amazon.com/Sun-Also-Rises-Ernest-Hemingway/dp/0743297334/" target="_blank">GnutellaWire/4.6.0 </a></td>
+                        <td>GnutellaWire/4.6.0</td>
+                        <td>1926</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="page6" style="display: none;">
+                <table width = "100%" height = "90">
+                    <thead>
+                    <tr height = "50">
+                        <th><b>File Name</b></th>
+                        <th><b>Infection Type</b></th>
+                        <th><b>User Agent</b></th>
+                        <th><b>Port</b></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr height = "50">
+                        <td>KeyGen.exe</td>
+                        <td>Adware-Adon!lnk </td>
+                        <td>TurboWire/4.5.0</td>
+                        <td>1951</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>FIFA14.exe</td>
+                        <td>Trojan</td>
+                        <td>Direct Connect</td>
+                        <td>1925</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>daemon.zip</td>
+                        <td>AdClicker-C.gen.dr</td>
+                        <td>LimeWireTurbo/7.1.0</td>
+                        <td>1959</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>toxic.gif</td>
+                        <td>Artemis!009DECB1C5DA </td>
+                        <td>Shareaza 2.7.9.1</td>
+                        <td>1869</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>KeyGen.exe</td>
+                        <td>BackDoor-FDDQ!F3AD6BCF5EB2</td>
+                        <td>GnutellaWire/4.6.0</td>
+                        <td>1926</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="page7" style="display: none;">
+                <table width = "100%" height = "90">
+                    <thead>
+                    <tr height = "50">
+                        <th><b>File Name</b></th>
+                        <th><b>Infection Type</b></th>
+                        <th><b>User Agent</b></th>
+                        <th><b>Port</b></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr height = "50">
+                        <td>KeyGen.exe</td>
+                        <td>Adware-Adon!lnk </td>
+                        <td>TurboWire/4.5.0</td>
+                        <td>1951</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>FIFA14.exe</td>
+                        <td>Trojan</td>
+                        <td>Direct Connect</td>
+                        <td>1925</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>daemon.zip</td>
+                        <td>AdClicker-C.gen.dr</td>
+                        <td>LimeWireTurbo/7.1.0</td>
+                        <td>1959</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>toxic.gif</td>
+                        <td>Artemis!009DECB1C5DA </td>
+                        <td>Shareaza 2.7.9.1</td>
+                        <td>1869</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>KeyGen.exe</td>
+                        <td>BackDoor-FDDQ!F3AD6BCF5EB2</td>
+                        <td>GnutellaWire/4.6.0</td>
                         <td>1926</td>
                     </tr>
                     </tbody>
@@ -545,12 +607,14 @@ ul.pagination li a:hover:not(.active) {background-color: #ddd;}
         <!/--Table Container --></div>
     <div id="user_adr2" style="display:none" align="right">
         <ul class="pagination">
-            <li><a href="">&laquo;</a></li>
-            <li><a class="active" href="javascript: onClick=showPage('1')">1</a></li>
-            <li><a href="javascript: onClick=showPage('2')">2</a></li>
-            <li><a href="javascript: onClick=showPage('3')">3</a></li>
-            <li><a href="javascript: onClick=showPage('4')">4</a></li>
-            <li><a href="javascript: onClick=showPage('5')">5</a></li>
+            <li id="list0"><a href="">&laquo;</a></li>
+            <li id="list1"><a href="javascript: onClick=showPage('1')">1</a></li>
+            <li id="list2"><a href="javascript: onClick=showPage('2')">2</a></li>
+            <li id="list3"><a href="javascript: onClick=showPage('3')">3</a></li>
+            <li id="list4"><a href="javascript: onClick=showPage('4')">4</a></li>
+            <li id="list5"><a href="javascript: onClick=showPage('5')">5</a></li>
+            <li id="list6"><a href="javascript: onClick=showPage('6')"><b>...</b></a></li>
+            <li id="list7"><a href="javascript: onClick=showPage('7')">986</a></li>
             <li><a href="#">&raquo;</a></li>
         </ul>
     </div>
