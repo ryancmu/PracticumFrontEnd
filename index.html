@@ -42,8 +42,8 @@
 
 	<!-- live feed JS files -->
 	<!--<script type="text/javascript" src="assets/js/liveFeed/jquery.min.js"></script>-->
-	<script type="text/javascript" src="assets/js/liveFeed/jquery.vticker-min.js"></script>
-	<script type="text/javascript" src="assets/js/liveFeed.js"></script>
+	<!--<script type="text/javascript" src="assets/js/liveFeed/jquery.vticker-min.js"></script>-->
+	<!--<script type="text/javascript" src="assets/js/liveFeed.js"></script>-->
 	<!-- /live feed JS files -->
 
     <!-- Theme JS files -->
@@ -76,6 +76,9 @@
 	<script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
 	<!-- /theme JS files -->
 
+    <!-- vTicker -->
+    <script type="text/javascript" src="assets/js/index/vTicker.js"></script>
+    <!-- /vTicker -->
 
 </head>
 
@@ -401,114 +404,179 @@
 							<div class="panel-heading">
 								<h5 class="panel-title">Live Stream</h5>
 							</div>
+                            <div class="panel-body">
+                                <div id="table-title">
+                                    <ul>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-lg-1">Country</div>
+                                                <div class="col-lg-1">State</div>
+                                                <div class="col-lg-2">IP</div>
+                                                <div class="col-lg-1">Port</div>
+                                                <div class="col-lg-4">File Name</div>
+                                                <div class="col-lg-3">Infection Type</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div id="table-body">
+                                    <ul>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-lg-1">US</div>
+                                                <div class="col-lg-1">Ohio</div>
+                                                <div class="col-lg-2">123.123.123.123</div>
+                                                <div class="col-lg-1">65534</div>
+                                                <div class="col-lg-4">Star Trek 2016.avi</div>
+                                                <div class="col-lg-3">trojan</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-lg-1">Canada</div>
+                                                <div class="col-lg-1">Vancouvor</div>
+                                                <div class="col-lg-2">123.224.224.144</div>
+                                                <div class="col-lg-1">65534</div>
+                                                <div class="col-lg-4">Inception 2010.avi</div>
+                                                <div class="col-lg-3">trojan</div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="row">
+                                                <div class="col-lg-1">China</div>
+                                                <div class="col-lg-1">Beijing</div>
+                                                <div class="col-lg-2">123.123.123.123</div>
+                                                <div class="col-lg-1">65534</div>
+                                                <div class="col-lg-4">Star Trek 2016.avi</div>
+                                                <div class="col-lg-3">trojan</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <script>
+                                    $(function() {
+                                        $('#table-body').vTicker('init', {speed: 400,
+                                            pause: 1000,
+                                            showItems: 2,
+                                            padding:4});
+                                        //$('#table-body').vTicker();
+                                    });
+
+                                </script>
+
+
+                                <!-- IP list table-->
+                                <div class="table-responsive">
+                                    <table class="table text-nowrap">
+                                        <thead>
+                                        <tr>
+                                            <th class="col-sm-1">Country</th>
+                                            <th class="col-sm-1">state</th>
+                                            <th class="col-md-3">IP</th>
+                                            <th class="col-sm-2">Port</th>
+                                            <th class="col-md-4">File Name</th>
+                                            <th class="col-md-4">Infection Type</th>
+                                        </tr>
+                                        </thead>
+
+                                        <tbody>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <tr>
+                                                    <td>
+                                                        <div class="media-left media-middle">
+                                                            <a href="#"><img src="assets/images/flags/ru.png" class="img-circle img-xs" alt=""></a>
+                                                        </div>
+                                                        <div class="media-left media-middle">
+                                                            <div class=""><a href="#" class="text-default text-semibold">Russia</a></div>
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="text-muted">Moscow</span></td>
+                                                    <td><span class="text-muted">129.98.212.123</span></td>
+                                                    <td><span class="text-success-600">35627</span></td>
+                                                    <td><h6 class="text-semibold">Cat Run(2011).EXE</h6></td>
+                                                    <td><span class="label bg-blue">Trojan</span></td>
+                                                    <td class="text-center">
+
+                                                    </td>
+                                                </tr>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <tr>
+                                                    <td>
+                                                        <div class="media-left media-middle">
+                                                            <a href="#"><img src="assets/images/flags/ca.png" class="img-circle img-xs" alt=""></a>
+                                                        </div>
+                                                        <div class="media-left media-middle">
+                                                            <div class=""><a href="#" class="text-default text-semibold">Canada</a></div>
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="text-muted">Vancouvor</span></td>
+                                                    <td><span class="text-muted">129.98.212.123</span></td>
+                                                    <td><span class="text-success-600">35627</span></td>
+                                                    <td><h6 class="text-semibold">Cat Run(2011).EXE</h6></td>
+                                                    <td><span class="label bg-blue">Trojan</span></td>
+                                                    <td class="text-center">
+
+                                                    </td>
+                                                </tr>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <tr>
+                                                    <td>
+                                                        <div class="media-left media-middle">
+                                                            <a href="#"><img src="assets/images/flags/us.png" class="img-circle img-xs" alt=""></a>
+                                                        </div>
+                                                        <div class="media-left media-middle">
+                                                            <div class=""><a href="#" class="text-default text-semibold">United States</a></div>
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="text-muted">Oregon</span></td>
+                                                    <td><span class="text-muted">198.80.19.231</span></td>
+                                                    <td><span class="text-success-600">29874</span></td>
+                                                    <td><h6 class="text-semibold">Furious 2013.EXE</h6></td>
+                                                    <td><span class="label bg-blue">Trojan</span></td>
+                                                    <td class="text-center">
+
+                                                    </td>
+                                                </tr>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <tr>
+                                                    <td>
+                                                        <div class="media-left media-middle">
+                                                            <a href="#"><img src="assets/images/flags/cn.png" class="img-circle img-xs" alt=""></a>
+                                                        </div>
+                                                        <div class="media-left media-middle">
+                                                            <div class=""><a href="#" class="text-default text-semibold">China</a></div>
+                                                        </div>
+                                                    </td>
+                                                    <td><span class="text-muted">Beijing</span></td>
+                                                    <td><span class="text-muted">89.29.81.211</span></td>
+                                                    <td><span class="text-success-600">23654</span></td>
+                                                    <td><h6 class="text-semibold">Tennis Game.EXE</h6></td>
+                                                    <td><span class="label bg-blue">Trojan</span></td>
+                                                    <td class="text-center">
+
+                                                    </td>
+                                                </tr>
+                                            </div>
+                                        </div>
+                                        </tbody>
+
+                                    </table>
+                                </div>
+                                <!-- /IP list table-->
+                            </div>
 						</div>
 						<!-- /IP list title-->
 
-						<!-- IP list table-->
-						<div class="table-responsive">
-							<table class="table text-nowrap">
-								<thead>
-									<tr>
-										<th class="col-sm-1">Country</th>
-										<th class="col-sm-1">state</th>
-										<th class="col-md-3">IP</th>
-										<th class="col-sm-2">Port</th>
-										<th class="col-md-4">File Name</th>
-										<th class="col-md-4">Infection Type</th>
-									</tr>
-								</thead>
 
-								<tbody>
-								    <div class="row">
-										<div class="col-md-12">
-									<tr>
-										<td>
-											<div class="media-left media-middle">
-												<a href="#"><img src="assets/images/flags/ru.png" class="img-circle img-xs" alt=""></a>
-											</div>
-											<div class="media-left media-middle">
-												<div class=""><a href="#" class="text-default text-semibold">Russia</a></div>
-											</div>
-										</td>
-										<td><span class="text-muted">Moscow</span></td>
-										<td><span class="text-muted">129.98.212.123</span></td>
-										<td><span class="text-success-600">35627</span></td>
-										<td><h6 class="text-semibold">Cat Run(2011).EXE</h6></td>
-										<td><span class="label bg-blue">Trojan</span></td>
-										<td class="text-center">
 
-										</td>
-									</tr>
-										</div>
-
-										<div class="col-md-12">
-									<tr>
-										<td>
-											<div class="media-left media-middle">
-												<a href="#"><img src="assets/images/flags/ca.png" class="img-circle img-xs" alt=""></a>
-											</div>
-											<div class="media-left media-middle">
-												<div class=""><a href="#" class="text-default text-semibold">Canada</a></div>
-											</div>
-										</td>
-										<td><span class="text-muted">Vancouvor</span></td>
-										<td><span class="text-muted">129.98.212.123</span></td>
-										<td><span class="text-success-600">35627</span></td>
-										<td><h6 class="text-semibold">Cat Run(2011).EXE</h6></td>
-										<td><span class="label bg-blue">Trojan</span></td>
-										<td class="text-center">
-
-										</td>
-									</tr>
-										</div>
-
-										<div class="col-md-12">
-									<tr>
-										<td>
-											<div class="media-left media-middle">
-												<a href="#"><img src="assets/images/flags/us.png" class="img-circle img-xs" alt=""></a>
-											</div>
-											<div class="media-left media-middle">
-												<div class=""><a href="#" class="text-default text-semibold">United States</a></div>
-											</div>
-										</td>
-										<td><span class="text-muted">Oregon</span></td>
-										<td><span class="text-muted">198.80.19.231</span></td>
-										<td><span class="text-success-600">29874</span></td>
-										<td><h6 class="text-semibold">Furious 2013.EXE</h6></td>
-										<td><span class="label bg-blue">Trojan</span></td>
-										<td class="text-center">
-
-										</td>
-									</tr>
-											</div>
-
-										<div class="col-md-12">
-									<tr>
-										<td>
-											<div class="media-left media-middle">
-												<a href="#"><img src="assets/images/flags/cn.png" class="img-circle img-xs" alt=""></a>
-											</div>
-											<div class="media-left media-middle">
-												<div class=""><a href="#" class="text-default text-semibold">China</a></div>
-											</div>
-										</td>
-										<td><span class="text-muted">Beijing</span></td>
-										<td><span class="text-muted">89.29.81.211</span></td>
-										<td><span class="text-success-600">23654</span></td>
-										<td><h6 class="text-semibold">Tennis Game.EXE</h6></td>
-										<td><span class="label bg-blue">Trojan</span></td>
-										<td class="text-center">
-
-										</td>
-									</tr>
-											</div>
-									</div>
-								</tbody>
-
-							</table>
-						</div>
-						<!-- /IP list table-->
 
 					</div>
 				</div>
