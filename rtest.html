@@ -35,6 +35,11 @@
 	<script type="text/javascript" src="assets/js/core/app.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
 	<!-- /theme JS files -->
+
+	<!-- vTicker -->
+	<script type="text/javascript" src="assets/js/index/vTicker.js"></script>
+	<!-- /vTicker -->
+
 </head>
 
 <body class="navbar-bottom">
@@ -62,6 +67,83 @@
 					</div>
 				</div>
 				<!-- /USA map -->
+
+				<!-- IP list -->
+				<div class="row">
+					<div class="col-lg-12">
+						<!-- IP list title-->
+						<div class="panel panel-flat">
+							<div class="panel-heading">
+								<h5 class="panel-title">Live Stream</h5>
+							</div>
+							<div class="panel-body">
+								<div id="table-title">
+									<div class="row">
+										<div class="col-lg-1">Country</div>
+										<div class="col-lg-1">State</div>
+										<div class="col-lg-2">IP</div>
+										<div class="col-lg-1">Port</div>
+										<div class="col-lg-4">File Name</div>
+										<div class="col-lg-3">Infection Type</div>
+									</div>
+								</div>
+
+								<div id="table-body">
+									<ul>
+										<li>
+											<div class="row">
+												<div class="col-lg-1">US</div>
+												<div class="col-lg-1">Ohio</div>
+												<div class="col-lg-2">123.123.123.123</div>
+												<div class="col-lg-1">65534</div>
+												<div class="col-lg-4">Star Trek 2016.avi</div>
+												<div class="col-lg-3">trojan</div>
+											</div>
+										</li>
+										<li>
+											<div class="row">
+												<div class="col-lg-1">Canada</div>
+												<div class="col-lg-1">Vancouvor</div>
+												<div class="col-lg-2">123.224.224.144</div>
+												<div class="col-lg-1">65534</div>
+												<div class="col-lg-4">Inception 2010.avi</div>
+												<div class="col-lg-3">trojan</div>
+											</div>
+										</li>
+										<li>
+											<div class="row">
+												<div class="col-lg-1">China</div>
+												<div class="col-lg-1">Beijing</div>
+												<div class="col-lg-2">123.123.123.123</div>
+												<div class="col-lg-1">65534</div>
+												<div class="col-lg-4">Star Trek 2016.avi</div>
+												<div class="col-lg-3">trojan</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<script>
+									$(function() {
+										$('#table-body').vTicker('init', {speed: 400,
+											pause: 1000,
+											showItems: 2,
+											padding:5,
+
+										});
+									});
+
+								</script>
+
+							</div>
+						</div>
+						<!-- /IP list title-->
+
+
+
+
+					</div>
+				</div>
+				<!-- /IP list -->
 
 			</div>
 			<!-- /main content -->
