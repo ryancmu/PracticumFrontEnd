@@ -42,7 +42,7 @@ $(function() {
             },
             series: {
                 regions: [{
-                    scale: ['#DEEBF7', '#08519C'],
+                    scale: ['#ff9999', '#e60000'],
                     attribute: 'fill',
                     values: data.states[val],
                     normalizeFunction: 'polynomial'

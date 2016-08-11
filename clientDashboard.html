@@ -58,6 +58,12 @@
     <script type="text/javascript" src="assets/js/liveFeed.js"></script>
     <!--/live feed JS files -->
 
+    <!-- Map JS files -->
+    <script type="text/javascript" src="assets/js/index/usa_map.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/maps/jvectormap/jvectormap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/maps/jvectormap/map_files/countries/usa.js"></script>
+    <!--/Map JS files-->
+
 </head>
 
 <body class="navbar-bottom">
@@ -219,11 +225,25 @@
             <div class="content-wrapper">
 
                 <!-- Put all your code here -->
-                     <!--us map-->
-                    <div class="">
-
+                <!-- USA map -->
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">U.S. Malware Distribution</h5>
+                        <div class="heading-elements">
+                            <ul class="icons-list">
+                                <li><a data-action="collapse"></a></li>
+                                <li><a data-action="reload"></a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <!--/us map-->
+
+                    <div class="panel-body">
+                        <p class="content-group">The map shows the malware distribution across the globe within the pass week. The <code>darker</code> the state is, the more malware was downloaded from there.</p>
+
+                        <div class="map-container usa_map"></div>
+                    </div>
+                </div>
+                <!-- /USA map -->
 
 
                     <!--charts-->
