@@ -56,6 +56,7 @@
 
     <!--live feed JS files -->
     <script type="text/javascript" src="assets/js/liveFeed.js"></script>
+    <script type="text/javascript" src="assets/js/index/vTicker.js"></script>
     <!--/live feed JS files -->
 
 </head>
@@ -412,7 +413,96 @@
 
                     <!--live feed-->
                     <div id="livefeed">
-                          hello
+                        <!-- IP list -->
+                        <style>
+                            #lfpanel{
+                                -webkit-box-shadow: 0px 10px 13px 0px rgba(83,83,87,1);
+                                -moz-box-shadow: 0px 10px 13px 0px rgba(83,83,87,1);
+                                box-shadow: 0px 10px 13px 0px rgba(83,83,87,1);
+                            }
+                            .border-bottom {
+                                padding: 3px;
+                                color: #a1a1a1;
+                            }
+                        </style>
+                            <!-- IP list title-->
+                            <div class="panel panel-flat" id="lfpanel">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Live Stream</h4>
+                                    <div class="heading-elements">
+                                        <ul class="icons-list">
+                                            <li><a data-action="collapse"></a></li>
+                                            <li><a class="note-icon-close" id="closeLF"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="table-title">
+                                        <style>
+                                            #table-title {
+                                                font-family: Helvetica;
+                                                font-size: medium;
+                                                font-weight: 400;
+                                                text-align: left;
+                                                background-color: transparent;
+                                            }
+                                        </style>
+                                        <div class="row">
+                                            <div class="col-lg-2">Country</div>
+                                            <div class="col-lg-2">State</div>
+                                            <div class="col-lg-2">IP</div>
+                                            <div class="col-lg-1">Port</div>
+                                            <div class="col-lg-3">File Name</div>
+                                            <div class="col-lg-2">Infection Type</div>
+                                        </div>
+                                        <div class="border-bottom" ></div>
+                                    </div>
+
+
+                                    <div id="table-body">
+                                        <style>
+                                            #table-body {
+                                                font-family: Helvetica;
+                                                font-size: small;
+                                            }
+                                        </style>
+                                        <ul>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-lg-2"><img src="assets/images/flags/us.png" class="img-circle img-xs" alt="">    United States</div>
+                                                    <div class="col-lg-2">Ohio</div>
+                                                    <div class="col-lg-2">123.123.123.123</div>
+                                                    <div class="col-lg-1">65534</div>
+                                                    <div class="col-lg-3">Star Trek 2016.avi</div>
+                                                    <div class="col-lg-2"><span class="label bg-blue">trojan</span></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-lg-2"><img src="assets/images/flags/ca.png" class="img-circle img-xs" alt="">    Canada</div>
+                                                    <div class="col-lg-2">Vancouvor</div>
+                                                    <div class="col-lg-2">123.224.224.144</div>
+                                                    <div class="col-lg-1">65534</div>
+                                                    <div class="col-lg-3">Inception 2010.avi</div>
+                                                    <div class="col-lg-2"><span class="label bg-blue">trojan</span></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-lg-2"><img src="assets/images/flags/cn.png" class="img-circle img-xs" alt="">     China</div>
+                                                    <div class="col-lg-2">Beijing</div>
+                                                    <div class="col-lg-2">123.123.123.123</div>
+                                                    <div class="col-lg-1">65534</div>
+                                                    <div class="col-lg-3">Star Trek 2016.avi</div>
+                                                    <div class="col-lg-2"><span class="label bg-blue">trojan</span></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /IP list title-->
+                        <!-- /IP list -->
                     </div>
                     <!--/live feed-->
 
