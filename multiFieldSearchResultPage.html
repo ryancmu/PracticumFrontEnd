@@ -39,9 +39,138 @@
     <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script>
+        function showPage(id)
+        {
+            var totalNumberOfPages = 5;
+            for(i=1; i<=totalNumberOfPages; i++)
+            {
+                if(document.getElementById('page'+i))
+                    document.getElementById('page'+i).style.display='none';
+            }
+            if(document.getElementById('page'+id))
+                document.getElementById('page'+id).style.display='block';
+        }
+    </script>
 
 
 </head>
+<style>head, body {
+    font-family: Helvetica,Arial,Sans-serif;
+    color: black;
+}
+
+
+
+h1{
+    font-size: 2em;
+    color: rgb(255,255,255) !important;
+}
+h2{
+    font-size: 1.5em;
+    color: rgb(185,85,25);
+}
+main {
+    background-color: rgb(220,220,220);
+}
+
+table {
+    border-collapse: separate;
+    border-style: 1px solid rgb(184,204,228);
+    border-color: rgb(0,0,255);
+}
+table thead th {
+    background: linear-gradient(180deg,rgb(100,100,100), rgb(0,0,0));
+    text-align: left;
+    color: rgb(255,255,255);
+}
+table tbody tr:nth-child(odd) {
+    background-color: rgb(197,217,241);
+}
+table tbody tr:nth-child(even) {
+    background-color: rgb(255,255,255);
+}
+table tbody tr td:nth-child(1) {
+    text-align: left;
+}
+table tbody tr td:nth-child(2) {
+    text-align: left;
+}
+a:link,a:visited {
+    color: rgb(0,0,255);
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+table tbody tr td:nth-child(4) {
+    text-align: left;
+}
+table tbody tr:hover {
+    transition-property: background-color, width, height;
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    background-color: rgb(255,255,0);
+
+}
+#section-contact input+input {
+    background-color: rgb(100,100,100);
+    color: rgb(255,255,255);
+}
+#section-contact input:nth-last-of-type(2) {
+    background-color: rgb(100,100,100);
+    color: rgb(255,255,255);
+}
+#section-contact div span{
+    color: rgb(255,0,0);
+}
+nav{
+    background-color: rgb(180,180,180);
+}
+li>a:link{
+    color: rgb(0,0,0);
+    text-decoration: none;
+
+}
+li>a:visited{
+    color: rgb(0,0,0);
+    text-decoration: none;
+
+}
+nav ul li{
+    list-style-type: none;
+    padding: 0.5em;
+}
+nav a:hover{
+    color: rgb(255,255,255);
+    text-decoration: underline;
+}
+main,nav,header,footer{
+    padding: 0.5em;
+}
+.ul.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination li {display: inline;}
+
+ul.pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+ul.pagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+ul.pagination li a:hover:not(.active) {background-color: #ddd;}
+</style>
 
 <body class="navbar-bottom">
 
@@ -172,6 +301,7 @@
 <!-- Page container -->
 <div class="page-container">
 
+
     <!-- Page content -->
     <div class="page-content">
 
@@ -181,17 +311,253 @@
                 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
             </div>
 
-            <!-- Put all your code here --
+            <!-- Put all your code here -->
             <!-- /put all your code here -->
-
+            <br><br><br><br>
         </div>
         <!-- /main content -->
-
     </div>
-    <!-- /page content -->
+    <div id="user_adr" style="display:none"><!-- /Table container -->
+
+        <section id="section-whatreading">
+            <h2 align = "center">File Activity Recorded</h2>
+            <div id="page1">
+                <table width = "100%" height = "90">
+                    <thead>
+                    <tr>
+                        <th class="table-header-title">File Name</th>
+                        <th class="table-header-author">Infection Type</th>
+                        <th class="table-header-isbn">User Agent</th>
+                        <th class="table-header-year">Port</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr height = "50">
+                        <td>The Catcher in the Rye</td>
+                        <td>Adware-Adon!lnk </td>
+                        <td><a  target="_blank">TurboWire/4.5.0 </a></td>
+                        <td>1951</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>The Great Gatsby</td>
+                        <td>Trojan</td>
+                        <td><a href="http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567/" target="_blank">Direct Connect</a></td>
+                        <td>1925</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>A Separate Peace</td>
+                        <td>AdClicker-C.gen.dr</td>
+                        <td><a href="http://www.amazon.com/A-Separate-Peace-John-Knowles/dp/0743253973/" target="_blank">LimeWireTurbo/7.1.0</a></td>
+                        <td>1959</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>War and Peace</td>
+                        <td>Artemis!009DECB1C5DA </td>
+                        <td><a href="http://www.amazon.com/War-Peace-Vintage-Classics-Tolstoy/dp/1400079985/" target="_blank">Shareaza 2.7.9.1  </a></td>
+                        <td>1869</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>The Sun Also Rises</td>
+                        <td>BackDoor-FDDQ!F3AD6BCF5EB2</td>
+                        <td><a href="http://www.amazon.com/Sun-Also-Rises-Ernest-Hemingway/dp/0743297334/" target="_blank">GnutellaWire/4.6.0 </a></td>
+                        <td>1926</td>
+                    </tr>
+                    </tbody>
+                </table></div>
+            <div id="page2" style="display: none;">
+                <table width = "100%" height = "90">
+                    <thead>
+                    <tr>
+                        <th class="table-header-title">File Name</th>
+                        <th class="table-header-author">Infection Type</th>
+                        <th class="table-header-isbn">User Agent</th>
+                        <th class="table-header-year">Port</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr height = "50">
+                        <td>File 6</td>
+                        <td>Adware-Adon!lnk </td>
+                        <td><a  target="_blank">TurboWire/4.5.0 </a></td>
+                        <td>1951</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>File 7</td>
+                        <td>Trojan</td>
+                        <td><a href="http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567/" target="_blank">Direct Connect</a></td>
+                        <td>1925</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>File 8</td>
+                        <td>AdClicker-C.gen.dr</td>
+                        <td><a href="http://www.amazon.com/A-Separate-Peace-John-Knowles/dp/0743253973/" target="_blank">LimeWireTurbo/7.1.0</a></td>
+                        <td>1959</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>File 9</td>
+                        <td>Artemis!009DECB1C5DA </td>
+                        <td><a href="http://www.amazon.com/War-Peace-Vintage-Classics-Tolstoy/dp/1400079985/" target="_blank">Shareaza 2.7.9.1  </a></td>
+                        <td>1869</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>File 10</td>
+                        <td>BackDoor-FDDQ!F3AD6BCF5EB2</td>
+                        <td><a href="http://www.amazon.com/Sun-Also-Rises-Ernest-Hemingway/dp/0743297334/" target="_blank">GnutellaWire/4.6.0 </a></td>
+                        <td>1926</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="page3" style="display: none;">
+                <table width = "100%" height = "90">
+                    <thead>
+                    <tr>
+                        <th class="table-header-title">File Name</th>
+                        <th class="table-header-author">Infection Type</th>
+                        <th class="table-header-isbn">User Agent</th>
+                        <th class="table-header-year">Port</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr height = "50">
+                        <td>The Catcher in the Rye</td>
+                        <td>Adware-Adon!lnk </td>
+                        <td><a  target="_blank">TurboWire/4.5.0 </a></td>
+                        <td>1951</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>The Great Gatsby</td>
+                        <td>Trojan</td>
+                        <td><a href="http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567/" target="_blank">Direct Connect</a></td>
+                        <td>1925</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>A Separate Peace</td>
+                        <td>AdClicker-C.gen.dr</td>
+                        <td><a href="http://www.amazon.com/A-Separate-Peace-John-Knowles/dp/0743253973/" target="_blank">LimeWireTurbo/7.1.0</a></td>
+                        <td>1959</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>War and Peace</td>
+                        <td>Artemis!009DECB1C5DA </td>
+                        <td><a href="http://www.amazon.com/War-Peace-Vintage-Classics-Tolstoy/dp/1400079985/" target="_blank">Shareaza 2.7.9.1  </a></td>
+                        <td>1869</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>The Sun Also Rises</td>
+                        <td>BackDoor-FDDQ!F3AD6BCF5EB2</td>
+                        <td><a href="http://www.amazon.com/Sun-Also-Rises-Ernest-Hemingway/dp/0743297334/" target="_blank">GnutellaWire/4.6.0 </a></td>
+                        <td>1926</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="page4" style="display: none;">
+                <table width = "100%" height = "90">
+                    <thead>
+                    <tr>
+                        <th class="table-header-title">File Name</th>
+                        <th class="table-header-author">Infection Type</th>
+                        <th class="table-header-isbn">User Agent</th>
+                        <th class="table-header-year">Port</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr height = "50">
+                        <td>File 16</td>
+                        <td>Adware-Adon!lnk </td>
+                        <td><a  target="_blank">TurboWire/4.5.0 </a></td>
+                        <td>1951</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>File 17</td>
+                        <td>Trojan</td>
+                        <td><a href="http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567/" target="_blank">Direct Connect</a></td>
+                        <td>1925</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>File 18</td>
+                        <td>AdClicker-C.gen.dr</td>
+                        <td><a href="http://www.amazon.com/A-Separate-Peace-John-Knowles/dp/0743253973/" target="_blank">LimeWireTurbo/7.1.0</a></td>
+                        <td>1959</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>File 19</td>
+                        <td>Artemis!009DECB1C5DA </td>
+                        <td><a href="http://www.amazon.com/War-Peace-Vintage-Classics-Tolstoy/dp/1400079985/" target="_blank">Shareaza 2.7.9.1  </a></td>
+                        <td>1869</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>File 20</td>
+                        <td>BackDoor-FDDQ!F3AD6BCF5EB2</td>
+                        <td><a href="http://www.amazon.com/Sun-Also-Rises-Ernest-Hemingway/dp/0743297334/" target="_blank">GnutellaWire/4.6.0 </a></td>
+                        <td>1926</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div id="page5" style="display: none;">
+                <table width = "100%" height = "90">
+                    <thead>
+                    <tr>
+                        <th class="table-header-title">File Name</th>
+                        <th class="table-header-author">Infection Type</th>
+                        <th class="table-header-isbn">User Agent</th>
+                        <th class="table-header-year">Port</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr height = "50">
+                        <td>File 21</td>
+                        <td>Adware-Adon!lnk </td>
+                        <td><a  target="_blank">TurboWire/4.5.0 </a></td>
+                        <td>1951</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>File 22</td>
+                        <td>Trojan</td>
+                        <td><a href="http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567/" target="_blank">Direct Connect</a></td>
+                        <td>1925</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>File 23</td>
+                        <td>AdClicker-C.gen.dr</td>
+                        <td><a href="http://www.amazon.com/A-Separate-Peace-John-Knowles/dp/0743253973/" target="_blank">LimeWireTurbo/7.1.0</a></td>
+                        <td>1959</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>File 24</td>
+                        <td>Artemis!009DECB1C5DA </td>
+                        <td><a href="http://www.amazon.com/War-Peace-Vintage-Classics-Tolstoy/dp/1400079985/" target="_blank">Shareaza 2.7.9.1  </a></td>
+                        <td>1869</td>
+                    </tr>
+                    <tr height = "50">
+                        <td>File 25</td>
+                        <td>BackDoor-FDDQ!F3AD6BCF5EB2</td>
+                        <td><a href="http://www.amazon.com/Sun-Also-Rises-Ernest-Hemingway/dp/0743297334/" target="_blank">GnutellaWire/4.6.0 </a></td>
+                        <td>1926</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+        <!/--Table Container --></div>
+    <div id="user_adr2" style="display:none" align="right">
+        <ul class="pagination">
+            <li><a href="">&laquo;</a></li>
+            <li><a class="active" href="javascript: onClick=showPage('1')">1</a></li>
+            <li><a href="javascript: onClick=showPage('2')">2</a></li>
+            <li><a href="javascript: onClick=showPage('3')">3</a></li>
+            <li><a href="javascript: onClick=showPage('4')">4</a></li>
+            <li><a href="javascript: onClick=showPage('5')">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+        </ul>
+    </div>
 
 </div>
 <!-- /page container -->
+
 
 <!-- Footer -->
 <div class="navbar navbar-default navbar-fixed-bottom footer  bg-grey-600">
@@ -217,6 +583,7 @@
         </div>
     </div>
 </div>
+
 <!-- /footer -->
 
 </body>
@@ -252,6 +619,16 @@
                     enabled: false
                 },
                 plotOptions: {
+                    series: {
+                        cursor: 'pointer',
+                        point: {
+                            events: {
+                                click: function (e) {
+                                    $('#user_adr, #user_adr2').toggle();
+                                }
+                            }
+                        }
+                    },
                     area: {
                         fillColor: {
                             linearGradient: {
