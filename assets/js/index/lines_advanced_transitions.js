@@ -178,7 +178,7 @@ $(function () {
 
             // Set timeout for auto change
             var timeout = setTimeout(function() {
-                d3.select("input[value=\"California\"]").property("checked", true).each(change);
+                d3.select("input[value=\"New York\"]").property("checked", true).each(change);
                 $.uniform.update();
             }, 2000);
 
