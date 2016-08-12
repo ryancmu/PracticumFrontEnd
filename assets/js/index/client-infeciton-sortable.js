@@ -32,7 +32,7 @@ $(function () {
             height = height - margin.top - margin.bottom - 5;
 
         // Format data
-        var formatPercent = d3.format(".0%");
+        // var formatPercent = d3.format("");
 
 
 
@@ -63,8 +63,8 @@ $(function () {
         // Vertical
         var yAxis = d3.svg.axis()
             .scale(y)
-            .orient("left")
-            .tickFormat(formatPercent);
+            .orient("left");
+            // .tickFormat(formatPercent);
 
 
 
