@@ -14,10 +14,11 @@ $(document).ready(function(){
         $('#back-to-top').tooltip('hide');
         $('body,html').animate({
             scrollTop: 0
-        }, 800);
+        }, 300);
         return false;
     });
 
-    $('#back-to-top').tooltip('show');
+    // $('#back-to-top').tooltip('show');
 
 });
+

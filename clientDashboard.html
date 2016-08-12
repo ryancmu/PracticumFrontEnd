@@ -34,7 +34,7 @@
     <!--/sortable vertical bar JS files -->
 
     <!--d3 line JS files -->
-    <script type="text/javascript" src="assets/js/charts/d3/lines/lines_advanced_transitions.js"></script>
+    <script type="text/javascript" src="assets/js/index/lines_advanced_transitions.js"></script>
     <script type="text/javascript" src="assets/js/charts/d3/lines/lines_basic.js"></script>
     <!--/d3 line JS files -->
 
@@ -56,13 +56,14 @@
 
     <!--live feed JS files -->
     <script type="text/javascript" src="assets/js/liveFeed.js"></script>
+    <script type="text/javascript" src="assets/js/index/vTicker.js"></script>
     <!--/live feed JS files -->
 
-    <!-- Map JS files -->
+    <!-- US map JS files -->
     <script type="text/javascript" src="assets/js/index/usa_map.js"></script>
     <script type="text/javascript" src="assets/js/plugins/maps/jvectormap/jvectormap.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins/maps/jvectormap/map_files/countries/usa.js"></script>
-    <!--/Map JS files-->
+    <!--/US map JS files-->
 
 </head>
 
@@ -249,7 +250,6 @@
                     <!--charts-->
                     <div class="">
 
-
                         <!-- file type - Combination and connection -->
                         <div class="panel panel-flat">
                             <div class="panel-heading">
@@ -385,11 +385,11 @@
                                 <div class="panel-body">
                                     <p class="content-group">This variation of a line chart demonstrates a sequence of <code>chained transitions</code>. Clicking on the radio buttons changes the displayed metric.</p>
                                     <p>
-                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="New York" checked="checked"> Oregon</label>
-                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="San Francisco"> Florida</label>
-                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="New York" checked="checked"> Texas</label>
-                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="San Francisco"> Washington</label>
-                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="New York"> Pennsylvania</label>
+                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="New York" checked="checked"> New York</label>
+                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="Florida"> Florida</label>
+                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="California"> California</label>
+                                        <!--<label class="radio-inline"><input type="radio" name="city" class="chained" value="San Francisco"> Washington</label>-->
+                                        <!--<label class="radio-inline"><input type="radio" name="city" class="chained" value="New York"> Pennsylvania</label>-->
                                     </p>
                                     <div class="chart-container">
                                         <div class="chart" id="d3-chained-transitions"></div>
@@ -431,8 +431,117 @@
 
 
                     <!--live feed-->
-                    <div id="livefeed">
-                          hello
+                    <div id="livefeed" style="min-width: 1150px">
+                        <!-- IP list -->
+                        <style>
+                            #lfpanel{
+                                -webkit-box-shadow: 0px 10px 13px 0px rgba(83,83,87,1);
+                                -moz-box-shadow: 0px 10px 13px 0px rgba(83,83,87,1);
+                                box-shadow: 0px 10px 13px 0px rgba(83,83,87,1);
+                            }
+                            .border-bottom {
+                                padding: 3px;
+                                color: #a1a1a1;
+                            }
+                        </style>
+                            <!-- IP list title-->
+                            <div class="panel panel-flat" id="lfpanel">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">Live Stream</h4>
+                                    <div class="heading-elements">
+                                        <ul class="icons-list">
+                                            <li><a data-action="collapse"></a></li>
+                                            <li><a class="note-icon-close" id="closeLF"></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="table-title">
+                                        <style>
+                                            #table-title {
+                                                font-family: Helvetica;
+                                                font-size: medium;
+                                                font-weight: 400;
+                                                text-align: left;
+                                                background-color: transparent;
+                                            }
+                                        </style>
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2 col-lg-2">Country</div>
+                                            <div class="col-xs-2 col-sm-2 col-lg-2">State</div>
+                                            <div class="col-xs-2 col-sm-2 col-lg-2">IP</div>
+                                            <div class="col-xs-1 col-sm-1 col-lg-1">Port</div>
+                                            <div class="col-xs-3 col-sm-3 col-lg-3">File Name</div>
+                                            <div class="col-xs-2 col-sm-2 col-lg-2">Infection Type</div>
+                                        </div>
+                                        <div class="border-bottom" ></div>
+                                    </div>
+
+
+                                    <div id="table-body">
+                                        <style>
+                                            #table-body {
+                                                font-family: Helvetica;
+                                                font-size: small;
+                                            }
+                                        </style>
+                                        <ul>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-lg-2"><img src="assets/images/flags/hu.png" class="img-circle img-xs" alt="">    Hungary</div>
+                                                    <div class="col-lg-2">Borsod-Abauj-Zemplen</div>
+                                                    <div class="col-lg-2">87.242.24.27</div>
+                                                    <div class="col-lg-1">45224</div>
+                                                    <div class="col-lg-3">XLS to Image Converter 2.0.zip</div>
+                                                    <div class="col-lg-2"><span class="label bg-brown">Artemis</span></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-lg-2"><img src="assets/images/flags/ru.png" class="img-circle img-xs" alt="">    Russian Federation</div>
+                                                    <div class="col-lg-2">Moskva</div>
+                                                    <div class="col-lg-2">188.64.170.222</div>
+                                                    <div class="col-lg-1">51171</div>
+                                                    <div class="col-lg-3">annotate PDFs 4.0.1 iPhone iPad and iPod touch.exe</div>
+                                                    <div class="col-lg-2"><span class="label bg-blue">Trojan-FCUT</span></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-lg-2"><img src="assets/images/flags/gb.png" class="img-circle img-xs" alt="">     United Kingdom</div>
+                                                    <div class="col-lg-2">England</div>
+                                                    <div class="col-lg-2">81.109.254.1</div>
+                                                    <div class="col-lg-1">59028</div>
+                                                    <div class="col-lg-3">13-youngbloodz-sumn_like_a_pimp_ft._ben_hated-exe.mp3.exe</div>
+                                                    <div class="col-lg-2"><span class="label bg-green">W32/Mobler.worm</span></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-lg-2"><img src="assets/images/flags/it.png" class="img-circle img-xs" alt="">     Italy</div>
+                                                    <div class="col-lg-2">Lombardia</div>
+                                                    <div class="col-lg-2">93.32.116.107</div>
+                                                    <div class="col-lg-1">62113</div>
+                                                    <div class="col-lg-3">AnyDVD 2.1.0.9.exe</div>
+                                                    <div class="col-lg-2"><span class="label bg-slate-400">Generic PUP.x</span></div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-lg-2"><img src="assets/images/flags/ro.png" class="img-circle img-xs" alt="">     Romania</div>
+                                                    <div class="col-lg-2">Bucuresti</div>
+                                                    <div class="col-lg-2">86.123.34.22</div>
+                                                    <div class="col-lg-1">59508</div>
+                                                    <div class="col-lg-3">50 PC Game Icons 18.zip</div>
+                                                    <div class="col-lg-2"><span class="label bg-brown">Artemis!</span></div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /IP list title-->
+                        <!-- /IP list -->
                     </div>
                     <!--/live feed-->
 
@@ -457,8 +566,8 @@
                 cursor: pointer;
                 position: fixed;
                 bottom: 0;
-                right: 20px;
-                display:none;
+                right: 40px;
+                display: none;
             }
         </style>
     </div>
