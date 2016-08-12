@@ -24,7 +24,6 @@
 	<script type="text/javascript" src="assets/js/plugins/ui/drilldown.js"></script>
 	<script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
 
-	<script type="text/javascript" src="assets/js/addMultiSearch.js"></script>
 	<!-- /core JS files -->
 
     <!-- Map JS files -->
@@ -304,7 +303,7 @@
 										<div class="input-group">
 											<div class="input-group-btn search-panel-multi">
 												<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-													<span id="search_concept_multi"><i class="icon-stack2 position-left"></i>Choose criteria</span> <span class="caret"></span>
+													<span class="dropdown_button_text" ><i class="icon-stack2 position-left"></i>Choose criteria</span> <span class="caret"></span>
 												</button>
 												<ul class="dropdown-menu" role="menu">
 													<li><a href="#ip_multi"><i class="icon-address-book"></i> IP</a></li>
@@ -317,10 +316,10 @@
 											<input type="hidden" name="search_param_multi" value="all" id="search_param_multi">
 											<input type="text" class="form-control" name="x" placeholder="Search...">
 											<span class="input-group-btn">
-                                                <button id="testButton" class="btn btn-default" type="button" onclick="add()"><span class="glyphicon glyphicon-plus"></span></button>
+                                                <button class="add_button btn btn-default" type="button"><span class="glyphicon glyphicon-plus"></span></button>
                                              </span>
 											<span class="input-group-btn">
-                                                <button id="testButtonRemove" class="btn btn-default" type="button" onclick="del()"><span class="glyphicon glyphicon-minus"></span></button>
+                                                <button class="remove_button btn btn-default" type="button"><span class="glyphicon glyphicon-minus"></span></button>
                                              </span>
 										</div>
 									</form>
