@@ -51,7 +51,7 @@ $(function() {
             onRegionLabelShow: function(event, label, code) {
                 label.html(
                     ''+label.html()+'<br>'+
-                    'Number: '+data.states[val][code]
+                    'Number of infections: '+data.states[val][code]
                 );
             }
         });

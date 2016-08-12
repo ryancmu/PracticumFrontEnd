@@ -11,7 +11,7 @@ $(function () {
         $("#livefeed").show();
         $(function() {
             $('#table-body').vTicker('init', {speed: 400,
-                pause: 2000,
+                pause: 500,
                 showItems: 2,
                 padding:5,
 
@@ -30,6 +30,10 @@ $(function () {
 
     $("#showfeb").click(function () {
         $("#feb").show();
+    });
+
+    $("#closeLine").click(function(){
+        $("#feb").hide();
     });
 })
 
