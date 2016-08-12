@@ -108,7 +108,8 @@ $(function () {
             data.forEach(function(d) {
                 d.date = parseDate(d.date);
                 d["New York"] = +d["New York"];
-                d["San Francisco"] = +d["San Francisco"];
+                d["California"] = +d["California"];
+                d["Florida"] = +d["Florida"];
             });
 
 
@@ -177,7 +178,7 @@ $(function () {
 
             // Set timeout for auto change
             var timeout = setTimeout(function() {
-                d3.select("input[value=\"San Francisco\"]").property("checked", true).each(change);
+                d3.select("input[value=\"California\"]").property("checked", true).each(change);
                 $.uniform.update();
             }, 2000);
 
