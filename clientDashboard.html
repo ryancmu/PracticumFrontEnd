@@ -30,12 +30,12 @@
     <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins/visualization/d3/d3.min.js"></script>
     <script type="text/javascript" src="assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
-    <script type="text/javascript" src="assets/js/client-infeciton-sortable.js"></script>
+    <script type="text/javascript" src="assets/js/index/client-infeciton-sortable.js"></script>
     <!--/sortable vertical bar JS files -->
 
     <!--d3 line JS files -->
     <script type="text/javascript" src="assets/js/index/lines_advanced_transitions.js"></script>
-    <script type="text/javascript" src="assets/js/charts/d3/lines/lines_basic.js"></script>
+    <script type="text/javascript" src="assets/js/index/client_feb_line.js"></script>
     <!--/d3 line JS files -->
 
 
@@ -55,7 +55,7 @@
     <!--/back to top JS files -->
 
     <!--live feed JS files -->
-    <script type="text/javascript" src="assets/js/liveFeed.js"></script>
+    <script type="text/javascript" src="assets/js/liveFeed&showHide.js"></script>
     <script type="text/javascript" src="assets/js/index/vTicker.js"></script>
     <!--/live feed JS files -->
 
@@ -239,8 +239,7 @@
                     </div>
 
                     <div class="panel-body">
-                        <p class="content-group">The map shows the malware distribution across the globe within the pass week. The <code>darker</code> the state is, the more malware was downloaded from there.</p>
-
+                        <p class="content-group">The map shows the malware distribution across the US within the pass week. The <code>darker</code> the state is, the more malware was downloaded from there.</p>
                         <div class="map-container usa_map"></div>
                     </div>
                 </div>
@@ -310,26 +309,6 @@
                                 <div class="panel panel-flat">
                                     <div class="panel-heading">
                                         <h3 class="panel-title">Infection Type</h3>
-                                        <div class="heading-elements">
-                                            <div class="dropdown dropdown-menu-left">
-                                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Whole year
-                                                    <span class="caret"></span></button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#january">January</a></li>
-                                                    <li><a href="#febuary">Febuary</a></li>
-                                                    <li><a href="#march">March</a></li>
-                                                    <li><a href="#april">April</a></li>
-                                                    <li><a href="#may">May</a></li>
-                                                    <li><a href="#june">June</a></li>
-                                                    <li><a href="#july">July</a></li>
-                                                    <li><a href="#august">August</a></li>
-                                                    <li><a href="#september">September</a></li>
-                                                    <li><a href="#october">October</a></li>
-                                                    <li><a href="#november">November</a></li>
-                                                    <li><a href="#december">December</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
                                     </div>
 
                                     <div class="panel-body">
@@ -353,7 +332,7 @@
                             <!-- Chained transitions -->
                             <div class="panel panel-flat">
                                 <div class="panel-heading">
-                                    <h5 class="panel-title">State Trending</h5>
+                                    <h5 class="panel-title">File per state overtime</h5>
                                     <div class="heading-elements">
                                         <ul class="icons-list">
                                             <li><a data-action="collapse"></a></li>
@@ -404,21 +383,20 @@
                             <!-- Simple line chart -->
                             <div class="panel panel-flat">
                                 <div class="panel-heading">
-                                    <h5 class="panel-title">Feburary Oregon Trending</h5>
+                                    <h5 class="panel-title">New York in February</h5>
                                     <div class="heading-elements">
                                         <ul class="icons-list">
                                             <li><a data-action="collapse"></a></li>
-                                            <li><a data-action="reload"></a></li>
-                                            <li><a data-action="close"></a></li>
+                                            <li><a class="note-icon-close" id="closeLine"></a></li>
                                         </ul>
                                     </div>
                                 </div>
 
                                 <div class="panel-body">
-                                    <p class="content-group">This is the line graph showing the trending within this month.</p>
+                                    <p class="content-group">This is the line graph showing the number of files downloaded in New York within this month.</p>
 
                                     <div class="chart-container">
-                                        <div class="chart" id="d3-line-basic"></div>
+                                        <div class="chart" id="newyork-feb"></div>
                                     </div>
                                 </div>
                             </div>
