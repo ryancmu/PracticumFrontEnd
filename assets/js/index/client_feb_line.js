@@ -84,9 +84,10 @@ $(function () {
 
         // Line
         var line = d3.svg.line()
-            .interpolate("basis")
+            // .interpolate("basis")
             .x(function(d) { return x(d.date); })
-            .y(function(d) { return y(d.close); });
+            .y(function(d) { return y(d.close); })
+            .interpolate("monotone");
 
 
 
