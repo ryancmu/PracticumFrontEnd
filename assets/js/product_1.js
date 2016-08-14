@@ -11,7 +11,7 @@ jQuery(function ($) {
                 fields: {
                     Location: { type: String },
                     Infected_File_Count: { type: Number },
-                    Infection_Types: { type: String },
+                    InfectionTypes: { type: String },
                     Port: { type: Number },
                     User_Agent: { type: String }
                 }
@@ -34,7 +34,7 @@ jQuery(function ($) {
                 [
                     { field: "Location", title: "Location", width: 80 },
                     { field: "Infected_File_Count", title: "File Count", width: 100 },
-                    { field: "Infection_Types", title: "Infection Types", width: 100 },
+                    { field: "InfectionTypes", title: "Infection Types", width: 100 },
                     { field: "Port", title: "Port", width: 50 },
                     { field: "User_Agent", title: "User Agent", width: 150 }
                 ],
