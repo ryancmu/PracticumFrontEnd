@@ -9,11 +9,11 @@ jQuery(function ($) {
             schema: {
                 type: "table",
                 fields: {
-                    Location: { type: String },
-                    Infected_File_Count: { type: Number },
-                    InfectionTypes: { type: String },
-                    Port: { type: Number },
-                    User_Agent: { type: String }
+                    Location: { path:"Location", type: String },
+                    Infected_File_Count: { path:"Infected File Count", type: Number },
+                    Infection_Types: { path:"Infection Types", type: String },
+                    Port: { path:"Port", type: Number },
+                    User_Agent: { path: "User Agent", type: String }
                 }
             }
         });
@@ -34,7 +34,7 @@ jQuery(function ($) {
                 [
                     { field: "Location", title: "Location", width: 80 },
                     { field: "Infected_File_Count", title: "File Count", width: 100 },
-                    { field: "InfectionTypes", title: "Infection Types", width: 100 },
+                    { field: "Infection_Types", title: "Infection Types", width: 100 },
                     { field: "Port", title: "Port", width: 50 },
                     { field: "User_Agent", title: "User Agent", width: 150 }
                 ],
