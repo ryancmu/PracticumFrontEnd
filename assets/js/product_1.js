@@ -9,11 +9,11 @@ jQuery(function ($) {
             schema: {
                 type: "table",
                 fields: {
-                    Location: { type: String },
-                    Infected_File_Count: { type: Number },
-                    Infection_Types: { type: String },
-                    Port: { type: Number },
-                    User_Agent: { type: String }
+                    Location: { path:"Location", type: String },
+                    Infected_File_Count: { path:"Infected File Count", type: Number },
+                    Infection_Types: { path:"Infection Types", type: String },
+                    Port: { path:"Port", type: Number },
+                    User_Agent: { path: "User Agent", type: String }
                 }
             }
         });
