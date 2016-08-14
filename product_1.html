@@ -202,50 +202,61 @@
                                          <td>@mdo</td>
                                          <td>@mdo</td>
                                          <td><a id="detail1" data-toggle="modal" data-target=".detail1-modal-lg">Detail</a></td>
-                                         <!-- Modal -->
-                                         <div class="modal fade detail1-modal-lg" id="myModal" role="dialog">
-                                             <div class="modal-dialog">
-
-                                                 <!-- Modal content-->
-                                                 <div class="modal-content">
-                                                     <div class="modal-header">
-                                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                         <h4 class="modal-title">Details of "xxx.xxx"</h4>
-                                                     </div>
-                                                     <div class="modal-body">
-                                                         <p>Some text in the modal.</p>
-                                                         <table id="product_1_table" class="table">
-                                                             <thead class="thead-inverse">
-                                                                 <tr>
-                                                                     <th>Location (State)</th>
-                                                                     <th>Infected File Count</th>
-                                                                     <th>Infection Types (count)</th>
-                                                                     <th>Port</th>
-                                                                     <th>User Agent</th>
-                                                                 </tr>
-                                                             </thead>
-                                                             <tbody>
-                                                                 <tr>
-                                                                     <td>Ohio</td>
-                                                                     <td>100</td>
-                                                                     <td>Trojan, Worm</td>
-                                                                     <td>8888</td>
-                                                                     <td>Direct Connect</td>
-                                                                 </tr>
-                                                             </tbody>
-                                                         </table>
-                                                     </div>
-                                                     <div class="modal-footer">
-                                                         <button id="exportButton" class="btn btn-info clearfix"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
-                                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                     </div>
-                                                 </div>
-
-                                             </div>
-                                         </div>
                                      </tr>
                                  </tbody>
                              </table>
+
+                            <!-- Modal -->
+                            <div class="modal fade detail1-modal-lg" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">Details of "xxx.xxx"</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p>Some text in the modal.</p>
+                                            <!--<div class="container">-->
+                                            <!--<div class="row">-->
+                                            <!--<div class="col-sm-2">Location</div>-->
+                                            <!--<div class="col-sm-2">Infected File Count</div>-->
+                                            <!--<div class="col-sm-3">Infection Types</div>-->
+                                            <!--<div class="col-sm-2">Port</div>-->
+                                            <!--<div class="col-sm-3">User Agent</div>-->
+                                            <!--</div>-->
+                                            <!--</div>-->
+                                            <table id="product_1_table" class="table">
+                                                <thead class="thead-inverse">
+                                                <tr>
+                                                    <th>Location</th>
+                                                    <th>Infected File Count</th>
+                                                    <th>Infection Types</th>
+                                                    <th>Port</th>
+                                                    <th>User Agent</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>Ohio</td>
+                                                    <td>100</td>
+                                                    <td>Trojan, Worm</td>
+                                                    <td>8888</td>
+                                                    <td>Direct Connect</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button id="exportButton" class="btn btn-info clearfix"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
                         </div>
 
                     </div>

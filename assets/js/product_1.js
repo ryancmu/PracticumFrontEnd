@@ -10,9 +10,9 @@ jQuery(function ($) {
                 type: "table",
                 fields: {
                     Location: { type: String },
-                    File_Count: { type: Number },
+                    Infected_File_Count: { type: Number },
                     Infection_Types: { type: String },
-                    Port: { type: String },
+                    Port: { type: Number },
                     User_Agent: { type: String }
                 }
             }
@@ -33,10 +33,10 @@ jQuery(function ($) {
                 data,
                 [
                     { field: "Location", title: "Location", width: 80 },
-                    { field: "File Count", title: "File Count", width: 100 },
-                    { field: "Infection Types", title: "Infection Types", width: 100 },
+                    { field: "Infected_File_Count", title: "File Count", width: 100 },
+                    { field: "Infection_Types", title: "Infection Types", width: 100 },
                     { field: "Port", title: "Port", width: 50 },
-                    { field: "User Agent", title: "User Agent", width: 150 }
+                    { field: "User_Agent", title: "User Agent", width: 150 }
                 ],
                 {
                     margins: {
