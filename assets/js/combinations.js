@@ -277,8 +277,8 @@ $(function () {
                 series: [
                     {
                         name: 'Direct Connect',
-                        type: 'line',
-                        data: [320, 332, 301, 334, 390, 330, 320]
+                        type: 'bar',
+                        data: [1320, 1332, 1301, 1334, 1390, 1330, 1320]
                     },
                     {
                         name: 'LimeWire',
@@ -308,7 +308,7 @@ $(function () {
                     },
                     {
                         name: 'other',
-                        type: 'bar',
+                        type: 'line',
                         data: [862, 1018, 964, 1026, 1679, 1600, 1570]
                     },
 
