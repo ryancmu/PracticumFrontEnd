@@ -19,6 +19,12 @@
  *
  * ---------------------------------------------------------------------------- */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+.thead-inverse th {
+  color: #fff;
+  background-color: #373a3c;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
