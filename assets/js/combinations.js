@@ -73,8 +73,8 @@ $(function () {
 
                 // Add title
                 title: {
-                    text: 'Top ',
-                    subtext: 'Open source data',
+                    text: 'Top 6 file type',
+                    // subtext: 'Open source data',
                     x: 'center'
                 },
 
@@ -88,7 +88,7 @@ $(function () {
                 legend: {
                     orient: 'vertical',
                     x: 'left',
-                    data: ['zip','exe','dll','rar','msi', 'Other']
+                    data: ['zip','exe','dll','rar','msi', 'other']
                 },
 
                 // Enable drag recalculate
@@ -106,7 +106,7 @@ $(function () {
                         {value: 929, name: 'dll'},
                         {value: 374, name: 'rar'},
                         {value: 219, name: 'msi'},
-                        {value: 1271, name: 'Other'}
+                        {value: 271, name: 'other'}
                     ]
                 }]
             };
@@ -132,7 +132,7 @@ $(function () {
 
                 // Add legend
                 legend: {
-                    data: ['zip','exe','dll','rar','msi', 'Other']
+                    data: ['zip','exe','dll','rar','msi', 'other']
                 },
 
                 // Add toolbox
@@ -223,7 +223,7 @@ $(function () {
                         name: 'other',
                         type: 'bar',
                         stack: 'Total',
-                        data: [820, 932, 901, 934, 1290, 1330, 1320]
+                        data: [120, 932, 901, 643, 145, 122, 420]
                     }
                 ]
             };
@@ -304,11 +304,15 @@ $(function () {
                     {
                         name: 'WinMX Music',
                         type: 'bar',
+                        tooltip: {trigger: 'item'},
+                        stack: 'Advertisement',
                         data: [862, 1018, 964, 1026, 1679, 1600, 1570]
                     },
                     {
-                        name: 'other',
-                        type: 'line',
+                        name: 'Other',
+                        type: 'bar',
+                        tooltip: {trigger: 'item'},
+                        stack: 'Advertisement',
                         data: [862, 1018, 964, 1026, 1679, 1600, 1570]
                     },
 

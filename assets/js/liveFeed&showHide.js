@@ -12,7 +12,7 @@ $(function () {
         $(function() {
             $('#table-body').vTicker('init', {speed: 400,
                 pause: 500,
-                showItems: 2,
+                showItems: 5,
                 padding:5,
 
             });
