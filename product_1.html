@@ -178,7 +178,7 @@
                 <!-- Put all your code here -->
                     <div class="panel">
                         <div class="panel-heading">
-                            <h3 class="heading-text">Infection List</h3>
+                            <h3 class="heading-text">Alarming IP List</h3>
                         </div>
 
                         <div class="panel-body">
@@ -199,9 +199,9 @@
                                          <td>75.185.167.245</td>
                                          <td>Ohio</td>
                                          <td>522022</td>
-                                         <td>GenericR-ATG!hb</td>
-                                         <td>55275, 63876, 60845, 61217...</td>
-                                         <td>Direct Connect</td>
+                                         <td>Artemis, W32/HLLP, Vundo...</td>
+                                         <td>56170, 34891, 6346, 3699...</td>
+                                         <td>Shareaza, TurboWire, KoolWire...</td>
                                          <td><a id="detail1" data-toggle="modal" data-target=".detail1-modal-lg">Detail</a></td>
                                      </tr>
                                      <tr>
@@ -287,7 +287,13 @@
                                      </tr>
                                  </tbody>
                              </table>
-
+                            <ul class="pagination pull-right">
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">&gt;</a></li>
+                            </ul>
                             <!-- Modal -->
                             <div class="modal fade detail1-modal-lg" id="myModal" role="dialog">
                                 <div class="modal-dialog modal-lg">
@@ -365,10 +371,19 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
+                                            <div class="row">
+
+                                            </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button id="exportButton" class="btn btn-info clearfix"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                            <button id="exportButton" class="btn btn-info clearfix pull-left"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
+                                            <ul class="pagination pull-right">
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">...</a></li>
+                                                <li><a href="#">&gt;</a></li>
+                                            </ul>
                                         </div>
                                     </div>
 
@@ -378,6 +393,9 @@
 
                         </div>
 
+                        <div class="panel-footer">
+
+                        </div>
                     </div>
                 <!-- /put all your code here -->
 
