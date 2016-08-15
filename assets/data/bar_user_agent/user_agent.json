@@ -1,13 +1,12 @@
 {
   "uaData":[
-    {"letter": "Direct Connect", "frequency": 9964012},
-    {"letter": "LImeWire", "frequency": 83002},
-    {"letter": "Shareaza", "frequency": 40551},
     {"letter": "Sharest", "frequency": 8963},
+    {"letter": "LimeWire", "frequency": 83002},
     {"letter": "LimeWire Music", "frequency": 2753},
-    {"letter": "LImeZilla", "frequency": 793},
+    {"letter": "LimeZilla", "frequency": 793},
+    {"letter": "Shareaza", "frequency": 40551},
+    {"letter": "Direct Connect", "frequency": 974558},
     {"letter": "WinMX Music", "frequency": 734},
-    {"letter": "LimeWireTurbo", "frequency": 593},
     {"letter": "LemoWire", "frequency": 1034},
     {"letter": "LimeRunner", "frequency": 869},
     {"letter": "giFT-Gnutella", "frequency": 698}

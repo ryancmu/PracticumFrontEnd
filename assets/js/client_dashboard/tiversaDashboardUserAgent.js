@@ -1,3 +1,6 @@
+/**
+ * Created by thanksgiving on 8/14/16.
+ */
 /* ------------------------------------------------------------------------------
  *
  *  # D3.js - vertical sortable bars
@@ -27,12 +30,13 @@ $(function () {
 
         // Define main variables
         var d3Container = d3.select(element),
-            margin = {top: 5, right: 20, bottom: 20, left: 40},
+            margin = {top: 5, right: 20, bottom: 20, left: 60},
             width = d3Container.node().getBoundingClientRect().width - margin.left - margin.right,
             height = height - margin.top - margin.bottom - 5;
 
         // Format data
-        var formatPercent = d3.format(",.2r");
+        // var formatPercent = d3.format(".0%");
+        var formatPercent = d3.format(".2r");
 
 
 
@@ -85,13 +89,10 @@ $(function () {
         // Load data
         // ------------------------------
 
-        //d3.tsv("assets/data/client-sortable/infection.tsv", function(error, data) {
-        d3.json("assets/data/client-sortable/infection.json", function(error, data) {
+        d3.json("assets/data/bar_user_agent/user_agent.json", function(error, data) {
 
-            //console.log(data);
-            data = data.infectionData;
-            console.log(data);
             // Pull out values
+            data = data.uaData;
             data.forEach(function(d) {
                 d.frequency = +d.frequency;
             });
@@ -133,7 +134,7 @@ $(function () {
                 .style("text-anchor", "end")
                 .style("fill", "#999")
                 .style("font-size", 12)
-                .text("Frequency");
+                .text("File Count");
 
 
             // Append bars
@@ -159,7 +160,7 @@ $(function () {
 
             // Sort values on page load with delay
             var sortTimeout = setTimeout(function() {
-                d3.select(".toggle-sort").property("checked", false).each(change);
+                d3.select(".toggle-sort").property("checked", true).each(change);
                 $.uniform.update();
             }, 2000);
 
@@ -169,8 +170,8 @@ $(function () {
 
                 // Copy-on-write since tweens are evaluated after a delay.
                 var x0 = x.domain(data.sort(this.checked
-                    ? function(a, b) { return b.frequency - a.frequency; }
-                    : function(a, b) { return d3.ascending(a.letter, b.letter); })
+                        ? function(a, b) { return b.frequency - a.frequency; }
+                        : function(a, b) { return d3.ascending(a.letter, b.letter); })
                     .map(function(d) { return d.letter; }))
                     .copy();
 
@@ -238,3 +239,4 @@ $(function () {
         }
     }
 });
+
