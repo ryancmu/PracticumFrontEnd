@@ -32,8 +32,8 @@ jQuery(function ($) {
                 data,
                 [
                     // { field: "Location", title: "Location", width: 80 },
-                    { field: "File_Name", title: "File Name", width: 100 },
-                    { field: "Infection_Types", title: "Infection Types", width: 100 },
+                    { field: "File_Name", title: "File Name", width: 150 },
+                    { field: "Infection_Types", title: "Infection Types", width: 150 },
                     { field: "Port", title: "Port", width: 50 },
                     { field: "User_Agent", title: "User Agent", width: 150 }
                 ],
