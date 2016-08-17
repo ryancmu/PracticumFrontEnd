@@ -1,0 +1,93 @@
+
+body, html {
+	height: 100%;
+	background-color: black;
+}
+
+
+#mainDiv {
+	width: 94%; 
+	height: 90%; 
+	background-color: none; 
+	position: relative; 
+	top: 5%; 
+	left: 3%;
+}
+
+#mapDiv {
+	width: 100%; 
+	height: 100%; 
+	background-color: none; 
+	position: absolute; 
+	background-image: url(bg_clear.jpg); 
+	background-size: 100% 100%; 
+	opacity: 0.8;
+}
+
+#mapDivImage {
+	position: absolute; 
+	width: 16%; 
+	height: 10%;
+	background-color: none; 
+	left: -1%;
+}
+
+#localTimeSpan {
+	color: green; 
+	text-align: right; 
+	position: absolute; 
+	top: 3%; 
+	left: 84%; 
+	background-color: none; 
+	width: 15%; 
+	height: 10%; 
+	font-size: 5pt; 
+	font-family: DigitalDismay;
+}
+
+#svgDiv {
+	width: 100%; 
+	height: 100%; 
+	background-color: none; 
+	position: absolute;
+}
+#tableDiv {
+	width: 46%;
+	height: 26%;
+	position: absolute;
+	top: 78%;
+	left: 35%;
+	color: white;
+	background-color: green;
+}
+
+#tableData{
+	color:white;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.th1 {
+	float: left;
+	width: 25%;
+}
+.th2 {
+	float: left;
+	width: 25%;
+}
+.th3 {
+	float: left;
+	width: 25%;
+}
+.th4 {
+	float: left;
+	width: 25%;
+}
+
+@font-face { font-family: DigitalDismay; src: url('Font/Digital Dismay/Digital Dismay.otf'); }
+@font-face { font-family: digital-7; src: url('Font/digital-7/digital-7.ttf'); }
+@font-face { font-family: DIGITALDREAM; src: url('Font/DIGITALDREAM/DIGITALDREAM.ttf'); }
+@font-face { font-family: DigiGraphics; src: url('Font/DigiGraphics/DigiGraphics.ttf'); }
+@font-face { font-family: TickingTimebombBB; src: url('Font/TickingTimebombBB/TickingTimebombBB.ttf'); }
