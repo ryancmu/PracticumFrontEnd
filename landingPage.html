@@ -26,7 +26,7 @@
 </head>
 
 <body>
-	<div id="mainDiv">
+	<div id="mainDiv">	
 		<div id="mapDiv"></div>
 		<img id="mapDivImage" src="assets/css/landing/TiversaLogo.png" alt="Tiversa">
 		<span id="localTimeSpan"></span>
@@ -35,62 +35,74 @@
 		<!-- <div id="chartDiv"></div> -->
 		<!--<div id="svgDiv"></div>-->
 
-		<!--<div id="tableDiv">-->
+		<div id="tableDiv">
+			<div class="panel">
+				<div class="panel-heading">
+					<div>
+						<ul>
+							<li>
+								<div class="row">
+									<div class="col-lg-3">Date</div>
+									<div class="col-lg-3">Country</div>
+									<div class="col-lg-3">Infection</div>
+									<div class="col-lg-3">File</div>
+								</div>
 
-			<!--<div id="th">-->
-				<!--<ul>-->
-					<!--<li>-->
-						<!--<div class="th1">Date</div>-->
-						<!--<div class="th2">Country</div>-->
-						<!--<div class="th3">Infection</div>-->
-						<!--<div class="th4">File</div>-->
-					<!--</li>-->
-				<!--</ul>-->
+							</li>
+						</ul>
+					</div>
 
-			<!--</div>-->
+				</div>
 
-			<!--<div id="tableData">-->
-				<!--<ul>-->
-					<!--<li>-->
-						<!--<div class="th1">1</div>-->
-						<!--<div class="th2">Country</div>-->
-						<!--<div class="th3">Infection</div>-->
-						<!--<div class="th4">File</div>-->
-					<!--</li>-->
-					<!--<li>-->
-						<!--<div class="th1">2</div>-->
-						<!--<div class="th2">Country</div>-->
-						<!--<div class="th3">Infection</div>-->
-						<!--<div class="th4">File</div>-->
-					<!--</li>-->
-					<!--<li>-->
-						<!--<div class="th1">3</div>-->
-						<!--<div class="th2">Country</div>-->
-						<!--<div class="th3">Infection</div>-->
-						<!--<div class="th4">File</div>-->
-					<!--</li>-->
-					<!--<li>-->
-						<!--<div class="th1">4</div>-->
-						<!--<div class="th2">Country</div>-->
-						<!--<div class="th3">Infection</div>-->
-						<!--<div class="th4">File</div>-->
-					<!--</li>-->
-					<!--<li>-->
-						<!--<div class="th1">5</div>-->
-						<!--<div class="th2">Country</div>-->
-						<!--<div class="th3">Infection</div>-->
-						<!--<div class="th4">File</div>-->
-					<!--</li>-->
-					<!--<li>-->
-						<!--<div class="th1">6</div>-->
-						<!--<div class="th2">Country</div>-->
-						<!--<div class="th3">Infection</div>-->
-						<!--<div class="th4">File</div>-->
-					<!--</li>-->
-				<!--</ul>-->
-			<!--</div>-->
+				<div class="panel-body">
+					<div id="tableData">
+						<ul>
+							<li>
+								<div class="row">
+									<div class="col-lg-3">1</div>
+									<div class="col-lg-3">Country</div>
+									<div class="col-lg-3">Infection</div>
+									<div class="col-lg-3">File</div>
+								</div>
+							</li>
+							<li>
+								<div class="row">
+									<div class="col-lg-3">2</div>
+									<div class="col-lg-3">Country</div>
+									<div class="col-lg-3">Infection</div>
+									<div class="col-lg-3">File</div>
+								</div>
+							</li>
+							<li>
+								<div class="row">
+									<div class="col-lg-3">3</div>
+									<div class="col-lg-3">Country</div>
+									<div class="col-lg-3">Infection</div>
+									<div class="col-lg-3">File</div>
+								</div>
+							</li>
+							<li>
+								<div class="row">
+									<div class="col-lg-3">4</div>
+									<div class="col-lg-3">Country</div>
+									<div class="col-lg-3">Infection</div>
+									<div class="col-lg-3">File</div>
+								</div>
+							</li>
+							<li>
+								<div class="row">
+									<div class="col-lg-3">5</div>
+									<div class="col-lg-3">Country</div>
+									<div class="col-lg-3">Infection</div>
+									<div class="col-lg-3">File</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
 
-		<!--</div>-->
+		</div>
  
 	</div>
 </body>
@@ -559,10 +571,10 @@
 
 	 $(function() {
              $('#tableData').vTicker('init', {
-             	speed: 10000,
+             	speed: 1000,
                  pause: 500,
-                 showItems: 3,
-                 padding: 5,
+                 showItems: 4,
+                 padding: 0,
 
              });
      });

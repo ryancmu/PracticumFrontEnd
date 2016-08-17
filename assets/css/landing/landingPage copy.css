@@ -53,20 +53,22 @@ body, html {
 }
 #tableDiv {
 	width: 46%;
-	height: 26%;
+	/*height: 26%;*/
 	position: absolute;
-	top: 78%;
+	top: 75%;
 	left: 35%;
-	color: white;
+	/*height: 30%;*/
 	background-color: green;
 }
 
 #tableData{
-	color:white;
+	height: 120px;
 }
 
 ul {
 	list-style-type: none;
+	width:100%;
+	padding-left: 0px;
 }
 
 .th1 {
@@ -84,6 +86,20 @@ ul {
 .th4 {
 	float: left;
 	width: 25%;
+}
+
+#tableDiv .panel{
+	margin-bottom: 0px;
+}
+
+#tableDiv .panel-heading{
+	padding-top: 10px;
+	padding-bottom: 5px;
+}
+
+#tableDiv .panel-body{
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 @font-face { font-family: DigitalDismay; src: url('Font/Digital Dismay/Digital Dismay.otf'); }
