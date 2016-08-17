@@ -18,9 +18,9 @@ $(function() {
         var val = 2009;
 
         // Values
-        statesValues = jvm.values.apply({}, jvm.values(data.states)),
-            metroPopValues = Array.prototype.concat.apply([], jvm.values(data.metro.population)),
-            metroUnemplValues = Array.prototype.concat.apply([], jvm.values(data.metro.unemployment));
+        statesValues = jvm.values.apply({}, jvm.values(data.states));
+            // metroPopValues = Array.prototype.concat.apply([], jvm.values(data.metro.population)),
+            // metroUnemplValues = Array.prototype.concat.apply([], jvm.values(data.metro.unemployment));
 
         // Configuration
         $('.usa_map').vectorMap({
@@ -42,7 +42,8 @@ $(function() {
             },
             series: {
                 regions: [{
-                    scale: ['#ff9999', '#e60000'],
+                    scale:['#c8eeff', '#0071A4'],
+                    // scale: ['#ffe6e6', '#e60000'],
                     attribute: 'fill',
                     values: data.states[val],
                     normalizeFunction: 'polynomial'
