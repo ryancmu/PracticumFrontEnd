@@ -5,7 +5,7 @@ function display_c(){
 	var ct = document.getElementById('localTimeSpan');
 	var font_Size = window.innerWidth;
 	
-	ct.style.fontSize = font_Size*0.026 + "pt";
+	ct.style.fontSize = font_Size*0.020 + "pt";
 
 	var refresh = 1000; // Refresh rate in milli seconds
 	mytime = setTimeout('display_ct()',refresh)

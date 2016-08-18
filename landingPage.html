@@ -95,6 +95,22 @@
 									<div class="col-xs-3 col-sm-3 col-lg-3">File</div>
 								</div>
 							</li>
+							<li>
+								<div class="row">
+									<div class="col-xs-3 col-sm-3 col-lg-3">5</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Country</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Infection</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">File</div>
+								</div>
+							</li>
+							<li>
+								<div class="row">
+									<div class="col-xs-3 col-sm-3 col-lg-3">5</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Country</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Infection</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">File</div>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -267,6 +283,7 @@
 		   				 });
 
 		    line.transition()
+					.delay(150)
 				.attr("x2", endX)
 				.attr("y2", endY)
 				.duration(duration*1000)
@@ -501,25 +518,6 @@
 
 	function start() {
 
-
-		// console.log("locations="+locations.length);
-		//source
-
-		  // var randomValue1 = Math.floor((Math.random()*(locations.length-1)) + 0);
-		  // var randomValue2 = Math.floor((Math.random()*(locations.length-1)) + 0);
-
-		  // var randomColor = Math.floor((Math.random()*(color.length-1)) + 0);
-
-		 //  if(randomValue1 != randomValue2) {
-		 //  	circleAnimation(40,1.5,locations[randomValue1][0], locations[randomValue1][1], 0, "none", color[randomColor]);
-		 //  	circleAnimation(40,1.5,locations[randomValue1][0], locations[randomValue1][1], 0.2, "none", color[randomColor]);
-		 //  	circleAnimation(40,1.5,locations[randomValue1][0], locations[randomValue1][1], 0.4, "none", color[randomColor]);
-		 //  	circleAnimation(40,1.2,locations[randomValue1][0], locations[randomValue1][1], 0.3, color[randomColor],"none");
-
-			// circleShotAnimation(locations[randomValue1][0], locations[randomValue1][1],
-			// 	locations[randomValue2][0], locations[randomValue2][1], randomColor);
-		 //  }
-
 		 var randomLocation = Math.floor((Math.random()*(locationArray.length)) + 0);
 		 console.log("location="+randomLocation);
 		 combineAnimation(locationArray[randomLocation]);
@@ -538,34 +536,6 @@
 </script>
 
 <script>
-
-	// $(function() {
-	// 		$('#example1').vTicker('init', {speed: 200, 
-	//     		pause: 800,
-	//     		showItems: 5,
-	//     		padding:3});
-	// });
-	
-	// $(function() {
-	// 		$('#example2').vTicker('init', {speed: 200, 
-	//     		pause: 800,
-	//     		showItems: 5,
-	//     		padding:3});
-	// });
-	
-	// $(function() {
-	// 		$('#example3').vTicker('init', {speed: 200, 
-	//     		pause: 800,
-	//     		showItems: 5,
-	//     		padding:3});
-	// });
-
-	// $(function() {
-	// 		$('#example4').vTicker('init', {speed: 200, 
-	//     		pause: 800,
-	//     		showItems: 5,
-	//     		padding:3});
-	// });
 
 	 $(function() {
              $('#tableData').vTicker('init', {
