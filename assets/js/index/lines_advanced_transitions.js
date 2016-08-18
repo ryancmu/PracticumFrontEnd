@@ -35,7 +35,7 @@ $(function () {
 
 
         // City name
-        var city = "New York";
+        var city = "Ohio";
 
         // Format data
         parseDate = d3.time.format("%Y%m%d").parse;
@@ -107,7 +107,7 @@ $(function () {
             // Pull out values
             data.forEach(function(d) {
                 d.date = parseDate(d.date);
-                d["New York"] = +d["New York"];
+                d["Ohio"] = +d["Ohio"];
                 d["California"] = +d["California"];
                 d["Florida"] = +d["Florida"];
             });
@@ -178,7 +178,7 @@ $(function () {
 
             // Set timeout for auto change
             var timeout = setTimeout(function() {
-                d3.select("input[value=\"New York\"]").property("checked", true).each(change);
+                d3.select("input[value=\"Ohio\"]").property("checked", true).each(change);
                 $.uniform.update();
             }, 2000);
 
