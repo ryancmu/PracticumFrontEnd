@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 
 
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="assets/js/core/libraries/bootstrap.min.js"></script>
 	
@@ -18,23 +18,19 @@
 	<script src="assets/js/landing/localTime.js"></script>
 	
 
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 	<script src="assets/js/liveFeed/jquery.vticker-min.js"></script>
 
 </head>
 
 <body>
-	<div id="mainDiv">	
-		<div id="mapDiv"></div>
-		<img id="mapDivImage" src="assets/css/landing/TiversaLogo.png" alt="Tiversa">
-		<span id="localTimeSpan"></span>
-		<div id="svgDiv"></div>
-
-		<!-- <div id="chartDiv"></div> -->
-		<!--<div id="svgDiv"></div>-->
-
+	<div id="mainOuterDiv">
+		<div id="mainDiv">
+			<div id="mapDiv"></div>
+			<img id="mapDivImage" src="assets/css/landing/TiversaLogo.png" alt="Tiversa">
+			<span id="localTimeSpan"></span>
+			<div id="svgDiv"></div>
+		</div>
 		<div id="tableDiv">
 			<div class="panel">
 				<div class="panel-heading">
@@ -42,10 +38,10 @@
 						<ul>
 							<li>
 								<div class="row">
-									<div class="col-lg-3">Date</div>
-									<div class="col-lg-3">Country</div>
-									<div class="col-lg-3">Infection</div>
-									<div class="col-lg-3">File</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Date</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Country</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Infection</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">File</div>
 								</div>
 
 							</li>
@@ -59,42 +55,58 @@
 						<ul>
 							<li>
 								<div class="row">
-									<div class="col-lg-3">1</div>
-									<div class="col-lg-3">Country</div>
-									<div class="col-lg-3">Infection</div>
-									<div class="col-lg-3">File</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">1</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Country</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Infection</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">File</div>
 								</div>
 							</li>
 							<li>
 								<div class="row">
-									<div class="col-lg-3">2</div>
-									<div class="col-lg-3">Country</div>
-									<div class="col-lg-3">Infection</div>
-									<div class="col-lg-3">File</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">2</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Country</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Infection</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">File</div>
 								</div>
 							</li>
 							<li>
 								<div class="row">
-									<div class="col-lg-3">3</div>
-									<div class="col-lg-3">Country</div>
-									<div class="col-lg-3">Infection</div>
-									<div class="col-lg-3">File</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">3</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Country</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Infection</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">File</div>
 								</div>
 							</li>
 							<li>
 								<div class="row">
-									<div class="col-lg-3">4</div>
-									<div class="col-lg-3">Country</div>
-									<div class="col-lg-3">Infection</div>
-									<div class="col-lg-3">File</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">4</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Country</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Infection</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">File</div>
 								</div>
 							</li>
 							<li>
 								<div class="row">
-									<div class="col-lg-3">5</div>
-									<div class="col-lg-3">Country</div>
-									<div class="col-lg-3">Infection</div>
-									<div class="col-lg-3">File</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">5</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Country</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Infection</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">File</div>
+								</div>
+							</li>
+							<li>
+								<div class="row">
+									<div class="col-xs-3 col-sm-3 col-lg-3">5</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Country</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Infection</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">File</div>
+								</div>
+							</li>
+							<li>
+								<div class="row">
+									<div class="col-xs-3 col-sm-3 col-lg-3">5</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Country</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">Infection</div>
+									<div class="col-xs-3 col-sm-3 col-lg-3">File</div>
 								</div>
 							</li>
 						</ul>
@@ -103,7 +115,6 @@
 			</div>
 
 		</div>
- 
 	</div>
 </body>
 	
@@ -269,6 +280,7 @@
 		   				 });
 
 		    line.transition()
+					.delay(150)
 				.attr("x2", endX)
 				.attr("y2", endY)
 				.duration(duration*1000)
@@ -503,25 +515,6 @@
 
 	function start() {
 
-
-		// console.log("locations="+locations.length);
-		//source
-
-		  // var randomValue1 = Math.floor((Math.random()*(locations.length-1)) + 0);
-		  // var randomValue2 = Math.floor((Math.random()*(locations.length-1)) + 0);
-
-		  // var randomColor = Math.floor((Math.random()*(color.length-1)) + 0);
-
-		 //  if(randomValue1 != randomValue2) {
-		 //  	circleAnimation(40,1.5,locations[randomValue1][0], locations[randomValue1][1], 0, "none", color[randomColor]);
-		 //  	circleAnimation(40,1.5,locations[randomValue1][0], locations[randomValue1][1], 0.2, "none", color[randomColor]);
-		 //  	circleAnimation(40,1.5,locations[randomValue1][0], locations[randomValue1][1], 0.4, "none", color[randomColor]);
-		 //  	circleAnimation(40,1.2,locations[randomValue1][0], locations[randomValue1][1], 0.3, color[randomColor],"none");
-
-			// circleShotAnimation(locations[randomValue1][0], locations[randomValue1][1],
-			// 	locations[randomValue2][0], locations[randomValue2][1], randomColor);
-		 //  }
-
 		 var randomLocation = Math.floor((Math.random()*(locationArray.length)) + 0);
 		 console.log("location="+randomLocation);
 		 combineAnimation(locationArray[randomLocation]);
@@ -541,40 +534,12 @@
 
 <script>
 
-	// $(function() {
-	// 		$('#example1').vTicker('init', {speed: 200, 
-	//     		pause: 800,
-	//     		showItems: 5,
-	//     		padding:3});
-	// });
-	
-	// $(function() {
-	// 		$('#example2').vTicker('init', {speed: 200, 
-	//     		pause: 800,
-	//     		showItems: 5,
-	//     		padding:3});
-	// });
-	
-	// $(function() {
-	// 		$('#example3').vTicker('init', {speed: 200, 
-	//     		pause: 800,
-	//     		showItems: 5,
-	//     		padding:3});
-	// });
-
-	// $(function() {
-	// 		$('#example4').vTicker('init', {speed: 200, 
-	//     		pause: 800,
-	//     		showItems: 5,
-	//     		padding:3});
-	// });
-
 	 $(function() {
              $('#tableData').vTicker('init', {
              	speed: 1000,
                  pause: 500,
                  showItems: 4,
-                 padding: 0,
+                 padding: 5
 
              });
      });
