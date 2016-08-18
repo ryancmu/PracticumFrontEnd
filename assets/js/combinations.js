@@ -74,6 +74,7 @@ $(function () {
                 // Add title
                 title: {
                     text: 'Top 6 file type',
+                    textStyle: {fontSize: 20},
                     // subtext: 'Open source data',
                     x: 'center'
                 },
@@ -88,6 +89,7 @@ $(function () {
                 legend: {
                     orient: 'vertical',
                     x: 'left',
+                    textStyle: {fontSize: 15},
                     data: ['zip','exe','dll','rar','msi', 'other']
                 },
 
@@ -96,7 +98,7 @@ $(function () {
 
                 // Add series
                 series: [{
-                    name: 'Browser',
+                    name: 'File Type',
                     type: 'pie',
                     radius: '75%',
                     center: ['50%', '57.5%'],
@@ -107,7 +109,7 @@ $(function () {
                         {value: 374, name: 'rar'},
                         {value: 219, name: 'msi'},
                         {value: 271, name: 'other'}
-                    ]
+                    ],
                 }]
             };
 
@@ -132,6 +134,7 @@ $(function () {
 
                 // Add legend
                 legend: {
+                    textStyle: {fontSize: 15},
                     data: ['zip','exe','dll','rar','msi', 'other']
                 },
 
@@ -257,6 +260,7 @@ $(function () {
 
                 // Add legend
                 legend: {
+                    textStyle: {fontSize: 15},
                     data: ['Direct Connect','LimeWire','Shareaza','LimeWire Music','WinMX Music', 'Other']
                 },
 
