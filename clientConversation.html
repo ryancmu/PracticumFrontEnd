@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Limitless - Responsive Web Application Kit by Eugene Kopyov</title>
+    <title>Tiversa&trade; - Conversation</title>
 
     <!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -28,7 +28,8 @@
     <!-- Theme JS files -->
     <script type="text/javascript" src="assets/js/core/app.js"></script>
     <script type="text/javascript" src="assets/js/pages/support_chat_layouts.js"></script>
-
+    <script type="text/javascript" src="assets/js/plugins/uploaders/fileinput.min.js"></script>
+    <script type="text/javascript" src="assets/js/pages/uploader_bootstrap.js"></script>
     <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
     <!-- /theme JS files -->
 
@@ -1246,9 +1247,21 @@
                             <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i class="icon-circle-right2"></i></b> Send</button>
                         </div>
                     </div>
+
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label text-semibold">File upload:</label>
+                        <div class="col-lg-10">
+                            <input type="file" class="file-input-ajax" multiple="multiple">
+
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- /line content divider -->
+
+
+
 
         </div>
         <!-- /main content -->
