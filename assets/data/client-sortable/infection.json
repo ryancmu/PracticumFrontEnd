@@ -1,12 +1,12 @@
 {
   "infectionData":[
-    {"letter": "Trojan-FHPO", "frequency": 1338},
-    {"letter": "BackDoor.xa", "frequency": 3151},
-    {"letter": "W32/Opanki.worm", "frequency": 1801},
-    {"letter": "GenericR-ATG!hb", "frequency": 7762},
-    {"letter": "Generic PUP", "frequency": 1533},
-    {"letter": "W32/HLLP", "frequency": 1000},
-    {"letter": "Generic Downloader.iv", "frequency": 3341},
-    {"letter": "Artemis", "frequency": 6138}
+    {"letter": "BackDoor-CKB.gen.ap", "frequency": 12215270},
+    {"letter": "GenericR-ATG!hb ", "frequency": 1004587 },
+    {"letter": "W32/HLLP.41472.e ", "frequency": 406533},
+    {"letter": "W32/Sality.gen.z     ", "frequency": 369860 },
+    {"letter": "Generic BackDoor.xa", "frequency": 354955},
+    {"letter": "Generic PUP ", "frequency": 311022},
+    {"letter": "Artemis!0F26F85D76D4  ", "frequency": 265042 },
+    {"letter": "Generic.gj  ", "frequency": 133831}
   ]
 }
