@@ -186,6 +186,9 @@
 
                     <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
                     <!-- /Preventative Pie Chart -->
+                    <br>
+                    <!--3D Pie Chart--->
+                    <div id="container2" style="height: 400px"></div>
 
                 </div>
             </div>
@@ -288,7 +291,7 @@
         },
         title: {
             style: {
-                fontSize: '22px',
+                fontSize: '24px',
                 fontWeight: 'bold',
                 textTransform: 'uppercase'
             }
@@ -301,14 +304,14 @@
         legend: {
             itemStyle: {
                 fontWeight: 'bold',
-                fontSize: '16px'
+                fontSize: '20px'
             }
         },
         xAxis: {
             gridLineWidth: 1,
             labels: {
                 style: {
-                    fontSize: '16px',
+                    fontSize: '20px',
                     fontWeight: 'bold'
                 }
             }
@@ -322,7 +325,7 @@
             },
             labels: {
                 style: {
-                    fontSize: '16px',
+                    fontSize: '20px',
                     fontWeight: 'bold'
                 }
             }
@@ -342,6 +345,51 @@
     // Apply the theme
     Highcharts.setOptions(Highcharts.theme);
 </script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+<script>
+    $(function () {
+        $('#container2').highcharts({
+            chart: {
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45
+                }
+            },
+            title: {
+                text: 'Top User Agents spreading malware'
+            },
+            subtitle: {
+                text: 'Following User Agents most likely to distribute malware'
+            },
+            plotOptions: {
+                pie: {
+                    innerSize: 100,
+                    depth: 45
+                }
+            },
+            series: [{
+                name: 'Delivered amount',
+                data: [
+                    ['Direct Connect', 3745568],
+                    ['LimeWire/4.21.1 (rc)', 974568],
+                    ['Shareaza 2.7.8.0', 231541],
+                    ['Sharest/3.8.0', 867733],
+                    ['LimeWire Music/4.8.0   ', 451255],
+                    ['LimeZilla/3.5.0 ', 426566],
+                    [' WinMX Music/6.3.0', 431353],
+                    ['giFT-Gnutella/0.0.11', 382561],
+                    ['Emerald P2P UltraPeer/3.3.0', 212556]
+                ]
+            }]
+        });
+    });
+</script>
+
 <!-- Footer -->
 <div class="navbar navbar-default navbar-fixed-bottom footer">
     <ul class="nav navbar-nav visible-xs-block">
