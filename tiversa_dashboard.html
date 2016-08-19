@@ -49,7 +49,10 @@
 	<script type="text/javascript" src="assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
     <!-- Theme JS files -->
 
-
+	<!---date range JS File--->
+	<script type="text/javascript" src="assets/js/moment.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-datetimepicker.min.js"></script>
+	<!---/date range JS File--->
 
 	<!--Pie chart JS files-->
 	<script type="text/javascript" src="assets/js/charts/d3/pies/pie_update.js"></script>
@@ -73,27 +76,7 @@
 	<script type="text/javascript" src="assets/js/plugins/pickers/daterangepicker.js"></script>
 
     <script type="text/javascript" src="assets/js/core/app.js"></script>
-    <script type="text/javascript" src="assets/js/pages/dashboard.js"></script>
-
 	<script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
-
-
-
-    <!-- Date picker -->
-    <script type="text/javascript" src="assets/js/plugins/notifications/jgrowl.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/ui/moment/moment.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/pickers/daterangepicker.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/pickers/anytime.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.date.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/picker.time.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/pickers/pickadate/legacy.js"></script>
-
-    <script type="text/javascript" src="assets/js/core/app.js"></script>
-    <script type="text/javascript" src="assets/js/pages/picker_date.js"></script>
-
-    <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
-    <!-- /Date picker -->
 
 
 
@@ -244,11 +227,56 @@
 							</div>
 						</div>
 
-
 						<div  class="panel-body">
 							<div class="row">
+								<div class="col-xs-8 col-xs-offset-2">
+									<div class="col-md-3">
+										<button class="btn btn-default">
+											<span class="dropdown_button_text" ><i class="icon-calendar position-left"></i>Date Range</span>
+										</button>
+									</div>
+									<div class='col-md-4'>
+										<div class="form-group">
+											<div class='input-group date' id='datetimepicker6'>
+												<input type='text' class="form-control" />
+												<span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+											</div>
+										</div>
+									</div>
+									<div class='col-md-4'>
+										<div class="form-group">
+											<div class='input-group date' id='datetimepicker7'>
+												<input type='text' class="form-control" />
+												<span class="input-group-addon">
+													<span class="glyphicon glyphicon-calendar"></span>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<script type="text/javascript">
+									$(function () {
+										$('#datetimepicker6').datetimepicker({
+											format: "MM-DD-YYYY",
+											useCurrent: false //Important! See issue #1075
+										});
+										$('#datetimepicker7').datetimepicker({
+											format: "MM-DD-YYYY",
+											useCurrent: false //Important! See issue #1075
+										});
+										$("#datetimepicker6").on("dp.change", function (e) {
+											$('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+										});
+										$("#datetimepicker7").on("dp.change", function (e) {
+											$('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+										});
+									});
+								</script>
+
 								<div id = "wrapper" class="col-xs-8 col-xs-offset-2">
-									<div class="multiSearch">
+									<div class="multiSearch col-lg-12">
 									<form action="sumbit" class="form-group">
 										<div class="input-group">
 											<div class="input-group-btn search-panel-multi">
@@ -256,14 +284,12 @@
 													<span class="dropdown_button_text" ><i class="icon-stack2 position-left"></i>Choose criteria</span> <span class="caret"></span>
 												</button>
 												<ul class="dropdown-menu" role="menu">
+													<li><a href="#client_multi"><i class="icon-user"></i> Client</a></li>
 													<li><a href="#ip_multi"><i class="icon-address-book"></i> IP</a></li>
-													<li><a href="#infection_multi"><i class="icon-calendar"></i> Date Range</a></li>
 													<li><a href="#file_name_multi"><i class="icon-file-eye"></i> File Name</a></li>
 													<li><a href="#country_multi"><i class="icon-location3"></i> Country</a></li>
 													<li><a href="#state_multi"><i class="icon-location4"></i> State</a></li>
 													<li><a href="#infection_multi"><i class="icon-warning"></i> Infection Type</a></li>
-                                                    <li><a href="#start_date"><i class="icon-arrow-right5"></i> Start Date</a></li>
-                                                    <li><a href="#end_date"><i class="icon-arrow-left5"></i> End Date</a></li>
 												</ul>
 											</div>
 											<input type="hidden" name="search_param_multi" value="all" id="search_param_multi">
