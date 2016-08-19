@@ -25,10 +25,16 @@
         2. font-size,
             left: label of pie charts
         7. ==The notebook==
-        8. Make Tiversa PNG
-            left: Use PS to do it
         9. ==Perfume: The Story of a Murderer==
 
+8.19
+    TODO:
+        1. Add checkbox for infection list;
+        2. Add infection ip list to infection list page;
+        3. Show FIle - SHA1 list
+        4. Possible IP List
+        5. Show 1 or 2 radio
+        6. set Radio then get the offender list
 
 
 
