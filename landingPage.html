@@ -139,7 +139,7 @@
 		offsetX = document.getElementById("svgDiv").offsetWidth;
 		offsetY = document.getElementById("svgDiv").offsetHeight;
 
-		locations = [[offsetX*0.06, offsetY*0.25, 1, "USA","assets/images/flags/us"], [offsetX*0.15, offsetY*0.4, 1, "USA"], [offsetX*0.2, offsetY*0.4, 1, "USA"], [offsetX*0.27, offsetY*0.4, 1, "USA"], [offsetX*0.2, offsetY*0.48, 2, "Mexico"],
+		locations = [[offsetX*0.06, offsetY*0.25, 1, "USA","assets/images/flags/ad.png"], [offsetX*0.15, offsetY*0.4, 1, "USA","assets/css/landing/USA.png"], [offsetX*0.2, offsetY*0.4, 1, "USA"], [offsetX*0.27, offsetY*0.4, 1, "USA"], [offsetX*0.2, offsetY*0.48, 2, "Mexico"],
 					[offsetX*0.17, offsetY*0.34, 3, "Canada"], [offsetX*0.24, offsetY*0.34, 3, "Canada"], [offsetX*0.30, offsetY*0.32, 3, "Canada"],
 					[offsetX*0.17, offsetY*0.34, 3, "Canada"],
 					[offsetX*0.3, offsetY*0.58, 4, "Venezuela"],
@@ -497,7 +497,7 @@
 		  	circleAnimation(40,1.2,locations[locations1[0]][0], locations[locations1[0]][1], 0.3, color[randomColor],"none");
 
             document.getElementById("SourceValue").innerHTML = "";
-//            document.getElementById("Flag").style.backgroundImage="url(assets/images/flags/us.png)";
+            document.getElementById("Flag").style.backgroundImage = "url('"+ locations[0][4] +"')";
             document.getElementById("InfectionValue").innerHTML = "";
             document.getElementById("UserAgentValue").innerHTML = "";
             document.getElementById("PortValue").innerHTML = "";
