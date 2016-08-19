@@ -63,7 +63,7 @@ $(function () {
             .scale(x)
             .orient("bottom")
             .ticks(6)
-            .tickFormat(d3.time.format("%b"));
+            .tickFormat(d3.time.format("%m-%d"));
 
         // Vertical
         var yAxis = d3.svg.axis()
