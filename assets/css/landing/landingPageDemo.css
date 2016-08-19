@@ -22,7 +22,7 @@ body, html {
 	width: 100%; 
 	height: 100%;
 	position: absolute; 
-	background-image: url(bg_clear.jpg); 
+	background-image: url(bg_blue.jpg);
 	background-size: 100% 100%; 
 	opacity: 1;
 }
@@ -35,7 +35,7 @@ body, html {
 }
 
 #localTimeSpan {
-	color: green; 
+	color: #00b7f0;
 	text-align: center;
 	position: absolute; 
 	top: 3%; 
@@ -43,7 +43,7 @@ body, html {
 	width: 15%; 
 	height: 8%;
 	font-family: DigitalDismay;
-	border: 2px solid darkgreen;
+	border: 2px solid #00b7f0;
 	/*border-style: dashed;*/
 	border-radius: 20%;
 }
@@ -54,13 +54,16 @@ body, html {
 	position: absolute;
 }
 
+/*rgb(0,183,240)*/
+/*rgb(0,186,245)*/
+
 #chartDiv {
 	width: 20%;
 	height: 33%;
 	position: absolute;
 	bottom: 6%;
 	left: 2%;
-	border: 2px solid darkgreen;
+	border: 2px solid #00b7f0;
 	border-radius: 10% 20% 10% 20%;
 }
 
@@ -72,7 +75,7 @@ body, html {
 	font-family: DigiGraphics;
 	font-size: large;
 	font-weight: 200;
-	color: darkgreen;
+	color: #00b7f0;
 	text-align: center;
 	/*background-color: #00a8c6;*/
 }
@@ -94,7 +97,7 @@ body, html {
 	position: absolute;
 	font-family: DigiGraphics;
 	font-size: small;
-	color: darkgreen;
+	color: #00b7f0;
 	text-align: center;
 }
 #Infection {
@@ -105,7 +108,7 @@ body, html {
 	font-family: DigiGraphics;
 	font-size: large;
 	font-weight: 200;
-	color: darkgreen;
+	color: #00b7f0;
 	text-align: center;
 	/*background-color: #00a8c6;*/
 }
@@ -116,7 +119,7 @@ body, html {
 	top: 46%;
 	font-family: DigiGraphics;
 	font-size: small;
-	color: darkgreen;
+	color: #00b7f0;
 	text-align: center;
 	/*background-color: #00a8c6;*/
 }
@@ -128,7 +131,7 @@ body, html {
 	font-family: DigiGraphics;
 	font-size: large;
 	font-weight: 200;
-	color: darkgreen;
+	color: #00b7f0;
 	text-align: center;
 }
 #UserAgentValue {
@@ -138,7 +141,7 @@ body, html {
 	top: 68%;
 	font-family: DigiGraphics;
 	font-size: small;
-	color: darkgreen;
+	color: #00b7f0;
 	text-align: center;
 }
 #Port {
@@ -149,7 +152,7 @@ body, html {
 	font-family: DigiGraphics;
 	font-size: large;
 	font-weight: 200;
-	color: darkgreen;
+	color: #00b7f0;
 	text-align: center;
 }
 #PortValue {
@@ -159,7 +162,7 @@ body, html {
 	top: 90%;
 	font-family: DigiGraphics;
 	font-size: small;
-	color: darkgreen;
+	color: #00b7f0;
 	text-align: center;
 }
 #tableDiv {
@@ -171,7 +174,7 @@ body, html {
 	bottom: 2%;
 	left: 35%;
 	/*height: 30%;*/
-	border: 2px solid darkgreen;
+	border: 2px solid #00b7f0;
 	border-radius: 10%;
 }
 
@@ -197,7 +200,7 @@ ul {
 	font-family: DigiGraphics;
 	color: green;
 	font-size: 100%;
-	border-bottom: 2px solid darkgreen;
+	border-bottom: 2px solid #00b7f0;
 }
 
 #tableDiv .panel-body{
