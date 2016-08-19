@@ -115,6 +115,17 @@
 			</div>
 
 		</div>
+        <div id="chartDiv">
+            <div id="Source">Source</div>
+            <div id="SourceValue"></div>
+            <div id="Infection">Infection</div>
+            <div id="InfectionValue"></div>
+            <div id="UserAgent">User Agent</div>
+            <div id="UserAgentValue"></div>
+            <div id="Port">Port Number</div>
+            <div id="PortValue">8080</div>
+            <div id="Flag"></div>
+        </div>
 	</div>
 </body>
 	
@@ -128,7 +139,7 @@
 		offsetX = document.getElementById("svgDiv").offsetWidth;
 		offsetY = document.getElementById("svgDiv").offsetHeight;
 
-		locations = [[offsetX*0.06, offsetY*0.25, 1, "USA"], [offsetX*0.15, offsetY*0.4, 1, "USA"], [offsetX*0.2, offsetY*0.4, 1, "USA"], [offsetX*0.27, offsetY*0.4, 1, "USA"], [offsetX*0.2, offsetY*0.48, 2, "Mexico"],
+		locations = [[offsetX*0.06, offsetY*0.25, 1, "USA","assets/images/flags/ad.png"], [offsetX*0.15, offsetY*0.4, 1, "USA","assets/css/landing/USA.png"], [offsetX*0.2, offsetY*0.4, 1, "USA"], [offsetX*0.27, offsetY*0.4, 1, "USA"], [offsetX*0.2, offsetY*0.48, 2, "Mexico"],
 					[offsetX*0.17, offsetY*0.34, 3, "Canada"], [offsetX*0.24, offsetY*0.34, 3, "Canada"], [offsetX*0.30, offsetY*0.32, 3, "Canada"],
 					[offsetX*0.17, offsetY*0.34, 3, "Canada"],
 					[offsetX*0.3, offsetY*0.58, 4, "Venezuela"],
@@ -163,9 +174,9 @@
 	
 	
 	viewPortValues();
-	console.log(locations[18][3]);
 
 	var color = ["#946746","#8f9747","#4da751","#759747","#3ac9c9"];
+    var flag = [["USA","assets/images/flags/us"]];
 
 	
 	var svg = d3.select("#svgDiv")
@@ -294,7 +305,7 @@
 									.attr("fill", "red");
 
 					if(tempCount == totalLocationcount) {
-						console.log("equal");
+
 						line.transition()
 							.delay(2000)
 							.each("end", function() {
@@ -485,20 +496,21 @@
 		  	circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0.4, "none", color[randomColor]);
 		  	circleAnimation(40,1.2,locations[locations1[0]][0], locations[locations1[0]][1], 0.3, color[randomColor],"none");
 
-		  	for(var i=1; i<locations1.length; i++) {
+            document.getElementById("SourceValue").innerHTML = "";
+            document.getElementById("Flag").style.backgroundImage = "url('"+ locations[0][4] +"')";
+            document.getElementById("InfectionValue").innerHTML = "";
+            document.getElementById("UserAgentValue").innerHTML = "";
+            document.getElementById("PortValue").innerHTML = "";
 
-		  		// var speed = Math.floor((Math.random()*(130)) + 110);
+            digitalText(locations[locations1[0]][3], "SourceValue", 50);
+            digitalText("Trojan", "InfectionValue", (locations[locations1[0]][3].length*100+50));
+            digitalText("Direct Connect", "UserAgentValue", (locations[locations1[0]][3].length*100+"Trojan".length*100+50+50));
+            digitalText("8080", "PortValue", (locations[locations1[0]][3].length*100+"Trojan".length*100+"Direct Connect".length*100+50+50+50));
+
+		  	for(var i=1; i<locations1.length; i++) {
 		  		circleShotAnimation(locations[locations1[0]][0], locations[locations1[0]][1],
 					locations[locations1[i][0]][0], locations[locations1[i][0]][1], randomColor, locations1[i]);
 		  	}
-
-		 //  	circleShotAnimation(locations[locations1[0]][0], locations[locations1[0]][1],
-			// 		locations[locations1[1][0]][0], locations[locations1[1][0]][1], randomColor);
-
-			// circleShotAnimation(locations[locations1[0]][0], locations[locations1[0]][1],
-			// 		locations[locations1[2][0]][0], locations[locations1[2][0]][1], randomColor);
-			
-			console.log("count="+totalLocationcount);	
 	}
 
 	var totalLocationcount = 0;
@@ -510,19 +522,55 @@
 				totalCountofLocation(location[i]);
 			}
 		}
-		// console.log("count="+count);
 	}
 
 	function start() {
 
 		 var randomLocation = Math.floor((Math.random()*(locationArray.length)) + 0);
-		 console.log("location="+randomLocation);
 		 combineAnimation(locationArray[randomLocation]);
 
 		  // setTimeout(start, 4000);
 	}
 	
-	
+//	function DigitalDisplay(value, element) {
+//
+//	    for (var i=0; i<value.length; i++) {
+//	        setTimeout(digitalDisplay(value.charAt(i), element), 2000*i);
+//
+//        }
+//        (function(index) {
+//            setTimeout(function() { alert(index); }, i * 1000);
+//        })(i);
+//    }
+
+//    function digitalDisplay(letter, element) {
+//        console.log(letter);
+//        var htmlValue = document.getElementById(element).innerHTML;
+//        document.getElementById(element).innerHTML = htmlValue + letter;
+//    }
+
+//    function initText(text){
+//        var textScroller = document.getElementById('SourceValue');
+//        var c = 0;
+//
+//        (function(){
+//            textScroller.innerHTML += text.charAt(c++);
+//            if(text.length > c){
+//                setTimeout(arguments.callee, 200);
+//            }
+//        })();
+//    }
+
+    function digitalText(text, element, delay)
+    {
+        var textScroller = document.getElementById(element);
+
+        for(c = 0; c < text.length; c++)
+        {
+            setTimeout(element+".innerHTML += '" + text[c] + "'", delay + c*100);
+        }
+    }
+
 
 </script>
 
@@ -530,13 +578,14 @@
 	display_c();
 	// seeLocations(locations);
 	start();
+//    digitalText("United States", "SourceValue");
 </script>
 
 <script>
 
 	 $(function() {
              $('#tableData').vTicker('init', {
-             	speed: 1000,
+             	speed: 300,
                  pause: 500,
                  showItems: 4,
                  padding: 5

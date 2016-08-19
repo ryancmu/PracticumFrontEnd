@@ -53,6 +53,115 @@ body, html {
 	height: 100%;
 	position: absolute;
 }
+
+#chartDiv {
+	width: 20%;
+	height: 33%;
+	position: absolute;
+	bottom: 6%;
+	left: 2%;
+	border: 2px solid darkgreen;
+	border-radius: 15%;
+}
+
+#Source {
+	width: 100%;
+	height: 12%;
+	position: absolute;
+	top: 0%;
+	font-family: DigiGraphics;
+	font-size: large;
+	font-weight: 200;
+	color: darkgreen;
+	text-align: center;
+	/*background-color: #00a8c6;*/
+}
+#Flag {
+	width: 8%;
+	height: 8%;
+	background-image: url(USA.png);
+	background-size: 100% 100%;
+	/*background-color: red;*/
+	position: absolute;
+	top: 12%;
+	left: 46%;
+	border-radius: 50% 44%;
+}
+#SourceValue {
+	width: 100%;
+	height: 10%;
+	top: 24%;
+	position: absolute;
+	font-family: DigiGraphics;
+	font-size: small;
+	color: darkgreen;
+	text-align: center;
+}
+#Infection {
+	width: 100%;
+	height: 12%;
+	position: absolute;
+	top: 36%;
+	font-family: DigiGraphics;
+	font-size: large;
+	font-weight: 200;
+	color: darkgreen;
+	text-align: center;
+	/*background-color: #00a8c6;*/
+}
+#InfectionValue {
+	width: 100%;
+	height: 10%;
+	position: absolute;
+	top: 46%;
+	font-family: DigiGraphics;
+	font-size: small;
+	color: darkgreen;
+	text-align: center;
+	/*background-color: #00a8c6;*/
+}
+#UserAgent {
+	width: 100%;
+	height: 12%;
+	position: absolute;
+	top: 58%;
+	font-family: DigiGraphics;
+	font-size: large;
+	font-weight: 200;
+	color: darkgreen;
+	text-align: center;
+}
+#UserAgentValue {
+	width: 100%;
+	height: 10%;
+	position: absolute;
+	top: 68%;
+	font-family: DigiGraphics;
+	font-size: small;
+	color: darkgreen;
+	text-align: center;
+}
+#Port {
+	width: 100%;
+	height: 12%;
+	position: absolute;
+	top: 80%;
+	font-family: DigiGraphics;
+	font-size: large;
+	font-weight: 200;
+	color: darkgreen;
+	text-align: center;
+}
+#PortValue {
+	width: 100%;
+	height: 10%;
+	position: absolute;
+	top: 90%;
+	font-family: DigiGraphics;
+	font-size: small;
+	color: darkgreen;
+	text-align: center;
+}
 #tableDiv {
 	width: 46%;
 
@@ -74,23 +183,6 @@ ul {
 	list-style-type: none;
 	width:100%;
 	padding-left: 0px;
-}
-
-.th1 {
-	float: left;
-	width: 25%;
-}
-.th2 {
-	float: left;
-	width: 25%;
-}
-.th3 {
-	float: left;
-	width: 25%;
-}
-.th4 {
-	float: left;
-	width: 25%;
 }
 
 #tableDiv .panel{
