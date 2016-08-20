@@ -26,20 +26,6 @@
     <script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
     <!-- /core JS files -->
 
-
-    <!--sortable vertical bar JS files -->
-    <script type="text/javascript" src="assets/js/plugins/forms/styling/uniform.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/visualization/d3/d3.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/visualization/d3/d3_tooltip.js"></script>
-    <script type="text/javascript" src="assets/js/index/client-infeciton-sortable.js"></script>
-    <!--/sortable vertical bar JS files -->
-
-    <!--d3 line JS files -->
-    <script type="text/javascript" src="assets/js/index/lines_advanced_transitions.js"></script>
-    <script type="text/javascript" src="assets/js/index/client_feb_line.js"></script>
-    <!--/d3 line JS files -->
-
-
     <!-- Theme JS files -->
     <script type="text/javascript" src="assets/js/core/app.js"></script>
     <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
@@ -47,24 +33,9 @@
 
     <!--eChart JS files -->
     <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
-    <script type="text/javascript" src="assets/js/combinations.js"></script>
+    <script type="text/javascript" src="assets/js/offender/offender_pie.js"></script>
     <script type="text/javascript" src="assets/js/index/pies_donuts.js"></script>
     <!--/eChart JS files -->
-
-    <!--back to top JS files -->
-    <script type="text/javascript" src="assets/js/backToTop.js"></script>
-    <!--/back to top JS files -->
-
-    <!--live feed JS files -->
-    <script type="text/javascript" src="assets/js/liveFeed&showHide.js"></script>
-    <script type="text/javascript" src="assets/js/index/vTicker.js"></script>
-    <!--/live feed JS files -->
-
-    <!-- US map JS files -->
-    <script type="text/javascript" src="assets/js/index/usa_map.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/maps/jvectormap/jvectormap.min.js"></script>
-    <script type="text/javascript" src="assets/js/plugins/maps/jvectormap/map_files/countries/usa.js"></script>
-    <!--/US map JS files-->
 
 </head>
 
@@ -210,7 +181,6 @@
             <div class="content-wrapper">
 
                 <!-- Put all your code here -->
-
                     <!--charts-->
                     <div class="">
 
@@ -243,113 +213,6 @@
                             </div>
                         </div>
                         <!-- /file type - combination and connection -->
-
-                        <!--infection bar char-->
-                        <div class="row">
-                            <!-- sortable vertical bar -->
-                            <div class="col-lg-12">
-                                <div class="panel panel-flat">
-                                    <div class="panel-heading">
-                                        <h5 class="panel-title">Infection Type</h5>
-                                        <div class="heading-elements">
-                                            <ul class="icons-list">
-                                                <li><a data-action="collapse"></a></li>
-                                                <li><a data-action="reload"></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                    <div class="panel-body">
-                                        <p class="content-group">They are displayed alphabetically, but you can <code>sort</code> them by values.</p>
-
-                                        <div class="checkbox content-group">
-                                            <label><input type="checkbox" class="toggle-sort"> Sort values</label>
-                                        </div>
-
-                                        <div class="chart-container">
-                                            <div class="chart" id="d3-bar-sortable-vertical"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /sortable vertical bar -->
-                        </div>
-                        <!--/infection bar char-->
-
-                        <!-- location: state month line chart -->
-                            <!-- Chained transitions -->
-                            <div class="panel panel-flat">
-                                <div class="panel-heading">
-                                    <h5 class="panel-title">Files per state - Time Analysis </h5>
-                                    <div class="heading-elements">
-                                        <ul class="icons-list">
-                                            <li><a data-action="collapse"></a></li>
-                                            <li><a data-action="reload"></a></li>
-                                        </ul>
-                                    </div>
-                                    <!--<div class="heading-btn pull-right">-->
-                                        <div class="dropdown dropdown-menu-rihgt pull-right">
-                                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Whole year
-                                                <span class="caret"></span></button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#january">January</a></li>
-                                                <li><a id="showfeb" href="#feb">Feburary</a></li>
-                                                <li><a href="#march">March</a></li>
-                                                <li><a href="#april">April</a></li>
-                                                <li><a href="#may">May</a></li>
-                                                <li><a href="#june">June</a></li>
-                                                <li><a href="#july">July</a></li>
-                                                <li><a href="#august">August</a></li>
-                                                <li><a href="#september">September</a></li>
-                                                <li><a href="#october">October</a></li>
-                                                <li><a href="#november">November</a></li>
-                                                <li><a href="#december">December</a></li>
-                                            </ul>
-                                        </div>
-                                    <!--</div>-->
-                                </div>
-
-                                <div class="panel-body">
-                                    <p class="content-group">This line graph shows the number of files downloaded from this state across the year.</p>
-                                    <p>
-                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="Ohio" checked="checked">Pennsylvania</label>
-                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="Florida"> Florida</label>
-                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="California"> California</label>
-                                    </p>
-                                    <div class="chart-container">
-                                        <div class="chart" id="d3-chained-transitions"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /chained transitions -->
-                        <!-- /location: state month line chart -->
-
-                        <!-- location: state daily line chart -->
-                        <div id="feb">
-                            <!-- Simple line chart -->
-                            <div class="panel panel-flat">
-                                <div class="panel-heading">
-                                    <h5 class="panel-title">Pennsylvania in February</h5>
-                                    <div class="heading-elements">
-                                        <ul class="icons-list">
-                                            <li><a data-action="collapse"></a></li>
-                                            <li><a class="note-icon-close" id="closeLine"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="panel-body">
-                                    <p class="content-group">This is the line graph showing the number of files downloaded in Pennsylvania within this month.</p>
-
-                                    <div class="chart-container">
-                                        <div class="chart" id="newyork-feb"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /simple line chart -->
-                        </div>
-                        <!-- location: state daily line chart -->
-
                     </div>
                     <!--/charts-->
             </div>
@@ -386,10 +249,6 @@
         </ul>
 
         <div class="navbar-collapse collapse" id="footer">
-            <!-- <div class="navbar-text">
-                &copy; 2015. <a href="#" class="navbar-link">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" class="navbar-link" target="_blank">Eugene Kopyov</a>
-            </div> -->
-
             <div class="navbar-text">
                 <span class="text-white">&copy; 2016. </span> <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon University eBiz</a>
             </div>
