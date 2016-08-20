@@ -6,7 +6,7 @@
  *
  *  Author: Zhijie
  *  Version: 1.0
- *  Latest update: August 1, 2015
+ *  Latest update: August 19, 2016
  *
  * ---------------------------------------------------------------------------- */
 
@@ -30,7 +30,6 @@ $(function () {
             'echarts/chart/line',
             'echarts/chart/bar',
             'echarts/chart/pie',
-
 
             'echarts/chart/scatter',
             'echarts/chart/k',

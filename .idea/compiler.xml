@@ -22,9 +22,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="todolist-core" />
-        <module name="todolist-web-common" />
-        <module name="todolist-web-servlet-jsp" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

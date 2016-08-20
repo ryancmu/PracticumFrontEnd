@@ -40,6 +40,19 @@
             src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
     <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/jszip.min.js"></script>
     <!-- /Product 1 JS files -->
+
+    <!--eChart JS files -->
+    <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+    <script type="text/javascript" src="assets/js/offender/offender_pie.js"></script>
+    <script type="text/javascript" src="assets/js/index/pies_donuts.js"></script>
+    <!--/eChart JS files -->
+
+    <!-- Detail JS Files-->
+    <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+    <script type="text/javascript" src="assets/js/offender/offender_pie.js"></script>
+    <script type="text/javascript" src="assets/js/index/pies_donuts.js"></script>
+    <!-- /Detail JS Files-->
+
 </head>
 
 <body class="navbar-bottom">
@@ -134,7 +147,6 @@
     </div>
     <!-- /main navbar -->
 
-
     <!-- Page header content -->
     <div class="page-header-content">
         <div class="page-title">
@@ -142,11 +154,9 @@
                 <small>Hello , PJ!</small>
             </h4>
         </div>
-
     </div>
 
     <!-- /page header content -->
-
 
     <!-- Second navbar -->
     <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
@@ -283,6 +293,48 @@
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                     <h4 class="modal-title">Offender "75.185.167.245" information details </h4>
                                 </div>
+
+                                <!-- Main content -->
+                                <div class="content-wrapper">
+                                    <!-- Put all your code here -->
+                                    <!--charts-->
+                                    <div class="">
+                                        <!-- file type - Combination and connection -->
+                                        <div class="panel panel-flat">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title">File Type</h5>
+                                                <div class="heading-elements">
+                                                    <ul class="icons-list">
+                                                        <li><a data-action="collapse"></a></li>
+                                                        <li><a data-action="reload"></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="chart-container">
+                                                            <div class="chart has-fixed-height" id="connect_pie"></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <div class="chart-container">
+                                                            <div class="chart has-fixed-height"
+                                                                 id="connect_column"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /file type - combination and connection -->
+                                    </div>
+                                    <!--/charts-->
+                                </div>
+                                <!-- /main content -->
+
+
                                 <div class="modal-body">
                                     <table id="product_4_table" class="table">
                                         <thead class="thead-inverse">
@@ -303,31 +355,31 @@
                                             <td>-81.50873</td>
                                         </tr>
                                         </tbody>
-                                        <tbody>
-                                        <tr>
-                                            <td>24.166.118.231</td>
-                                            <td>United States</td>
-                                            <td>Cuyahoga Falls, Ohio</td>
-                                            <td>41.13394</td>
-                                            <td>-81.48456</td>
-                                        </tr>
-                                        </tbody>
-                                        <tr>
-                                            <td>90.157.32.177</td>
-                                            <td>Russian Federation</td>
-                                            <td>Sverdlovskaya, Yekaterinburg</td>
-                                            <td>56.8575</td>
-                                            <td>60.6125</td>
-                                        </tr>
-                                        </tbody>
-                                        <tr>
-                                            <td>90.157.32.177</td>
-                                            <td>Russian Federation</td>
-                                            <td>Sverdlovskaya, Yekaterinburg</td>
-                                            <td>56.8575</td>
-                                            <td>60.6125</td>
-                                        </tr>
-                                        </tbody>
+                                        <!--<tbody>-->
+                                        <!--<tr>-->
+                                        <!--<td>24.166.118.231</td>-->
+                                        <!--<td>United States</td>-->
+                                        <!--<td>Cuyahoga Falls, Ohio</td>-->
+                                        <!--<td>41.13394</td>-->
+                                        <!--<td>-81.48456</td>-->
+                                        <!--</tr>-->
+                                        <!--</tbody>-->
+                                        <!--<tr>-->
+                                        <!--<td>90.157.32.177</td>-->
+                                        <!--<td>Russian Federation</td>-->
+                                        <!--<td>Sverdlovskaya, Yekaterinburg</td>-->
+                                        <!--<td>56.8575</td>-->
+                                        <!--<td>60.6125</td>-->
+                                        <!--</tr>-->
+                                        <!--</tbody>-->
+                                        <!--<tr>-->
+                                        <!--<td>90.157.32.177</td>-->
+                                        <!--<td>Russian Federation</td>-->
+                                        <!--<td>Sverdlovskaya, Yekaterinburg</td>-->
+                                        <!--<td>56.8575</td>-->
+                                        <!--<td>60.6125</td>-->
+                                        <!--</tr>-->
+                                        <!--</tbody>-->
                                     </table>
                                 </div>
                                 <div class="modal-footer">
