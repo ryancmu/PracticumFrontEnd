@@ -4,6 +4,7 @@
  *
  *  Chart combination configurations
  *
+ *  Author: Zhijie
  *  Version: 1.0
  *  Latest update: August 1, 2015
  *
@@ -13,20 +14,15 @@ $(function () {
 
     // Set paths
     // ------------------------------
-
     require.config({
         paths: {
             echarts: 'assets/js/plugins/visualization/echarts'
         }
     });
 
-
-
     // Configuration
     // ------------------------------
-
     require(
-
         // Add necessary charts
         [
             'echarts',
@@ -42,31 +38,12 @@ $(function () {
             'echarts/chart/gauge'
         ],
 
-
         // Charts setup
         function (ec, limitless) {
-
-
             // Initialize charts
             // ------------------------------
-
-            // var line_bar = ec.init(document.getElementById('line_bar'), limitless);
-            // var column_pie = ec.init(document.getElementById('column_pie'), limitless);
-            // var scatter_pie = ec.init(document.getElementById('scatter_pie'), limitless);
-            // var scatter_line = ec.init(document.getElementById('scatter_line'), limitless);
-            //
             var connect_pie = ec.init(document.getElementById('connect_pie'), limitless);
             var connect_column = ec.init(document.getElementById('connect_column'), limitless);
-            //
-            // var candlestick_scatter = ec.init(document.getElementById('candlestick_scatter'), limitless);
-
-
-
-            // Charts options
-            // ------------------------------
-            //
-            // Column and pie connection
-            //
 
             // Pie options
             connect_pie_options = {
@@ -235,16 +212,13 @@ $(function () {
             connect_pie.connect(connect_column);
             connect_column.connect(connect_pie);
 
-
             // Apply options
             // ------------------------------
-
             connect_pie.setOption(connect_pie_options);
             connect_column.setOption(connect_column_options);
 
             // Resize charts
             // ------------------------------
-
             window.onresize = function () {
                 setTimeout(function (){
                     connect_pie.resize();
