@@ -235,6 +235,56 @@
                     <!--charts-->
                     <div class="">
 
+                        <!-- location: state month line chart -->
+                        <!-- Chained transitions -->
+                        <div class="panel panel-flat">
+                            <div class="panel-heading">
+                                <h5 class="panel-title">Files per state - Time Analysis </h5>
+                                <div class="heading-elements">
+                                    <ul class="icons-list">
+                                        <li><a data-action="collapse"></a></li>
+                                        <li><a data-action="reload"></a></li>
+                                    </ul>
+                                </div>
+                                <!--<div class="heading-btn pull-right">-->
+                                <!--<div class="dropdown dropdown-menu-rihgt pull-right">-->
+                                <!--<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Whole year-->
+                                <!--<span class="caret"></span></button>-->
+                                <!--<ul class="dropdown-menu">-->
+                                <!--<li><a href="#january">January</a></li>-->
+                                <!--<li><a id="showfeb" href="#feb">Feburary</a></li>-->
+                                <!--<li><a href="#march">March</a></li>-->
+                                <!--<li><a href="#april">April</a></li>-->
+                                <!--<li><a href="#may">May</a></li>-->
+                                <!--<li><a href="#june">June</a></li>-->
+                                <!--<li><a href="#july">July</a></li>-->
+                                <!--<li><a href="#august">August</a></li>-->
+                                <!--<li><a href="#september">September</a></li>-->
+                                <!--<li><a href="#october">October</a></li>-->
+                                <!--<li><a href="#november">November</a></li>-->
+                                <!--<li><a href="#december">December</a></li>-->
+                                <!--</ul>-->
+                                <!--</div>-->
+                                <!--</div>-->
+                            </div>
+
+                            <div class="panel-body">
+                                <p class="content-group">This line graph shows the number of files downloaded from this state across the year.</p>
+                                <p>
+                                    <label class="radio-inline"><input type="radio" name="city" class="chained" value="Ohio" checked="checked">Pennsylvania</label>
+                                    <label class="radio-inline"><input type="radio" name="city" class="chained" value="Florida"> Florida</label>
+                                    <label class="radio-inline"><input type="radio" name="city" class="chained" value="California"> California</label>
+                                </p>
+                                <div class="chart-container">
+                                    <div class="chart" id="d3-chained-transitions"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /chained transitions -->
+                        <!-- /location: state month line chart -->
+
+
+
                         <!-- file type - Combination and connection -->
                         <div class="panel panel-flat">
                             <div class="panel-heading">
@@ -319,54 +369,6 @@
                             <!-- /sortable vertical bar -->
                         </div>
                         <!--/infection bar char-->
-
-                        <!-- location: state month line chart -->
-                            <!-- Chained transitions -->
-                            <div class="panel panel-flat">
-                                <div class="panel-heading">
-                                    <h5 class="panel-title">Files per state - Time Analysis </h5>
-                                    <div class="heading-elements">
-                                        <ul class="icons-list">
-                                            <li><a data-action="collapse"></a></li>
-                                            <li><a data-action="reload"></a></li>
-                                        </ul>
-                                    </div>
-                                    <!--<div class="heading-btn pull-right">-->
-                                        <div class="dropdown dropdown-menu-rihgt pull-right">
-                                            <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Whole year
-                                                <span class="caret"></span></button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#january">January</a></li>
-                                                <li><a id="showfeb" href="#feb">Feburary</a></li>
-                                                <li><a href="#march">March</a></li>
-                                                <li><a href="#april">April</a></li>
-                                                <li><a href="#may">May</a></li>
-                                                <li><a href="#june">June</a></li>
-                                                <li><a href="#july">July</a></li>
-                                                <li><a href="#august">August</a></li>
-                                                <li><a href="#september">September</a></li>
-                                                <li><a href="#october">October</a></li>
-                                                <li><a href="#november">November</a></li>
-                                                <li><a href="#december">December</a></li>
-                                            </ul>
-                                        </div>
-                                    <!--</div>-->
-                                </div>
-
-                                <div class="panel-body">
-                                    <p class="content-group">This line graph shows the number of files downloaded from this state across the year.</p>
-                                    <p>
-                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="Ohio" checked="checked">Pennsylvania</label>
-                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="Florida"> Florida</label>
-                                        <label class="radio-inline"><input type="radio" name="city" class="chained" value="California"> California</label>
-                                    </p>
-                                    <div class="chart-container">
-                                        <div class="chart" id="d3-chained-transitions"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /chained transitions -->
-                        <!-- /location: state month line chart -->
 
                         <!-- location: state daily line chart -->
                         <div id="feb">
