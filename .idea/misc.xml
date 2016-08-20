@@ -9,6 +9,14 @@
         <option value="$PROJECT_DIR$/../../Practicum/practicum/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../../Practicum/practicum/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Practicum/practicum/todolist-core/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Practicum/practicum/todolist-web-common/pom.xml" />
+        <option value="$PROJECT_DIR$/../../Practicum/practicum/todolist-web-servlet-jsp/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />

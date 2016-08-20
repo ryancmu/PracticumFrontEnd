@@ -7,7 +7,8 @@
     <title>Tiversa&trade; - Offender List</title>
 
     <!-- Global stylesheets -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
+          type="text/css">
     <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
     <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="assets/css/core.css" rel="stylesheet" type="text/css">
@@ -33,371 +34,403 @@
 
     <!-- Product 1 JS files -->
     <script type="text/javascript" src="assets/js/product_1.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
-    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css"/>
+    <script type="text/javascript"
+            src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
     <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/jszip.min.js"></script>
     <!-- /Product 1 JS files -->
 
-    <!--&lt;!&ndash; Blink Style CSS &ndash;&gt;-->
-    <!--@-webkit-keyframes invalid {-->
-        <!--from { background-color: red; }-->
-        <!--to { background-color: inherit; }-->
-    <!--}-->
-    <!--@-moz-keyframes invalid {-->
-        <!--from { background-color: red; }-->
-        <!--to { background-color: inherit; }-->
-    <!--}-->
-    <!--@-o-keyframes invalid {-->
-        <!--from { background-color: red; }-->
-        <!--to { background-color: inherit; }-->
-    <!--}-->
-    <!--@keyframes invalid {-->
-        <!--from { background-color: red; }-->
-        <!--to { background-color: inherit; }-->
-    <!--}-->
-    <!--.invalid {-->
-        <!-- -webkit-animation: invalid 1s infinite; /* Safari 4+ */-->
-        <!-- -moz-animation:    invalid 1s infinite; /* Fx 5+ */-->
-        <!-- -o-animation:      invalid 1s infinite; /* Opera 12+ */-->
-        <!--animation:         invalid 1s infinite; /* IE 10+ */-->
-    <!--}-->
+    <!--eChart JS files -->
+    <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+    <script type="text/javascript" src="assets/js/offender/offender_pie.js"></script>
+    <script type="text/javascript" src="assets/js/index/pies_donuts.js"></script>
+    <!--/eChart JS files -->
 
-    <!--td {-->
-        <!--padding: 1em;-->
-    <!--}-->
-    <!--&lt;!&ndash; Blink Style CSS &ndash;&gt;-->
+    <!-- Detail JS Files-->
+    <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+    <script type="text/javascript" src="assets/js/offender/offender_pie.js"></script>
+    <script type="text/javascript" src="assets/js/index/pies_donuts.js"></script>
+    <!-- /Detail JS Files-->
 
 </head>
 
 <body class="navbar-bottom">
 
-    <!-- Page header -->
-    <div class="page-header page-header-inverse bg-indigo">
+<!-- Page header -->
+<div class="page-header page-header-inverse bg-indigo">
 
-        <!-- Main navbar -->
-        <div class="navbar navbar-inverse navbar-transparent">
-            <div class="navbar-header">
-                <a href="clientDashboard.html"><img src="assets/css/landing/TiversaLogo.png" alt=""></a>
-                <ul class="nav navbar-nav pull-right visible-xs-block">
-                    <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
-                </ul>
-            </div>
+    <!-- Main navbar -->
+    <div class="navbar navbar-inverse navbar-transparent">
+        <div class="navbar-header">
+            <a href="clientDashboard.html"><img src="assets/css/landing/TiversaLogo.png" alt=""></a>
+            <ul class="nav navbar-nav pull-right visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
+            </ul>
+        </div>
 
-            <div class="navbar-collapse collapse" id="navbar-mobile">
-                <p class="navbar-text"><span class="label bg-success-400">Premium</span></p>
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            <p class="navbar-text"><span class="label bg-success-400">Premium</span></p>
 
 
-                <div class="navbar-right">
-                    <ul class="nav navbar-nav">
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
 
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="icon-bubble8"></i>
-                                <span class="visible-xs-inline-block position-right">Messages</span>
-                            </a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-bubble8"></i>
+                            <span class="visible-xs-inline-block position-right">Messages</span>
+                        </a>
 
-                            <div class="dropdown-menu dropdown-content width-350">
-                                <div class="dropdown-content-heading">
-                                    Messages
-                                    <ul class="icons-list">
-                                        <li><a href="#"><i class="icon-menu7"></i></a></li>
-                                    </ul>
-                                </div>
-
-                                <ul class="media-list dropdown-content-body">
-                                    <li class="media">
-                                        <div class="media-left">
-                                            <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
-                                            <span class="badge bg-danger-400 media-badge">5</span>
-                                        </div>
-
-                                        <div class="media-body">
-                                            <a href="#" class="media-heading">
-                                                <span class="text-semibold">Andy</span>
-                                                <span class="media-annotation pull-right">09:58</span>
-                                            </a>
-
-                                            <span class="text-muted">Do you want to discuss the plan...</span>
-                                        </div>
-                                    </li>
-
-                                    <li class="media">
-                                        <div class="media-left">
-                                            <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
-                                            <span class="badge bg-danger-400 media-badge">4</span>
-                                        </div>
-
-                                        <div class="media-body">
-                                            <a href="#" class="media-heading">
-                                                <span class="text-semibold">Bridget Green</span>
-                                                <span class="media-annotation pull-right">12:16</span>
-                                            </a>
-
-                                            <span class="text-muted">Do you want to go over the report...</span>
-                                        </div>
-                                    </li>
-
+                        <div class="dropdown-menu dropdown-content width-350">
+                            <div class="dropdown-content-heading">
+                                Messages
+                                <ul class="icons-list">
+                                    <li><a href="#"><i class="icon-menu7"></i></a></li>
                                 </ul>
                             </div>
-                        </li>
 
-                        <li class="dropdown dropdown-user">
-                            <a class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="assets/images/pj.jpg" class="img-circle" alt="">
-                                <span>PJ</span>
-                                <i class="caret"></i>
-                            </a>
+                            <ul class="media-list dropdown-content-body">
+                                <li class="media">
+                                    <div class="media-left">
+                                        <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <span class="badge bg-danger-400 media-badge">5</span>
+                                    </div>
 
-                            <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-                                <li><a href="#"><i class="icon-comment-discussion"></i> Messages</a></li>
-                                <li class="divider"></li>
-                                <li><a href="login_validation.html"><i class="icon-switch2"></i> Logout</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!-- /main navbar -->
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Andy</span>
+                                            <span class="media-annotation pull-right">09:58</span>
+                                        </a>
 
+                                        <span class="text-muted">Do you want to discuss the plan...</span>
+                                    </div>
+                                </li>
 
-        <!-- Page header content -->
-        <div class="page-header-content">
-            <div class="page-title">
-                <h4>Dashboard <small>Hello , PJ!</small></h4>
-            </div>
+                                <li class="media">
+                                    <div class="media-left">
+                                        <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <span class="badge bg-danger-400 media-badge">4</span>
+                                    </div>
 
-        </div>
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Bridget Green</span>
+                                            <span class="media-annotation pull-right">12:16</span>
+                                        </a>
 
-        <!-- /page header content -->
+                                        <span class="text-muted">Do you want to go over the report...</span>
+                                    </div>
+                                </li>
 
-
-        <!-- Second navbar -->
-        <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
-            <ul class="nav navbar-nav visible-xs-block">
-                <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
-            </ul>
-
-            <div class="navbar-collapse collapse" id="navbar-second-toggle">
-                <ul class="nav navbar-nav navbar-nav-material">
-                    <li><a href="clientDashboard.html">Dashboard</a></li>
-
-                    <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
-
-                        <div class="dropdown-menu">
-                            <ul class="menu-list">
-                                <li><a href="product_1.html">Infected IP List</a></li>
-                                <li><a href="product_2.html">Product 2</a></li>
-                                <li><a href="product_4.html">Offender List</a></li>
                             </ul>
                         </div>
+                    </li>
+
+                    <li class="dropdown dropdown-user">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="assets/images/pj.jpg" class="img-circle" alt="">
+                            <span>PJ</span>
+                            <i class="caret"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                            <li><a href="clientConversation.html"><i class="icon-comment-discussion"></i> Messages</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login_validation.html"><i class="icon-switch2"></i> Logout</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
         </div>
-        <!-- /second navbar -->
-
     </div>
-    <!-- /page header -->
+    <!-- /main navbar -->
 
-    <!-- Page container -->
-    <div class="page-container">
-
-        <!-- Page content -->
-        <div class="page-content">
-
-            <!-- Main content -->
-            <div class="content-wrapper">
-
-                <!-- Put all your code here -->
-                    <div class="panel">
-                        <div class="panel-heading">
-                            <h3 class="heading-text">Offender List</h3>
-                        </div>
-
-                        <div class="panel-body">
-                             <table class="table table-hover">
-                                 <thead class="thead-inverse">
-                                    <tr>
-                                        <th>IP</th>
-                                        <th>Location (State)</th>
-                                        <th>Total Infected Files</th>
-                                        <th>Unique Infected Files</th>
-                                        <th>Unique Infection Types</th>
-                                        <th>Detail</th>
-                                    </tr>
-                                 </thead>
-                                 <tbody>
-                                     <tr>
-                                         <td>75.185.167.245</td>
-                                         <td>Ohio, United States</td>
-                                         <td>522,022</td>
-                                         <td>22,890</td>
-                                         <td>1</td>
-                                         <td><a id="detail1" data-toggle="modal" data-target=".detail1-modal-lg">Detail</a></td>
-                                     </tr>
-                                     <tr>
-                                         <td>24.166.118.231</td>
-                                         <td>Ohio, United States</td>
-                                         <td>362,524</td>
-                                         <td>24,170</td>
-                                         <td>1</td>
-                                         <td><a id="detail2" data-toggle="modal" data-target=".detail1-modal-lg">Detail</a></td>
-                                     </tr>
-                                     <tr>
-                                         <td>90.157.32.177</td>
-                                         <td>Sverdlovskaya, Russia</td>
-                                         <td>153,531</td>
-                                         <td>21,663</td>
-                                         <td>21,663</td>
-                                         <td><a id="detail3" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
-                                     </tr>
-                                     <tr>
-                                         <td>109.173.88.172</td>
-                                         <td>Moscow, Russia</td>
-                                         <td>137,413</td>
-                                         <td>24,561</td>
-                                         <td>24,560</td>
-                                         <td><a id="detail4" data-toggle="modal" data-target=".detail4-modal-lg">Detail</a></td>
-                                     </tr>
-                                     <tr>
-                                         <td>68.15.236.12</td>
-                                         <td>Nebraska, United States</td>
-                                         <td>110,180</td>
-                                         <td>37,855</td>
-                                         <td>16,194</td>
-                                         <td><a id="detail5" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
-                                     </tr>
-                                     <tr>
-                                         <td>87.242.32.114</td>
-                                         <td>Borsod-Abauj-Zemplen, Hungary</td>
-                                         <td>104,899</td>
-                                         <td>72,071</td>
-                                         <td>14</td>
-                                         <td><a id="detail6" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
-                                     </tr>
-                                     <tr>
-                                         <td>78.83.45.245</td>
-                                         <td>Sofia, Bulgaria</td>
-                                         <td>30,069</td>
-                                         <td>261</td>
-                                         <td>244</td>
-                                         <td><a id="detail7" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
-                                     </tr>
-                                     <tr>
-                                         <td>185.58.206.9</td>
-                                         <td>Moskva, Russia</td>
-                                         <td>12,429</td>
-                                         <td>11,990</td>
-                                         <td>11,990</td>
-                                         <td><a id="detail8" data-toggle="modal" data-target=".detail5-modal-lg">Detail</a></td>
-                                     </tr>
-                                 </tbody>
-                             </table>
-
-                            <!-- Modal -->
-                            <div class="modal fade detail1-modal-lg" id="myModal" role="dialog">
-                                <div class="modal-dialog modal-lg">
-
-                                    <!-- Modal content-->
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title">Offender "75.185.167.245" information details </h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <table id="product_4_table" class="table">
-                                                <thead class="thead-inverse">
-                                                <tr>
-                                                    <th>IP</th>
-                                                    <th>Country</th>
-                                                    <th>City, State</th>
-                                                    <th>Latitude</th>
-                                                    <th>Longitude</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                    <td>75.185.167.245</td>
-                                                    <td>United States</td>
-                                                    <td>Beachwood, Ohio</td>
-                                                    <td>41.4645</td>
-                                                    <td>-81.50873</td>
-                                                </tr>
-                                                </tbody>
-                                                <tbody>
-                                                <tr>
-                                                    <td>24.166.118.231</td>
-                                                    <td>United States</td>
-                                                    <td>Cuyahoga Falls, Ohio</td>
-                                                    <td>41.13394</td>
-                                                    <td>-81.48456</td>
-                                                </tr>
-                                                </tbody>
-                                                <tr>
-                                                    <td>90.157.32.177</td>
-                                                    <td>Russian Federation</td>
-                                                    <td>Sverdlovskaya, Yekaterinburg</td>
-                                                    <td>56.8575</td>
-                                                    <td>60.6125</td>
-                                                </tr>
-                                                </tbody>
-                                                <tr>
-                                                    <td>90.157.32.177</td>
-                                                    <td>Russian Federation</td>
-                                                    <td>Sverdlovskaya, Yekaterinburg</td>
-                                                    <td>56.8575</td>
-                                                    <td>60.6125</td>
-                                                </tr>
-                                                </tbody>
-                                            </table>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button id="exportButton" class="btn btn-info clearfix"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                <!-- /put all your code here -->
-
-            </div>
-            <!-- /main content -->
-
+    <!-- Page header content -->
+    <div class="page-header-content">
+        <div class="page-title">
+            <h4>Dashboard
+                <small>Hello , PJ!</small>
+            </h4>
         </div>
-        <!-- /page content -->
-
     </div>
-    <!-- /page container -->
 
-    <!-- Footer -->
-    <div class="navbar navbar-default navbar-fixed-bottom footer  bg-indigo">
+    <!-- /page header content -->
+
+    <!-- Second navbar -->
+    <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
         <ul class="nav navbar-nav visible-xs-block">
-            <li><a class="text-center collapsed" data-toggle="collapse" data-target="#footer"><i class="icon-circle-up2"></i></a></li>
+            <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i
+                    class="icon-paragraph-justify3"></i></a></li>
         </ul>
 
-        <div class="navbar-collapse collapse" id="footer">
+        <div class="navbar-collapse collapse" id="navbar-second-toggle">
+            <ul class="nav navbar-nav navbar-nav-material">
+                <li><a href="clientDashboard.html">Dashboard</a></li>
 
-            <div class="navbar-text">
-                <span class="text-white">&copy; 2016. </span> <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon University eBiz</a>
-            </div>
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
 
-            <div class="navbar-right">
-                <ul class="nav navbar-nav">
-                    <li><a href="#" class="text-white">About</a></li>
-                    <li><a href="#" class="text-white">Terms</a></li>
-                    <li><a href="http://tiversa.com/contact/" class="text-white">Contact</a></li>
-                </ul>
-            </div>
+                    <div class="dropdown-menu">
+                        <ul class="menu-list">
+                            <li><a href="product_1.html">Infected IP List</a></li>
+                            <li><a href="product_2.html">Product 2</a></li>
+                            <li><a href="PreventativePage.html">Preventative Page</a></li>
+                            <li><a href="product_4.html">Offender List</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-    <!-- /footer -->
+    <!-- /second navbar -->
+
+</div>
+<!-- /page header -->
+
+<!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+            <!-- Put all your code here -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3 class="heading-text">Offender List</h3>
+                </div>
+
+                <div class="panel-body">
+                    <table class="table table-hover">
+                        <thead class="thead-inverse">
+                        <tr>
+                            <th>IP</th>
+                            <th>Location (State)</th>
+                            <th>Total Infected Files</th>
+                            <th>Unique Infected Files</th>
+                            <th>Unique Infection Types</th>
+                            <th>Detail</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>75.185.167.245</td>
+                            <td>Ohio, United States</td>
+                            <td>522,022</td>
+                            <td>22,890</td>
+                            <td>1</td>
+                            <td><a id="detail1" data-toggle="modal" data-target=".detail1-modal-lg">Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td>24.166.118.231</td>
+                            <td>Ohio, United States</td>
+                            <td>362,524</td>
+                            <td>24,170</td>
+                            <td>1</td>
+                            <td><a id="detail2" data-toggle="modal" data-target=".detail1-modal-lg">Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td>90.157.32.177</td>
+                            <td>Sverdlovskaya, Russia</td>
+                            <td>153,531</td>
+                            <td>21,663</td>
+                            <td>21,663</td>
+                            <td><a id="detail3" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td>109.173.88.172</td>
+                            <td>Moscow, Russia</td>
+                            <td>137,413</td>
+                            <td>24,561</td>
+                            <td>24,560</td>
+                            <td><a id="detail4" data-toggle="modal" data-target=".detail4-modal-lg">Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td>68.15.236.12</td>
+                            <td>Nebraska, United States</td>
+                            <td>110,180</td>
+                            <td>37,855</td>
+                            <td>16,194</td>
+                            <td><a id="detail5" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td>87.242.32.114</td>
+                            <td>Borsod-Abauj-Zemplen, Hungary</td>
+                            <td>104,899</td>
+                            <td>72,071</td>
+                            <td>14</td>
+                            <td><a id="detail6" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td>78.83.45.245</td>
+                            <td>Sofia, Bulgaria</td>
+                            <td>30,069</td>
+                            <td>261</td>
+                            <td>244</td>
+                            <td><a id="detail7" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
+                        </tr>
+                        <tr>
+                            <td>185.58.206.9</td>
+                            <td>Moskva, Russia</td>
+                            <td>12,429</td>
+                            <td>11,990</td>
+                            <td>11,990</td>
+                            <td><a id="detail8" data-toggle="modal" data-target=".detail5-modal-lg">Detail</a></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Modal -->
+                    <div class="modal fade detail1-modal-lg" id="myModal" role="dialog">
+                        <div class="modal-dialog modal-lg">
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Offender "75.185.167.245" information details </h4>
+                                </div>
+
+                                <!-- Main content -->
+                                <div class="content-wrapper">
+                                    <!-- Put all your code here -->
+                                    <!--charts-->
+                                    <div class="">
+                                        <!-- file type - Combination and connection -->
+                                        <div class="panel panel-flat">
+                                            <div class="panel-heading">
+                                                <h5 class="panel-title">File Type</h5>
+                                                <div class="heading-elements">
+                                                    <ul class="icons-list">
+                                                        <li><a data-action="collapse"></a></li>
+                                                        <li><a data-action="reload"></a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
+                                            <div class="panel-body">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="chart-container">
+                                                            <div class="chart has-fixed-height" id="connect_pie"></div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <div class="chart-container">
+                                                            <div class="chart has-fixed-height"
+                                                                 id="connect_column"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /file type - combination and connection -->
+                                    </div>
+                                    <!--/charts-->
+                                </div>
+                                <!-- /main content -->
+
+
+                                <div class="modal-body">
+                                    <table id="product_4_table" class="table">
+                                        <thead class="thead-inverse">
+                                        <tr>
+                                            <th>IP</th>
+                                            <th>Country</th>
+                                            <th>City, State</th>
+                                            <th>Latitude</th>
+                                            <th>Longitude</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>75.185.167.245</td>
+                                            <td>United States</td>
+                                            <td>Beachwood, Ohio</td>
+                                            <td>41.4645</td>
+                                            <td>-81.50873</td>
+                                        </tr>
+                                        </tbody>
+                                        <!--<tbody>-->
+                                        <!--<tr>-->
+                                        <!--<td>24.166.118.231</td>-->
+                                        <!--<td>United States</td>-->
+                                        <!--<td>Cuyahoga Falls, Ohio</td>-->
+                                        <!--<td>41.13394</td>-->
+                                        <!--<td>-81.48456</td>-->
+                                        <!--</tr>-->
+                                        <!--</tbody>-->
+                                        <!--<tr>-->
+                                        <!--<td>90.157.32.177</td>-->
+                                        <!--<td>Russian Federation</td>-->
+                                        <!--<td>Sverdlovskaya, Yekaterinburg</td>-->
+                                        <!--<td>56.8575</td>-->
+                                        <!--<td>60.6125</td>-->
+                                        <!--</tr>-->
+                                        <!--</tbody>-->
+                                        <!--<tr>-->
+                                        <!--<td>90.157.32.177</td>-->
+                                        <!--<td>Russian Federation</td>-->
+                                        <!--<td>Sverdlovskaya, Yekaterinburg</td>-->
+                                        <!--<td>56.8575</td>-->
+                                        <!--<td>60.6125</td>-->
+                                        <!--</tr>-->
+                                        <!--</tbody>-->
+                                    </table>
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="exportButton" class="btn btn-info clearfix"><span
+                                            class="fa fa-file-pdf-o"></span> Export to PDF
+                                    </button>
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- /put all your code here -->
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+</div>
+<!-- /page container -->
+
+<!-- Footer -->
+<div class="navbar navbar-default navbar-fixed-bottom footer  bg-indigo">
+    <ul class="nav navbar-nav visible-xs-block">
+        <li><a class="text-center collapsed" data-toggle="collapse" data-target="#footer"><i
+                class="icon-circle-up2"></i></a></li>
+    </ul>
+
+    <div class="navbar-collapse collapse" id="footer">
+
+        <div class="navbar-text">
+            <span class="text-white">&copy; 2016. </span> <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by
+            <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon University
+                eBiz</a>
+        </div>
+
+        <div class="navbar-right">
+            <ul class="nav navbar-nav">
+                <li><a href="#" class="text-white">About</a></li>
+                <li><a href="#" class="text-white">Terms</a></li>
+                <li><a href="http://tiversa.com/contact/" class="text-white">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /footer -->
 
 </body>
 </html>
