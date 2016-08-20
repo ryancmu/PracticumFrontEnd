@@ -11,7 +11,7 @@ body, html {
 	background-color: black;
 }
 #Product2Title {
-	color: darkgreen;
+	color: #00b7f0;
 	font-family: TickingTimebombBB;
 	font-size: 180%;
 	text-align: center;
@@ -36,7 +36,7 @@ body, html {
 	width: 100%; 
 	height: 100%;
 	position: absolute; 
-	background-image: url(bg_clear.jpg); 
+	background-image: url(bg_blue.jpg);
 	background-size: 100% 100%; 
 	opacity: 1;
 }
@@ -227,7 +227,7 @@ ul {
 	right: 5%;
 	width: 4%;
 	height: 7%;
-	background: url('back_button.png') no-repeat;
+	background: url('BackButtonBlue.png') no-repeat;
 	background-size: 100% 100%;
 	border: none;
 }
