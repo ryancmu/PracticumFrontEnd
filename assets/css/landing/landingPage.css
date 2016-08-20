@@ -1,6 +1,7 @@
 
 body, html {
 	height: 100%;
+	width: 100%;
 	background-color: transparent;
 }
 
@@ -9,6 +10,19 @@ body, html {
 	height: 100%;
 	background-color: black;
 }
+#Product2Title {
+	color: darkgreen;
+	font-family: TickingTimebombBB;
+	font-size: 180%;
+	text-align: center;
+	position: absolute;
+	top: 6%;
+	left: 15%;
+	width: 70%;
+	height: 5%;
+	/*background-color: #00a5bb;*/
+}
+
 #mainDiv {
 	width: 94%;
 	height: 90%;
@@ -206,6 +220,16 @@ ul {
 	font-size: 70%;
 	font-family: DigiGraphics;
 	color: green;
+}
+#backButton {
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	width: 4%;
+	height: 7%;
+	background: url('back_button.png') no-repeat;
+	background-size: 100% 100%;
+	border: none;
 }
 
 @font-face { font-family: DigitalDismay; src: url('Font/Digital Dismay/Digital Dismay.otf'); }
