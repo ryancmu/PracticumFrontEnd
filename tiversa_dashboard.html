@@ -218,7 +218,7 @@
 				<div>
 					<div class="panel panel-flat">
 						<div class="panel-heading">
-							<h5 class="panel-title">Search</h5>
+							<h3 class="panel-title">Search</h3>
 							<div class="heading-elements">
 								<ul class="icons-list">
 									<li><a data-action="collapse"></a></li>
@@ -315,6 +315,90 @@
 					</div>
                 </div>
 				<!--Multiple Search Field-->
+
+				<!-- Warning list--->
+				<div class="panel">
+					<div class="panel-heading">
+						<h3 class="heading-text">Warning List</h3>
+						<div class="row">
+							<div class="well col-md-10 col-md-offset-1" style="padding: 0px">
+								<table id="legend">
+									<!--<thead>-->
+									<tr>
+										<td><h6>File count increase: <span class="label label-info">FCI</span></h6></td>
+										<td><h6>Infection Type increase: <span class="label label-danger">ITI</span></h6></td>
+										<td><h6>User Agent increase: <span class="label label-default">UAI</span></h6></td>
+									</tr>
+									<style>
+										#legend td {
+											padding: 2em;
+										}
+									</style>
+									<!--</thead>-->
+								</table>
+							</div>
+							<!--<div class="col-md-3 col-md-offset-1">-->
+							<!--<h6>File count increase: <span class="label label-info">FCI</span></h6>-->
+							<!--</div>-->
+							<!--<div class="col-md-3">-->
+							<!--<h6>Infection Type increase: <span class="label label-danger">ITI</span></h6>-->
+							<!--</div>-->
+							<!--<div class="col-md-3">-->
+							<!--<h6>User Agent increase: <span class="label label-default">UAI</span></h6>-->
+							<!--</div>-->
+						</div>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="well col-md-10 col-md-offset-1">
+								<table class="table" >
+									<thead class="info">
+									<tr>
+										<th>Client</th>
+										<th>Source State</th>
+										<th>Reasons</th>
+										<th>Action Required</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr id="level1">
+										<td>Telecom Inc.</td>
+										<td>Pennslyvania</td>
+										<td><span class="label label-info">FCI</span> <span class="label label-danger">ITI</span></td>
+										<td><button id="handle1" class="btn btn-xs btn-primary">Handle</button></td>
+									</tr>
+									<script>
+										$("#handle1").click(function () {
+											$("#level1").hide();
+										});
+									</script>
+
+									<tr>
+										<td>NSA</td>
+										<td>Ohio</td>
+										<td><span class="label label-default">UAI</span> <span class="label label-danger">ITI</span></td>
+										<td><button id="handle2" class="btn btn-xs btn-primary">Handle</button></td>
+									</tr>
+									<tr>
+										<td>Home Land Security</td>
+										<td>Florida</td>
+										<td><span class="label label-info">FCI</span> <span class="label label-default">UAI</span></td>
+										<td><button id="handle3" class="btn btn-xs btn-primary">Handle</button></td>
+									</tr>
+									<tr>
+										<td>Insurance Inc.</td>
+										<td>California</td>
+										<td><span class="label label-default">UAI</span> <span class="label label-danger">ITI</span></td>
+										<td><button id="handle4" class="btn btn-xs btn-primary">Handle</button></td>
+									</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Warning list--->
+
 
                 <!-- Choropleth map -->
                 <div class="panel panel-flat">
