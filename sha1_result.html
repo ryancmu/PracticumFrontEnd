@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tiversa&trade; - Dashboard</title>
+
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
+
+    <!-- DataTable -->
+    <link href="assets/css/dataTable/dataTables.min.css" rel="stylesheet" type="text/css">
+    <!-- /DataTable -->
+
+
+    <!-- Core JS files -->
+    <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/nicescroll.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/drilldown.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
+
+    <!-- /core JS files -->
+
+
+    <script type="text/javascript" src="assets/js/core/app.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
+
+    <!--DataTable JS-->
+    <script type="text/javascript" src="assets/js/dataTable/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/dataTable/jquery.dataTables.min.js"></script>
+    <!--/DataTable JS-->
+</head>
+
+<body class="navbar-bottom">
+
+<!-- Page header -->
+<div class="page-header page-header-inverse bg-indigo">
+
+    <!-- Main navbar -->
+    <div class="navbar navbar-inverse navbar-transparent">
+        <div class="navbar-header" style="padding-left: 10px; padding-top: 5px">
+            <a href="index.html"><img src="assets/images/TiversaLogo_meitu_1.png" alt=""></a>
+
+            <ul class="nav navbar-nav pull-right visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-bubble8"></i>
+                            <span class="visible-xs-inline-block position-right">Messages</span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-content width-350">
+                            <div class="dropdown-content-heading">
+                                Messages
+                                <ul class="icons-list">
+                                    <li><a href="#"><i class="icon-menu7"></i></a></li>
+                                </ul>
+                            </div>
+
+                            <ul class="media-list dropdown-content-body">
+                                <li class="media">
+                                    <div class="media-left">
+                                        <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <span class="badge bg-danger-400 media-badge">5</span>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Andy</span>
+                                            <span class="media-annotation pull-right">09:58</span>
+                                        </a>
+
+                                        <span class="text-muted">Do you want to discuss the plan...</span>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <span class="badge bg-danger-400 media-badge">4</span>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Bridget Green</span>
+                                            <span class="media-annotation pull-right">12:16</span>
+                                        </a>
+
+                                        <span class="text-muted">Do you want to go over the report...</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="dropdown dropdown-user">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="assets/images/placeholder.jpg" alt="">
+                            <span>Ray</span>
+                            <i class="caret"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                            <li><a href="#"><i class="icon-comment-discussion"></i> Messages</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login_validation.html"><i class="icon-switch2"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /main navbar -->
+
+
+    <!-- Page header content -->
+    <div class="page-header-content">
+        <div class="page-title">
+            <h4>Dashboard <small>Hello , Ray!</small></h4>
+        </div>
+
+    </div>
+
+    <!-- /page header content -->
+
+
+    <!-- Second navbar -->
+    <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
+        <ul class="nav navbar-nav visible-xs-block">
+            <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+        </ul>
+
+        <!--Tab-->
+        <div class="navbar-collapse collapse" id="navbar-second-toggle">
+            <ul class="nav navbar-nav navbar-nav-material">
+                <li class="active"><a href="tiversa_dashboard.html">Dashboard</a></li>
+                <li><a href="user_list.html"><i class="icon-display4 position-left"></i> Client Lists </a></li>
+            </ul>
+        </div>
+        <!--Tab-->
+    </div>
+    <!-- /second navbar -->
+
+</div>
+<!-- /page header -->
+
+<!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+            <!-- Put all your code here -->
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3 class="heading-text">Distinct Files By SHA1</h3>
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="">
+                            <style>
+                                div.dataTables_filter{
+                                    width: 100%;
+                                    float: none;
+                                    margin:0;
+                                    text-align: right;
+                                }
+                            </style>
+                            <table id="sha_table" class="table table-hover">
+                                <thead class="thead-inverse">
+                                <tr>
+                                    <th class="col-md-5">Unique SHA1</th>
+                                    <th class="col-md-3">File Count</th>
+                                    <th class="col-md-2 text-center">Show Detail</th>
+                                    <th class="col-md-3 text-center">Search By</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="col-md-5">733c24af39acc497455562bab637db571a2c4e8f</td>
+                                    <td class="col-md-3">887</td>
+                                    <td class="col-md-1 text-center"><a id="detail1" data-toggle="modal" data-target=".detail1-modal-lg">Detail</a></td>
+                                    <td class="col-md-3 text-center"><input type="checkbox" class="sha_checkbox" /></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-5">f0936b335fc1633d7e4d518a2711da87670dac2f</td>
+                                    <td class="col-md-3">464</td>
+                                    <td class="col-md-1 text-center"><a id="detail2" data-toggle="modal" data-target=".detail1-modal-lg">Detail</a></td>
+                                    <td class="col-md-3 text-center"><input type="checkbox" class="sha_checkbox" /></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-5">9f970d30107500b4613570d1b0b4af950b6e82a5</td>
+                                    <td class="col-md-3">406</td>
+                                    <td class="col-md-1 text-center"><a id="detail3" data-toggle="modal" data-target=".detail1-modal-lg">Detail</a></td>
+                                    <td class="col-md-3 text-center"><input type="checkbox" class="sha_checkbox" /></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-5"> 4e6e8fd5ab6a847da21ae1ad22c912b03db49b88</td>
+                                    <td class="col-md-3">369</td>
+                                    <td class="col-md-1 text-center"><a id="detail4" data-toggle="modal" data-target=".detail1-modal-lg">Detail</a></td>
+                                    <td class="col-md-3 text-center"><input type="checkbox" class="sha_checkbox" /></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-5">65481c616d009e6cf90761eab218a572f9353b48</td>
+                                    <td class="col-md-3">354</td>
+                                    <td class="col-md-1 text-center"><a id="detail5" data-toggle="modal" data-target=".detail1-modal-lg">Detail</a></td>
+                                    <td class="col-md-3 text-center"><input type="checkbox" class="sha_checkbox" /></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="row">
+                                <ul class="pagination pull-right">
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">...</a></li>
+                                    <li><a href="#">&gt;</a></li>
+                                </ul>
+                            </div>
+
+                            <p class="text-size-large">Distict File Number: 463 &nbsp;<button id="select_all" class="btn btn-primary btn-xs">Select All</button></p>
+                            <!-- Modal -->
+                            <div class="modal fade detail1-modal-lg" id="myModal" role="dialog">
+                                <div class="modal-dialog modal-lg">
+
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4 class="modal-title">SHA1: 733c24af39acc497455562bab637db571a2c4e8f</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <table id="product_1_table" class="table">
+                                                <thead class="thead-inverse">
+                                                <tr>
+                                                    <th>File Name</th>
+                                                    <th>Infection Types</th>
+                                                    <th>Port</th>
+                                                    <th>User Agent</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>SkypeAccountHackerSetup.exe</td>
+                                                    <td>RDN/Generic.dx</td>
+                                                    <td>6346</td>
+                                                    <td>Shareaza</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hide ALL IP Preactivated Portable-mhktricks.net.zip</td>
+                                                    <td>Artemis!A44FA3F60016</td>
+                                                    <td>6346</td>
+                                                    <td>Shareaza</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ServiceInstall.exe</td>
+                                                    <td>W32/HLLP.41472.e</td>
+                                                    <td>6346</td>
+                                                    <td>Shareaza</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>IPHiderLib64.dll</td>
+                                                    <td>W32/HLLP.41472.e</td>
+                                                    <td>6346</td>
+                                                    <td>Shareaza</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Shareaza_2.7.9.0_Win32.exe</td>
+                                                    <td>Artemis!A44FA3F60016</td>
+                                                    <td>6346</td>
+                                                    <td>Shareaza</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Gnutellawire Crack Uploaded By Anuzbitt torrents download.zip</td>
+                                                    <td>Vundo.gen.du</td>
+                                                    <td>6346</td>
+                                                    <td>TurboWire</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>uTorrent.exe</td>
+                                                    <td>Artemis!F509EC872FE4</td>
+                                                    <td>3699</td>
+                                                    <td>Sharest</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Facebook Ativador WebCam HotSex P2P 2015 - Windows XP.zip</td>
+                                                    <td>W32/HLLP.41472.e</td>
+                                                    <td>6346</td>
+                                                    <td>Shareaza</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Reality Kings Crack Uploaded By Anuzbitt torrents download.zip</td>
+                                                    <td>Generic Downloader.iv</td>
+                                                    <td>34891</td>
+                                                    <td>KoolWire</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="row">
+
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button id="exportButton" class="btn btn-info clearfix pull-left"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
+                                            <ul class="pagination pull-right">
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">...</a></li>
+                                                <li><a href="#">&gt;</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- /Modal -->
+                            <script>
+                                $(document).ready(function () {
+                                    $("#sha_table").DataTable({
+                                        info: false,
+                                        paging:false,
+                                        order: [[1, 'desc']]
+                                    });
+
+                                    $("#select_all").click(function(){
+                                        if($(this).text() == "Select All"){
+                                            $(".sha_checkbox").prop("checked", true);
+                                            $(this).text("Select None");
+                                        } else {
+                                            $(".sha_checkbox").prop("checked", false);
+                                            $(this).text("Select All");
+                                        }
+
+                                    });
+                                })
+
+                            </script>
+
+                            <br />
+                            <button class="btn btn-md btn-primary pull-right">Analysis</button>
+                        </div>
+                        <!--/col-6 -->
+                    </div>
+                    <!-- /Row-->
+
+
+                </div>
+
+                <div class="panel-footer">
+
+                </div>
+            </div>
+            <!-- /put all your code here -->
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+</div>
+<!-- /page container -->
+
+<!-- Footer -->
+<div class="navbar navbar-default navbar-fixed-bottom footer  bg-indigo">
+    <ul class="nav navbar-nav visible-xs-block">
+        <li><a class="text-center collapsed" data-toggle="collapse" data-target="#footer"><i class="icon-circle-up2"></i></a></li>
+    </ul>
+
+    <div class="navbar-collapse collapse" id="footer">
+        <!-- <div class="navbar-text">
+            &copy; 2015. <a href="#" class="navbar-link">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" class="navbar-link" target="_blank">Eugene Kopyov</a>
+        </div> -->
+
+        <div class="navbar-text">
+            <span class="text-white">&copy; 2016. </span> <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon University eBiz</a>
+        </div>
+
+        <div class="navbar-right">
+            <ul class="nav navbar-nav">
+                <li><a href="#" class="text-white">About</a></li>
+                <li><a href="#" class="text-white">Terms</a></li>
+                <li><a href="http://tiversa.com/contact/" class="text-white">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /footer -->
+
+</body>
+</html>
