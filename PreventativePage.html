@@ -188,13 +188,14 @@
                     <!-- /Preventative Pie Chart -->
                     <br>
                     <!--3D Pie Chart--->
-                    <div id="container2" style="height: 400px"></div>
+                    <div id="container2" style="height: 400px; float: left;font-weight: bold;font-size: larger"></div>
+                    <div id="container3" style="height: 400px; float: right; font-weight: bold;font-size: larger"></div>
 
                 </div>
             </div>
 
         </div>
-        <!-- /content warpper --->
+        <!-- /content wrapper --->
 
     </div>
     <!-- /page content --->
@@ -208,13 +209,21 @@
                 text: 'Top Infected Cities in Pennsylvania'
             },
             xAxis: {
+                title: {
+                    text: 'Infection'
+                },
                 categories: ['BackDoor-CKB.gen.ap', 'GenericR-ATG!hb ', 'Artemis!0F26F85D76D4 ', 'Trojan-FHPO!070E451597F0', 'W32/Sality.gen.z  ']
+            },
+            yAxis: {
+                title: {
+                    text: 'Infected Files Count'
+                }
             },
             labels: {
                 items: [{
-                    html: 'Total infection spread',
+                    html: 'Infected files count',
                     style: {
-                        left: '50px',
+                        left: '30px',
                         top: '18px',
                         color: (Highcharts.theme && Highcharts.theme.textColor) || 'black'
                     }
@@ -240,28 +249,6 @@
                     lineWidth: 2,
                     lineColor: Highcharts.getOptions().colors[3],
                     fillColor: 'white'
-                }
-            }, {
-                type: 'pie',
-                name: 'Total consumption',
-                data: [{
-                    name: 'Pittsburgh',
-                    y: 13,
-                    color: Highcharts.getOptions().colors[0]
-                }, {
-                    name: 'Philadelphia',
-                    y: 23,
-                    color: Highcharts.getOptions().colors[1]
-                }, {
-                    name: 'Harrisburg',
-                    y: 19,
-                    color: Highcharts.getOptions().colors[2]
-                }],
-                center: [40, 80],
-                size: 100,
-                showInLegend: false,
-                dataLabels: {
-                    enabled: false
                 }
             }]
         });
@@ -291,10 +278,17 @@
         },
         title: {
             style: {
-                fontSize: '24px',
+                fontSize: '30px',
                 fontWeight: 'bold',
                 textTransform: 'uppercase'
             }
+        },
+        subtitle: {
+            style: {
+                fontWeight: 'bold',
+                fontSize: '16px'
+            }
+
         },
         tooltip: {
             borderWidth: 0,
@@ -304,15 +298,23 @@
         legend: {
             itemStyle: {
                 fontWeight: 'bold',
-                fontSize: '20px'
+                fontSize: '24px'
             }
         },
         xAxis: {
             gridLineWidth: 1,
-            labels: {
+            title: {
                 style: {
                     fontSize: '20px',
                     fontWeight: 'bold'
+                }
+            },
+
+            labels: {
+                style: {
+                    fontSize: '18px',
+                    fontWeight: 'bold',
+                    textTransform: 'uppercase'
                 }
             }
         },
@@ -320,12 +322,13 @@
             minorTickInterval: 'auto',
             title: {
                 style: {
-                    textTransform: 'uppercase'
+                    fontSize: '18px',
+                    fontWeight: 'bold'
                 }
             },
             labels: {
                 style: {
-                    fontSize: '20px',
+                    fontSize: '18px',
                     fontWeight: 'bold'
                 }
             }
@@ -361,10 +364,10 @@
                 }
             },
             title: {
-                text: 'Top User Agents spreading malware'
+                text: 'Top User Agents spreading malware infected files'
             },
             subtitle: {
-                text: 'Following User Agents most likely to distribute malware'
+                text: 'Following User Agents most likely to distribute malware  infected files'
             },
             plotOptions: {
                 pie: {
@@ -373,7 +376,7 @@
                 }
             },
             series: [{
-                name: 'Delivered amount',
+                name: 'Infected files count',
                 data: [
                     ['Direct Connect', 3745568],
                     ['LimeWire/4.21.1 (rc)', 974568],
@@ -384,6 +387,44 @@
                     ['Others', 931353],
                     ['giFT-Gnutella/0.0.11', 382561],
                     ['Emerald P2P UltraPeer/3.3.0', 212556]
+                ]
+            }]
+        });
+    });
+</script>
+<script>
+    $(function () {
+        $('#container3').highcharts({
+            chart: {
+                type: 'pie',
+                options3d: {
+                    enabled: true,
+                    alpha: 45
+                }
+            },
+            title: {
+                text: 'Top Ports spreading malware infected files'
+            },
+            subtitle: {
+                text: 'Following Ports most likely to spread malware infected files'
+            },
+            plotOptions: {
+                pie: {
+                    innerSize: 100,
+                    depth: 45
+                }
+            },
+            series: [{
+                name: 'Infected files count',
+                data: [
+                    ['27016', 50835],
+                    ['24846', 42560],
+                    ['55275', 39362],
+                    ['63876', 36299],
+                    ['50728', 34342 ],
+                    ['56170', 26886 ],
+                    ['6346', 25665],
+                    ['49947', 23044]
                 ]
             }]
         });
