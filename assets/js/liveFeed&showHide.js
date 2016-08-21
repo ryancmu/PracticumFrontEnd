@@ -5,7 +5,7 @@
 
 $(function () {
 
-    $("#livefeed").hide();
+    // $("#livefeed").hide();
 
     $("#showlivefeed").click(function () {
         $("#livefeed").show();
