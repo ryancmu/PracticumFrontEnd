@@ -1,12 +1,12 @@
 {
   "infectionData":[
-    {"letter": "BackDoor-CKB.gen.ap", "frequency": 122},
-    {"letter": "GenericR-ATG!hb ", "frequency": 26 },
+    {"letter": "BackDoor", "frequency": 122},
+    {"letter": "GenericR-ATG", "frequency": 26 },
     {"letter": "W32/HLLP.41472.e ", "frequency": 33},
     {"letter": "W32/Sality.gen.z     ", "frequency": 60 },
     {"letter": "Generic BackDoor.xa", "frequency": 55},
     {"letter": "Generic PUP ", "frequency": 22},
-    {"letter": "Artemis!0F26F85D76D4  ", "frequency": 42 },
+    {"letter": "Artemis!", "frequency": 42 },
     {"letter": "Generic.gj  ", "frequency": 31}
   ]
 }

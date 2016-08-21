@@ -11,7 +11,6 @@
  * ---------------------------------------------------------------------------- */
 
 $(function () {
-
     // Set paths
     // ------------------------------
     require.config({
@@ -41,57 +40,20 @@ $(function () {
         function (ec, limitless) {
             // Initialize charts
             // ------------------------------
-            var connect_pie = ec.init(document.getElementById('connect_pie'), limitless);
             var connect_column = ec.init(document.getElementById('connect_column'), limitless);
-
-            // Pie options
-            connect_pie_options = {
-
-                // Add title
-                title: {
-                    text: 'Top 2 file type',
-                    textStyle: {fontSize: 18},
-                    // subtext: 'Open source data',
-                    x: 'center'
-                },
-
-                // Add tooltip
-                tooltip: {
-                    trigger: 'item',
-                    formatter: "{a} <br/>{b}: {c} ({d}%)"
-                },
-
-                // Add legend
-                legend: {
-                    orient: 'vertical',
-                    x: 'left',
-                    textStyle: {fontSize: 15},
-                    data: ['other','GenericR-ATG!hb']
-                },
-
-                // Enable drag recalculate
-                calculable: true,
-
-                // Add series
-                series: [{
-                    name: 'Infection Type',
-                    type: 'pie',
-                    radius: '75%',
-                    center: ['50%', '57.5%'],
-                    data: [
-                        {value: 522022, name: 'GenericR-ATG!hb'},
-                        {value: 1, name: 'other'}
-                    ],
-                }]
-            };
 
             // Column options
             connect_column_options = {
-
                 // Setup grid
+                // grid: {
+                //     x: 40,
+                //     x2: 47,
+                //     y: 35,
+                //     y2: 25
+                // },
                 grid: {
-                    x: 40,
-                    x2: 47,
+                    x: 54,
+                    x2: 55,
                     y: 35,
                     y2: 25
                 },
@@ -107,7 +69,7 @@ $(function () {
                 // Add legend
                 legend: {
                     textStyle: {fontSize: 15},
-                    data: ['zip','exe','dll','rar','msi', 'other']
+                    data: ['Count','SHA1','File Names','Infection Types']
                 },
 
                 // Add toolbox
@@ -153,7 +115,7 @@ $(function () {
                 // Horizontal axis
                 xAxis: [{
                     type: 'category',
-                    data: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+                    data: ['2015.09','2015.10','2015.11','2015.12','2016.01','2016.02','2016.03','2016.04','2016.05','2016.06','2016.07','2016.08']
                 }],
 
                 // Vertical axis
@@ -165,58 +127,44 @@ $(function () {
                 // Add series
                 series: [
                     {
-                        name: 'zip',
-                        type: 'bar',
+                        name: 'Count',
+                        type: 'line',
                         stack: 'Total',
-                        data: [320, 332, 301, 334, 390, 330, 320]
+                        data: [0, 24352, 257822, 71489, 64443, 82552, 21364, 0, 0, 0, 0, 0]
                     },
                     {
-                        name: 'exe',
-                        type: 'bar',
+                        name: 'SHA1',
+                        type: 'line',
                         stack: 'Total',
-                        data: [120, 132, 101, 134, 90, 230, 210]
+                        data: [0, 13397, 19966, 19241, 17656, 20460, 14305, 0, 0, 0, 0, 0]
                     },
                     {
-                        name: 'dll',
-                        type: 'bar',
+                        name: 'File Names',
+                        type: 'line',
                         stack: 'Total',
-                        data: [220, 182, 191, 234, 290, 330, 310]
+                        data: [0, 13397, 19966, 19241, 17656, 20460, 14305, 0, 0, 0, 0, 0]
                     },
                     {
-                        name: 'rar',
-                        type: 'bar',
+                        name: 'Infection Types',
+                        type: 'line',
                         stack: 'Total',
-                        data: [150, 232, 201, 154, 190, 330, 410]
+                        data: [0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
                     },
-                    {
-                        name: 'msi',
-                        type: 'bar',
-                        stack: 'Total',
-                        data: [820, 932, 901, 934, 1290, 1330, 1320]
-                    },
-                    {
-                        name: 'other',
-                        type: 'bar',
-                        stack: 'Total',
-                        data: [120, 932, 901, 643, 145, 122, 420]
-                    }
+
                 ]
             };
 
             // Connect charts
-            connect_pie.connect(connect_column);
-            connect_column.connect(connect_pie);
+            // connect_column.connect(connect_pie);
 
             // Apply options
             // ------------------------------
-            connect_pie.setOption(connect_pie_options);
             connect_column.setOption(connect_column_options);
 
             // Resize charts
             // ------------------------------
             window.onresize = function () {
                 setTimeout(function (){
-                    connect_pie.resize();
                     connect_column.resize();
                 }, 200);
             }
