@@ -55,8 +55,8 @@
 
     <!-- Main navbar -->
     <div class="navbar navbar-inverse navbar-transparent">
-        <div class="navbar-header" style="padding-left: 10px; padding-top: 5px">
-            <a href="tiversa_dashboard.html"><img src="assets/css/landing/TiversaLogo.png" alt=""></a>
+        <div class="navbar-header">
+            <a href="clientDashboard.html"><img src="assets/css/landing/TiversaLogo.png" alt=""></a>
 
             <ul class="nav navbar-nav pull-right visible-xs-block">
                 <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
@@ -64,6 +64,9 @@
         </div>
 
         <div class="navbar-collapse collapse" id="navbar-mobile">
+            <p class="navbar-text"><span class="label bg-success-400">Premium</span></p>
+
+
             <div class="navbar-right">
                 <ul class="nav navbar-nav">
 
@@ -120,14 +123,14 @@
 
                     <li class="dropdown dropdown-user">
                         <a class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="assets/images/placeholder.jpg" alt="">
-                            <span>Ray</span>
+                            <img src="assets/images/pj.jpg" class="img-circle" alt="">
+                            <span>PJ</span>
                             <i class="caret"></i>
                         </a>
 
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-                            <li><a href="#"><i class="icon-comment-discussion"></i> Messages</a></li>
+                            <li><a href="clientConversation.html"><i class="icon-comment-discussion"></i> Messages</a></li>
                             <li class="divider"></li>
                             <li><a href="login_validation.html"><i class="icon-switch2"></i> Logout</a></li>
                         </ul>
@@ -139,27 +142,43 @@
     <!-- /main navbar -->
 
 
+    <!-- Page header content -->
+    <div class="page-header-content">
+        <div class="page-title">
+            <h4>Dashboard <small>Hello, PJ!</small></h4>
+        </div>
+    </div>
+    <!-- /page header content -->
+
+
     <!-- Second navbar -->
     <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
         <ul class="nav navbar-nav visible-xs-block">
-            <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i
-                    class="icon-paragraph-justify3"></i></a></li>
+            <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
         </ul>
 
-        <!--Tab-->
         <div class="navbar-collapse collapse" id="navbar-second-toggle">
             <ul class="nav navbar-nav navbar-nav-material">
-                <li class="active"><a href="tiversa_dashboard.html">Dashboard</a></li>
-                <li><a href="tiversa_client_lists.html"><i class="icon-user position-left"></i> Client Lists </a></li>
-                <li><a href="tiversa_malware_map.html"><i class="icon-map position-left"></i> Malware Map</a></li>
-                <li><a href="tiversa_malware_analysis.html"><i class="icon-statistics position-left"></i> Malware Statistics</a></li>
+                <li class="active"><a href="clientDashboard.html">Dashboard</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
+
+                    <div class="dropdown-menu">
+                        <ul class="menu-list">
+                            <li><a href="product_1.html">Infected IP List</a></li>
+                            <li><a href="product_2.html">Product 2</a></li>
+                            <li><a href="PreventativePage.html">Preventative Page</a></li>
+                            <li><a href="product_4.html">Offender List</a></li>
+                        </ul>
+                    </div>
+                </li>
             </ul>
         </div>
-        <!--Tab-->
     </div>
     <!-- /second navbar -->
 
 </div>
+
 <!-- /page header -->
 
 <!-- Page container -->
@@ -173,14 +192,16 @@
 
 
             <!-- Put Your Code Here-->
-            <div id="mainOuterDiv">
-                <div id="mainDiv">
-                    <div id="mapDiv"></div>
-                    <div id="svgDiv"></div>
-                </div>
-                <!--<div id="Product2Title">Geographic Location of Offenders</div>-->
-                <!--<button type="button" onclick="alert('previous page!')" id="backButton"></button>-->
-            </div>
+
+                    <div id="mainOuterDiv">
+                        <div id="mainDiv">
+                            <div id="mapDiv"></div>
+                            <div id="svgDiv"></div>
+                        </div>
+                        <!--<div id="Product2Title">Geographic Location of Offenders</div>-->
+                        <!--<button type="button" onclick="alert('previous page!')" id="backButton"></button>-->
+                    </div>
+
             <!-- /Put Your Code Here-->
 
 
