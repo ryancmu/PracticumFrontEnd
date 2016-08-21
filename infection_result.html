@@ -232,17 +232,224 @@
                                 <!--<li><a href="#">&gt;</a></li>-->
                             <!--</ul>-->
                             <br />
+
                             <a href="sha1_result.html"><button class="btn btn-md btn-primary pull-right">Next Step</button></a>
                         </div>
                         <!--/col-6 -->
                     </div>
                     <!-- /Row-->
 
+                    <div class="row">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Infected IP List</h3>
+                        </div>
+
+                        <table class="table table-hover table-bordered table-striped">
+                            <thead class="thead-inverse">
+                            <tr>
+                                <th>IP</th>
+                                <th>Infected File Count</th>
+                                <th>Infection Types</th>
+                                <th>Port</th>
+                                <th>User Agent</th>
+                                <th>Detail</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>75.185.167.245</td>
+                                <td>522022</td>
+                                <td>Artemis, W32/HLLP, Vundo...</td>
+                                <td>56170, 34891, 6346, 3699...</td>
+                                <td>Shareaza, TurboWire, KoolWire...</td>
+                                <td><a id="detail1" data-toggle="modal" data-target=".detail1-modal-lg">Detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>24.166.118.231</td>
+                                <td>362524</td>
+                                <td>GenericR-ATG!hb</td>
+                                <td>50728, 56170, 49947, 60198...</td>
+                                <td>Direct Connect</td>
+                                <td><a id="detail2" data-toggle="modal" data-target=".detail2-modal-lg">Detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>73.179.70.80</td>
+                                <td>192444</td>
+                                <td>Trojan-FHPO, Artemis</td>
+                                <td>52332, 52422, 50778, 53576...</td>
+                                <td>Direct Connect</td>
+                                <td><a id="detail3" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>76.189.41.118</td>
+                                <td>112837</td>
+                                <td>GenericR-ATG!hb</td>
+                                <td>65524, 65518, 65505, 65475...</td>
+                                <td>Direct Connect</td>
+                                <td><a id="detail4" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>72.76.92.135</td>
+                                <td>66241</td>
+                                <td>Artemis</td>
+                                <td>4933, 4841, 4838, 4791...</td>
+                                <td>Direct Connect</td>
+                                <td><a id="detail5" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>199.188.103.187</td>
+                                <td>36633</td>
+                                <td>W32/Worm</td>
+                                <td>58453, 58440, 58436, 58403...</td>
+                                <td>Direct Connect</td>
+                                <td><a id="detail6" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>52.25.173.211</td>
+                                <td>26268</td>
+                                <td>Trojan-FCUT</td>
+                                <td>64939, 64932, 64926, 64857...</td>
+                                <td>Direct Connect</td>
+                                <td><a id="detail7" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>96.242.132.60</td>
+                                <td>9802</td>
+                                <td>Artemis</td>
+                                <td>4977, 4935, 4921, 4795...</td>
+                                <td>Direct Connect</td>
+                                <td><a id="detail8" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>70.46.121.171</td>
+                                <td>6162</td>
+                                <td>Trojan-FHPO</td>
+                                <td>65343, 65231, 65230, 58894...</td>
+                                <td>Direct Connect, Shareaza</td>
+                                <td><a id="detail9" data-toggle="modal" data-target=".detail5-modal-lg">Detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>98.114.232.141</td>
+                                <td>958</td>
+                                <td>RDN/Generic, Artemis, Puper!msi...</td>
+                                <td>61115, 52695, 51064, 50797...</td>
+                                <td>Direct Connect</td>
+                                <td><a id="detail10" data-toggle="modal" data-target=".detail4-modal-lg">Detail</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <br />
+                        <div class="row">
+                            <ul class="pagination pull-right">
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">&gt;</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade detail1-modal-lg" id="myModal" role="dialog">
+                            <div class="modal-dialog modal-lg">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">"75.185.167.245" in Ohio has 522022 infected files</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <table id="product_1_table" class="table">
+                                            <thead class="thead-inverse">
+                                            <tr>
+                                                <th>File Name</th>
+                                                <th>Infection Types</th>
+                                                <th>Port</th>
+                                                <th>User Agent</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td>SkypeAccountHackerSetup.exe</td>
+                                                <td>RDN/Generic.dx</td>
+                                                <td>6346</td>
+                                                <td>Shareaza</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hide ALL IP Preactivated Portable-mhktricks.net.zip</td>
+                                                <td>Artemis!A44FA3F60016</td>
+                                                <td>6346</td>
+                                                <td>Shareaza</td>
+                                            </tr>
+                                            <tr>
+                                                <td>ServiceInstall.exe</td>
+                                                <td>W32/HLLP.41472.e</td>
+                                                <td>6346</td>
+                                                <td>Shareaza</td>
+                                            </tr>
+                                            <tr>
+                                                <td>IPHiderLib64.dll</td>
+                                                <td>W32/HLLP.41472.e</td>
+                                                <td>6346</td>
+                                                <td>Shareaza</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Shareaza_2.7.9.0_Win32.exe</td>
+                                                <td>Artemis!A44FA3F60016</td>
+                                                <td>6346</td>
+                                                <td>Shareaza</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Gnutellawire Crack Uploaded By Anuzbitt torrents download.zip</td>
+                                                <td>Vundo.gen.du</td>
+                                                <td>6346</td>
+                                                <td>TurboWire</td>
+                                            </tr>
+                                            <tr>
+                                                <td>uTorrent.exe</td>
+                                                <td>Artemis!F509EC872FE4</td>
+                                                <td>3699</td>
+                                                <td>Sharest</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Facebook Ativador WebCam HotSex P2P 2015 - Windows XP.zip</td>
+                                                <td>W32/HLLP.41472.e</td>
+                                                <td>6346</td>
+                                                <td>Shareaza</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Reality Kings Crack Uploaded By Anuzbitt torrents download.zip</td>
+                                                <td>Generic Downloader.iv</td>
+                                                <td>34891</td>
+                                                <td>KoolWire</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="row">
+
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id="exportButton" class="btn btn-info clearfix pull-left"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
+                                        <ul class="pagination pull-right">
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">...</a></li>
+                                            <li><a href="#">&gt;</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- /Modal -->
+                    </div>
 
                 </div>
 
                 <div class="panel-footer">
-
                 </div>
             </div>
             <!-- /put all your code here -->
