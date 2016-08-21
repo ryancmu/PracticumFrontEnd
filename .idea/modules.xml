@@ -3,10 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FrontEnd.iml" filepath="$PROJECT_DIR$/FrontEnd.iml" />
-      <module fileurl="file://$USER_HOME$/Practicum/practicum/todolist-core/todolist-core.iml" filepath="$USER_HOME$/Practicum/practicum/todolist-core/todolist-core.iml" />
-      <module fileurl="file://$USER_HOME$/Practicum/practicum/todolist-mvc.iml" filepath="$USER_HOME$/Practicum/practicum/todolist-mvc.iml" />
-      <module fileurl="file://$USER_HOME$/Practicum/practicum/todolist-web-common/todolist-web-common.iml" filepath="$USER_HOME$/Practicum/practicum/todolist-web-common/todolist-web-common.iml" />
-      <module fileurl="file://$USER_HOME$/Practicum/practicum/todolist-web-servlet-jsp/todolist-web-servlet-jsp.iml" filepath="$USER_HOME$/Practicum/practicum/todolist-web-servlet-jsp/todolist-web-servlet-jsp.iml" />
     </modules>
   </component>
 </project>
