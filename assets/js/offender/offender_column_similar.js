@@ -41,7 +41,6 @@ $(function () {
             // Initialize charts
             // ------------------------------
             var connect_column = ec.init(document.getElementById('connect_column'), limitless);
-            var connect_column2 = ec.init(document.getElementById('connect_column_2'), limitless);
 
             // Column options
             connect_column_options = {
@@ -131,146 +130,42 @@ $(function () {
                         name: 'Count',
                         type: 'line',
                         stack: 'Total',
-                        data: [0, 24352, 257822, 71489, 64443, 82552, 21364, 0, 0, 0, 0, 0]
+                        data: [0, 0, 0, 0, 0, 0, 49575, 149444, 10801, 0, 3698, 149006]
                     },
                     {
                         name: 'SHA1',
                         type: 'line',
                         stack: 'Total',
-                        data: [0, 13397, 19966, 19241, 17656, 20460, 14305, 0, 0, 0, 0, 0]
+                        data: [0, 0, 0, 0, 0, 0, 15415, 20815, 10799, 0, 3330, 20423]
                     },
                     {
                         name: 'File Names',
                         type: 'line',
                         stack: 'Total',
-                        data: [0, 13397, 19966, 19241, 17656, 20460, 14305, 0, 0, 0, 0, 0]
+                        data: [0, 0, 0, 0, 0, 0, 15415, 20815, 10799, 0, 3330, 20423]
                     },
                     {
                         name: 'Infection Types',
                         type: 'line',
                         stack: 'Total',
-                        data: [0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
+                        data: [0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1]
                     },
 
                 ]
             };
-
-            connect_column_options2 = {
-                // Setup grid
-                grid: {
-                    x: 54,
-                    x2: 55,
-                    y: 35,
-                    y2: 25
-                },
-
-                // Add tooltip
-                tooltip: {
-                    trigger: 'axis',
-                    axisPointer: {
-                        type: 'shadow'
-                    }
-                },
-
-                // Add legend
-                legend: {
-                    textStyle: {fontSize: 12},
-                    data: ['SHA1 / Count', 'Infection / SHA1', 'File Name / SHA1']
-                },
-
-                // Add toolbox
-                toolbox: {
-                    show: true,
-                    orient: 'vertical',
-                    x: 'right',
-                    y: 35,
-                    feature: {
-                        mark: {
-                            show: true,
-                            title: {
-                                mark: 'Markline switch',
-                                markUndo: 'Undo markline',
-                                markClear: 'Clear markline'
-                            }
-                        },
-                        magicType: {
-                            show: true,
-                            title: {
-                                line: 'Switch to line chart',
-                                bar: 'Switch to bar chart',
-                                stack: 'Switch to stack',
-                                tiled: 'Switch to tiled'
-                            },
-                            type: ['line', 'bar', 'stack', 'tiled']
-                        },
-                        restore: {
-                            show: true,
-                            title: 'Restore'
-                        },
-                        saveAsImage: {
-                            show: true,
-                            title: 'Same as image',
-                            lang: ['Save']
-                        }
-                    }
-                },
-
-                // Enable drag recalculate
-                calculable: true,
-
-                // Horizontal axis
-                xAxis: [{
-                    type: 'category',
-                    data: ['SHA1 / Count', 'Infection / SHA1', 'File Name / SHA1']
-                }],
-
-                // Vertical axis
-                yAxis: [{
-                    type: 'value',
-                    splitArea: {show: true}
-                }],
-
-                // Add series
-                series: [
-                    {
-                        name: 'SHA1 / Count',
-                        type: 'line',
-                        stack: 'Percentage',
-                        data: [0.00]
-                    },
-                    {
-                        name: 'Infection / SHA1',
-                        type: 'line',
-                        stack: 'Percentage',
-                        data: [4.38]
-                    },
-
-                    {
-                        name: 'File Name / SHA1',
-                        type: 'line',
-                        stack: 'Percentage',
-                        data: [100.00]
-                    }
-                ]
-            };
-
 
             // Connect charts
             // connect_column.connect(connect_pie);
-            // connect_column.connect(connect_column2);
-            // connect_column2.connect(connect_column);
 
             // Apply options
             // ------------------------------
             connect_column.setOption(connect_column_options);
-            connect_column2.setOption(connect_column_options2);
 
             // Resize charts
             // ------------------------------
             window.onresize = function () {
                 setTimeout(function (){
                     connect_column.resize();
-                    connect_column2.resize();
                 }, 200);
             }
         }
