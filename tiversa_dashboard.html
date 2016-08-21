@@ -157,6 +157,15 @@
                 <li><a href="tiversa_malware_map.html"><i class="icon-map position-left"></i> Malware Map</a></li>
                 <li><a href="tiversa_malware_analysis.html"><i class="icon-statistics position-left"></i> Malware
                     Statistics</a></li>
+                <li><a id="searchdiv"><i class="icon-search4 position-left"></i> Search</a></li>
+                <script>
+                    $(function () {
+                        $("#search").hide();
+                        $("#searchdiv").click(function () {
+                            $("#search").show();
+                        });
+                    })
+                </script>
             </ul>
         </div>
         <!--Tab-->
@@ -176,7 +185,7 @@
         <div class="content-wrapper">
 
             <!--Multi Search below-->
-            <div>
+            <div id="search">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title"><b><strong>Search</strong></b></h3>
@@ -325,22 +334,16 @@
                         <td>Pennslyvania</td>
                         <td><span class="label label-info">FCI</span> <span class="label label-danger">ITI</span></td>
                         <td>
-                            <button id="handle1" class="btn btn-xs btn-primary">Handle</button>
+                            <a href="tiversa_handle_page.html"><button id="handle1" class="btn btn-xs btn-primary">Handle</button></a>
                         </td>
                     </tr>
-                    <script>
-                        $("#handle1").click(function () {
-                            $("#level1").hide();
-                        });
-                    </script>
-
                     <tr>
                         <td>NSA</td>
                         <td>Ohio</td>
                         <td><span class="label label-default">UAI</span> <span class="label label-danger">ITI</span>
                         </td>
                         <td>
-                            <button id="handle2" class="btn btn-xs btn-primary">Handle</button>
+                            <a href="#"><button id="handle2" class="btn btn-xs btn-primary">Handle</button></a>
                         </td>
                     </tr>
                     <tr>

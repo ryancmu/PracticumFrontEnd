@@ -49,6 +49,16 @@
     <script type="text/javascript" src="assets/js/backToTop.js"></script>
     <!--/back to top JS files -->
 
+
+    <!---date range JS File--->
+    <script type="text/javascript" src="assets/js/moment.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap-datetimepicker.min.js"></script>
+    <!---/date range JS File--->
+    <!-- search JS File --->
+    <script type="text/javascript" src="assets/js/searchBy.js"></script>
+    <!-- !searchBy JS File --->
+
+
 </head>
 
 <body class="navbar-bottom">
@@ -154,9 +164,18 @@
             <div class="navbar-collapse collapse" id="navbar-second-toggle">
                 <ul class="nav navbar-nav navbar-nav-material">
                     <li><a href="tiversa_dashboard.html"><i class="glyphicon-dashboard position-left"></i> Dashboard</a></li>
-                    <li class="active"><a href="tiversa_client_lists.html"><i class="icon-user position-left"></i> Client Lists </a></li>
+                    <li><a href="tiversa_client_lists.html"><i class="icon-user position-left"></i> Client Lists </a></li>
                     <li><a href="tiversa_malware_map.html"><i class="icon-map position-left"></i> Malware Map</a></li>
                     <li><a href="tiversa_malware_analysis.html"><i class="icon-statistics position-left"></i> Malware Statistics</a></li>
+                    <li><a id="searchdiv"><i class="icon-search4 position-left"></i> Search</a></li>
+                    <script>
+                        $(function () {
+                            $("#search").hide();
+                            $("#searchdiv").click(function () {
+                                $("#search").show();
+                            });
+                        })
+                    </script>
                 </ul>
             </div>
             <!--Tab-->
@@ -177,8 +196,124 @@
             <div class="content-wrapper">
 
                 <!-- Put all your code here -->
+
+
+                <!--Multi Search below-->
+                <div id="search">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title"><b><strong>Search</strong></b></h3>
+                            <div class="heading-elements">
+                                <ul class="icons-list">
+                                    <li><a data-action="collapse"></a></li>
+                                    <!--<li><a data-action="close"></a></li>-->
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-8 col-xs-offset-2">
+                                    <div class="col-md-3">
+                                        <button class="btn btn-default">
+                                            <span class="dropdown_button_text"><i class="icon-calendar position-left"></i>Date Range</span>
+                                        </button>
+                                    </div>
+                                    <div class='col-md-4'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker6'>
+                                                <input type='text' class="form-control"/>
+                                                <span class="input-group-addon">
+											<span class="glyphicon glyphicon-calendar"></span>
+										</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-4'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker7'>
+                                                <input type='text' class="form-control"/>
+                                                <span class="input-group-addon">
+													<span class="glyphicon glyphicon-calendar"></span>
+												</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepicker6').datetimepicker({
+                                            format: "MM-DD-YYYY",
+                                            useCurrent: false //Important! See issue #1075
+                                        });
+                                        $('#datetimepicker7').datetimepicker({
+                                            format: "MM-DD-YYYY",
+                                            useCurrent: false //Important! See issue #1075
+                                        });
+                                        $("#datetimepicker6").on("dp.change", function (e) {
+                                            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+                                        });
+                                        $("#datetimepicker7").on("dp.change", function (e) {
+                                            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+                                        });
+                                    });
+                                </script>
+
+                                <div id="wrapper" class="col-xs-8 col-xs-offset-2">
+                                    <div class="multiSearch col-lg-12">
+                                        <form action="sumbit" class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-btn search-panel-multi">
+                                                    <button type="button" class="btn btn-default dropdown-toggle"
+                                                            data-toggle="dropdown">
+                                                    <span class="dropdown_button_text"><i
+                                                            class="icon-stack2 position-left"></i>Choose criteria</span>
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu" role="menu">
+                                                        <li><a href="#client_multi"><i class="icon-user"></i> Client</a>
+                                                        </li>
+                                                        <li><a href="#ip_multi"><i class="icon-address-book"></i> IP</a>
+                                                        </li>
+                                                        <li><a href="#file_name_multi"><i class="icon-file-eye"></i> File
+                                                            Name</a></li>
+                                                        <li><a href="#country_multi"><i class="icon-location3"></i> Country</a>
+                                                        </li>
+                                                        <li><a href="#state_multi"><i class="icon-location4"></i> State</a>
+                                                        </li>
+                                                        <li><a href="#infection_multi"><i class="icon-warning"></i>
+                                                            Infection Type</a></li>
+                                                    </ul>
+                                                </div>
+                                                <input type="hidden" name="search_param_multi" value="all"
+                                                       id="search_param_multi">
+                                                <input type="text" class="form-control" name="x" placeholder="Search...">
+                                                <span class="input-group-btn">
+                                                <button class="add_button btn btn-default" type="button"><span
+                                                        class="glyphicon glyphicon-plus"></span></button>
+                                             </span>
+                                                <span class="input-group-btn">
+                                                <button class="remove_button btn btn-default" type="button"><span
+                                                        class="glyphicon glyphicon-minus"></span></button>
+                                             </span>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <span align="center" class="input-group-btn">
+                            <a href="infection_result.html"><li class="btn btn-default">search</li></a>
+                        </span>
+                        </div>
+                    </div>
+                </div>
+                <!--Multiple Search Field-->
+
+
                 <!-- USA map -->
-                <div class="panel panel-flat">
+                <div id="handlepage" class="panel panel-flat">
                     <div class="panel-heading">
                         <h5 class="panel-title">U.S. Malware Distribution</h5>
                         <div class="heading-elements">
@@ -197,39 +332,37 @@
                 <!-- /USA map -->
 
 
-                    <!--charts-->
-                    <div class="">
+                <!--charts-->
 
-                        <!-- location: state month line chart -->
-                        <!-- Chained transitions -->
-                        <div class="panel panel-flat">
-                            <div class="panel-heading">
-                                <h5 class="panel-title">Files per state - Time Analysis </h5>
-                                <div class="heading-elements">
-                                    <ul class="icons-list">
-                                        <li><a data-action="collapse"></a></li>
-                                        <li><a data-action="reload"></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="panel-body">
-                                <p class="content-group">This line graph shows the number of files downloaded from this state across the year.</p>
-                                <p>
-                                    <label class="radio-inline"><input type="radio" name="city" class="chained" value="Ohio" checked="checked">Pennsylvania</label>
-                                    <label class="radio-inline"><input type="radio" name="city" class="chained" value="Florida"> Florida</label>
-                                    <label class="radio-inline"><input type="radio" name="city" class="chained" value="California"> California</label>
-                                </p>
-                                <div class="chart-container">
-                                    <div class="chart" id="d3-chained-transitions"></div>
-                                </div>
-                            </div>
+                <!-- location: state month line chart -->
+                <!-- Chained transitions -->
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Files per state - Time Analysis </h5>
+                        <div class="heading-elements">
+                            <ul class="icons-list">
+                                <li><a data-action="collapse"></a></li>
+                                <li><a data-action="reload"></a></li>
+                            </ul>
                         </div>
-                        <!-- /chained transitions -->
-                        <!-- /location: state month line chart -->
-
                     </div>
-                    <!--/charts-->
+
+                    <div class="panel-body">
+                        <p class="content-group">This line graph shows the number of files downloaded from this state across the year.</p>
+                        <p>
+                            <label class="radio-inline"><input type="radio" name="city" class="chained" value="Ohio" checked="checked">Pennsylvania</label>
+                            <label class="radio-inline"><input type="radio" name="city" class="chained" value="Florida"> Florida</label>
+                            <label class="radio-inline"><input type="radio" name="city" class="chained" value="California"> California</label>
+                        </p>
+                        <div class="chart-container">
+                            <div class="chart" id="d3-chained-transitions"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /chained transitions -->
+                <!-- /location: state month line chart -->
+
+                <!--/charts-->
 
                 <!-- /put all your code here -->
 
