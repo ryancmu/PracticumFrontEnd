@@ -367,6 +367,10 @@
                 options3d: {
                     enabled: true,
                     alpha: 45
+                },
+                style: {
+                    fontSize: '30px',
+                    fontWeight: 'bold'
                 }
             },
             title: {
@@ -379,10 +383,15 @@
                 pie: {
                     innerSize: 100,
                     depth: 45
+                },
+                style: {
+                    fontSize: '30px',
+                    fontWeight: 'bold'
                 }
             },
             series: [{
                 name: 'Infected files count',
+
                 data: [
                     ['Direct Connect', 3745568],
                     ['LimeWire/4.21.1 (rc)', 974568],
@@ -393,6 +402,7 @@
                     ['Others', 931353],
                     ['giFT-Gnutella/0.0.11', 382561],
                     ['Emerald P2P UltraPeer/3.3.0', 212556]
+
                 ]
             }]
         });
@@ -438,9 +448,10 @@
 </script>
 
 <!-- Footer -->
-<div class="navbar navbar-default navbar-fixed-bottom footer">
+<div class="navbar navbar-default navbar-fixed-bottom footer  bg-indigo">
     <ul class="nav navbar-nav visible-xs-block">
-        <li><a class="text-center collapsed" data-toggle="collapse" data-target="#footer"><i class="icon-circle-up2"></i></a></li>
+        <li><a class="text-center collapsed" data-toggle="collapse" data-target="#footer"><i
+                class="icon-circle-up2"></i></a></li>
     </ul>
 
     <div class="navbar-collapse collapse" id="footer">
@@ -449,14 +460,16 @@
         </div> -->
 
         <div class="navbar-text">
-            &copy; 2016. <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon Uniersity eBiz</a>
+            <span class="text-white">&copy; 2016. </span> <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by
+            <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon University
+                eBiz</a>
         </div>
 
         <div class="navbar-right">
             <ul class="nav navbar-nav">
-                <li><a href="#">About</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="http://tiversa.com/contact/">Contact</a></li>
+                <li><a href="#" class="text-white">About</a></li>
+                <li><a href="#" class="text-white">Terms</a></li>
+                <li><a href="http://tiversa.com/contact/" class="text-white">Contact</a></li>
             </ul>
         </div>
     </div>
