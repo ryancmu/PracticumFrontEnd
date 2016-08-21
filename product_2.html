@@ -1,181 +1,248 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
+<html lang="en">
 <head>
-	<title>Tiversa</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tiversa&trade; - Dashboard</title>
 
-	<script src="http://d3js.org/d3.v3.min.js"></script>
-	
-	
-	<script src="assets/js/landing/data.js"></script>
-	<script src="assets/js/landing/locations.js"></script>
-	<script src="assets/js/landing/d3Animations.js"></script>
-	
-	<link rel="stylesheet" type="text/css" href="assets/css/landing/landingPage.css">
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
+          type="text/css">
+    <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/nicescroll.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/drilldown.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
+    <!-- /core JS files -->
+
+    <!---date range JS File--->
+    <script type="text/javascript" src="assets/js/moment.min.js"></script>
+    <!---/date range JS File--->
+
+    <script type="text/javascript" src="assets/js/core/app.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
+
+
+    <!--map and animation-->
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+
+
+    <script src="assets/js/landing/data.js"></script>
+    <script src="assets/js/landing/locations.js"></script>
+    <script src="assets/js/landing/d3Animations.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="assets/css/landing/product2.css">
+
 
 </head>
 
-<body>
-	<div id="mainOuterDiv">
-		<div id="mainDiv">
-			<div id="mapDiv"></div>
-			<div id="svgDiv"></div>
-		</div>
-		<div id="Product2Title">Geographic Location of Offenders</div>
-		<button type="button" onclick="alert('previous page!')" id="backButton"></button>
-	</div>
+<body class="navbar-bottom">
+
+<!-- Page header -->
+<div class="page-header page-header-inverse bg-indigo">
+
+    <!-- Main navbar -->
+    <div class="navbar navbar-inverse navbar-transparent">
+        <div class="navbar-header">
+            <a href="clientDashboard.html"><img src="assets/css/landing/TiversaLogo.png" alt=""></a>
+
+            <ul class="nav navbar-nav pull-right visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            <p class="navbar-text"><span class="label bg-success-400">Premium</span></p>
+
+
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-bubble8"></i>
+                            <span class="visible-xs-inline-block position-right">Messages</span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-content width-350">
+                            <div class="dropdown-content-heading">
+                                Messages
+                                <ul class="icons-list">
+                                    <li><a href="#"><i class="icon-menu7"></i></a></li>
+                                </ul>
+                            </div>
+
+                            <ul class="media-list dropdown-content-body">
+                                <li class="media">
+                                    <div class="media-left">
+                                        <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <span class="badge bg-danger-400 media-badge">5</span>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Andy</span>
+                                            <span class="media-annotation pull-right">09:58</span>
+                                        </a>
+
+                                        <span class="text-muted">Do you want to discuss the plan...</span>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <span class="badge bg-danger-400 media-badge">4</span>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Bridget Green</span>
+                                            <span class="media-annotation pull-right">12:16</span>
+                                        </a>
+
+                                        <span class="text-muted">Do you want to go over the report...</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="dropdown dropdown-user">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="assets/images/pj.jpg" class="img-circle" alt="">
+                            <span>PJ</span>
+                            <i class="caret"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                            <li><a href="clientConversation.html"><i class="icon-comment-discussion"></i> Messages</a></li>
+                            <li class="divider"></li>
+                            <li><a href="login_validation.html"><i class="icon-switch2"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /main navbar -->
+
+
+    <!-- Page header content -->
+    <div class="page-header-content">
+        <div class="page-title">
+            <h4>Dashboard <small>Hello, PJ!</small></h4>
+        </div>
+    </div>
+    <!-- /page header content -->
+
+
+    <!-- Second navbar -->
+    <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
+        <ul class="nav navbar-nav visible-xs-block">
+            <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+        </ul>
+
+        <div class="navbar-collapse collapse" id="navbar-second-toggle">
+            <ul class="nav navbar-nav navbar-nav-material">
+                <li class="active"><a href="clientDashboard.html">Dashboard</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
+
+                    <div class="dropdown-menu">
+                        <ul class="menu-list">
+                            <li><a href="product_1.html">Infected IP List</a></li>
+                            <li><a href="PreventativePage.html">Preventative Page</a></li>
+                            <li><a href="product_4.html">Offender List</a></li>
+                            <li><a href="product_2.html">Offender Map</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /second navbar -->
+
+</div>
+
+<!-- /page header -->
+
+<!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+
+            <!-- Put Your Code Here-->
+
+                    <div id="mainOuterDiv">
+                        <div id="mainDiv">
+                            <div id="mapDiv"></div>
+                            <div id="svgDiv"></div>
+                        </div>
+                        <!--<div id="Product2Title">Geographic Location of Offenders</div>-->
+                        <!--<button type="button" onclick="alert('previous page!')" id="backButton"></button>-->
+                    </div>
+
+            <!-- /Put Your Code Here-->
+
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+</div>
+<!-- /page container -->
+
+<!-- Footer -->
+<div class="navbar navbar-default navbar-fixed-bottom footer  bg-indigo">
+    <ul class="nav navbar-nav visible-xs-block">
+        <li><a class="text-center collapsed" data-toggle="collapse" data-target="#footer"><i
+                class="icon-circle-up2"></i></a></li>
+    </ul>
+
+    <div class="navbar-collapse collapse" id="footer">
+        <!-- <div class="navbar-text">
+            &copy; 2015. <a href="#" class="navbar-link">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" class="navbar-link" target="_blank">Eugene Kopyov</a>
+        </div> -->
+
+        <div class="navbar-text">
+            <span class="text-white">&copy; 2016. </span> <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by
+            <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon University
+                eBiz</a>
+        </div>
+
+        <div class="navbar-right">
+            <ul class="nav navbar-nav">
+                <li><a href="#" class="text-white">About</a></li>
+                <li><a href="#" class="text-white">Terms</a></li>
+                <li><a href="http://tiversa.com/contact/" class="text-white">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /footer -->
+
 </body>
-	
-<script type="text/javascript">
-
-	var offsetX = document.getElementById("svgDiv").offsetWidth;
-	var offsetY = document.getElementById("svgDiv").offsetHeight;
-	var locations = [];
-
-	function viewPortValues() {
-		offsetX = document.getElementById("svgDiv").offsetWidth;
-		offsetY = document.getElementById("svgDiv").offsetHeight;
-
-		locations = [[offsetX*0.06, offsetY*0.25, 1, "USA_", "assets/images/Product2/Flag/USA.png"], [offsetX*0.15, offsetY*0.4, 1, "USA1", "assets/images/Product2/Flag/USA.png"], [offsetX*0.2, offsetY*0.4, 1, "USA", "assets/images/Product2/Flag/USA.png"], [offsetX*0.27, offsetY*0.4, 1, "USA2", "assets/images/Product2/Flag/USA.png"], [offsetX*0.2, offsetY*0.48, 2, "Mexico"],
-					[offsetX*0.17, offsetY*0.34, 3, "Canada_"], [offsetX*0.24, offsetY*0.34, 3, "Canada"], [offsetX*0.30, offsetY*0.32, 3, "Canada_"],
-					[offsetX*0.17, offsetY*0.34, 3, "Canada_"],
-					[offsetX*0.3, offsetY*0.58, 4, "Venezuela"],
-					[offsetX*0.26, offsetY*0.64, 5, "Peru"],
-					[offsetX*0.35, offsetY*0.64, 6, "Brazil"], [offsetX*0.32, offsetY*0.68, 6, "Brazil"],
-					[offsetX*0.28, offsetY*0.78, 7, "Argentina"],
-					[offsetX*0.53, offsetY*0.7, 8, "South Africa"],
-					[offsetX*0.56, offsetY*0.41, 9, "Israil"],
-					[offsetX*0.61, offsetY*0.41, 10, "Iran"],
-					[offsetX*0.56, offsetY*0.37, 11, "Turkey", "assets/images/Product2/Flag/Bulgaria.png"],
-					[offsetX*0.52, offsetY*0.36, 12, "Romania", "assets/images/Product2/Flag/Hungary.png"],
-					[offsetX*0.54, offsetY*0.33, 13, "Ukraine"],
-					[offsetX*0.49, offsetY*0.32, 14, "Germany"],
-					[offsetX*0.46, offsetY*0.34, 15, "France"],
-					[offsetX*0.44, offsetY*0.37, 16, "Spain"],
-					[offsetX*0.45, offsetY*0.27, 17, "UK"],
-					[offsetX*0.51, offsetY*0.22, 18, "Sweeden"],
-					[offsetX*0.68, offsetY*0.47, 19, "India"],
-					[offsetX*0.7, offsetY*0.39, 20, "China_"], [offsetX*0.76, offsetY*0.42, 20, "China"], [offsetX*0.74, offsetY*0.35, 20, "China_"],
-					[offsetX*0.65, offsetY*0.27, 21, "Russia1","assets/images/Product2/Flag/Russia.png"], [offsetX*0.7, offsetY*0.3, 21, "Russia2", "assets/images/Product2/Flag/Russia.png"], [offsetX*0.75, offsetY*0.28, 21, "Russia", "assets/images/Product2/Flag/Russia.png"], [offsetX*0.8, offsetY*0.3, 21, "Russia_", "assets/images/Product2/Flag/Russia.png"],
-					[offsetX*0.815, offsetY*0.38, 22, "South Korea"],
-					[offsetX*0.85, offsetY*0.38, 23, "Japan"],
-					[offsetX*0.78, offsetY*0.6, 24, "Malaysia"],
-					[offsetX*0.82, offsetY*0.71, 25, "Australia_"], [offsetX*0.86, offsetY*0.67, 25, "Australia"], [offsetX*0.9, offsetY*0.74, 25, "Australia_"], 
-					[offsetX*0.965, offsetY*0.8, 26, "New Zealand"]
-
-					];
-
-		setTimeout(viewPortValues, 100);
-	}
-
-	locationCountry = ["USA", "USA1", "USA2", "Russia", "Russia1", "Russia2", "Romania" ,"Turkey"];
-	
-	viewPortValues();
-
-	var color = ["#946746","#8f9747","#4da751","#759747","#3ac9c9"];
-
-	
-	var svg = d3.select("#svgDiv")
-            .append("svg")
-            .attr("width", "100%")
-            .attr("height", "100%");
-
-	function seeLocations(locations) {
-
-		for(i=0; i<locations.length; i++) {
-			var myCircle = svg.append("circle")
-	                    .attr("cx",locations[i][0])
-	                    .attr("cy",locations[i][1])
-	                    .attr("r",5)
-	                    .attr("fill", "red")
-	                    .attr("opacity",1);	
-	        
-	        var text = svg.append("text")
-	        			.attr("x", locations[i][0])
-	        			.attr("y", locations[i][1])
-	        			.style("fill", "white")
-	        			.text(i);
-		}
-	}
-
-	function FlagSet() {
-
-
-		for(var i=0; i<locationCountry.length; i++) {
-			for(var j=0; j<locations.length; j++) {
-				if(locations[j][3]==locationCountry[i]) {
-					var flag = svg.append("image")
-							.attr("xlink:href", locations[j][4])
-							.attr("width", 30)
-							.attr("height", 30)
-							.attr("x", locations[j][0]-15)
-							.attr("y", locations[j][1]-15);
-				}
-			}
-		}
-//		var flag = svg.append("image")
-//						.attr("xlink:href", "assets/images/Product2/Flag/USA.png")
-//						.attr("width", 30)
-//						.attr("height", 30)
-//						.attr("x", locations[0][0]-15)
-//						.attr("y", locations[0][1]-15);
-	}
-	function circleAnimation(finalRadius, duration_sec, locationX, locationY, delay_sec, fill_color, stroke_color) {
-	  	var myCircle = svg.append("circle")
-	                    .attr("cx",locationX)
-	                    .attr("cy",locationY)
-	                    .attr("r",0)
-	                    .attr("fill", fill_color)
-	                    .attr("stroke", stroke_color)
-	                    .attr("stroke-width",4)
-	                    .attr("opacity",1);
-
-	  		myCircle.transition()
-	          .delay(delay_sec*1000)
-	          .attr("r",finalRadius)
-	          .duration(duration_sec*1000)
-	          .attr("opacity",0)
-	          .duration(duration_sec*1000)
-	          .each("end",function() {
-	            d3.select(this).remove();
-	    });
-	}
-
-
-	function combineAnimation(locationsX, locationsY) {
-
-			var circleRadious = offsetY * 0.06;
-
-			circleAnimation(circleRadious,1.5,locationsX, locationsY, 0, "none", "#ff0000");
-		  	circleAnimation(circleRadious,1.5,locationsX, locationsY, 0.2, "none", "#ff0000");
-		  	circleAnimation(circleRadious,1.5,locationsX, locationsY, 0.4, "none", "#ff0000");
-		  	circleAnimation(circleRadious,1.2,locationsX, locationsY, 0.3, "#ff0000","none");
-
-	}
-
-	function start() {
-
-		 for(var i=0; i<locationCountry.length; i++) {
-		 	for(var j=0; j<locations.length; j++) {
-		 		if(locations[j][3]==locationCountry[i]) {
-		 			combineAnimation(locations[j][0], locations[j][1]);
-		 		}
-		 	}
-		 	
-		 }
-		 
-
-		 setTimeout(start, 2000);
-	}
-	
-	
-
-</script>
-
-<script type="text/javascript">
-//	 seeLocations(locations);
-	FlagSet();
-	start();
-</script>
-
+<script src="assets/js/productPage/product2.js"></script>
 </html>
