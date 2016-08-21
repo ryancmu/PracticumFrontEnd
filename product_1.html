@@ -8,12 +8,13 @@
 
     <!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
     <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
     <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="assets/css/core.css" rel="stylesheet" type="text/css">
     <link href="assets/css/components.css" rel="stylesheet" type="text/css">
     <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/client_dashboard/client_dashboard.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/client_dashboard/product_table.css" rel="stylesheet" type="text/css">
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -186,11 +187,11 @@
                 <!-- Put all your code here -->
                     <div class="panel">
                         <div class="panel-heading">
-                            <h3 class="heading-text">Infected IP List</h3>
+                            <h5 class="panel-title">Infected IP List</h5>
                         </div>
 
                         <div class="panel-body">
-                             <table class="table table-hover">
+                             <table class="table table-hover table-bordered table-striped">
                                  <thead class="thead-inverse">
                                     <tr>
                                         <th>IP</th>
@@ -295,13 +296,17 @@
                                      </tr>
                                  </tbody>
                              </table>
-                            <ul class="pagination pull-right">
-                                <li class="active"><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
-                                <li><a href="#">...</a></li>
-                                <li><a href="#">&gt;</a></li>
-                            </ul>
+                            <br />
+                            <div class="row">
+                                <ul class="pagination pull-right">
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">...</a></li>
+                                    <li><a href="#">&gt;</a></li>
+                                </ul>
+                            </div>
+
                             <!-- Modal -->
                             <div class="modal fade detail1-modal-lg" id="myModal" role="dialog">
                                 <div class="modal-dialog modal-lg">
