@@ -63,17 +63,15 @@
 
     <!-- Main navbar -->
     <div class="navbar navbar-inverse navbar-transparent">
-        <div class="navbar-header">
-            <a href="clientDashboard.html"><img src="assets/css/landing/TiversaLogo.png" alt=""></a>
+        <div class="navbar-header" style="padding-left: 10px; padding-top: 5px">
+            <a href="tiversa_dashboard.html"><img src="assets/css/landing/TiversaLogo.png" alt=""></a>
+
             <ul class="nav navbar-nav pull-right visible-xs-block">
                 <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
             </ul>
         </div>
 
         <div class="navbar-collapse collapse" id="navbar-mobile">
-            <p class="navbar-text"><span class="label bg-success-400">Premium</span></p>
-
-
             <div class="navbar-right">
                 <ul class="nav navbar-nav">
 
@@ -130,15 +128,14 @@
 
                     <li class="dropdown dropdown-user">
                         <a class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="assets/images/pj.jpg" class="img-circle" alt="">
-                            <span>PJ</span>
+                            <img src="assets/images/headshot.jpg" alt="">
+                            <span>Ray</span>
                             <i class="caret"></i>
                         </a>
 
                         <ul class="dropdown-menu dropdown-menu-right">
                             <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
-                            <li><a href="clientConversation.html"><i class="icon-comment-discussion"></i> Messages</a>
-                            </li>
+                            <li><a href="#"><i class="icon-comment-discussion"></i> Messages</a></li>
                             <li class="divider"></li>
                             <li><a href="login_validation.html"><i class="icon-switch2"></i> Logout</a></li>
                         </ul>
@@ -149,16 +146,6 @@
     </div>
     <!-- /main navbar -->
 
-    <!-- Page header content -->
-    <div class="page-header-content">
-        <div class="page-title">
-            <h4>Dashboard
-                <small>Hello, Ray!</small>
-            </h4>
-        </div>
-    </div>
-
-    <!-- /page header content -->
 
     <!-- Second navbar -->
     <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
@@ -167,24 +154,33 @@
                     class="icon-paragraph-justify3"></i></a></li>
         </ul>
 
+        <!--Tab-->
         <div class="navbar-collapse collapse" id="navbar-second-toggle">
             <ul class="nav navbar-nav navbar-nav-material">
-                <li><a href="clientDashboard.html">Dashboard</a></li>
-
-                <li class="dropdown active">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Products <span class="caret"></span></a>
-
-                    <div class="dropdown-menu">
-                        <ul class="menu-list">
-                            <li><a href="product_1.html">Infected IP List</a></li>
-                            <li><a href="product_2.html">Product 2</a></li>
-                            <li><a href="PreventativePage.html">Preventative Page</a></li>
-                            <li><a href="product_4.html">Offender List</a></li>
-                        </ul>
-                    </div>
-                </li>
+                <li class="active"><a href="tiversa_dashboard.html"><i class="glyphicon-dashboard position-left"></i> Dashboard</a></li>
+                <li><a href="tiversa_client_lists.html"><i class="icon-user position-left"></i> Client Lists </a></li>
+                <li><a href="tiversa_malware_map.html"><i class="icon-map position-left"></i> Malware Map</a></li>
+                <li><a href="tiversa_malware_analysis.html"><i class="icon-statistics position-left"></i> Malware
+                    Statistics</a></li>
+                <li><a id="searchdiv"><i class="icon-search4 position-left"></i> Search</a></li>
+                <script>
+                    $(function () {
+                        $("#search").hide();
+                        var showSearch = false;
+                        $("#searchdiv").click(function () {
+                            if(showSearch == false){
+                                $("#search").show();
+                                showSearch = true;
+                            } else {
+                                $("#search").hide();
+                                showSearch = false;
+                            }
+                        });
+                    })
+                </script>
             </ul>
         </div>
+        <!--Tab-->
     </div>
     <!-- /second navbar -->
 
