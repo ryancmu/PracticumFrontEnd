@@ -49,7 +49,7 @@
     <!-- Main navbar -->
     <div class="navbar navbar-inverse navbar-transparent">
         <div class="navbar-header" style="padding-left: 10px; padding-top: 5px">
-            <a href="index.html"><img src="assets/images/TiversaLogo_meitu_1.png" alt=""></a>
+            <a href="tiversa_dashboard.html"><img src="assets/css/landing/TiversaLogo.png" alt=""></a>
 
             <ul class="nav navbar-nav pull-right visible-xs-block">
                 <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
@@ -113,7 +113,7 @@
 
                     <li class="dropdown dropdown-user">
                         <a class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="assets/images/placeholder.jpg" alt="">
+                            <img src="assets/images/headshot.jpg" alt="">
                             <span>Ray</span>
                             <i class="caret"></i>
                         </a>
@@ -132,28 +132,37 @@
     <!-- /main navbar -->
 
 
-    <!-- Page header content -->
-    <div class="page-header-content">
-        <div class="page-title">
-            <h4>Dashboard <small>Hello , Ray!</small></h4>
-        </div>
-
-    </div>
-
-    <!-- /page header content -->
-
-
     <!-- Second navbar -->
     <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
         <ul class="nav navbar-nav visible-xs-block">
-            <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+            <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i
+                    class="icon-paragraph-justify3"></i></a></li>
         </ul>
 
         <!--Tab-->
         <div class="navbar-collapse collapse" id="navbar-second-toggle">
             <ul class="nav navbar-nav navbar-nav-material">
-                <li class="active"><a href="tiversa_dashboard.html">Dashboard</a></li>
-                <li><a href="user_list.html"><i class="icon-display4 position-left"></i> Client Lists </a></li>
+                <li class="active"><a href="tiversa_dashboard.html"><i class="glyphicon-dashboard position-left"></i> Dashboard</a></li>
+                <li><a href="tiversa_client_lists.html"><i class="icon-user position-left"></i> Client Lists </a></li>
+                <li><a href="tiversa_malware_map.html"><i class="icon-map position-left"></i> Malware Map</a></li>
+                <li><a href="tiversa_malware_analysis.html"><i class="icon-statistics position-left"></i> Malware
+                    Statistics</a></li>
+                <li><a id="searchdiv"><i class="icon-search4 position-left"></i> Search</a></li>
+                <script>
+                    $(function () {
+                        $("#search").hide();
+                        var showSearch = false;
+                        $("#searchdiv").click(function () {
+                            if(showSearch == false){
+                                $("#search").show();
+                                showSearch = true;
+                            } else {
+                                $("#search").hide();
+                                showSearch = false;
+                            }
+                        });
+                    })
+                </script>
             </ul>
         </div>
         <!--Tab-->
@@ -175,7 +184,8 @@
             <!-- Put all your code here -->
             <div class="panel">
                 <div class="panel-heading">
-                    <h3 class="heading-text">Distinct Files By SHA1</h3>
+                    <h3 class="heading-text">List of files infected by "BackDoor"</h3>
+                    <p class="text-size-large">Total Number of SHA1: 463 &nbsp;</p>
                 </div>
 
                 <div class="panel-body">
@@ -192,8 +202,8 @@
                             <table id="sha_table" class="table table-hover table-striped table-bordered">
                                 <thead class="thead-inverse">
                                 <tr>
-                                    <th class="col-md-5">Unique SHA1</th>
-                                    <th class="col-md-3">File Count</th>
+                                    <th class="col-md-5">SHA1</th>
+                                    <th class="col-md-3">Number of Files</th>
                                     <th class="col-md-2 text-center">Show Detail</th>
                                     <th class="col-md-3 text-center">Search By</th>
                                 </tr>
@@ -242,7 +252,7 @@
                                 </ul>
                             </div>
 
-                            <p class="text-size-large">Distinct File Number: 463 &nbsp;<button id="select_all" class="btn btn-primary btn-xs">Select All</button></p>
+                            <button id="select_all" class="btn btn-primary btn-xs">Select All</button>
                             <!-- Modal -->
                             <div class="modal fade detail1-modal-lg" id="myModal" role="dialog">
                                 <div class="modal-dialog modal-lg">
@@ -362,7 +372,7 @@
                             </script>
 
                             <br />
-                            <a href="product_4.html"><button class="btn btn-md btn-primary pull-right">Analysis</button></a>
+                            <a href="product_4.html"><button class="btn btn-md btn-primary pull-right">Generate Offender List</button></a>
                         </div>
                         <!--/col-6 -->
                     </div>
