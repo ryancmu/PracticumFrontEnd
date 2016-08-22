@@ -28,7 +28,7 @@ $(function () {
             'echarts/theme/limitless',
             'echarts/chart/line',
             'echarts/chart/bar',
-            'echarts/chart/pie',
+            // 'echarts/chart/pie',
 
             'echarts/chart/scatter',
             'echarts/chart/k',
@@ -129,25 +129,25 @@ $(function () {
                 series: [
                     {
                         name: 'Count',
-                        type: 'line',
+                        type: 'bar',
                         stack: 'Total',
                         data: [0, 0, 0, 0, 0, 0, 49575, 149444, 10801, 0, 3698, 149006]
                     },
                     {
                         name: 'SHA1',
-                        type: 'line',
+                        type: 'bar',
                         stack: 'Total',
                         data: [0, 0, 0, 0, 0, 0, 15415, 20815, 10799, 0, 3330, 20423]
                     },
                     {
                         name: 'File Names',
-                        type: 'line',
+                        type: 'bar',
                         stack: 'Total',
                         data: [0, 0, 0, 0, 0, 0, 15415, 20815, 10799, 0, 3330, 20423]
                     },
                     {
                         name: 'Infection Types',
-                        type: 'line',
+                        type: 'bar',
                         stack: 'Total',
                         data: [0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1]
                     }
@@ -241,25 +241,25 @@ $(function () {
                 series: [
                     {
                         name: 'Count',
-                        type: 'line',
+                        type: 'bar',
                         stack: 'Total',
                         data: [0, 24352, 257822, 71489, 64443, 82552, 21364, 0, 0, 0, 0, 0]
                     },
                     {
                         name: 'SHA1',
-                        type: 'line',
+                        type: 'bar',
                         stack: 'Total',
                         data: [0, 13397, 19966, 19241, 17656, 20460, 14305, 0, 0, 0, 0, 0]
                     },
                     {
                         name: 'File Names',
-                        type: 'line',
+                        type: 'bar',
                         stack: 'Total',
                         data: [0, 13397, 19966, 19241, 17656, 20460, 14305, 0, 0, 0, 0, 0]
                     },
                     {
                         name: 'Infection Types',
-                        type: 'line',
+                        type: 'bar',
                         stack: 'Total',
                         data: [0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
                     },

@@ -128,25 +128,25 @@ $(function () {
                 series: [
                     {
                         name: 'Count',
-                        type: 'line',
+                        type: 'bar',
                         stack: 'Total',
                         data: [0, 24352, 257822, 71489, 64443, 82552, 21364, 0, 0, 0, 0, 0]
                     },
                     {
                         name: 'SHA1',
-                        type: 'line',
+                        type: 'bar',
                         stack: 'Total',
                         data: [0, 13397, 19966, 19241, 17656, 20460, 14305, 0, 0, 0, 0, 0]
                     },
                     {
                         name: 'File Names',
-                        type: 'line',
+                        type: 'bar',
                         stack: 'Total',
                         data: [0, 13397, 19966, 19241, 17656, 20460, 14305, 0, 0, 0, 0, 0]
                     },
                     {
                         name: 'Infection Types',
-                        type: 'line',
+                        type: 'bar',
                         stack: 'Total',
                         data: [0, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0]
                     },
