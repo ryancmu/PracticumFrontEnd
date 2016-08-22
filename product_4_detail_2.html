@@ -47,8 +47,13 @@
 
     <!-- Detail JS Files-->
     <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
-    <script type="text/javascript" src="assets/js/offender/offender_column_similar.js"></script>
+    <script type="text/javascript" src="assets/js/offender/offender_column_slider.js"></script>
     <!-- /Detail JS Files-->
+
+    <!--percentage-->
+    <script type="text/javascript" src="assets/js/plugins/loaders/progressbar.min.js"></script>
+    <script type="text/javascript" src="assets/js/pages/components_loaders.js"></script>
+    <!--percentage-->
 
 </head>
 
@@ -228,13 +233,44 @@
                                     <div class="chart has-fixed-height" id="connect_column"></div>
                                 </div>
                             </div>
+                            <div class="col-lg-1">
+                            </div>
+                            <!-- Progress bar contextual alternatives -->
 
-                            <div class="col-lg-5">
-                                <div class="chart-container">
-                                    <div class="chart has-fixed-height" id="connect_column_2"></div>
+                            <div class="col-md-4">
+                                <div class="border-top-primary">
+                                    <div class="text-center">
+                                        <h4 class="no-margin text-semibold"></h4>
+                                        <p class="content-group-sm text-muted"></p>
+                                    </div>
+
+                                    <p class="text-semibold">SHA1 / Count: 0.0049%</p>
+                                    <div class="progress content-group-sm">
+                                        <div class="progress-bar progress-bar-striped active" style="width: 1%">
+                                            <span class="sr-only">1% Complete</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-semibold">Infection / SHA1: 4.38%</p>
+                                    <div class="progress content-group-sm">
+                                        <div class="progress-bar progress-bar-danger progress-bar-striped active"
+                                             style="width: 5%">
+                                            <span class="sr-only">5% Complete (danger)</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-semibold">SHA1 / File Name: 100%</p>
+                                    <div class="progress content-group-sm">
+                                        <div class="progress-bar progress-bar-success progress-bar-striped active"
+                                             style="width: 100%">
+                                            <span class="sr-only">100% Complete (success)</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- /progress bar contextual alternatives -->
                         </div>
+
                     </div>
                 </div>
                 <!-- /file type - combination and connection -->
