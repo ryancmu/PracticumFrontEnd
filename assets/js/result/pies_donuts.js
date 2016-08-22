@@ -141,11 +141,11 @@ $(function () {
                     radius: '60%',
                     center: ['50%', '57.5%'],
                     data: [
-                        {value: 1221527, name: 'BackDoor'},
-                        {value: 1004587, name: 'GenericR'},
-                        {value: 406533, name: 'W32/HLLP'},
-                        {value: 369860, name: 'W32/Sality'},
-                        {value: 354955, name: 'Generic BackDoor'}
+                        {value: 15521, name: 'BackDoor'},
+                        {value: 704, name: 'GenericR'},
+                        {value: 643, name: 'W32/HLLP'},
+                        {value: 561, name: 'W32/Sality'},
+                        {value: 354, name: 'Generic BackDoor'}
                     ]
                 }]
             };
@@ -162,7 +162,6 @@ $(function () {
 
             window.onresize = function () {
                 setTimeout(function (){
-                    basic_pie_filetype.resize();
                     basic_pie_infection.resize();
                 }, 200);
             }
