@@ -281,8 +281,14 @@
 
                     <div class="panel-footer">
                         <div class="pull-right">
-                            <a href="product_4_detail_2.html"><button type="button" class="btn btn-primary"> Find Similar
-                            </button></a>
+                            <button type="button" class="btn btn-primary" id="findSimilar"> Find Similar</button>
+                            <script>
+                                $(document).ready(function() {
+                                    $("#findSimilar").click(function(){
+                                        self.location='product_4_detail_2.html';
+                                    });
+                                });
+                            </script>
                             <button class="btn btn-info"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
                         </div>
                     </div>
