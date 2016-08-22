@@ -167,8 +167,15 @@
                 <script>
                     $(function () {
                         $("#search").hide();
+                        var showSearch = false;
                         $("#searchdiv").click(function () {
-                            $("#search").show();
+                            if(showSearch == false){
+                                $("#search").show();
+                                showSearch = true;
+                            } else {
+                                $("#search").hide();
+                                showSearch = false;
+                            }
                         });
                     })
                 </script>
