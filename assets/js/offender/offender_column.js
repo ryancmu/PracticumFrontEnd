@@ -41,7 +41,6 @@ $(function () {
             // Initialize charts
             // ------------------------------
             var connect_column = ec.init(document.getElementById('connect_column'), limitless);
-            var connect_column2 = ec.init(document.getElementById('connect_column_2'), limitless);
 
             // Column options
             connect_column_options = {
@@ -155,106 +154,6 @@ $(function () {
                 ]
             };
 
-            connect_column_options2 = {
-                // Setup grid
-                grid: {
-                    x: 54,
-                    x2: 55,
-                    y: 35,
-                    y2: 25
-                },
-
-                // Add tooltip
-                tooltip: {
-                    trigger: 'axis',
-                    axisPointer: {
-                        type: 'shadow'
-                    }
-                },
-
-                // Add legend
-                legend: {
-                    textStyle: {fontSize: 12},
-                    data: ['SHA1 / Count', 'Infection / SHA1', 'File Name / SHA1']
-                },
-
-                // Add toolbox
-                toolbox: {
-                    show: true,
-                    orient: 'vertical',
-                    x: 'right',
-                    y: 35,
-                    feature: {
-                        mark: {
-                            show: true,
-                            title: {
-                                mark: 'Markline switch',
-                                markUndo: 'Undo markline',
-                                markClear: 'Clear markline'
-                            }
-                        },
-                        magicType: {
-                            show: true,
-                            title: {
-                                line: 'Switch to line chart',
-                                bar: 'Switch to bar chart',
-                                stack: 'Switch to stack',
-                                tiled: 'Switch to tiled'
-                            },
-                            type: ['line', 'bar', 'stack', 'tiled']
-                        },
-                        restore: {
-                            show: true,
-                            title: 'Restore'
-                        },
-                        saveAsImage: {
-                            show: true,
-                            title: 'Same as image',
-                            lang: ['Save']
-                        }
-                    }
-                },
-
-                // Enable drag recalculate
-                calculable: true,
-
-                // Horizontal axis
-                xAxis: [{
-                    type: 'category',
-                    data: ['SHA1 / Count', 'Infection / SHA1', 'File Name / SHA1']
-                }],
-
-                // Vertical axis
-                yAxis: [{
-                    type: 'value',
-                    splitArea: {show: true}
-                }],
-
-                // Add series
-                series: [
-                    {
-                        name: 'SHA1 / Count',
-                        type: 'line',
-                        stack: 'Percentage',
-                        data: [0.00]
-                    },
-                    {
-                        name: 'Infection / SHA1',
-                        type: 'line',
-                        stack: 'Percentage',
-                        data: [4.38]
-                    },
-
-                    {
-                        name: 'File Name / SHA1',
-                        type: 'line',
-                        stack: 'Percentage',
-                        data: [100.00]
-                    }
-                ]
-            };
-
-
             // Connect charts
             // connect_column.connect(connect_pie);
             // connect_column.connect(connect_column2);
@@ -263,14 +162,12 @@ $(function () {
             // Apply options
             // ------------------------------
             connect_column.setOption(connect_column_options);
-            connect_column2.setOption(connect_column_options2);
 
             // Resize charts
             // ------------------------------
             window.onresize = function () {
                 setTimeout(function (){
                     connect_column.resize();
-                    connect_column2.resize();
                 }, 200);
             }
         }
