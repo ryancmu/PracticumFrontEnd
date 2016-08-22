@@ -1,0 +1,2724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tiversa - User List</title>
+
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/nicescroll.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/drilldown.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
+    <!-- /core JS files -->
+
+    <!-- Theme JS files -->
+    <script type="text/javascript" src="assets/js/core/app.js"></script>
+    <script type="text/javascript" src="assets/js/pages/user_pages_list.js"></script>
+
+    <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
+    <!-- /theme JS files -->
+
+</head>
+
+<body class="navbar-bottom">
+
+<!-- Page header -->
+<div class="page-header page-header-inverse bg-indigo">
+
+    <!-- Main navbar -->
+    <div class="navbar navbar-inverse navbar-transparent">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="index.html"></a>
+
+            <ul class="nav navbar-nav pull-right visible-xs-block">
+                <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="navbar-collapse collapse" id="navbar-mobile">
+            <p class="navbar-text"><span class="label bg-success-400">Premium</span></p>
+
+            <ul class="nav navbar-nav">
+                <li><a href="#">Upgrade</a></li>
+            </ul>
+
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-bell2"></i>
+                            <span class="visible-xs-inline-block position-right">Activity</span>
+                            <span class="status-mark border-pink-300"></span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-content">
+                            <div class="dropdown-content-heading">
+                                Activity
+                                <ul class="icons-list">
+                                    <li><a href="#"><i class="icon-menu7"></i></a></li>
+                                </ul>
+                            </div>
+
+                            <ul class="media-list dropdown-content-body width-350">
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="btn bg-success-400 btn-rounded btn-icon btn-xs"><i class="icon-mention"></i></a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#">Taylor Swift</a> mentioned you in a post "Angular JS. Tips and tricks"
+                                        <div class="media-annotation">4 minutes ago</div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="btn bg-pink-400 btn-rounded btn-icon btn-xs"><i class="icon-paperplane"></i></a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        Special offers have been sent to subscribed users by <a href="#">Donna Gordon</a>
+                                        <div class="media-annotation">36 minutes ago</div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="btn bg-blue btn-rounded btn-icon btn-xs"><i class="icon-plus3"></i></a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#">Chris Arney</a> created a new <span class="text-semibold">Design</span> branch in <span class="text-semibold">Limitless</span> repository
+                                        <div class="media-annotation">2 hours ago</div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="btn bg-purple-300 btn-rounded btn-icon btn-xs"><i class="icon-truck"></i></a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        Shipping cost to the Netherlands has been reduced, database updated
+                                        <div class="media-annotation">Feb 8, 11:30</div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="btn bg-warning-400 btn-rounded btn-icon btn-xs"><i class="icon-bubble8"></i></a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        New review received on <a href="#">Server side integration</a> services
+                                        <div class="media-annotation">Feb 2, 10:20</div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="btn bg-teal-400 btn-rounded btn-icon btn-xs"><i class="icon-spinner11"></i></a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <strong>January, 2016</strong> - 1320 new users, 3284 orders, $49,390 revenue
+                                        <div class="media-annotation">Feb 1, 05:46</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-bubble8"></i>
+                            <span class="visible-xs-inline-block position-right">Messages</span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-content width-350">
+                            <div class="dropdown-content-heading">
+                                Messages
+                                <ul class="icons-list">
+                                    <li><a href="#"><i class="icon-menu7"></i></a></li>
+                                </ul>
+                            </div>
+
+                            <ul class="media-list dropdown-content-body">
+                                <li class="media">
+                                    <div class="media-left">
+                                        <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <span class="badge bg-danger-400 media-badge">5</span>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">James Alexander</span>
+                                            <span class="media-annotation pull-right">04:58</span>
+                                        </a>
+
+                                        <span class="text-muted">who knows, maybe that would be the best thing for me...</span>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                        <span class="badge bg-danger-400 media-badge">4</span>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Margo Baker</span>
+                                            <span class="media-annotation pull-right">12:16</span>
+                                        </a>
+
+                                        <span class="text-muted">That was something he was unable to do because...</span>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Jeremy Victorino</span>
+                                            <span class="media-annotation pull-right">22:48</span>
+                                        </a>
+
+                                        <span class="text-muted">But that would be extremely strained and suspicious...</span>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Beatrix Diaz</span>
+                                            <span class="media-annotation pull-right">Tue</span>
+                                        </a>
+
+                                        <span class="text-muted">What a strenuous career it is that I've chosen...</span>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></div>
+                                    <div class="media-body">
+                                        <a href="#" class="media-heading">
+                                            <span class="text-semibold">Richard Vango</span>
+                                            <span class="media-annotation pull-right">Mon</span>
+                                        </a>
+
+                                        <span class="text-muted">Other travelling salesmen live a life of luxury...</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="dropdown dropdown-user">
+                        <a class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="assets/images/placeholder.jpg" alt="">
+                            <span>Victoria</span>
+                            <i class="caret"></i>
+                        </a>
+
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                            <li><a href="#"><i class="icon-coins"></i> My balance</a></li>
+                            <li><a href="#"><span class="badge bg-blue pull-right">26</span> <i class="icon-comment-discussion"></i> Messages</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
+                            <li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /main navbar -->
+
+
+    <!-- Page header content -->
+    <div class="page-header-content">
+        <div class="page-title">
+            <h4>User Pages - User List</h4>
+        </div>
+
+        <div class="heading-elements">
+            <ul class="breadcrumb heading-text">
+                <li><a href="index.html"><i class="icon-home2 position-left"></i> Home</a></li>
+                <li><a href="user_pages_list.html">User pages</a></li>
+                <li class="active">User list</li>
+            </ul>
+        </div>
+    </div>
+    <!-- /page header content -->
+
+
+    <!-- Second navbar -->
+    <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
+        <ul class="nav navbar-nav visible-xs-block">
+            <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+        </ul>
+
+        <div class="navbar-collapse collapse" id="navbar-second-toggle">
+            <ul class="nav navbar-nav navbar-nav-material">
+                <li><a href="index.html">Dashboard</a></li>
+
+                <li class="dropdown mega-menu mega-menu-wide">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Components <span class="caret"></span></a>
+
+                    <div class="dropdown-menu dropdown-content">
+                        <div class="dropdown-content-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <span class="menu-heading underlined">Forms</span>
+                                    <ul class="menu-list">
+                                        <li>
+
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-file-css"></i> JSON forms</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-footprint"></i> Wizards</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-spell-check"></i> Editors</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-select2"></i> Pickers</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-insert-template"></i> Form layouts</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="menu-heading underlined">Appearance</span>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="#"><i class="icon-grid"></i> Components</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-browser"></i> Content panels</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-droplets"></i> Content styling</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-gift"></i> Extra components</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-wrench3"></i> Tools</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="menu-heading underlined">Extensions</span>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="#"><i class="icon-puzzle4"></i> Extensions</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-popout"></i> JQuery UI</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-upload"></i> File uploaders</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-calendar3"></i> Event calendars</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-sphere"></i> Internationalization</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="menu-heading underlined">Tables</span>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="#"><i class="icon-table2"></i> Basic tables</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-grid7"></i> Data tables</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-alignment-unalign"></i> Data tables extensions</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-file-spreadsheet"></i> Handsontable</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-versions"></i> Responsive options</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="dropdown mega-menu mega-menu-wide">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Features <span class="caret"></span></a>
+
+                    <div class="dropdown-menu dropdown-content">
+                        <div class="dropdown-content-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <span class="menu-heading underlined">Main content</span>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="#"><i class="icon-stack2"></i> Page layouts</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-align-center-horizontal"></i> Fixed width</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-copy"></i> Layouts</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-droplet2"></i> Color system</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="menu-heading underlined">Layout</span>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="#"><i class="icon-indent-decrease2"></i> Sidebars</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Double sidebar</a>
+                                                    <ul>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-sort"></i> Vertical navigation</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-transmission"></i> Horizontal navigation</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-paragraph-justify3"></i> Navbars</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Multiple navbars</a>
+                                                    <ul>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-tree5"></i> Menu levels</a>
+                                            <ul>
+                                                <li><a href="#"><i class="icon-IE"></i> Second level</a></li>
+                                                <li>
+                                                    <a href="#"><i class="icon-firefox"></i> Second level with child</a>
+                                                    <ul>
+                                                        <li><a href="#"><i class="icon-android"></i> Third level</a></li>
+                                                        <li>
+                                                            <a href="#"><i class="icon-apple2"></i> Third level with child</a>
+                                                            <ul>
+                                                                <li><a href="#"><i class="icon-html5"></i> Fourth level</a></li>
+                                                                <li><a href="#"><i class="icon-css3"></i> Fourth level</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li><a href="#"><i class="icon-windows"></i> Third level</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#"><i class="icon-chrome"></i> Second level</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="menu-heading underlined">Data visualization</span>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="#"><i class="icon-graph"></i> Echarts library</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-statistics"></i> D3 library</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-stats-dots"></i> Dimple library</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Line charts</a>
+                                                    <ul>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Bar charts</a>
+                                                    <ul>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Area charts</a>
+                                                    <ul>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Step charts</a>
+                                                    <ul>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-stats-bars"></i> C3 library</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-google"></i> Google visualization</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3">
+                                    <span class="menu-heading underlined">Extras</span>
+                                    <ul class="menu-list">
+                                        <li>
+                                            <a href="#"><i class="icon-spinner10 spinner position-left"></i> Velocity animations</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-map5"></i> Maps integration</a>
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Google maps</a>
+                                                    <ul>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-magazine"></i> Timelines</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon-thumbs-up2 position-left"></i> Icons</a>
+                                            <ul>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Page kits <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu width-250">
+                        <li class="dropdown-header">Apps</li>
+                        <li class="dropdown-submenu">
+                            <a href="#"><i class="icon-task"></i> Task manager</a>
+                            <ul class="dropdown-menu width-200">
+                                <li class="dropdown-header highlight">Options</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#"><i class="icon-cash3"></i> Invoicing</a>
+                            <ul class="dropdown-menu width-200">
+                                <li class="dropdown-header highlight">Options</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-header">User</li>
+                        <li class="dropdown-submenu">
+                            <a href="#"><i class="icon-people"></i> User pages</a>
+                            <ul class="dropdown-menu width-200">
+                                <li class="dropdown-header highlight">Basic</li>
+                                <li class="active"><a href="user_pages_list.html">User list</a></li>
+                                <li class="dropdown-header highlight">Profiles</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#"><i class="icon-user-plus"></i> Login &amp; registration</a>
+                            <ul class="dropdown-menu width-200">
+                            </ul>
+                        </li>
+                        <li class="dropdown-header">Kits</li>
+                        <li class="dropdown-submenu">
+                            <a href="#"><i class="icon-search4"></i> Search</a>
+                            <ul class="dropdown-menu width-200">
+                                <li class="dropdown-header highlight">Basic</li>
+                                <li class="dropdown-header highlight">Media</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#"><i class="icon-images2"></i> Gallery</a>
+                            <ul class="dropdown-menu width-200">
+                                <li class="dropdown-header highlight">Options</li>
+                                <li><a href="gallery_grid.html">Media grid</a></li>
+                                <li><a href="gallery_titles.html">Media with titles</a></li>
+                                <li><a href="gallery_description.html">Media with description</a></li>
+                                <li><a href="gallery_library.html">Media library</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-header">Tools</li>
+                        <li class="dropdown-submenu">
+                            <a href="#"><i class="icon-lifebuoy"></i> Support</a>
+                            <ul class="dropdown-menu width-200">
+                                <li class="dropdown-header highlight">Chats</li>
+                            </ul>
+                        </li>
+                        <li class="dropdown-submenu">
+                            <a href="#"><i class="icon-warning"></i> Error pages</a>
+                            <ul class="dropdown-menu width-200">
+                                <li class="dropdown-header highlight">Options</li>
+                                <li><a href="error_403.html">Error 403</a></li>
+                                <li><a href="error_404.html">Error 404</a></li>
+                                <li><a href="error_405.html">Error 405</a></li>
+                                <li><a href="error_500.html">Error 500</a></li>
+                                <li><a href="error_503.html">Error 503</a></li>
+                                <li><a href="error_offline.html">Offline page</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-nav-material navbar-right">
+                <li>
+                    <a href="changelog.html">
+                        <span class="status-mark status-mark-inline border-success-300 position-left"></span>
+                        Changelog
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="icon-cog3"></i>
+                        <span class="visible-xs-inline-block position-right">Settings</span>
+                        <span class="caret"></span>
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#"><i class="icon-user-lock"></i> Account security</a></li>
+                        <li><a href="#"><i class="icon-statistics"></i> Analytics</a></li>
+                        <li><a href="#"><i class="icon-accessibility"></i> Accessibility</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#"><i class="icon-gear"></i> All settings</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /second navbar -->
+
+
+    <!-- Floating menu -->
+    <ul class="fab-menu fab-menu-top-right" data-fab-toggle="click">
+        <li>
+            <a class="fab-menu-btn btn bg-pink-300 btn-float btn-rounded btn-icon">
+                <i class="fab-icon-open icon-plus3"></i>
+                <i class="fab-icon-close icon-cross2"></i>
+            </a>
+
+            <ul class="fab-menu-inner">
+                <li>
+                    <div data-fab-label="Compose email">
+                        <a href="#" class="btn btn-default btn-rounded btn-icon btn-float">
+                            <i class="icon-pencil"></i>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div data-fab-label="Conversations">
+                        <a href="#" class="btn btn-default btn-rounded btn-icon btn-float">
+                            <i class="icon-bubbles7"></i>
+                        </a>
+                        <span class="badge bg-primary-400">5</span>
+                    </div>
+                </li>
+                <li>
+                    <div data-fab-label="Chat with Jack">
+                        <a href="#" class="btn bg-pink-400 btn-rounded btn-icon btn-float">
+                            <img src="assets/images/placeholder.jpg" class="img-responsive" alt="">
+                        </a>
+                        <span class="status-mark border-pink-400"></span>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <!-- /floating menu -->
+
+</div>
+<!-- /page header -->
+
+
+<!-- Page container -->
+<div class="page-container">
+
+    <!-- Page content -->
+    <div class="page-content">
+
+        <!-- Main content -->
+        <div class="content-wrapper">
+
+            <!-- Simple lists -->
+            <div class="row">
+                <div class="col-md-6">
+
+                    <!-- Simple list -->
+                    <div class="panel panel-flat">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Simple user list</h5>
+                            <div class="heading-elements">
+                                <ul class="icons-list">
+                                    <li><a data-action="collapse"></a></li>
+                                    <li><a data-action="reload"></a></li>
+                                    <li><a data-action="close"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <ul class="media-list">
+                                <li class="media-header">Team leaders</li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">James Alexander</div>
+                                        <span class="text-muted">Development</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list icons-list-extended text-nowrap">
+                                            <li><a href="#" data-popup="tooltip" title="Call" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Chat" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Video" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Jeremy Victorino</div>
+                                        <span class="text-muted">Finances</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list icons-list-extended text-nowrap">
+                                            <li><a href="#" data-popup="tooltip" title="Call" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Chat" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Video" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Margo Baker</div>
+                                        <span class="text-muted">Marketing</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list icons-list-extended text-nowrap">
+                                            <li><a href="#" data-popup="tooltip" title="Call" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Chat" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Video" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Monica Smith</div>
+                                        <span class="text-muted">Design</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list icons-list-extended text-nowrap">
+                                            <li><a href="#" data-popup="tooltip" title="Call" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Chat" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Video" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media-header">Office staff</li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Bastian Miller</div>
+                                        <span class="text-muted">Web dev</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list icons-list-extended text-nowrap">
+                                            <li><a href="#" data-popup="tooltip" title="Call" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Chat" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Video" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Jordana Mills</div>
+                                        <span class="text-muted">Sales consultant</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list icons-list-extended text-nowrap">
+                                            <li><a href="#" data-popup="tooltip" title="Call" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Chat" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Video" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Buzz Brenson</div>
+                                        <span class="text-muted">UX expert</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list icons-list-extended text-nowrap">
+                                            <li><a href="#" data-popup="tooltip" title="Call" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Chat" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Video" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Zachary Willson</div>
+                                        <span class="text-muted">Illustrator</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list icons-list-extended text-nowrap">
+                                            <li><a href="#" data-popup="tooltip" title="Call" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Chat" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Video" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">William Miles</div>
+                                        <span class="text-muted">SEO expert</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list icons-list-extended text-nowrap">
+                                            <li><a href="#" data-popup="tooltip" title="Call" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Chat" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Video" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media-header">Partners</li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Freddy Walden</div>
+                                        <span class="text-muted">Microsoft</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list icons-list-extended text-nowrap">
+                                            <li><a href="#" data-popup="tooltip" title="Call" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Chat" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Video" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Dori Laperriere</div>
+                                        <span class="text-muted">Google</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list icons-list-extended text-nowrap">
+                                            <li><a href="#" data-popup="tooltip" title="Call" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Chat" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Video" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Vanessa Aurelius</div>
+                                        <span class="text-muted">Facebook</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list icons-list-extended text-nowrap">
+                                            <li><a href="#" data-popup="tooltip" title="Call" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Chat" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i></a></li>
+                                            <li><a href="#" data-popup="tooltip" title="Video" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /simple list -->
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <!-- Dropdown list -->
+                    <div class="panel panel-flat">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Dropdown list</h5>
+                            <div class="heading-elements">
+                                <ul class="icons-list">
+                                    <li><a data-action="collapse"></a></li>
+                                    <li><a data-action="reload"></a></li>
+                                    <li><a data-action="close"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <ul class="media-list">
+                                <li class="media-header">Team leaders</li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">James Alexander</div>
+                                        <span class="text-muted">Development</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i> Make a call</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i> Start chat</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i> Video call</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Jeremy Victorino</div>
+                                        <span class="text-muted">Finances</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i> Make a call</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i> Start chat</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i> Video call</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Margo Baker</div>
+                                        <span class="text-muted">Marketing</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i> Make a call</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i> Start chat</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i> Video call</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Monica Smith</div>
+                                        <span class="text-muted">Design</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i> Make a call</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i> Start chat</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i> Video call</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media-header">Office staff</li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Bastian Miller</div>
+                                        <span class="text-muted">Web dev</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i> Make a call</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i> Start chat</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i> Video call</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Jordana Mills</div>
+                                        <span class="text-muted">Sales consultant</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i> Make a call</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i> Start chat</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i> Video call</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Buzz Brenson</div>
+                                        <span class="text-muted">UX expert</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i> Make a call</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i> Start chat</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i> Video call</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Zachary Willson</div>
+                                        <span class="text-muted">Illustrator</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i> Make a call</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i> Start chat</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i> Video call</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">William Miles</div>
+                                        <span class="text-muted">SEO expert</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i> Make a call</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i> Start chat</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i> Video call</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media-header">Partners</li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Freddy Walden</div>
+                                        <span class="text-muted">Microsoft</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i> Make a call</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i> Start chat</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i> Video call</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Dori Laperriere</div>
+                                        <span class="text-muted">Google</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i> Make a call</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i> Start chat</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i> Video call</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left media-middle">
+                                        <a href="#">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Vanessa Aurelius</div>
+                                        <span class="text-muted">Facebook</span>
+                                    </div>
+
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li class="dropdown">
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-menu9"></i></a>
+
+                                                <ul class="dropdown-menu dropdown-menu-right">
+                                                    <li><a href="#" data-toggle="modal" data-target="#call"><i class="icon-phone2"></i> Make a call</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#chat"><i class="icon-comment"></i> Start chat</a></li>
+                                                    <li><a href="#" data-toggle="modal" data-target="#video"><i class="icon-video-camera"></i> Video call</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /dropdown list -->
+
+                </div>
+            </div>
+            <!-- /simple lists -->
+
+
+            <!-- Linked lists -->
+            <div class="row">
+                <div class="col-md-6">
+
+                    <!-- List with text -->
+                    <div class="panel panel-flat">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Linked list (text)</h5>
+                            <div class="heading-elements">
+                                <ul class="icons-list">
+                                    <li><a data-action="collapse"></a></li>
+                                    <li><a data-action="reload"></a></li>
+                                    <li><a data-action="close"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <ul class="media-list media-list-linked">
+                            <li class="media-header">Team leaders</li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">James Alexander</div>
+                                        <span class="text-muted">Development</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+											<span class="text-muted">
+												<i class="icon-pin-alt text-size-base"></i>
+												&nbsp;Vienna
+											</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Jeremy Victorino</div>
+                                        <span class="text-muted">Finances</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+											<span class="text-muted">
+												<i class="icon-pin-alt text-size-base"></i>
+												&nbsp;Mexico
+											</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Margo Baker</div>
+                                        <span class="text-muted">Marketing</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+											<span class="text-muted">
+												<i class="icon-pin-alt text-size-base"></i>
+												&nbsp;Tokyo
+											</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Monica Smith</div>
+                                        <span class="text-muted">Design</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+											<span class="text-muted">
+												<i class="icon-pin-alt text-size-base"></i>
+												&nbsp;New York
+											</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media-header">Office staff</li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Bastian Miller</div>
+                                        <span class="text-muted">Web dev</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+											<span class="text-muted">
+												<i class="icon-pin-alt text-size-base"></i>
+												&nbsp;Hamburg
+											</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Jordana Mills</div>
+                                        <span class="text-muted">Sales consultant</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+											<span class="text-muted">
+												<i class="icon-pin-alt text-size-base"></i>
+												&nbsp;Amsterdam
+											</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Buzz Brenson</div>
+                                        <span class="text-muted">UX expert</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+											<span class="text-muted">
+												<i class="icon-pin-alt text-size-base"></i>
+												&nbsp;Madrid
+											</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Zachary Willson</div>
+                                        <span class="text-muted">Illustrator</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+											<span class="text-muted">
+												<i class="icon-pin-alt text-size-base"></i>
+												&nbsp;Paris
+											</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">William Miles</div>
+                                        <span class="text-muted">SEO expert</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+											<span class="text-muted">
+												<i class="icon-pin-alt text-size-base"></i>
+												&nbsp;Berlin
+											</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media-header">Partners</li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Freddy Walden</div>
+                                        <span class="text-muted">Microsoft</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+											<span class="text-muted">
+												<i class="icon-pin-alt text-size-base"></i>
+												&nbsp;Palo Alto
+											</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Dori Laperriere</div>
+                                        <span class="text-muted">Google</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+											<span class="text-muted">
+												<i class="icon-pin-alt text-size-base"></i>
+												&nbsp;Dublin
+											</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Vanessa Aurelius</div>
+                                        <span class="text-muted">Facebook</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+											<span class="text-muted">
+												<i class="icon-pin-alt text-size-base"></i>
+												&nbsp;London
+											</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /list with text -->
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <!-- List with labels -->
+                    <div class="panel panel-flat">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Linked list (labels)</h5>
+                            <div class="heading-elements">
+                                <ul class="icons-list">
+                                    <li><a data-action="collapse"></a></li>
+                                    <li><a data-action="reload"></a></li>
+                                    <li><a data-action="close"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <ul class="media-list media-list-linked">
+                            <li class="media-header">Team leaders</li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">James Alexander</div>
+                                        <span class="text-muted">Development</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <span class="label label-primary">Berlin</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Jeremy Victorino</div>
+                                        <span class="text-muted">Finances</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <span class="label label-danger">Hague</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Margo Baker</div>
+                                        <span class="text-muted">Marketing</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <span class="label label-success">Munich</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Monica Smith</div>
+                                        <span class="text-muted">Design</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <span class="label bg-indigo-400">Zurich</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media-header">Office staff</li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Bastian Miller</div>
+                                        <span class="text-muted">Web dev</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <span class="label label-primary">Berlin</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Jordana Mills</div>
+                                        <span class="text-muted">Sales consultant</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <span class="label label-success">Munich</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Buzz Brenson</div>
+                                        <span class="text-muted">UX expert</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <span class="label bg-indigo-400">Zurich</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Zachary Willson</div>
+                                        <span class="text-muted">Illustrator</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <span class="label bg-indigo-400">Zurich</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">William Miles</div>
+                                        <span class="text-muted">SEO expert</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <span class="label label-success">Munich</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media-header">Partners</li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Freddy Walden</div>
+                                        <span class="text-muted">Microsoft</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <span class="label label-primary">Berlin</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Dori Laperriere</div>
+                                        <span class="text-muted">Google</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <span class="label label-danger">Hague</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="media">
+                                <a href="#" class="media-link">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Vanessa Aurelius</div>
+                                        <span class="text-muted">Facebook</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <span class="label label-primary">Berlin</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /list with labels -->
+
+                </div>
+            </div>
+            <!-- /linked lists -->
+
+
+            <!-- Collapsible lists -->
+            <div class="row">
+                <div class="col-md-6">
+
+                    <!-- Collapsible list -->
+                    <div class="panel panel-flat">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Collapsible list</h5>
+                            <div class="heading-elements">
+                                <ul class="icons-list">
+                                    <li><a data-action="collapse"></a></li>
+                                    <li><a data-action="reload"></a></li>
+                                    <li><a data-action="close"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <ul class="media-list media-list-linked">
+                            <li class="media-header">Team leaders</li>
+
+                            <li class="media">
+                                <div class="media-link cursor-pointer" data-toggle="collapse" data-target="#james">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">James Alexander</div>
+                                        <span class="text-muted">Last.fm</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+                                        <i class="icon-menu7 display-block"></i>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="james">
+                                    <div class="contact-details">
+                                        <ul class="list-extended list-unstyled list-icons">
+                                            <li><i class="icon-pin position-left"></i> Amsterdam</li>
+                                            <li><i class="icon-user-tie position-left"></i> Senior Designer</li>
+                                            <li><i class="icon-phone position-left"></i> +1(800)431 8996</li>
+                                            <li><i class="icon-mail5 position-left"></i> <a href="#">james@alexander.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="media-link cursor-pointer" data-toggle="collapse" data-target="#jeremy">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Jeremy Victorino</div>
+                                        <span class="text-muted">Spotify</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+                                        <i class="icon-menu7 display-block"></i>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="jeremy">
+                                    <div class="contact-details">
+                                        <ul class="list-extended list-unstyled list-icons">
+                                            <li><i class="icon-pin position-left"></i> Hague</li>
+                                            <li><i class="icon-user-tie position-left"></i> Network engineer</li>
+                                            <li><i class="icon-phone position-left"></i> +1(389)384 9039</li>
+                                            <li><i class="icon-mail5 position-left"></i> <a href="#">jeremy@victorino.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="media-link cursor-pointer" data-toggle="collapse" data-target="#margo">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Margo Baker</div>
+                                        <span class="text-muted">eBay</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+                                        <i class="icon-menu7 display-block"></i>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="margo">
+                                    <div class="contact-details">
+                                        <ul class="list-extended list-unstyled list-icons">
+                                            <li><i class="icon-pin position-left"></i> Dublin</li>
+                                            <li><i class="icon-user-tie position-left"></i> Marketing expert</li>
+                                            <li><i class="icon-phone position-left"></i> +3(431)589 3889</li>
+                                            <li><i class="icon-mail5 position-left"></i> <a href="#">margo@baker.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="media-link cursor-pointer" data-toggle="collapse" data-target="#monica">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Monica Smith</div>
+                                        <span class="text-muted">Amazon</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+                                        <i class="icon-menu7 display-block"></i>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="monica">
+                                    <div class="contact-details">
+                                        <ul class="list-extended list-unstyled list-icons">
+                                            <li><i class="icon-pin position-left"></i> Paris</li>
+                                            <li><i class="icon-user-tie position-left"></i> Web master</li>
+                                            <li><i class="icon-phone position-left"></i> +5(342)543 2367</li>
+                                            <li><i class="icon-mail5 position-left"></i> <a href="#">monica@smith.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="media-header">Office staff</li>
+
+                            <li class="media">
+                                <div class="media-link cursor-pointer" data-toggle="collapse" data-target="#bastian">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Bastian Miller</div>
+                                        <span class="text-muted">Yahoo</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+                                        <i class="icon-menu7 display-block"></i>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="bastian">
+                                    <div class="contact-details">
+                                        <ul class="list-extended list-unstyled list-icons">
+                                            <li><i class="icon-pin position-left"></i> New York</li>
+                                            <li><i class="icon-user-tie position-left"></i> Lead developer</li>
+                                            <li><i class="icon-phone position-left"></i> +1(234)675 3904</li>
+                                            <li><i class="icon-mail5 position-left"></i> <a href="#">bastian@miller.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="media-link cursor-pointer" data-toggle="collapse" data-target="#jordana">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Jordana Mills</div>
+                                        <span class="text-muted">Paypal</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+                                        <i class="icon-menu7 display-block"></i>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="jordana">
+                                    <div class="contact-details">
+                                        <ul class="list-extended list-unstyled list-icons">
+                                            <li><i class="icon-pin position-left"></i> Madrid</li>
+                                            <li><i class="icon-user-tie position-left"></i> UI/UX expert</li>
+                                            <li><i class="icon-phone position-left"></i> +2(564)234 9002</li>
+                                            <li><i class="icon-mail5 position-left"></i> <a href="#">jordana@mills.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="media-link cursor-pointer" data-toggle="collapse" data-target="#buzz">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Buzz Brenson</div>
+                                        <span class="text-muted">Oracle</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+                                        <i class="icon-menu7 display-block"></i>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="buzz">
+                                    <div class="contact-details">
+                                        <ul class="list-extended list-unstyled list-icons">
+                                            <li><i class="icon-pin position-left"></i> Hamburg</li>
+                                            <li><i class="icon-user-tie position-left"></i> Engineer</li>
+                                            <li><i class="icon-phone position-left"></i> +4(234)543 2388</li>
+                                            <li><i class="icon-mail5 position-left"></i> <a href="#">buzz@brenson.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="media-link cursor-pointer" data-toggle="collapse" data-target="#zachary">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Zachary Willson</div>
+                                        <span class="text-muted">Salesforce</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+                                        <i class="icon-menu7 display-block"></i>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="zachary">
+                                    <div class="contact-details">
+                                        <ul class="list-extended list-unstyled list-icons">
+                                            <li><i class="icon-pin position-left"></i> Berlin</li>
+                                            <li><i class="icon-user-tie position-left"></i> Accountant</li>
+                                            <li><i class="icon-phone position-left"></i> +4(231)653 3892</li>
+                                            <li><i class="icon-mail5 position-left"></i> <a href="#">zachary@willson.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="media-link cursor-pointer" data-toggle="collapse" data-target="#william">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">William Miles</div>
+                                        <span class="text-muted">Bing</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+                                        <i class="icon-menu7 display-block"></i>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="william">
+                                    <div class="contact-details">
+                                        <ul class="list-extended list-unstyled list-icons">
+                                            <li><i class="icon-pin position-left"></i> Oslo</li>
+                                            <li><i class="icon-user-tie position-left"></i> Senior engineer</li>
+                                            <li><i class="icon-phone position-left"></i> +6(324)236 3689</li>
+                                            <li><i class="icon-mail5 position-left"></i> <a href="#">william@miles.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="media-header">Partners</li>
+
+                            <li class="media">
+                                <div class="media-link cursor-pointer" data-toggle="collapse" data-target="#freddy">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Freddy Walden</div>
+                                        <span class="text-muted">Microsoft</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+                                        <i class="icon-menu7 display-block"></i>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="freddy">
+                                    <div class="contact-details">
+                                        <ul class="list-extended list-unstyled list-icons">
+                                            <li><i class="icon-pin position-left"></i> Amsterdam</li>
+                                            <li><i class="icon-user-tie position-left"></i> Accountant</li>
+                                            <li><i class="icon-phone position-left"></i> +3(234)653 5432</li>
+                                            <li><i class="icon-mail5 position-left"></i> <a href="#">freddy@walden.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="media-link cursor-pointer" data-toggle="collapse" data-target="#dori">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Dori Laperriere</div>
+                                        <span class="text-muted">Google</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+                                        <i class="icon-menu7 display-block"></i>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="dori">
+                                    <div class="contact-details">
+                                        <ul class="list-extended list-unstyled list-icons">
+                                            <li><i class="icon-pin position-left"></i> New York</li>
+                                            <li><i class="icon-user-tie position-left"></i> Usability expert</li>
+                                            <li><i class="icon-phone position-left"></i> +1(455)234 8994</li>
+                                            <li><i class="icon-mail5 position-left"></i> <a href="#">dori@laperriere.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="media">
+                                <div class="media-link cursor-pointer" data-toggle="collapse" data-target="#vanessa">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Vanessa Aurelius</div>
+                                        <span class="text-muted">Facebook</span>
+                                    </div>
+                                    <div class="media-right media-middle text-nowrap">
+                                        <i class="icon-menu7 display-block"></i>
+                                    </div>
+                                </div>
+
+                                <div class="collapse" id="vanessa">
+                                    <div class="contact-details">
+                                        <ul class="list-extended list-unstyled list-icons">
+                                            <li><i class="icon-pin position-left"></i> Rome</li>
+                                            <li><i class="icon-user-tie position-left"></i> Web developer</li>
+                                            <li><i class="icon-phone position-left"></i> +8(344)658 4598</li>
+                                            <li><i class="icon-mail5 position-left"></i> <a href="#">vanessa@aurelius.com</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /collapsible list -->
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <!-- Custom handle -->
+                    <div class="panel panel-flat">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Custom handle</h5>
+                            <div class="heading-elements">
+                                <ul class="icons-list">
+                                    <li><a data-action="collapse"></a></li>
+                                    <li><a data-action="reload"></a></li>
+                                    <li><a data-action="close"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="panel-body">
+                            <ul class="media-list">
+                                <li class="media-header">Team leaders</li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">James Alexander</div>
+                                        <span class="text-muted">Last.fm</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li><a data-toggle="collapse" data-target="#james2"><i class="icon-menu7"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="collapse" id="james2">
+                                        <div class="contact-details">
+                                            <ul class="list-extended list-unstyled list-icons">
+                                                <li><i class="icon-pin position-left"></i> Amsterdam</li>
+                                                <li><i class="icon-user-tie position-left"></i> Senior Designer</li>
+                                                <li><i class="icon-phone position-left"></i> +1(800)431 8996</li>
+                                                <li><i class="icon-mail5 position-left"></i> <a href="#">james@alexander.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Jeremy Victorino</div>
+                                        <span class="text-muted">Spotify</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li><a data-toggle="collapse" data-target="#jeremy2"><i class="icon-menu7"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="collapse" id="jeremy2">
+                                        <div class="contact-details">
+                                            <ul class="list-extended list-unstyled list-icons">
+                                                <li><i class="icon-pin position-left"></i> Hague</li>
+                                                <li><i class="icon-user-tie position-left"></i> Network engineer</li>
+                                                <li><i class="icon-phone position-left"></i> +1(389)384 9039</li>
+                                                <li><i class="icon-mail5 position-left"></i> <a href="#">jeremy@victorino.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Margo Baker</div>
+                                        <span class="text-muted">eBay</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li><a data-toggle="collapse" data-target="#margo2"><i class="icon-menu7"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="collapse" id="margo2">
+                                        <div class="contact-details">
+                                            <ul class="list-extended list-unstyled list-icons">
+                                                <li><i class="icon-pin position-left"></i> Dublin</li>
+                                                <li><i class="icon-user-tie position-left"></i> Marketing expert</li>
+                                                <li><i class="icon-phone position-left"></i> +3(431)589 3889</li>
+                                                <li><i class="icon-mail5 position-left"></i> <a href="#">margo@baker.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Monica Smith</div>
+                                        <span class="text-muted">Amazon</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li><a data-toggle="collapse" data-target="#monica2"><i class="icon-menu7"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="collapse" id="monica2">
+                                        <div class="contact-details">
+                                            <ul class="list-extended list-unstyled list-icons">
+                                                <li><i class="icon-pin position-left"></i> Paris</li>
+                                                <li><i class="icon-user-tie position-left"></i> Web master</li>
+                                                <li><i class="icon-phone position-left"></i> +5(342)543 2367</li>
+                                                <li><i class="icon-mail5 position-left"></i> <a href="#">monica@smith.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="media-header">Office staff</li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Bastian Miller</div>
+                                        <span class="text-muted">Yahoo</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li><a data-toggle="collapse" data-target="#bastian2"><i class="icon-menu7"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="collapse" id="bastian2">
+                                        <div class="contact-details">
+                                            <ul class="list-extended list-unstyled list-icons">
+                                                <li><i class="icon-pin position-left"></i> New York</li>
+                                                <li><i class="icon-user-tie position-left"></i> Lead developer</li>
+                                                <li><i class="icon-phone position-left"></i> +1(234)675 3904</li>
+                                                <li><i class="icon-mail5 position-left"></i> <a href="#">bastian@miller.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Jordana Mills</div>
+                                        <span class="text-muted">Paypal</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li><a data-toggle="collapse" data-target="#jordana2"><i class="icon-menu7"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="collapse" id="jordana2">
+                                        <div class="contact-details">
+                                            <ul class="list-extended list-unstyled list-icons">
+                                                <li><i class="icon-pin position-left"></i> Madrid</li>
+                                                <li><i class="icon-user-tie position-left"></i> UI/UX expert</li>
+                                                <li><i class="icon-phone position-left"></i> +2(564)234 9002</li>
+                                                <li><i class="icon-mail5 position-left"></i> <a href="#">jordana@mills.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Buzz Brenson</div>
+                                        <span class="text-muted">Oracle</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li><a data-toggle="collapse" data-target="#buzz2"><i class="icon-menu7"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="collapse" id="buzz2">
+                                        <div class="contact-details">
+                                            <ul class="list-extended list-unstyled list-icons">
+                                                <li><i class="icon-pin position-left"></i> Hamburg</li>
+                                                <li><i class="icon-user-tie position-left"></i> Engineer</li>
+                                                <li><i class="icon-phone position-left"></i> +4(234)543 2388</li>
+                                                <li><i class="icon-mail5 position-left"></i> <a href="#">buzz@brenson.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Zachary Willson</div>
+                                        <span class="text-muted">Salesforce</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li><a data-toggle="collapse" data-target="#zachary2"><i class="icon-menu7"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="collapse" id="zachary2">
+                                        <div class="contact-details">
+                                            <ul class="list-extended list-unstyled list-icons">
+                                                <li><i class="icon-pin position-left"></i> Berlin</li>
+                                                <li><i class="icon-user-tie position-left"></i> Accountant</li>
+                                                <li><i class="icon-phone position-left"></i> +4(231)653 3892</li>
+                                                <li><i class="icon-mail5 position-left"></i> <a href="#">zachary@willson.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">William Miles</div>
+                                        <span class="text-muted">Bing</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li><a data-toggle="collapse" data-target="#william2"><i class="icon-menu7"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="collapse" id="william2">
+                                        <div class="contact-details">
+                                            <ul class="list-extended list-unstyled list-icons">
+                                                <li><i class="icon-pin position-left"></i> Oslo</li>
+                                                <li><i class="icon-user-tie position-left"></i> Senior engineer</li>
+                                                <li><i class="icon-phone position-left"></i> +6(324)236 3689</li>
+                                                <li><i class="icon-mail5 position-left"></i> <a href="#">william@miles.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="media-header">Partners</li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Freddy Walden</div>
+                                        <span class="text-muted">Microsoft</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li><a data-toggle="collapse" data-target="#freddy2"><i class="icon-menu7"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="collapse" id="freddy2">
+                                        <div class="contact-details">
+                                            <ul class="list-extended list-unstyled list-icons">
+                                                <li><i class="icon-pin position-left"></i> Amsterdam</li>
+                                                <li><i class="icon-user-tie position-left"></i> Accountant</li>
+                                                <li><i class="icon-phone position-left"></i> +3(234)653 5432</li>
+                                                <li><i class="icon-mail5 position-left"></i> <a href="#">freddy@walden.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Dori Laperriere</div>
+                                        <span class="text-muted">Google</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li><a data-toggle="collapse" data-target="#dori2"><i class="icon-menu7"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="collapse" id="dori2">
+                                        <div class="contact-details">
+                                            <ul class="list-extended list-unstyled list-icons">
+                                                <li><i class="icon-pin position-left"></i> New York</li>
+                                                <li><i class="icon-user-tie position-left"></i> Usability expert</li>
+                                                <li><i class="icon-phone position-left"></i> +1(455)234 8994</li>
+                                                <li><i class="icon-mail5 position-left"></i> <a href="#">dori@laperriere.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left"><img src="assets/images/placeholder.jpg" class="img-circle" alt=""></div>
+                                    <div class="media-body">
+                                        <div class="media-heading text-semibold">Vanessa Aurelius</div>
+                                        <span class="text-muted">Facebook</span>
+                                    </div>
+                                    <div class="media-right media-middle">
+                                        <ul class="icons-list text-nowrap">
+                                            <li><a data-toggle="collapse" data-target="#vanessa2"><i class="icon-menu7"></i></a></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="collapse" id="vanessa2">
+                                        <div class="contact-details">
+                                            <ul class="list-extended list-unstyled list-icons">
+                                                <li><i class="icon-pin position-left"></i> Rome</li>
+                                                <li><i class="icon-user-tie position-left"></i> Web developer</li>
+                                                <li><i class="icon-phone position-left"></i> +8(344)658 4598</li>
+                                                <li><i class="icon-mail5 position-left"></i> <a href="#">vanessa@aurelius.com</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /custom handle -->
+
+                </div>
+            </div>
+            <!-- /collapsible lists -->
+
+
+            <!-- Phone call modal -->
+            <div id="call" class="modal fade">
+                <div class="modal-dialog modal-xs">
+                    <div class="modal-content">
+                        <div class="thumbnail no-border no-margin">
+                            <div class="thumb thumb-rounded">
+                                <img src="assets/images/placeholder.jpg" alt="">
+                                <div class="caption-overflow">
+										<span>
+											<a href="assets/images/placeholder.jpg" class="btn btn-success btn-icon btn-xs"><i class="icon-plus2"></i></a>
+											<a href="user_pages_profile.html" class="btn btn-success btn-icon btn-xs"><i class="icon-link"></i></a>
+										</span>
+                                </div>
+                            </div>
+
+                            <div class="caption text-center">
+                                <h6 class="text-semibold no-margin-top content-group">Nathan Jacobson <small class="display-block">Lead UX designer</small></h6>
+
+                                <ul class="list-inline list-inline-condensed no-margin">
+                                    <li><a href="#" class="btn btn-success btn-rounded btn-float"><i class="icon-phone2"></i></a></li>
+                                    <li><a href="#" class="btn btn-danger btn-rounded btn-float" data-dismiss="modal"><i class="icon-phone-slash"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /phone call modal -->
+
+
+            <!-- Chat modal -->
+            <div id="chat" class="modal fade">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h6 class="modal-title"><span class="status-mark bg-success position-left"></span> James Alexander</h6>
+                        </div>
+
+                        <div class="modal-body">
+                            <ul class="media-list chat-list content-group">
+                                <li class="media date-step">
+                                    <span>Monday, Feb 10</span>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="assets/images/placeholder.jpg">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-content">Below mounted advantageous spread yikes bat stubbornly crud a and a excepting</div>
+                                        <span class="media-annotation display-block mt-10">Mon, 9:54 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
+                                    </div>
+                                </li>
+
+                                <li class="media reversed">
+                                    <div class="media-body">
+                                        <div class="media-content">Far squid and that hello fidgeted and when. As this oh darn but slapped casually husky sheared that cardinal hugely one and some unnecessary factiously hedgehog a feeling one rudely much but one owing sympathetic regardless more astonishing evasive tasteful much.</div>
+                                        <span class="media-annotation display-block mt-10">Mon, 10:24 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
+                                    </div>
+
+                                    <div class="media-right">
+                                        <a href="assets/images/placeholder.jpg">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="assets/images/placeholder.jpg">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-content">Darn over sour then cynically less roadrunner up some cast buoyant. Macaw krill when and upon less contrary warthog jeez some koala less since therefore minimal.</div>
+                                        <span class="media-annotation display-block mt-10">Mon, 10:56 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
+                                    </div>
+                                </li>
+
+                                <li class="media reversed">
+                                    <div class="media-body">
+                                        <div class="media-content">Some upset impious a and submissive when far crane the belched coquettishly. More the puerile dove wherever</div>
+                                        <span class="media-annotation display-block mt-10">Mon, 11:29 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
+                                    </div>
+
+                                    <div class="media-right">
+                                        <a href="assets/images/placeholder.jpg">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="media date-step">
+                                    <span>Yesterday</span>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="assets/images/placeholder.jpg">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-content">Regardless equitably hello heron glum cassowary jocosely before reliably a jeepers wholehearted shuddered more that some where far by koala.</div>
+                                        <span class="media-annotation display-block mt-10">Tue, 6:40 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="assets/images/placeholder.jpg">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-content">Crud reran and while much withdrew ardent much crab hugely met dizzily that more jeez gent equivalent unsafely far one hesitant so therefore.</div>
+                                        <span class="media-annotation display-block mt-10">Tue, 10:28 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
+                                    </div>
+                                </li>
+
+                                <li class="media reversed">
+                                    <div class="media-body">
+                                        <div class="media-content">Thus superb the tapir the wallaby blank frog execrably much since dalmatian by in hot. Uninspiringly arose mounted stared one curt safe</div>
+                                        <span class="media-annotation display-block mt-10">Tue, 8:12 am <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
+                                    </div>
+
+                                    <div class="media-right">
+                                        <a href="assets/images/placeholder.jpg">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="media date-step">
+                                    <span>Today</span>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="assets/images/placeholder.jpg">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-content">Tolerantly some understood this stubbornly after snarlingly frog far added insect into snorted more auspiciously heedless drunkenly jeez foolhardy oh.</div>
+                                        <span class="media-annotation display-block mt-10">Wed, 4:20 pm <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
+                                    </div>
+                                </li>
+
+                                <li class="media reversed">
+                                    <div class="media-body">
+                                        <div class="media-content">Satisfactorily strenuously while sleazily dear frustratingly insect menially some shook far sardonic badger telepathic much jeepers immature much hey.</div>
+                                        <span class="media-annotation display-block mt-10">2 hours ago <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
+                                    </div>
+
+                                    <div class="media-right">
+                                        <a href="assets/images/placeholder.jpg">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+
+                                <li class="media">
+                                    <div class="media-left">
+                                        <a href="assets/images/placeholder.jpg">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="media-body">
+                                        <div class="media-content">Grunted smirked and grew less but rewound much despite and impressive via alongside out and gosh easy manatee dear ineffective yikes.</div>
+                                        <span class="media-annotation display-block mt-10">13 minutes ago <a href="#"><i class="icon-pin-alt position-right text-muted"></i></a></span>
+                                    </div>
+                                </li>
+
+                                <li class="media reversed">
+                                    <div class="media-body">
+                                        <div class="media-content"><i class="icon-menu display-block"></i></div>
+                                    </div>
+
+                                    <div class="media-right">
+                                        <a href="assets/images/placeholder.jpg">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle" alt="">
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <textarea name="enter-message" class="form-control content-group" rows="3" cols="1" placeholder="Enter your message..."></textarea>
+
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <ul class="icons-list icons-list-extended mt-10">
+                                        <li><a href="#" data-popup="tooltip" title="Send photo" data-container="body"><i class="icon-file-picture"></i></a></li>
+                                        <li><a href="#" data-popup="tooltip" title="Send video" data-container="body"><i class="icon-file-video"></i></a></li>
+                                        <li><a href="#" data-popup="tooltip" title="Send file" data-container="body"><i class="icon-file-plus"></i></a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-xs-6 text-right">
+                                    <button type="button" class="btn bg-teal-400 btn-labeled btn-labeled-right"><b><i class="icon-circle-right2"></i></b> Send</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /chat modal -->
+
+
+            <!-- Video call modal -->
+            <div id="video" class="modal fade">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="thumbnail no-margin">
+                                        <figure class="thumb">
+                                            <img src="assets/images/placeholder.jpg" alt="">
+                                            <figcaption>
+                                                <ul class="icons-list pull-left">
+                                                    <li><a href="#"><i class="icon-screen-full"></i></a></li>
+                                                </ul>
+
+                                                <ul class="icons-list pull-right">
+                                                    <li class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                            <i class="icon-cog3"></i>
+                                                            <span class="caret"></span>
+                                                        </a>
+
+                                                        <ul class="dropdown-menu dropdown-menu-right">
+                                                            <li><a href="#"><i class="icon-inbox pull-right"></i> Action</a></li>
+                                                            <li><a href="#"><i class="icon-googleplus5 pull-right"></i> Another action</a></li>
+                                                            <li><a href="#"><i class="icon-grid-alt pull-right"></i> Something else</a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#"><i class="icon-spinner2 spinner pull-right"></i> One more line</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </figcaption>
+                                        </figure>
+
+                                        <div class="caption text-center">
+                                            <h6 class="text-semibold no-margin">Adriana Linders <small class="display-block">Chief accountant</small></h6>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="thumbnail no-margin">
+                                        <figure class="thumb">
+                                            <img src="assets/images/placeholder.jpg" alt="">
+                                            <figcaption>
+                                                <ul class="icons-list pull-left">
+                                                    <li><a href="#"><i class="icon-screen-full"></i></a></li>
+                                                </ul>
+
+                                                <ul class="icons-list pull-right">
+                                                    <li class="dropdown">
+                                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                            <i class="icon-cog3"></i>
+                                                            <span class="caret"></span>
+                                                        </a>
+
+                                                        <ul class="dropdown-menu dropdown-menu-right">
+                                                            <li><a href="#"><i class="icon-inbox pull-right"></i> Action</a></li>
+                                                            <li><a href="#"><i class="icon-googleplus5 pull-right"></i> Another action</a></li>
+                                                            <li><a href="#"><i class="icon-grid-alt pull-right"></i> Something else</a></li>
+                                                            <li class="divider"></li>
+                                                            <li><a href="#"><i class="icon-spinner2 spinner pull-right"></i> One more line</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </figcaption>
+                                        </figure>
+
+                                        <div class="caption text-center">
+                                            <h6 class="text-semibold no-margin">Victoria Ansley <small class="display-block">Lead UX designer</small></h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <ul class="list-inline list-inline-condensed text-center">
+                                <li><a href="#" class="btn bg-purple-300 btn-rounded btn-float"><i class="icon-mic2"></i></a></li>
+                                <li><a href="#" class="btn bg-success-400 btn-rounded btn-float"><i class="icon-video-camera2"></i></a></li>
+                                <li><a href="#" class="btn bg-blue btn-rounded btn-float"><i class="icon-comment"></i></a></li>
+                                <li><a href="#" class="btn bg-danger btn-rounded btn-float" data-dismiss="modal"><i class="icon-phone-slash"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /video call modal -->
+
+        </div>
+        <!-- /main content -->
+
+    </div>
+    <!-- /page content -->
+
+</div>
+<!-- /page container -->
+
+
+<!-- Footer -->
+<div class="navbar navbar-default navbar-fixed-bottom footer">
+    <ul class="nav navbar-nav visible-xs-block">
+        <li><a class="text-center collapsed" data-toggle="collapse" data-target="#footer"><i class="icon-circle-up2"></i></a></li>
+    </ul>
+
+    <div class="navbar-collapse collapse" id="footer">
+        <div class="navbar-text">
+            &copy; 2016. <a href="#" class="navbar-link">Tiversa</a> by <a href="www.tiversa.com" class="navbar-link" target="_blank">Ebiz</a>
+        </div>
+
+        <div class="navbar-right">
+            <ul class="nav navbar-nav">
+                <li><a href="#">About</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- /footer -->
+
+</body>
+</html>
