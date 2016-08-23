@@ -197,10 +197,10 @@
             <!-- Main content -->
             <div class="content-wrapper">
 
-                <!-- /original panel -->
+                <!-- /bar panel -->
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title text-bold">Similarity for "24.166.118.231"</h3>
+                        <h3 class="panel-title text-bold">Detail Comparison</h3>
                         <!--<h5 class="panel-title">Detail Info about "24.166.118.231"</h5>-->
                         <div class="heading-elements">
                             <ul class="icons-list">
@@ -214,15 +214,40 @@
                         <div class="row" style="padding-bottom: 50px">
 
                             <div class="col-lg-6">
+                                <h4 class="text-center"><code>Current IP "24.166.118.231"</code></h4>
                                 <div class="chart-container">
                                     <div class="chart has-fixed-height" id="connect_column_2"></div>
                                 </div>
                             </div>
-                            <div class="col-lg-1">
-                            </div>
 
+                            <div class="col-lg-6">
+                                <h4 class="text-center"><code>Top Similar IP "75.185.167.245"</code></h4>
+                                <div class="chart-container">
+                                    <div class="chart has-fixed-height" id="connect_column"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /bar panel -->
+
+                <!-- ratio panel -->
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-bold">Ratio Comparison</h3>
+                        <div class="heading-elements">
+                            <ul class="icons-list">
+                                <li><a data-action="collapse"></a></li>
+                                <li><a data-action="reload"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="row col-sm-offset-1">
                             <!-- Progress bar contextual alternatives -->
-                            <div class="col-md-4">
+                            <div class="col-md-5">
+                                <h4><code>Current IP "24.166.118.231"</code></h4>
                                 <div class="border-top-primary">
                                     <div class="text-center">
                                         <h4 class="no-margin text-semibold"></h4>
@@ -246,7 +271,7 @@
 
                                     <p class="text-semibold">SHA1 / File Name: 100.00%</p>
                                     <div class="progress content-group-sm">
-                                        <div class="progress-bar progress-bar-success progress-bar-striped active"
+                                        <div class="progress-bar progress-bar-warning progress-bar-striped active"
                                              style="width: 100%">
                                             <span class="sr-only">100% Complete (success)</span>
                                         </div>
@@ -255,57 +280,9 @@
                             </div>
                             <!-- /progress bar contextual alternatives -->
 
-                        </div>
-
-                        <table id="product_4_table2" class="table">
-                            <thead class="thead-inverse">
-                            <tr>
-                                <th>IP</th>
-                                <th>Country</th>
-                                <th>City, State</th>
-                                <th>Latitude</th>
-                                <th>Longitude</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>75.185.167.245</td>
-                                <td>United States</td>
-                                <td>Beachwood, Ohio</td>
-                                <td>41.4645</td>
-                                <td>-81.50873</td>
-                            </tr>
-                            </tbody>
-                        </table>
-
-                    </div>
-
-                </div>
-                <!-- /original panel -->
-
-                <!-- similar panel -->
-                <div class="panel">
-                    <div class="panel-heading">
-                        <div class="heading-elements">
-                            <ul class="icons-list">
-                                <li><a data-action="collapse"></a></li>
-                                <li><a data-action="reload"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="panel-body">
-                        <div class="row"  style="padding-bottom: 50px">
-                            <div class="col-lg-6">
-                                <div class="chart-container">
-                                    <div class="chart has-fixed-height" id="connect_column"></div>
-                                </div>
-                            </div>
-                            <div class="col-lg-1">
-                            </div>
-
                             <!-- Progress bar contextual alternatives -->
-                            <div class="col-md-4">
+                            <div class="col-md-5">
+                                <h4><code>Top Similar IP "75.185.167.245"</code></h4>
                                     <div class="border-top-primary">
                                         <div class="text-center">
                                             <h4 class="no-margin text-semibold"></h4>
@@ -330,7 +307,7 @@
 
                                         <p class="text-semibold">SHA1 / File Name : 100%</p>
                                         <div class="progress content-group-sm">
-                                            <div class="progress-bar progress-bar-success progress-bar-striped active"
+                                            <div class="progress-bar progress-bar-warning progress-bar-striped active"
                                                  style="width: 100%">
                                                 <span class="sr-only">100% Complete (success)</span>
                                             </div>
@@ -340,39 +317,77 @@
                             <!-- /progress bar contextual alternatives -->
                         </div>
 
-                        <table id="product_4_table" class="table">
-                            <thead class="thead-inverse">
-                            <tr>
-                                <th>IP</th>
-                                <th>Country</th>
-                                <th>City, State</th>
-                                <th>Latitude</th>
-                                <th>Longitude</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>24.166.118.231</td>
-                                <td>United States</td>
-                                <td>Cuyahoga Falls, Ohio</td>
-                                <td>41.13394</td>
-                                <td>-81.48456</td>
-                            </tr>
-                            </tbody>
-                        </table>
-
                     </div>
                 </div>
-                <!-- /similar panel -->
+                <!-- /ratio panel -->
 
+                <!-- location panel -->
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-bold">Location Comparison</h3>
+                        <div class="heading-elements">
+                            <ul class="icons-list">
+                                <li><a data-action="collapse"></a></li>
+                                <li><a data-action="reload"></a></li>
+                            </ul>
+                        </div>
+                    </div>
 
+                    <div class="panel-body">
+                        <table id="product_4_table" class="table">
+                            <h4><code>Current IP "24.166.118.231"</code></h4>
+                            <thead class="thead-inverse">
+                                <tr>
+                                    <th>IP</th>
+                                    <th>Country</th>
+                                    <th>City, State</th>
+                                    <th>Latitude</th>
+                                    <th>Longitude</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>24.166.118.231</td>
+                                    <td>United States</td>
+                                    <td>Cuyahoga Falls, Ohio</td>
+                                    <td>41.13394</td>
+                                    <td>-81.48456</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table id="product_4_table2" class="table">
+                            <h4><code>Top Similar IP "75.185.167.245"</code></h4>
+                            <thead class="thead-inverse">
+                                <tr>
+                                    <th>IP</th>
+                                    <th>Country</th>
+                                    <th>City, State</th>
+                                    <th>Latitude</th>
+                                    <th>Longitude</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>75.185.167.245</td>
+                                    <td>United States</td>
+                                    <td>Beachwood, Ohio</td>
+                                    <td>41.4645</td>
+                                    <td>-81.50873</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /location panel -->
+
+                <!-- button -->
                 <div class="pull-right">
-                    <button type="button" class="btn btn-primary">Find Similar</button>
+                    <!--<button type="button" class="btn btn-primary">Find Similar</button>-->
                     <button id="exportButton" class="btn btn-info"><span
                             class="fa fa-file-pdf-o"></span> Export to PDF
                     </button>
                 </div>
-
+                <!-- /button -->
 
             </div>
             <!-- /main content -->
