@@ -11,6 +11,8 @@ $(document).ready(function(e){
         var $clone = $(".multiSearch:first").clone(false);
         addClickEventListner.call($clone);
         $clone.appendTo("#wrapper");
+        var $dropdown_button_text = $($clone).find(".dropdown_button_text");
+        $dropdown_button_text.html("<i class='icon-stack2 position-left'></i>Choose criteria");
     }
 
     function remove(that) {
