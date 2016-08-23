@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Preventative Page</title>
+    <title>Tiversa&trade; - Preventive Care</title>
 
     <!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
@@ -41,7 +41,7 @@
     <!-- Main navbar -->
     <div class="navbar navbar-inverse navbar-transparent">
         <div class="navbar-header">
-            <!--<a class="navbar-brand" href="index.html"><img src="assets/images/logo_light.png" alt=""></a>-->
+            <a href="clientDashboard.html"><img src="assets/css/landing/TiversaLogo.png" alt=""></a>
 
             <ul class="nav navbar-nav pull-right visible-xs-block">
                 <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
@@ -49,11 +49,6 @@
         </div>
 
         <div class="navbar-collapse collapse" id="navbar-mobile">
-            <p class="navbar-text">Tiversa</p>
-            <p class="navbar-text"><span class="label bg-success-400">Premium</span></p>
-
-
-
             <div class="navbar-right">
                 <ul class="nav navbar-nav">
 
@@ -129,22 +124,6 @@
     <!-- /main navbar -->
 
 
-    <!-- Page header content -->
-    <div class="page-header-content">
-        <div class="page-title">
-            <h4>Dashboard</h4>
-        </div>
-
-        <!-- <div class="heading-elements">
-            <ul class="breadcrumb heading-text">
-                <li><a href="index.html"><i class="icon-home2 position-left"></i> Home</a></li>
-                <li class="active">Dashboard</li>
-            </ul>
-        </div -->
-    </div>
-    <!-- /page header content -->
-
-
     <!-- Second navbar -->
     <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
         <ul class="nav navbar-nav visible-xs-block">
@@ -160,9 +139,9 @@
                     <div class="dropdown-menu">
                         <ul class="menu-list">
                             <li><a href="product_1.html">Infected IP List</a></li>
-                            <li><a href="product_2.html">Product 2</a></li>
-                            <li><a href="PreventativePage.html">Preventative Page</a></li>
-                            <li><a href="product_4.html">Offender List</a></li>
+                            <li class="active"><a href="PreventativePage.html">Preventative Page</a></li>
+                            <li><a href="product_4_client.html">Offender List</a></li>
+                            <li><a href="product_2.html">Offender Map</a></li>
                         </ul>
                     </div>
                 </li>
@@ -185,22 +164,36 @@
         <!-- content wrapper --->
         <div class="content-wrapper">
 
-            <div class="row">
-                <div class="col-lg-12">
+            <!-- big main panel--->
+            <div class="panel">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Preventative Pie Chart-->
+                            <script src="https://code.highcharts.com/highcharts.js"></script>
+                            <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
-                    <!-- Preventative Pie Chart-->
-                    <script src="https://code.highcharts.com/highcharts.js"></script>
-                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                            <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                            <!-- /Preventative Pie Chart -->
+                        </div>
+                    </div>
 
-                    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-                    <!-- /Preventative Pie Chart -->
-                    <br>
                     <!--3D Pie Chart--->
-                    <div id="container2" style="height: 400px; float: left;font-weight: bold;font-size: larger"></div>
-                    <div id="container3" style="height: 400px; float: right; font-weight: bold;font-size: larger"></div>
+                    <div class="row" style="padding-top: 80px">
+                        <div class="col-lg-6" style="padding-right: 10px">
+                            <div id="container2" style="height: 400px; float: left;font-weight: bold;font-size: larger"></div>
+                        </div>
+
+                         <div class="col-lg-6">
+                             <div id="container3" style="height: 400px; float: right; font-weight: bold;font-size: larger"></div>
+                         </div>
+
+                    </div>
+                    <!-- /3D Pie Chart--->
 
                 </div>
             </div>
+            <!-- /big main panel--->
 
         </div>
         <!-- /content wrapper --->
@@ -210,11 +203,15 @@
 
 </div>
 <!-- /page container --->
+
 <script>
     $(function () {
         $('#container').highcharts({
             title: {
-                text: 'Top Infected Cities in Pennsylvania'
+                text: 'Top 3 Cities with Infected Files in Pennsylvania for 5 Infection Types'
+            },
+            credits: {
+                enabled: false
             },
             xAxis: {
                 title: {
@@ -250,7 +247,7 @@
             }, {
                 type: 'spline',
                 name: 'Average',
-                data: [2224, 2118, 1517, 2263, 2987],
+                data: [2117, 2121, 1481, 2732, 3813],
                 marker: {
                     lineWidth: 2,
                     lineColor: Highcharts.getOptions().colors[3],
@@ -260,6 +257,7 @@
         });
     });
 </script>
+
 <script>
 
     /**
@@ -374,11 +372,14 @@
                     fontWeight: 'bold'
                 }
             },
+            credits: {
+                enabled: false
+            },
             title: {
-                text: 'Worst User Agents'
+                text: 'Top User Agents'
             },
             subtitle: {
-                text: 'Following User Agents most likely to distribute malware  infected files'
+                text: 'Following User Agents are most likely to distribute malware'
             },
             plotOptions: {
                 pie: {
@@ -420,16 +421,19 @@
                 }
             },
             title: {
-                text: 'Worst Ports'
+                text: 'Top Ports'
             },
             subtitle: {
-                text: 'Following Ports most likely to spread malware infected files'
+                text: 'Following Ports are most likely to spread malware'
             },
             plotOptions: {
                 pie: {
                     innerSize: 100,
                     depth: 45
                 }
+            },
+            credits: {
+                enabled: false
             },
             series: [{
                 name: 'Infected files count',
