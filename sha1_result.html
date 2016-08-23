@@ -142,7 +142,7 @@
         <!--Tab-->
         <div class="navbar-collapse collapse" id="navbar-second-toggle">
             <ul class="nav navbar-nav navbar-nav-material">
-                <li class="active"><a href="tiversa_dashboard.html"><i class="glyphicon-dashboard position-left"></i> Dashboard</a></li>
+                <li><a href="tiversa_dashboard.html"><i class="glyphicon-dashboard position-left"></i> Dashboard</a></li>
                 <li><a href="tiversa_client_lists.html"><i class="icon-user position-left"></i> Client Lists </a></li>
                 <li><a href="tiversa_malware_map.html"><i class="icon-map position-left"></i> Malware Map</a></li>
                 <li><a href="tiversa_malware_analysis.html"><i class="icon-statistics position-left"></i> Malware
@@ -184,13 +184,12 @@
             <!-- Put all your code here -->
             <div class="panel">
                 <div class="panel-heading">
-                    <h3 class="heading-text">List of files infected by "BackDoor"</h3>
-                    <p class="text-size-large">Total Number of SHA1: 463 &nbsp;</p>
+                    <h3 class="heading-text text-bold">List of files infected by "BackDoor"</h3>
+                    <p class="text-size-large" style="font-size: 20px">Total Number of SHA1: 463</p>
                 </div>
 
                 <div class="panel-body">
                     <div class="row">
-                        <div class="">
                             <style>
                                 div.dataTables_filter{
                                     width: 100%;
@@ -199,7 +198,7 @@
                                     text-align: right;
                                 }
                             </style>
-                            <table id="sha_table" class="table table-hover table-striped table-bordered">
+                            <table id="sha_table" class="table table-hover table-striped table-bordered text-size-large">
                                 <thead class="thead-inverse">
                                 <tr>
                                     <th class="col-md-5">SHA1</th>
@@ -242,17 +241,9 @@
                                 </tbody>
                             </table>
 
-                            <div class="row">
-                                <ul class="pagination pull-right">
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">...</a></li>
-                                    <li><a href="#">&gt;</a></li>
-                                </ul>
+                            <div class="pull-right">
+                                <button id="select_all" class="btn btn-primary btn-xs">Select All</button>
                             </div>
-
-                            <button id="select_all" class="btn btn-primary btn-xs">Select All</button>
                             <!-- Modal -->
                             <div class="modal fade detail1-modal-lg" id="myModal" role="dialog">
                                 <div class="modal-dialog modal-lg">
@@ -370,17 +361,19 @@
                                 })
 
                             </script>
-
-                            <br />
-                        </div>
-                        <!--/col-6 -->
                     </div>
-                    <!-- /Row-->
-
-
                 </div>
 
                 <div class="panel-footer">
+                    <div class="text-center">
+                        <ul class="pagination">
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">...</a></li>
+                            <li><a href="#">&gt;</a></li>
+                        </ul>
+                    </div>
                     <a href="product_4.html"><button class="btn btn-md btn-primary pull-right">Generate Offender List</button></a>
                 </div>
             </div>
