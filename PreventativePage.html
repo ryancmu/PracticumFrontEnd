@@ -208,7 +208,10 @@
     $(function () {
         $('#container').highcharts({
             title: {
-                text: 'Top 4 Cities with Infected Files in Pennsylvania for 5 Infection Types'
+                text: 'Top 3 Cities with Infected Files in Pennsylvania for 5 Infection Types'
+            },
+            credits: {
+                enabled: false
             },
             xAxis: {
                 title: {
@@ -244,7 +247,7 @@
             }, {
                 type: 'spline',
                 name: 'Average',
-                data: [2224, 2118, 1517, 2263, 2987],
+                data: [2117, 2121, 1481, 2732, 3813],
                 marker: {
                     lineWidth: 2,
                     lineColor: Highcharts.getOptions().colors[3],
@@ -369,6 +372,9 @@
                     fontWeight: 'bold'
                 }
             },
+            credits: {
+                enabled: false
+            },
             title: {
                 text: 'Top User Agents'
             },
@@ -425,6 +431,9 @@
                     innerSize: 100,
                     depth: 45
                 }
+            },
+            credits: {
+                enabled: false
             },
             series: [{
                 name: 'Infected files count',

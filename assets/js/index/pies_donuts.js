@@ -63,6 +63,11 @@ $(function () {
 
                 // Add title
                 title: {
+                    textStyle:{
+                        color: '#000000',
+                        fontFamily: 'Helvetica',
+                        fontWeight: 'normal'
+                    },
                     text: 'File Type Percentage (Top 5)',
                     // subtext: 'Open source information',
                     x: 'center'
@@ -153,6 +158,11 @@ $(function () {
 
                 // Add title
                 title: {
+                    textStyle:{
+                        color: '#000000',
+                        fontFamily: 'Helvetica',
+                        fontWeight: 'normal'
+                    },
                     text: 'Infection Percentage (Top 5)',
                     // subtext: 'Open source information',
                     x: 'center'
