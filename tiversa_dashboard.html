@@ -341,8 +341,15 @@
                         <td>Pennsylvania</td>
                         <td><span class="label label-info">FCI</span> <span class="label label-danger">ITI</span></td>
                         <td>
-                            <a href="tiversa_handle_page.html"><button id="handle1" class="btn btn-xs btn-primary">Investigate</button></a>
+                            <button id="handle1" class="btn btn-xs btn-primary">Investigate</button>
                         </td>
+                        <script>
+                            $(document).ready(function() {
+                                $("#handle1").click(function(){
+                                    self.location='tiversa_handle_page.html';
+                                });
+                            });
+                        </script>
                     </tr>
                     <tr>
                         <td>NSA</td>

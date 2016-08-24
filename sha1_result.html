@@ -374,7 +374,14 @@
                             <li><a href="#">&gt;</a></li>
                         </ul>
                     </div>
-                    <a href="product_4.html"><button class="btn btn-md btn-primary pull-right">Generate Offender List</button></a>
+                    <button class="btn btn-md btn-primary pull-right" id="btn_generate">Generate Offender List</button>
+                    <script>
+                        $(document).ready(function() {
+                            $("#btn_generate").click(function(){
+                                self.location='product_4.html';
+                            });
+                        });
+                    </script>
                 </div>
             </div>
             <!-- /put all your code here -->
