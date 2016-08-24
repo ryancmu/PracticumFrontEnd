@@ -324,8 +324,15 @@
 
                             </div>
                             <span align="center" class="input-group-btn">
-                            <a href="infection_result.html"><li class="btn btn-default">search</li></a>
-                        </span>
+                                <button class="btn btn-default" id="search_btn">search</button>
+                            </span>
+                            <script>
+                                $(document).ready(function() {
+                                    $("#search_btn").click(function(){
+                                        self.location='infection_result.html';
+                                    });
+                                });
+                            </script>
                         </div>
                     </div>
                 </div>

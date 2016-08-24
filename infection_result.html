@@ -241,7 +241,14 @@
                             <!--</ul>-->
                             <br />
 
-                            <a href="sha1_result.html"><button class="btn btn-md btn-primary pull-right">Search All Files</button></a>
+                            <button id="btn_search_all_files" class="btn btn-md btn-primary pull-right">Search All Files</button>
+                            <script>
+                                $(document).ready(function() {
+                                    $("#btn_search_all_files").click(function(){
+                                        self.location='sha1_result.html';
+                                    });
+                                });
+                            </script>
                         </div>
                         <!--/col-6 -->
                     </div>
