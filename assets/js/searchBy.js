@@ -13,6 +13,8 @@ $(document).ready(function(e){
         $clone.appendTo("#wrapper");
         var $dropdown_button_text = $($clone).find(".dropdown_button_text");
         $dropdown_button_text.html("<i class='icon-stack2 position-left'></i>Choose criteria");
+        var $input_text = $($clone).find(".form-control");
+        $input_text.val("");
     }
 
     function remove(that) {

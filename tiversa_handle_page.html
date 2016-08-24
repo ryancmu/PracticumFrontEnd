@@ -248,11 +248,21 @@
                                 </div>
                                 <script type="text/javascript">
                                     $(function () {
+                                        var d = new Date();
+                                        var month = d.getMonth() + 1;
+                                        var today = month + "-" + d.getDate() + "-" + d.getFullYear();
+
+                                        var dd = new Date();
+                                        dd.setDate(dd.getDate() - 6);
+                                        var startMonth = dd.getMonth() + 1;
+                                        var startDay = startMonth + "-" + dd.getDate() + "-" + dd.getFullYear();
                                         $('#datetimepicker6').datetimepicker({
+                                            defaultDate: startDay,
                                             format: "MM-DD-YYYY",
                                             useCurrent: false //Important! See issue #1075
                                         });
                                         $('#datetimepicker7').datetimepicker({
+                                            defaultDate: today,
                                             format: "MM-DD-YYYY",
                                             useCurrent: false //Important! See issue #1075
                                         });
