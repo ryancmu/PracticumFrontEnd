@@ -55,7 +55,10 @@ $(document).ready(function () {
 
                 // Add tooltip
                 tooltip : {
-                    trigger: 'axis'
+                    trigger: 'axis',
+                    axisPointer: {
+                        type: 'shadow'
+                    }
                 },
 
                 // Add legend
@@ -68,12 +71,33 @@ $(document).ready(function () {
                 toolbox: {
                     show : true,
                     orient: 'vertical',
+                    x: 'right',
+                    y: 35,
                     feature : {
-                        mark : {show: true},
-//                                                                    dataView : {show: true, readOnly: false},
-                        magicType : {show: true, type: ['bar']},
-                        restore : {show: true},
-                        saveAsImage : {show: true}
+                        mark: {
+                            show: true,
+                            title: {
+                                mark: 'Markline switch',
+                                markUndo: 'Undo markline',
+                                markClear: 'Clear markline'
+                            }
+                        },
+                        magicType : {
+                            show: true,
+                            title: {
+                                line: 'Switch to line chart',
+                                bar: 'Switch to bar chart'
+                            },
+                            type: ['line', 'bar']
+                        },
+                        restore : {
+                            show: true,
+                            title: 'Restore'
+                        },
+                        saveAsImage : {
+                            show: true,
+                            title: 'Same as image'
+                        }
                     }
                 },
 
@@ -97,7 +121,7 @@ $(document).ready(function () {
                     {
                         name: 'Count',
                         type: 'line',
-//												stack: 'Total',
+												stack: 'Total',
                         data: [0, 0, 0, 0, 0, 49575, 149444, 10801, 0, 3698, 149006, 0]
                     },
                     {
