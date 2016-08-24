@@ -1,16 +1,7 @@
-/* ------------------------------------------------------------------------------
- *
- *  # Echarts - chart combinations
- *
- *  Chart combination configurations
- *
- *  Author: Zhijie
- *  Version: 1.0
- *  Latest update: August 19, 2016
- *
- * ---------------------------------------------------------------------------- */
-
-$(function () {
+/**
+ * Created by zhangchuhui on 8/24/16.
+ */
+$(document).ready(function () {
     // Set paths
     // ------------------------------
     require.config({
@@ -40,7 +31,7 @@ $(function () {
         function (ec, limitless) {
             // Initialize charts
             // ------------------------------
-            var connect_column = ec.init(document.getElementById('connect_column'), limitless);
+            var line = ec.init(document.getElementById('p4detailline'), limitless);
 
             // Column options
             connect_column_options = {
@@ -58,12 +49,13 @@ $(function () {
                     y2: 25
                 },
 
+                title : {
+                    text: '',
+                },
+
                 // Add tooltip
-                tooltip: {
-                    trigger: 'axis',
-                    axisPointer: {
-                        type: 'shadow'
-                    }
+                tooltip : {
+                    trigger: 'axis'
                 },
 
                 // Add legend
@@ -74,38 +66,14 @@ $(function () {
 
                 // Add toolbox
                 toolbox: {
-                    show: true,
+                    show : true,
                     orient: 'vertical',
-                    x: 'right',
-                    y: 35,
-                    feature: {
-                        mark: {
-                            show: true,
-                            title: {
-                                mark: 'Markline switch',
-                                markUndo: 'Undo markline',
-                                markClear: 'Clear markline'
-                            }
-                        },
-                        magicType: {
-                            show: true,
-                            title: {
-                                line: 'Switch to line chart',
-                                bar: 'Switch to bar chart',
-                                stack: 'Switch to stack',
-                                tiled: 'Switch to tiled'
-                            },
-                            type: ['line', 'bar', 'stack', 'tiled']
-                        },
-                        restore: {
-                            show: true,
-                            title: 'Restore'
-                        },
-                        saveAsImage: {
-                            show: true,
-                            title: 'Same as image',
-                            lang: ['Save']
-                        }
+                    feature : {
+                        mark : {show: true},
+//                                                                    dataView : {show: true, readOnly: false},
+                        magicType : {show: true, type: ['bar']},
+                        restore : {show: true},
+                        saveAsImage : {show: true}
                     }
                 },
 
@@ -128,45 +96,40 @@ $(function () {
                 series: [
                     {
                         name: 'Count',
-                        type: 'bar',
-                        stack: 'Total',
+                        type: 'line',
+//												stack: 'Total',
                         data: [0, 0, 0, 0, 0, 49575, 149444, 10801, 0, 3698, 149006, 0]
                     },
                     {
                         name: 'SHA1',
-                        type: 'bar',
-                        stack: 'Total',
+                        type: 'line',
+//												stack: 'Total',
                         data: [0, 0, 0, 0, 0, 15415, 20815, 10799, 0, 3330, 20423, 0]
                     },
                     {
                         name: 'File Names',
-                        type: 'bar',
-                        stack: 'Total',
+                        type: 'line',
+//												stack: 'Total',
                         data: [0, 0, 0, 0, 0, 15415, 20815, 10799, 0, 3330, 20423, 0]
                     },
                     {
                         name: 'Infection Types',
-                        type: 'bar',
-                        stack: 'Total',
+                        type: 'line',
+//												stack: 'Total',
                         data: [0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0]
                     }
                 ]
             };
 
-            // Connect charts
-            // connect_column.connect(connect_pie);
-            // connect_column.connect(connect_column2);
-            // connect_column2.connect(connect_column);
-
             // Apply options
             // ------------------------------
-            connect_column.setOption(connect_column_options);
+            line.setOption(connect_column_options);
 
             // Resize charts
             // ------------------------------
             window.onresize = function () {
                 setTimeout(function (){
-                    connect_column.resize();
+                    line.resize();
                 }, 200);
             }
         }

@@ -141,7 +141,7 @@ $(function () {
                     radius: '60%',
                     center: ['50%', '57.5%'],
                     data: [
-                        {value: 15521, name: 'BackDoor'},
+                        {value: 15221, name: 'BackDoor'},
                         {value: 704, name: 'GenericR'},
                         {value: 643, name: 'W32/HLLP'},
                         {value: 561, name: 'W32/Sality'},
@@ -153,7 +153,7 @@ $(function () {
             // Apply options
             // ------------------------------
 
-            
+
             basic_pie_infection.setOption(basic_pie_infection_options);
 
 

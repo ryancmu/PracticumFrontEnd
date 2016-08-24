@@ -26,22 +26,14 @@
 	<!-- /core JS files -->
 
     <!-- Theme JS files -->
-    <script type="text/javascript" src="assets/js/plugins/loaders/progressbar.min.js"></script>
-
     <script type="text/javascript" src="assets/js/core/app.js"></script>
-    <script type="text/javascript" src="assets/js/pages/components_loaders.js"></script>
-
     <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
     <!-- /theme JS files -->
 
-	<!-- vTicker -->
-	<!--<script type="text/javascript" src="assets/js/index/vTicker.js"></script>-->
-	<!-- /vTicker -->
+	<!--eChart JS files -->
+	<script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+	<!--/eChart JS files -->
 
-	<!-- enlarge JS-->
-	<script type="text/javascript" src="assets/js/test/grid.js"></script>
-	<script type="text/javascript" src="assets/js/test/modernizr.custom.js"></script>
-	<!-- /enlarge JS-->
 </head>
 
 <body class="navbar-bottom">
@@ -56,122 +48,144 @@
 			<!-- Main content -->
 			<div class="content-wrapper">
 
-                <!--percentage-->
-				<!--<div class="col-md-4">-->
-					<!--<div class="panel panel-body border-top-primary text-center">-->
-						<!--<h6 class="no-margin text-semibold">Filled percentages</h6>-->
-						<!--<p class="content-group-sm text-muted">Percentages display on top</p>-->
 
-						<!--<div class="content-group-sm" id="v-fill-basic" style="height: 200px">-->
-							<!--<div class="progress vertical">-->
-								<!--<div class="progress-bar progress-bar-primary" data-transitiongoal-backup="30" data-transitiongoal="30">-->
-									<!--<span class="sr-only">0%</span>-->
-								<!--</div>-->
-							<!--</div>-->
-
-							<!--<div class="progress vertical">-->
-								<!--<div class="progress-bar progress-bar-danger" data-transitiongoal-backup="60" data-transitiongoal="60">-->
-									<!--<span class="sr-only">0%</span>-->
-								<!--</div>-->
-							<!--</div>-->
-
-							<!--<div class="progress vertical">-->
-								<!--<div class="progress-bar progress-bar-info" data-transitiongoal-backup="90" data-transitiongoal="90">-->
-									<!--<span class="sr-only">0%</span>-->
-								<!--</div>-->
-							<!--</div>-->
-						<!--</div>-->
-
-						<!--<button type="button" class="btn btn-primary btn-sm" id="v-fill-basic-start">Start</button>-->
-						<!--<button type="button" class="btn btn-danger btn-sm" id="v-fill-basic-reset">Reset</button>-->
-					<!--</div>-->
-				<!--</div>-->
-				<!--percentage-->
-
-
-				<!--enlarge-->
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="heading-text"><b><strong>Warning List</strong></b></h3>
-						<div class="heading-elements">
-							<ul class="icons-list">
-								<li><a data-action="collapse"></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="panel-body">
-						<p id="legends"><label>File count increase: <span class="label label-info">FCI</span></label>
-							<label>Infection Type increase: <span class="label label-danger">ITI</span></label>
-							<label>User Agent increase: <span class="label label-default">UAI</span></label>
-						</p>
-						<style>
-							#legends label {
-								padding-right: 20px;
-								font-size: 15px;
+				<div class="chart has-fixed-height" id="p4detailline"></div>
+				<script>
+					$(document).ready(function () {
+						// Set paths
+						// ------------------------------
+						require.config({
+							paths: {
+								echarts: 'assets/js/plugins/visualization/echarts'
 							}
-						</style>
-					</div>
-					<table id="og-grid" class="table" style="font-size: 15px">
-						<thead>
-						<tr>
-							<th>Client</th>
-							<th>Source State</th>
-							<th>Reasons</th>
-							<th>Action</th>
-						</tr>
-						</thead>
-						<tbody>
-						<tr id="level1">
-							<td>Telecom Inc.</td>
-							<td>Pennslyvania</td>
-							<td><span class="label label-info">FCI</span> <span class="label label-danger">ITI</span></td>
-							<td>
-								<a href="tiversa_handle_page.html"><button id="handle1" class="btn btn-xs btn-primary">Handle</button></a>
-							</td>
-						</tr>
-						<tr>
-							<td>NSA</td>
-							<td>Ohio</td>
-							<td><span class="label label-default">UAI</span> <span class="label label-danger">ITI</span>
-							</td>
-							<td>
-								<a href="#" data-description="#handlepage"><button id="handle2" class="btn btn-xs btn-primary">Handle</button></a>
-							</td>
-							<script>
-								$(function() {
-									Grid.init();
-								});
-							</script>
-						</tr>
-						<tr>
-							<td>Department of Homeland Security</td>
-							<td>Florida</td>
-							<td><span class="label label-info">FCI</span> <span class="label label-default">UAI</span></td>
-							<td>
-								<button id="handle3" class="btn btn-xs btn-primary">Handle</button>
-							</td>
-						</tr>
-						<tr>
-							<td>Insurance Inc.</td>
-							<td>California</td>
-							<td><span class="label label-default">UAI</span> <span class="label label-danger">ITI</span>
-							</td>
-							<td>
-								<button id="handle4" class="btn btn-xs btn-primary">Handle</button>
-							</td>
-						</tr>
-						</tbody>
-					</table>
-				</div>
-				<!--/enlarge-->
+						});
 
+						// Configuration
+						// ------------------------------
+						require(
+								// Add necessary charts
+								[
+									'echarts',
+									'echarts/theme/limitless',
+									'echarts/chart/line',
+									'echarts/chart/bar',
+									'echarts/chart/pie',
 
+									'echarts/chart/scatter',
+									'echarts/chart/k',
+									'echarts/chart/radar',
+									'echarts/chart/gauge'
+								],
 
+								// Charts setup
+								function (ec, limitless) {
+									// Initialize charts
+									// ------------------------------
+									var line = ec.init(document.getElementById('p4detailline'), limitless);
 
+									// Column options
+									connect_column_options = {
+										// Setup grid
+										// grid: {
+										//     x: 40,
+										//     x2: 47,
+										//     y: 35,
+										//     y2: 25
+										// },
+										grid: {
+											x: 54,
+											x2: 55,
+											y: 35,
+											y2: 25
+										},
 
+										title : {
+											text: '',
+										},
 
+										// Add tooltip
+										tooltip : {
+											trigger: 'axis'
+										},
 
+										// Add legend
+										legend: {
+											textStyle: {fontSize: 15},
+											data: ['Count','SHA1','File Names','Infection Types']
+										},
 
+										// Add toolbox
+										toolbox: {
+											show : true,
+											feature : {
+												mark : {show: true},
+												dataView : {show: true, readOnly: false},
+												magicType : {show: true, type: ['line', 'bar']},
+												restore : {show: true},
+												saveAsImage : {show: true}
+											}
+										},
+
+										// Enable drag recalculate
+										calculable: true,
+
+										// Horizontal axis
+										xAxis: [{
+											type: 'category',
+											data: ['2015.10','2015.11','2015.12','2016.01','2016.02','2016.03','2016.04','2016.05','2016.06','2016.07','2016.08','2016.09']
+										}],
+
+										// Vertical axis
+										yAxis: [{
+											type: 'value',
+											splitArea: {show: true}
+										}],
+
+										// Add series
+										series: [
+											{
+												name: 'Count',
+												type: 'line',
+//												stack: 'Total',
+												data: [0, 0, 0, 0, 0, 49575, 149444, 10801, 0, 3698, 149006, 0]
+											},
+											{
+												name: 'SHA1',
+												type: 'line',
+//												stack: 'Total',
+												data: [0, 0, 0, 0, 0, 15415, 20815, 10799, 0, 3330, 20423, 0]
+											},
+											{
+												name: 'File Names',
+												type: 'line',
+//												stack: 'Total',
+												data: [0, 0, 0, 0, 0, 15415, 20815, 10799, 0, 3330, 20423, 0]
+											},
+											{
+												name: 'Infection Types',
+												type: 'line',
+//												stack: 'Total',
+												data: [0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0]
+											}
+										]
+									};
+
+									// Apply options
+									// ------------------------------
+									line.setOption(connect_column_options);
+
+									// Resize charts
+									// ------------------------------
+									window.onresize = function () {
+										setTimeout(function (){
+											line.resize();
+										}, 200);
+									}
+								}
+
+						);
+					});
+				</script>
 
 
 			</div>
