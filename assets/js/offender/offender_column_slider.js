@@ -93,10 +93,10 @@ $(function () {
                             title: {
                                 line: 'Switch to line chart',
                                 bar: 'Switch to bar chart',
-                                stack: 'Switch to stack',
-                                tiled: 'Switch to tiled'
+                                // stack: 'Switch to stack',
+                                // tiled: 'Switch to tiled'
                             },
-                            type: ['line', 'bar', 'stack', 'tiled']
+                            type: ['line', 'bar']
                         },
                         restore: {
                             show: true,
@@ -129,26 +129,26 @@ $(function () {
                 series: [
                     {
                         name: 'Count',
-                        type: 'bar',
-                        stack: 'Total',
+                        type: 'line',
+                        // stack: 'Total',
                         data: [0, 0, 0, 0, 0, 49575, 149444, 10801, 0, 3698, 149006, 0]
                     },
                     {
                         name: 'SHA1',
-                        type: 'bar',
-                        stack: 'Total',
+                        type: 'line',
+                        // stack: 'Total',
                         data: [0, 0, 0, 0, 0, 15415, 20815, 10799, 0, 3330, 20423, 0]
                     },
                     {
                         name: 'File Names',
-                        type: 'bar',
-                        stack: 'Total',
+                        type: 'line',
+                        // stack: 'Total',
                         data: [0, 0, 0, 0, 0, 15415, 20815, 10799, 0, 3330, 20423, 0]
                     },
                     {
                         name: 'Infection Types',
-                        type: 'bar',
-                        stack: 'Total',
+                        type: 'line',
+                        // stack: 'Total',
                         data: [0, 0, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0]
                     }
                 ]
@@ -205,10 +205,10 @@ $(function () {
                             title: {
                                 line: 'Switch to line chart',
                                 bar: 'Switch to bar chart',
-                                stack: 'Switch to stack',
-                                tiled: 'Switch to tiled'
+                                // stack: 'Switch to stack',
+                                // tiled: 'Switch to tiled'
                             },
-                            type: ['line', 'bar', 'stack', 'tiled']
+                            type: ['line', 'bar']
                         },
                         restore: {
                             show: true,
@@ -241,26 +241,26 @@ $(function () {
                 series: [
                     {
                         name: 'Count',
-                        type: 'bar',
-                        stack: 'Total',
+                        type: 'line',
+                        // stack: 'Total',
                         data: [24352, 257822, 71489, 64443, 82552, 21364, 0, 0, 0, 0, 0, 0]
                     },
                     {
                         name: 'SHA1',
-                        type: 'bar',
-                        stack: 'Total',
+                        type: 'line',
+                        // stack: 'Total',
                         data: [13397, 19966, 19241, 17656, 20460, 14305, 0, 0, 0, 0, 0, 0]
                     },
                     {
                         name: 'File Names',
-                        type: 'bar',
-                        stack: 'Total',
+                        type: 'line',
+                        // stack: 'Total',
                         data: [13397, 19966, 19241, 17656, 20460, 14305, 0, 0, 0, 0, 0, 0]
                     },
                     {
                         name: 'Infection Types',
-                        type: 'bar',
-                        stack: 'Total',
+                        type: 'line',
+                        // stack: 'Total',
                         data: [1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0]
                     },
 
