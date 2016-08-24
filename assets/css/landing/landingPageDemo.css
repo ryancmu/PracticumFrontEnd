@@ -59,13 +59,14 @@ body, html {
 
 #chartDiv {
 	width: 20%;
-	height: 26%;
+	height: 28%;
 	position: absolute;
 	bottom: 6%;
 	left: 2%;
 	border: 2px solid #00b7f0;
 	/*border: 2px solid #3F793C;*/
 	border-radius: 20% 20% 20% 20%;
+	font-family: TickingTimebombBB;
 }
 
 #Source {
@@ -73,9 +74,9 @@ body, html {
 	height: 12%;
 	position: absolute;
 	top: 0%;
-	font-family: digital-7;
+	/*font-family: digital-7;*/
 	font-size: large;
-	font-weight: 200;
+	font-weight: 100;
 	color: #00b7f0;
 	text-align: center;
 	/*background-color: #00a8c6;*/
@@ -96,7 +97,7 @@ body, html {
 	height: 10%;
 	top: 24%;
 	position: absolute;
-	font-family: digital-7;
+	/*font-family: digital-7;*/
 	font-size: small;
 	color: #00b7f0;
 	text-align: center;
@@ -106,9 +107,9 @@ body, html {
 	height: 12%;
 	position: absolute;
 	top: 33%;
-	font-family: digital-7;
+	/*font-family: digital-7;*/
 	font-size: large;
-	font-weight: 200;
+	font-weight: 100;
 	color: #00b7f0;
 	text-align: center;
 	/*background-color: #00a8c6;*/
@@ -118,7 +119,7 @@ body, html {
 	height: 10%;
 	position: absolute;
 	top: 46%;
-	font-family: digital-7;
+	/*font-family: digital-7;*/
 	font-size: small;
 	color: #00b7f0;
 	text-align: center;
@@ -129,9 +130,9 @@ body, html {
 	height: 12%;
 	position: absolute;
 	top: 55%;
-	font-family: digital-7;
+	/*font-family: digital-7;*/
 	font-size: large;
-	font-weight: 200;
+	font-weight: 100;
 	color: #00b7f0;
 	text-align: center;
 }
@@ -140,7 +141,7 @@ body, html {
 	height: 10%;
 	position: absolute;
 	top: 68%;
-	font-family: digital-7;
+	/*font-family: digital-7;*/
 	font-size: small;
 	color: #00b7f0;
 	text-align: center;
@@ -150,9 +151,9 @@ body, html {
 	height: 12%;
 	position: absolute;
 	top: 77%;
-	font-family: digital-7;
+	/*font-family: digital-7;*/
 	font-size: large;
-	font-weight: 200;
+	font-weight: 100;
 	color: #00b7f0;
 	text-align: center;
 }
@@ -161,7 +162,7 @@ body, html {
 	height: 10%;
 	position: absolute;
 	top: 89%;
-	font-family: digital-7;
+	/*font-family: digital-7;*/
 	font-size: small;
 	color: #00b7f0;
 	text-align: center;
@@ -197,7 +198,7 @@ ul {
 #tableDiv .panel-heading{
 	padding-top: 10px;
 	padding-bottom: 5px;
-	font-weight: 300;
+	font-weight: 100;
 	font-family: DigiGraphics;
 	color: #00b7f0;
 	font-size: 100%;

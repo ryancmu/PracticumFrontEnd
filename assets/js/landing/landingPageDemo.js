@@ -75,6 +75,60 @@ function seeLocations(locations) {
     }
 }
 
+function type3AnimationLayer1(sourceX, sourceY, endX, endY, delay, randomColor) {
+    var circle = svg.append("circle")
+                    .attr("cx", sourceX)
+                    .attr("cy", sourceY)
+                    .attr("r", 4)
+                    .attr("fill", "red");
+
+    randomDelay = Math.floor((Math.random()*(8)) + 0);
+    circle.transition()
+        .delay(delay*1000+randomDelay*100)
+        .attr("cx", endX)
+        .attr("cy", endY)
+        .duration(1000)
+        .each("end", function() {
+
+            //beacon animations
+            circleAnimation(40,1.5,endX, endY,0, "none", color[randomColor]);
+            circleAnimation(40,1.5,endX, endY,0.2, "none", color[randomColor]);
+            circleAnimation(40,1.5,endX, endY,0.4, "none", color[randomColor]);
+            circleAnimation(40,1.2,endX, endY,0.3, color[randomColor],"none");
+
+            d3.select(this).remove();
+        });
+}
+
+
+function type3AnimationInit(location, type) {
+
+    var staticCircle = svg.append("circle")
+        .attr("cx", locations[location[0]][0])
+        .attr("cy", locations[location[0]][1])
+        .attr("r",3)
+        .attr("fill", "red");
+
+    if(type==="type3") {
+        // console.log("type="+type);
+        var staticCircle1 = svg.append("circle")
+            .attr("cx", locations[location[0]][0])
+            .attr("cy", locations[location[0]][1])
+            .attr("r",10)
+            .attr("stroke", "green")
+            .attr("stroke-width", 3)
+            .attr("fill", "none");
+    }
+
+    for(var i=1; i<location.length;i++) {
+        var randomValue = Math.floor((Math.random()*(5)) + 3);
+        for(j=1; j<=randomValue; j++) {
+            type3AnimationLayer1(locations[location[0]][0], locations[location[0]][1], locations[location[i]][0], locations[location[i]][1], j/2, 1);
+        }
+
+    }
+}
+
 function circleAnimation(finalRadius, duration_sec, locationX, locationY, delay_sec, fill_color, stroke_color) {
     var myCircle = svg.append("circle")
         .attr("cx",locationX)
@@ -96,7 +150,7 @@ function circleAnimation(finalRadius, duration_sec, locationX, locationY, delay_
         });
 }
 
-function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1) {
+function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1, type) {
 
 
 
@@ -122,14 +176,19 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
         .attr("r",1)
         .attr("fill",color[randomColor])
 
+
     var strokeWidth = Math.floor((Math.random()*3) + 1);
+    var lineColor = "#00b7f0";
+    if(type==="type1") {
+        lineColor = color[randomColor];
+    }
     var line = svg.append("line")
         .attr("x1", startX)
         .attr("y1", startY)
         .attr("x2", startX)
         .attr("y2", startY)
         // .attr("stroke-dasharray", 5)
-        .attr("stroke", "#00b7f0")
+        .attr("stroke", lineColor)
         .attr("stroke-width", strokeWidth);
 
 
@@ -155,7 +214,7 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
             if(locations1.length > 1) {
                 for(var i=1; i<locations1.length; i++) {
                     circleShotAnimation(locations[locations1[0]][0], locations[locations1[0]][1],
-                        locations[locations1[i][0]][0], locations[locations1[i][0]][1], randomColor, locations1[i]);
+                        locations[locations1[i][0]][0], locations[locations1[i][0]][1], randomColor, locations1[i], type);
                 }
             }
 
@@ -167,8 +226,10 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
         .attr("y2", endY)
         .duration(duration*1000)
         .each("end", function() {
+            if(type==="type1") {
+                tempCount++;
+            }
 
-            tempCount++;
             var staticCircle = svg.append("circle")
                 .attr("cx", endX)
                 .attr("cy", endY)
@@ -178,17 +239,18 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
             if(tempCount == totalLocationcount) {
 
                 line.transition()
-                    .delay(2000)
+                    .delay(2500)
                     .each("end", function() {
-                        svg.selectAll("line").remove();
-                        svg.selectAll("circle").remove();
-                        start();
+                        if(type==="type1") {
+                            svg.selectAll("line").remove();
+                            svg.selectAll("circle").remove();
+                            start();
+                        }
                     });
 
             }
 
         });
-
 
 
     myCircle2.transition()
@@ -234,19 +296,16 @@ var locations1 = [[0],
     [[8],
         [22],
         [[23],
-            [20],[24],
-            [[29],
-                [25],[26],[28],
-                [[32],
-                    [25],[33],[34],
-                    [[27],
-                        [35],[36],[37],[38]
-                    ]
-                ]
-            ]
+            [20],[24]
         ]
     ]
 ];
+
+var type2Locations1 = [[29],
+                            [19],[15],[25],[26],[27],[32],[33]
+                      ];
+
+var type3Locations1 = [[14],[11],[35],[37],[38]];
 
 var locations2 = [[18],
     [[15],
@@ -331,16 +390,19 @@ var locations10 = [[27],
     ]
 ];
 
-var locationArray = [locations1, locations2, locations3, locations4, locations5, locations6,locations7,locations8,locations9, locations10];
+var locationArray = [locations1];
+var type2LocationArray = [type2Locations1];
+var type3LocationArray = [type3Locations1];
 
 
 var tempCount = 0;
-function combineAnimation(locations1) {
-
+function combineAnimation(locations1, type) {
+    console.log("type="+type);
     totalLocationcount = 0;
-    totalCountofLocation(locations1);
+    if(type.localeCompare("type1")) {
+        totalCountofLocation(locations1);
+    }
 
-    var randomColor = Math.floor((Math.random()*(color.length-1)) + 0);
 
     tempCount = 1;
 
@@ -350,41 +412,75 @@ function combineAnimation(locations1) {
         .attr("cx", locations[locations1[0]][0])
         .attr("cy", locations[locations1[0]][1])
         .attr("r",3)
-        .attr("fill", "#00b7f0");
+        .attr("fill", "red");
 
-    var staticCircle1 = svg.append("circle")
-        .attr("cx", locations[locations1[0]][0])
-        .attr("cy", locations[locations1[0]][1])
-        .attr("r",10)
-        .attr("stroke", "red")
-        .attr("stroke-width", 3)
-        .attr("fill", "none");
+    if(type==="type1") {
+        // console.log("type="+type);
+        var staticCircle1 = svg.append("circle")
+            .attr("cx", locations[locations1[0]][0])
+            .attr("cy", locations[locations1[0]][1])
+            .attr("r",10)
+            .attr("stroke", "red")
+            .attr("stroke-width", 3)
+            .attr("fill", "none");
+    }
+
+    if(type==="type2") {
+        // console.log("type="+type);
+        var staticCircle1 = svg.append("circle")
+            .attr("cx", locations[locations1[0]][0])
+            .attr("cy", locations[locations1[0]][1])
+            .attr("r",10)
+            .attr("stroke", "yellow")
+            .attr("stroke-width", 3)
+            .attr("fill", "none");
+    }
+
+    if(type==="type2") {
+        var staticCircle1 = svg.append("polygone")
+            // .attr("points",
+            //                 ""+locations[locations1[0]][0]-10+"",""+locations[locations1[0]][1]+10+"",
+            //                 ""+locations[locations1[0]][0]+10+"", ""+locations[locations1[0]][1]+10+"",
+            //                 ""+locations[locations1[0]][0]+"", ""+locations[locations1[0]][1]-10+""
+            //      )
+            .attr("points", "100,50 " +
+                "200,150 " +
+                "300,50")
+            .attr("stroke", "red")
+            .attr("stroke-width", 3)
+            .attr("fill", "green");
+    }
 
 
 
-    circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0, "none", color[randomColor]);
-    circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0.2, "none", color[randomColor]);
-    circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0.4, "none", color[randomColor]);
-    circleAnimation(40,1.2,locations[locations1[0]][0], locations[locations1[0]][1], 0.3, color[randomColor],"none");
 
-    document.getElementById("SourceValue").innerHTML = "";
-    document.getElementById("Flag").style.backgroundImage = "url('"+ locations[locations1[0]][4] +"')";
-    document.getElementById("InfectionValue").innerHTML = "";
-    document.getElementById("UserAgentValue").innerHTML = "";
-    document.getElementById("PortValue").innerHTML = "";
+    circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0, "none", "red");
+    circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0.2, "none", "red");
+    circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0.4, "none", "red");
+    circleAnimation(40,1.2,locations[locations1[0]][0], locations[locations1[0]][1], 0.3, "red","none");
 
-    var randomInfection = Math.floor((Math.random()*(infection.length-1)) + 0);
-    var randomUserAgent = Math.floor((Math.random()*(userAgent.length-1)) + 0);
-    var randomPortNumber = Math.floor((Math.random()*(portNumber[1])) + portNumber[0]);
+    if(type.localeCompare("type1")) {
+        document.getElementById("SourceValue").innerHTML = "";
+        document.getElementById("Flag").style.backgroundImage = "url('"+ locations[locations1[0]][4] +"')";
+        document.getElementById("InfectionValue").innerHTML = "";
+        document.getElementById("UserAgentValue").innerHTML = "";
+        document.getElementById("PortValue").innerHTML = "";
 
-    digitalText(locations[locations1[0]][3], "SourceValue", 50);
-    digitalText(infection[randomInfection], "InfectionValue", (locations[locations1[0]][3].length*70+50));
-    digitalText(userAgent[randomUserAgent], "UserAgentValue", (locations[locations1[0]][3].length*70+"Trojan".length*70+50+50));
-    digitalText(randomPortNumber+"", "PortValue", (locations[locations1[0]][3].length*70+"Trojan".length*70+"Direct Connect".length*70+50+50+50));
+        var randomInfection = Math.floor((Math.random()*(infection.length-1)) + 0);
+        var randomUserAgent = Math.floor((Math.random()*(userAgent.length-1)) + 0);
+        var randomPortNumber = Math.floor((Math.random()*(portNumber[1])) + portNumber[0]);
+
+        digitalText(locations[locations1[0]][3], "SourceValue", 50);
+        digitalText(infection[randomInfection], "InfectionValue", (locations[locations1[0]][3].length*70+50));
+        digitalText(userAgent[randomUserAgent], "UserAgentValue", (locations[locations1[0]][3].length*70+"Trojan".length*70+50+50));
+        digitalText(randomPortNumber+"", "PortValue", (locations[locations1[0]][3].length*70+"Trojan".length*70+"Direct Connect".length*70+50+50+50));
+
+    }
 
     for(var i=1; i<locations1.length; i++) {
+        var randomColor = Math.floor((Math.random()*(color.length)) + 0);
         circleShotAnimation(locations[locations1[0]][0], locations[locations1[0]][1],
-            locations[locations1[i][0]][0], locations[locations1[i][0]][1], randomColor, locations1[i]);
+            locations[locations1[i][0]][0], locations[locations1[i][0]][1], randomColor, locations1[i], type);
     }
 }
 
@@ -393,16 +489,24 @@ function totalCountofLocation(location) {
     for(var i=0; i<location.length; i++) {
         if(location.length==1) {
             totalLocationcount++;
+
         } else if(location.length>1) {
             totalCountofLocation(location[i]);
         }
     }
 }
 
+function init() {
+    var randomLocation = Math.floor((Math.random()*(locationArray.length)) + 0);
+    combineAnimation(locationArray[randomLocation], "type1");
+    combineAnimation(type2LocationArray[randomLocation], "type2");
+    type3AnimationInit(type3LocationArray[randomLocation], "type3");
+}
 function start() {
 
-    var randomLocation = Math.floor((Math.random()*(locationArray.length)) + 0);
-    combineAnimation(locationArray[randomLocation]);
+
+    setTimeout(init, 500);
+
 
     // setTimeout(start, 4000);
 }
