@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tiversa&trade; - Offender List Detail</title>
+
+    <!-- Global stylesheets -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
+          type="text/css">
+    <link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/client_dashboard/client_dashboard.css" rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
+
+    <!-- Core JS files -->
+    <script type="text/javascript" src="assets/js/plugins/loaders/pace.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/core/libraries/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/loaders/blockui.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/nicescroll.min.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/drilldown.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
+    <!-- /core JS files -->
+
+    <!-- Theme JS files -->
+    <script type="text/javascript" src="assets/js/core/app.js"></script>
+    <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
+    <!-- /theme JS files -->
+
+    <!-- Product 1 JS files -->
+    <script type="text/javascript" src="assets/js/product_1.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css"/>
+    <script type="text/javascript"
+            src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/jszip.min.js"></script>
+    <!-- /Product 1 JS files -->
+
+    <!--eChart JS files -->
+    <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+    <!--/eChart JS files -->
+
+    <!-- Detail JS Files-->
+    <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
+    <script type="text/javascript" src="assets/js/offender/offender_column.js"></script>
+    <!-- /Detail JS Files-->
+
+    <!--percentage-->
+    <script type="text/javascript" src="assets/js/plugins/loaders/progressbar.min.js"></script>
+    <script type="text/javascript" src="assets/js/pages/components_loaders.js"></script>
+    <!--percentage-->
+</head>
+
+<body class="navbar-bottom">
+
+    <!-- Page header -->
+    <div class="page-header page-header-inverse bg-indigo">
+
+        <!-- Main navbar -->
+        <div class="navbar navbar-inverse navbar-transparent">
+            <div class="navbar-header" style="padding-left: 10px; padding-top: 5px">
+                <a href="tiversa_dashboard.html"><img src="assets/css/landing/TiversaLogo.png" alt=""></a>
+
+                <ul class="nav navbar-nav pull-right visible-xs-block">
+                    <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-grid3"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar-mobile">
+                <div class="navbar-right">
+                    <ul class="nav navbar-nav">
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="icon-bubble8"></i>
+                                <span class="visible-xs-inline-block position-right">Messages</span>
+                            </a>
+
+                            <div class="dropdown-menu dropdown-content width-350">
+                                <div class="dropdown-content-heading">
+                                    Messages
+                                    <ul class="icons-list">
+                                        <li><a href="#"><i class="icon-menu7"></i></a></li>
+                                    </ul>
+                                </div>
+
+                                <ul class="media-list dropdown-content-body">
+                                    <li class="media">
+                                        <div class="media-left">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                            <span class="badge bg-danger-400 media-badge">5</span>
+                                        </div>
+
+                                        <div class="media-body">
+                                            <a href="#" class="media-heading">
+                                                <span class="text-semibold">Andy</span>
+                                                <span class="media-annotation pull-right">09:58</span>
+                                            </a>
+
+                                            <span class="text-muted">Do you want to discuss the plan...</span>
+                                        </div>
+                                    </li>
+
+                                    <li class="media">
+                                        <div class="media-left">
+                                            <img src="assets/images/placeholder.jpg" class="img-circle img-sm" alt="">
+                                            <span class="badge bg-danger-400 media-badge">4</span>
+                                        </div>
+
+                                        <div class="media-body">
+                                            <a href="#" class="media-heading">
+                                                <span class="text-semibold">Bridget Green</span>
+                                                <span class="media-annotation pull-right">12:16</span>
+                                            </a>
+
+                                            <span class="text-muted">Do you want to go over the report...</span>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="dropdown dropdown-user">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="assets/images/headshot.jpg" alt="">
+                                <span>Ray</span>
+                                <i class="caret"></i>
+                            </a>
+
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="#"><i class="icon-user-plus"></i> My profile</a></li>
+                                <li><a href="#"><i class="icon-comment-discussion"></i> Messages</a></li>
+                                <li class="divider"></li>
+                                <li><a href="login_validation.html"><i class="icon-switch2"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /main navbar -->
+
+
+        <!-- Second navbar -->
+        <div class="navbar navbar-inverse navbar-transparent" id="navbar-second">
+            <ul class="nav navbar-nav visible-xs-block">
+                <li><a class="text-center collapsed" data-toggle="collapse" data-target="#navbar-second-toggle"><i
+                        class="icon-paragraph-justify3"></i></a></li>
+            </ul>
+
+            <!--Tab-->
+            <div class="navbar-collapse collapse" id="navbar-second-toggle">
+                <ul class="nav navbar-nav navbar-nav-material">
+                    <li><a href="tiversa_dashboard.html"><i class="glyphicon-dashboard position-left"></i>
+                        Dashboard</a></li>
+                    <li><a href="tiversa_client_lists.html"><i class="icon-user position-left"></i> Client Lists </a></li>
+                    <li><a href="tiversa_malware_map.html"><i class="icon-map position-left"></i> Malware Map</a></li>
+                    <li><a href="tiversa_malware_analysis.html"><i class="icon-statistics position-left"></i> Malware
+                        Statistics</a></li>
+                    <li><a id="searchdiv"><i class="icon-search4 position-left"></i> Search</a></li>
+                    <script>
+                        $(function () {
+                            $("#search").hide();
+                            var showSearch = false;
+                            $("#searchdiv").click(function () {
+                                if (showSearch == false) {
+                                    $("#search").show();
+                                    showSearch = true;
+                                } else {
+                                    $("#search").hide();
+                                    showSearch = false;
+                                }
+                            });
+                        })
+                    </script>
+                </ul>
+            </div>
+            <!--Tab-->
+        </div>
+        <!-- /second navbar -->
+
+    </div>
+    <!-- /page header -->
+
+    <!-- Page container -->
+    <div class="page-container">
+
+        <!-- Page content -->
+        <div class="page-content">
+            <!-- Main content -->
+            <div class="content-wrapper">
+
+                <!-- Infection Type pie chart and progress bar -->
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h5 class="panel-title text-size-large text-bold">Details about "24.166.118.231"</h5>
+                        <div class="heading-elements">
+                            <ul class="icons-list">
+                                <li><a data-action="collapse"></a></li>
+                                <li><a data-action="reload"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="panel-body">
+                        <div class="row" style="padding-bottom: 50px">
+                            <div class="col-lg-6">
+                                <div class="chart-container">
+                                    <div class="chart has-fixed-height" id="connect_column"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-1">
+                            </div>
+
+                            <!-- Progress bar contextual alternatives -->
+                            <div class="col-md-4">
+                                <div class="border-top-primary">
+                                    <div class="text-center">
+                                        <h4 class="no-margin text-semibold"></h4>
+                                        <p class="content-group-sm text-muted"></p>
+                                    </div>
+
+                                    <p class="text-semibold">SHA1 / Count: 6.67%</p>
+                                    <div class="progress content-group-sm">
+                                        <div class="progress-bar progress-bar-danger progress-bar-striped active"
+                                             style="width: 6.7%">
+                                            <span class="sr-only">5% Complete (danger)</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-semibold">Infection / SHA1: 0.0041%</p>
+                                    <div class="progress content-group-sm">
+
+                                        <div class="progress-bar progress-bar-striped active" style="width: 1%">
+                                            <span class="sr-only">1% Complete</span>
+                                        </div>
+                                    </div>
+
+                                    <p class="text-semibold">SHA1 / File Name : 100%</p>
+                                    <div class="progress content-group-sm">
+                                        <div class="progress-bar progress-bar-warning progress-bar-striped active"
+                                             style="width: 100%">
+                                            <style>
+                                                .progress-bar-warning {
+                                                    background-color: #f0ad4e;
+                                                }
+                                            </style>
+                                            <span class="sr-only">100% Complete (success)</span>
+                                        </div>
+                                    </div>
+
+                                    <!--<div class="pull-right" style="padding-top: 20px">-->
+                                        <!--<a href="tiversa_generate_file_list.html"><button class="btn btn-block">Generate File List</button></a>-->
+                                    <!--</div>-->
+
+                                </div>
+                            </div>
+                            <!-- /progress bar contextual alternatives -->
+                        </div>
+
+                        <!-- infected ip list-->
+                        <table id="product_4_table" class="table">
+                            <thead class="thead-inverse">
+                            <tr>
+                                <th>IP</th>
+                                <th>Country</th>
+                                <th>City, State</th>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>90.157.32.177</td>
+                                <td>United States</td>
+                                <td>Cuyahoga Falls, Ohio</td>
+                                <td>41.13394</td>
+                                <td>-81.48456</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!-- /infected ip list-->
+
+                    </div>
+
+                    <div class="panel-footer">
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-primary" id="findSimilar"> Find Similar</button>
+                            <script>
+                                $(document).ready(function() {
+                                    $("#findSimilar").click(function(){
+                                        self.location='product_4_detail_2.html';
+                                    });
+                                });
+                            </script>
+                            <button class="btn btn-info"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
+                            <a href="tiversa_generate_file_list.html"><button class="btn btn-default">Generate File List</button></a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /Infection Type pie chart and progress bar -->
+
+
+            </div>
+            <!-- /main content -->
+        </div>
+        <!-- /page content -->
+    </div>
+    <!-- /Page container -->
+
+
+    <!-- Footer -->
+    <div class="navbar navbar-default navbar-fixed-bottom footer  bg-indigo">
+        <ul class="nav navbar-nav visible-xs-block">
+            <li><a class="text-center collapsed" data-toggle="collapse" data-target="#footer"><i
+                    class="icon-circle-up2"></i></a></li>
+        </ul>
+
+        <div class="navbar-collapse collapse" id="footer">
+            <div class="navbar-text">
+                <span class="text-white">&copy; 2016. </span> <a href="www.tiversa.com" class="navbar-link">Tiversa</a> by
+                <a href="http://www.ebusiness.cs.cmu.edu/" class="navbar-link" target="_blank">Carnegie Mellon University
+                    eBiz</a>
+            </div>
+
+            <div class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" class="text-white">About</a></li>
+                    <li><a href="#" class="text-white">Terms</a></li>
+                    <li><a href="http://tiversa.com/contact/" class="text-white">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /footer -->
+
+</body>
+</html>
