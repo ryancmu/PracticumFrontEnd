@@ -46,7 +46,7 @@ function viewPortValues() {
 
 viewPortValues();
 
-var color = ["#946746","#8f9747","#4da751","#759747","#3ac9c9", "#00b7f0"];
+var color = ["#946746","#8f9747","#4da751","#759747","#3ac9c9", "#00b7f0","#FF8600","#603311", "#FF6103", "#FF3D0D", "#FFD700","#99CC32"];
 var portNumber = [1025, 65535];
 var infection = ["Trojan-Skelky","Trojan-FHNH", "JS-Nemucod","Android/Fictus.A","Generic VB.c","W32/Vbbot","W32/Spybot.bfr!IO","ZvuZona","Artemis!7AE","Exploit-SWF.x","Artemis!A857A4E","BrowseFox-FUT","W32/Spybot.bfr!","W32/Spybot.bfr!1D","W32/Spybot.bfr!KT"];
 var userAgent = ["Direct Connect","Lime Wire", "Shareaza","Frost Wire", "Direct Connect","Dexter Wire", "BitRope P2P", "Direct Connect","Bear Share Turbo", "Emerald", "Direct Connect"];
@@ -76,13 +76,24 @@ function seeLocations(locations) {
 }
 
 function type3AnimationLayer1(sourceX, sourceY, endX, endY, delay, randomColor) {
+
     var circle = svg.append("circle")
                     .attr("cx", sourceX)
                     .attr("cy", sourceY)
-                    .attr("r", 4)
-                    .attr("fill", "red");
+                    .attr("r", 3)
+                    .attr("fill", color[randomColor]);
+
+    var line = svg.append("line")
+        .attr("x1", sourceX)
+        .attr("y1", sourceY)
+        .attr("x2", sourceX)
+        .attr("y2", sourceY)
+        // .attr("stroke-dasharray", 5)
+        .attr("stroke", color[randomColor])
+        .attr("stroke-width", 2);
 
     randomDelay = Math.floor((Math.random()*(8)) + 0);
+
     circle.transition()
         .delay(delay*1000+randomDelay*100)
         .attr("cx", endX)
@@ -107,21 +118,53 @@ function type3AnimationInit(location, type) {
         .attr("cx", locations[location[0]][0])
         .attr("cy", locations[location[0]][1])
         .attr("r",3)
-        .attr("fill", "red");
+        .attr("fill", "#00CD00");
+
+    circleAnimation(40,1.5,locations[location[0]][0], locations[location[0]][1], 0, "none", "#00CD00");
+    circleAnimation(40,1.5,locations[location[0]][0], locations[location[0]][1], 0.2, "none", "#00CD00");
+    circleAnimation(40,1.5,locations[location[0]][0], locations[location[0]][1], 0.4, "none", "#00CD00");
+    circleAnimation(40,1.2,locations[location[0]][0], locations[location[0]][1], 0.3, "#00CD00","none");
+
+    // var widthSmall = 5;
+    // var X1 = locations[location[0]][0]-widthSmall;
+    // var Y1 = locations[location[0]][1]+widthSmall;
+    // var X2 = locations[location[0]][0]+widthSmall;
+    // var Y2 = locations[location[0]][1]+widthSmall;
+    // var X3 = locations[location[0]][0];
+    // var Y3 = locations[location[0]][1]-widthSmall;
+    //
+    // svg.append("polygon")
+    //     .attr("fill", "red")
+    //     .attr("points",""+X1+","+Y1+","+X2+","+Y2+","+X3+","+Y3+"");
 
     if(type==="type3") {
         // console.log("type="+type);
-        var staticCircle1 = svg.append("circle")
-            .attr("cx", locations[location[0]][0])
-            .attr("cy", locations[location[0]][1])
-            .attr("r",10)
-            .attr("stroke", "green")
-            .attr("stroke-width", 3)
-            .attr("fill", "none");
+        // var staticCircle1 = svg.append("circle")
+        //     .attr("cx", locations[location[0]][0])
+        //     .attr("cy", locations[location[0]][1])
+        //     .attr("r",10)
+        //     .attr("stroke", "green")
+        //     .attr("stroke-width", 3)
+        //     .attr("fill", "none");
+        var width = 15;
+        var yW = width * 0.5;
+        var xW = width * 0.866;
+        var x1 = locations[location[0]][0]-xW;
+        var y1 = locations[location[0]][1]+yW;
+        var x2 = locations[location[0]][0]+xW;
+        var y2 = locations[location[0]][1]+yW;
+        var x3 = locations[location[0]][0];
+        var y3 = locations[location[0]][1]-width;
+
+        svg.append("polygon")
+            .attr("fill", "none")
+            .attr("stroke", "#00CD00")
+            .attr("stroke-width",3)
+            .attr("points",""+x1+","+y1+","+x2+","+y2+","+x3+","+y3+"");
     }
 
     for(var i=1; i<location.length;i++) {
-        var randomValue = Math.floor((Math.random()*(5)) + 3);
+        var randomValue = Math.floor((Math.random()*(4)) + 3);
         for(j=1; j<=randomValue; j++) {
             type3AnimationLayer1(locations[location[0]][0], locations[location[0]][1], locations[location[i]][0], locations[location[i]][1], j/2, 1);
         }
@@ -152,9 +195,6 @@ function circleAnimation(finalRadius, duration_sec, locationX, locationY, delay_
 
 function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1, type) {
 
-
-
-
     var myCircle1 = svg.append("circle")
         .attr("cx",startX)
         .attr("cy",startY)
@@ -178,7 +218,8 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
 
 
     var strokeWidth = Math.floor((Math.random()*3) + 1);
-    var lineColor = "#00b7f0";
+    // var lineColor = "#00b7f0";
+    var lineColor = color[randomColor];
     if(type==="type1") {
         lineColor = color[randomColor];
     }
@@ -244,6 +285,8 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
                         if(type==="type1") {
                             svg.selectAll("line").remove();
                             svg.selectAll("circle").remove();
+                            svg.selectAll("polygon").remove();
+                            svg.selectAll("rect").remove();
                             start();
                         }
                     });
@@ -251,7 +294,6 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
             }
 
         });
-
 
     myCircle2.transition()
         .delay(0.02*1000)
@@ -270,7 +312,6 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
         .each("end", function() {
             d3.select(this).remove();
         });
-
 
     myCircle4.transition()
         .delay(0.035*1000)
@@ -403,10 +444,7 @@ function combineAnimation(locations1, type) {
         totalCountofLocation(locations1);
     }
 
-
     tempCount = 1;
-
-
 
     var staticCircle = svg.append("circle")
         .attr("cx", locations[locations1[0]][0])
@@ -415,6 +453,7 @@ function combineAnimation(locations1, type) {
         .attr("fill", "red");
 
     if(type==="type1") {
+        staticCircle.attr("fill","red");
         // console.log("type="+type);
         var staticCircle1 = svg.append("circle")
             .attr("cx", locations[locations1[0]][0])
@@ -423,43 +462,35 @@ function combineAnimation(locations1, type) {
             .attr("stroke", "red")
             .attr("stroke-width", 3)
             .attr("fill", "none");
+
+        circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0, "none", "red");
+        circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0.2, "none", "red");
+        circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0.4, "none", "red");
+        circleAnimation(40,1.2,locations[locations1[0]][0], locations[locations1[0]][1], 0.3, "red","none");
     }
 
     if(type==="type2") {
-        // console.log("type="+type);
-        var staticCircle1 = svg.append("circle")
-            .attr("cx", locations[locations1[0]][0])
-            .attr("cy", locations[locations1[0]][1])
-            .attr("r",10)
-            .attr("stroke", "yellow")
-            .attr("stroke-width", 3)
-            .attr("fill", "none");
-    }
 
-    if(type==="type2") {
-        var staticCircle1 = svg.append("polygone")
-            // .attr("points",
-            //                 ""+locations[locations1[0]][0]-10+"",""+locations[locations1[0]][1]+10+"",
-            //                 ""+locations[locations1[0]][0]+10+"", ""+locations[locations1[0]][1]+10+"",
-            //                 ""+locations[locations1[0]][0]+"", ""+locations[locations1[0]][1]-10+""
-            //      )
-            .attr("points", "100,50 " +
-                "200,150 " +
-                "300,50")
-            .attr("stroke", "red")
-            .attr("stroke-width", 3)
-            .attr("fill", "green");
+        staticCircle.attr("fill","#FCD116");
+
+        svg.append("rect")
+            .attr("fill", "none")
+            .attr("stroke", "#FCD116")
+            .attr("stroke-width",3)
+            .attr("x", locations[locations1[0]][0]-9)
+            .attr("y", locations[locations1[0]][1]-9)
+            .attr("width", 18)
+            .attr("height", 18);
+
+        circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0, "none", "#FCD116");
+        circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0.2, "none", "#FCD116");
+        circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0.4, "none", "#FCD116");
+        circleAnimation(40,1.2,locations[locations1[0]][0], locations[locations1[0]][1], 0.3, "#FCD116","none");
     }
 
 
 
-
-    circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0, "none", "red");
-    circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0.2, "none", "red");
-    circleAnimation(40,1.5,locations[locations1[0]][0], locations[locations1[0]][1], 0.4, "none", "red");
-    circleAnimation(40,1.2,locations[locations1[0]][0], locations[locations1[0]][1], 0.3, "red","none");
-
-    if(type.localeCompare("type1")) {
+    if(type==="type1") {
         document.getElementById("SourceValue").innerHTML = "";
         document.getElementById("Flag").style.backgroundImage = "url('"+ locations[locations1[0]][4] +"')";
         document.getElementById("InfectionValue").innerHTML = "";
@@ -498,17 +529,13 @@ function totalCountofLocation(location) {
 
 function init() {
     var randomLocation = Math.floor((Math.random()*(locationArray.length)) + 0);
+
     combineAnimation(locationArray[randomLocation], "type1");
     combineAnimation(type2LocationArray[randomLocation], "type2");
-    type3AnimationInit(type3LocationArray[randomLocation], "type3");
+    // type3AnimationInit(type3LocationArray[randomLocation], "type3");
 }
 function start() {
-
-
     setTimeout(init, 500);
-
-
-    // setTimeout(start, 4000);
 }
 
 function digitalText(text, element, delay)
