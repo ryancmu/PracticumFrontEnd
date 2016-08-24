@@ -52,7 +52,7 @@ $(function() {
             onRegionLabelShow: function(event, label, code) {
                 label.html(
                     ''+label.html()+'<br>'+
-                    'Number of infections: '+data.states[val][code]
+                    'Number of infected files: '+data.states[val][code]
                 );
             }
         });

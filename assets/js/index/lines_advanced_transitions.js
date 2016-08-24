@@ -92,7 +92,7 @@ $(function () {
 
         // Line
         var line = d3.svg.line()
-            .interpolate("basis")
+            .interpolate("linear")
             .x(function(d) { return x(d.date); })
             .y(function(d) { return y(d[city]); });
 
