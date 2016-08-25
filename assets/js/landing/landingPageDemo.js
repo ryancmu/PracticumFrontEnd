@@ -137,7 +137,7 @@ function type3AnimationInit(location, type) {
     //     .attr("fill", "red")
     //     .attr("points",""+X1+","+Y1+","+X2+","+Y2+","+X3+","+Y3+"");
 
-    if(type==="type3") {
+    if(type.localeCompare("type3")==0) {
         // console.log("type="+type);
         // var staticCircle1 = svg.append("circle")
         //     .attr("cx", locations[location[0]][0])
@@ -220,7 +220,7 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
     var strokeWidth = Math.floor((Math.random()*3) + 1);
     // var lineColor = "#00b7f0";
     var lineColor = color[randomColor];
-    if(type==="type1") {
+    if(type.localeCompare("type1")==0) {
         lineColor = color[randomColor];
     }
     var line = svg.append("line")
@@ -267,7 +267,7 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
         .attr("y2", endY)
         .duration(duration*1000)
         .each("end", function() {
-            if(type==="type1") {
+            if(type.localeCompare("type1")==0) {
                 tempCount++;
             }
 
@@ -276,13 +276,15 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
                 .attr("cy", endY)
                 .attr("r",3)
                 .attr("fill", "red");
-
-            if(tempCount == totalLocationcount) {
+            console.log("tempCount="+tempCount+" totalCount="+totalLocationcount);
+            if(tempCount === totalLocationcount) {
 
                 line.transition()
                     .delay(2500)
                     .each("end", function() {
-                        if(type==="type1") {
+                        console.log("temp count");
+                        if(type.localeCompare("type1")==0) {
+                            console.log("temp count type1");
                             svg.selectAll("line").remove();
                             svg.selectAll("circle").remove();
                             svg.selectAll("polygon").remove();
@@ -342,29 +344,32 @@ var locations1 = [[0],
     ]
 ];
 
-var type2Locations1 = [[29],
+var type2Locations1 =   [[29],
                             [19],[15],[25],[26],[27],[32],[33]
-                      ];
+                        ];
 
 var type3Locations1 = [[14],[11],[35],[37],[38]];
 
 var locations2 = [[18],
     [[15],
-        [25],[36]
+        [25]
     ],
-    [17],[19],[20],
-    [[21],
-        [[3],
-            [8],[1],[4],[9]
-        ],
-        [7],[23]
+    [17],[19],
+    [[20],
+        [23],[24]
     ],
-    [22],
+    [21], [22],
     [[29],
-        [26],[32],[33]
-    ],
-    [1]
+        [26],[31],[16],
+        [[28],
+            [27],[33]
+        ]
+    ]
 ];
+
+var type2Locations2 =   [[9],
+                            [10],[11],[12],[13],[4],[8],[3]
+                        ];
 
 var locations3 = [[30],
     [[22],
@@ -431,20 +436,26 @@ var locations10 = [[27],
     ]
 ];
 
-var locationArray = [locations1];
-var type2LocationArray = [type2Locations1];
+var locationArray = [locations2];
+var type2LocationArray = [type2Locations2];
 var type3LocationArray = [type3Locations1];
 
 
 var tempCount = 0;
 function combineAnimation(locations1, type) {
-    console.log("type="+type);
-    totalLocationcount = 0;
-    if(type.localeCompare("type1")) {
-        totalCountofLocation(locations1);
+    // console.log("type="+type);
+    if(type.localeCompare("type1")==0) {
+        totalLocationcount = 0;
     }
 
-    tempCount = 1;
+    if(type.localeCompare("type1")==0) {
+        // console.log("type="+type);
+        totalCountofLocation(locations1);
+    }
+    if(type.localeCompare("type1")==0) {
+        tempCount = 1;
+    }
+
 
     var staticCircle = svg.append("circle")
         .attr("cx", locations[locations1[0]][0])
@@ -452,7 +463,8 @@ function combineAnimation(locations1, type) {
         .attr("r",3)
         .attr("fill", "red");
 
-    if(type==="type1") {
+    if(type.localeCompare("type1")==0) {
+        // console.log(type);
         staticCircle.attr("fill","red");
         // console.log("type="+type);
         var staticCircle1 = svg.append("circle")
@@ -469,8 +481,8 @@ function combineAnimation(locations1, type) {
         circleAnimation(40,1.2,locations[locations1[0]][0], locations[locations1[0]][1], 0.3, "red","none");
     }
 
-    if(type==="type2") {
-
+    if(type.localeCompare("type2")==0) {
+        // console.log(type);
         staticCircle.attr("fill","#FCD116");
 
         svg.append("rect")
@@ -490,7 +502,7 @@ function combineAnimation(locations1, type) {
 
 
 
-    if(type==="type1") {
+    if(type.localeCompare("type1")==0) {
         document.getElementById("SourceValue").innerHTML = "";
         document.getElementById("Flag").style.backgroundImage = "url('"+ locations[locations1[0]][4] +"')";
         document.getElementById("InfectionValue").innerHTML = "";
@@ -532,7 +544,7 @@ function init() {
 
     combineAnimation(locationArray[randomLocation], "type1");
     combineAnimation(type2LocationArray[randomLocation], "type2");
-    // type3AnimationInit(type3LocationArray[randomLocation], "type3");
+    type3AnimationInit(type3LocationArray[randomLocation], "type3");
 }
 function start() {
     setTimeout(init, 500);
@@ -562,7 +574,7 @@ function tableTicker() {
 
 
     display_c();
-    // seeLocations(locations);
+    seeLocations(locations);
     start();
     // digitalText("United States", "SourceValue");
     tableTicker();
