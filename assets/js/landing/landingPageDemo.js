@@ -237,7 +237,7 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
     var distance = Math.sqrt( Math.pow((startX - endX), 2) + Math.pow((startY - endY), 2) );
     var speed = 170;
     var duration = distance/speed;
-    duration = 0.6;
+    duration = 0.65;
 
     myCircle1.transition()
         .attr("cx", endX)
