@@ -654,6 +654,14 @@ function init() {
             combineAnimation(type2LocationArray[randomLocation], "type2");
             type3AnimationInit(type3LocationArray[randomLocation], "type3");
             break;
+        case 4:
+            combineAnimation(locationArray[randomLocation], "type1");
+            combineAnimation(type2LocationArray[randomLocation], "type2");
+            break;
+        case 5:
+            combineAnimation(type2LocationArray[randomLocation], "type2");
+            type3AnimationInit(type3LocationArray[randomLocation], "type3");
+            break;
     }
 
     // combineAnimation(locationArray[randomLocation], "type1");
