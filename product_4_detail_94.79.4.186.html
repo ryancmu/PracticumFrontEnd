@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tiversa&trade; - Find Similar</title>
+    <title>Tiversa&trade; - Offender List Detail</title>
 
     <!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -47,14 +47,13 @@
 
     <!-- Detail JS Files-->
     <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
-    <script type="text/javascript" src="assets/js/offender/offender_column_slider.js"></script>
+    <script type="text/javascript" src="assets/js/offender/offender_column.js"></script>
     <!-- /Detail JS Files-->
 
     <!--percentage-->
     <script type="text/javascript" src="assets/js/plugins/loaders/progressbar.min.js"></script>
     <script type="text/javascript" src="assets/js/pages/components_loaders.js"></script>
     <!--percentage-->
-
 </head>
 
 <body class="navbar-bottom">
@@ -158,7 +157,8 @@
             <!--Tab-->
             <div class="navbar-collapse collapse" id="navbar-second-toggle">
                 <ul class="nav navbar-nav navbar-nav-material">
-                    <li><a href="tiversa_dashboard.html"><i class="glyphicon-dashboard position-left"></i> Dashboard</a></li>
+                    <li><a href="tiversa_dashboard.html"><i class="glyphicon-dashboard position-left"></i>
+                        Dashboard</a></li>
                     <li><a href="tiversa_client_lists.html"><i class="icon-user position-left"></i> Client Lists </a></li>
                     <li><a href="tiversa_malware_map.html"><i class="icon-map position-left"></i> Malware Map</a></li>
                     <li><a href="tiversa_malware_analysis.html"><i class="icon-statistics position-left"></i> Malware
@@ -169,7 +169,7 @@
                             $("#search").hide();
                             var showSearch = false;
                             $("#searchdiv").click(function () {
-                                if(showSearch == false){
+                                if (showSearch == false) {
                                     $("#search").show();
                                     showSearch = true;
                                 } else {
@@ -193,15 +193,13 @@
 
         <!-- Page content -->
         <div class="page-content">
-
             <!-- Main content -->
             <div class="content-wrapper">
 
-                <!-- /bar panel -->
+                <!-- Infection Type pie chart and progress bar -->
                 <div class="panel">
                     <div class="panel-heading">
-                        <h3 class="panel-title text-bold">Comparison</h3>
-                        <!--<h5 class="panel-title">Detail Info about "24.166.118.231"</h5>-->
+                        <h5 class="panel-title text-size-large text-bold">Details about "24.166.118.231"</h5>
                         <div class="heading-elements">
                             <ul class="icons-list">
                                 <li><a data-action="collapse"></a></li>
@@ -213,40 +211,16 @@
                     <div class="panel-body">
                         <div class="row" style="padding-bottom: 50px">
                             <div class="col-lg-6">
-                                <h4 class="text-center"><code>Current IP "24.166.118.231"</code></h4>
                                 <div class="chart-container">
                                     <div class="chart has-fixed-height" id="connect_column"></div>
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
-                                <h4 class="text-center"><code>Top Similar IP "75.185.167.245"</code></h4>
-                                <div class="chart-container">
-                                    <div class="chart has-fixed-height" id="connect_column_2"></div>
-                                </div>
+                            <div class="col-lg-1">
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /bar panel -->
 
-                <!-- ratio panel -->
-                <div class="panel">
-                    <div class="panel-heading">
-                        <h3 class="panel-title text-bold">Ratio Comparison</h3>
-                        <div class="heading-elements">
-                            <ul class="icons-list">
-                                <li><a data-action="collapse"></a></li>
-                                <li><a data-action="reload"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="panel-body">
-                        <div class="row">
                             <!-- Progress bar contextual alternatives -->
-                            <div class="col-md-6">
-                                <h4><code>Current IP "24.166.118.231"</code></h4>
+                            <div class="col-md-4">
                                 <div class="border-top-primary">
                                     <div class="text-center">
                                         <h4 class="no-margin text-semibold"></h4>
@@ -255,53 +229,13 @@
 
                                     <p class="text-semibold">SHA1 / Count: 6.67%</p>
                                     <div class="progress content-group-sm">
-                                        <div class="progress-bar progress-bar-striped progress-bar-danger active"
+                                        <div class="progress-bar progress-bar-danger progress-bar-striped active"
                                              style="width: 6.7%">
-                                            <span class="sr-only">6% Complete (danger)</span>
-                                        </div>
-                                    </div>
-
-                                    <p class="text-semibold">Infection / SHA1: 0.0041%</p>
-                                    <div class="progress content-group-sm">
-                                        <div class="progress-bar progress-bar-striped active" style="width: 1%">
-                                            <span class="sr-only">1% Complete</span>
-                                        </div>
-                                    </div>
-
-                                    <p class="text-semibold">SHA1 / File Name: 100.00%</p>
-                                    <div class="progress content-group-sm">
-                                        <div class="progress-bar progress-bar-warning progress-bar-striped active"
-                                             style="width: 100%">
-                                            <style>
-                                                .progress-bar-warning {
-                                                    background-color: #f0ad4e;
-                                                }
-                                            </style>
-                                            <span class="sr-only">100% Complete (success)</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /progress bar contextual alternatives -->
-
-                            <!-- Progress bar contextual alternatives -->
-                            <div class="col-md-6">
-                                <h4><code>Top Similar IP "75.185.167.245"</code></h4>
-                                <div class="border-top-primary">
-                                    <div class="text-center">
-                                        <h4 class="no-margin text-semibold"></h4>
-                                        <p class="content-group-sm text-muted"></p>
-                                    </div>
-
-                                    <p class="text-semibold">SHA1 / Count: 4.38%</p>
-                                    <div class="progress content-group-sm">
-                                        <div class="progress-bar progress-bar-striped progress-bar-danger active"
-                                             style="width: 4.38%">
                                             <span class="sr-only">5% Complete (danger)</span>
                                         </div>
                                     </div>
 
-                                    <p class="text-semibold">Infection / SHA1: 0.0044%</p>
+                                    <p class="text-semibold">Infection / SHA1: 0.0041%</p>
                                     <div class="progress content-group-sm">
 
                                         <div class="progress-bar progress-bar-striped active" style="width: 1%">
@@ -313,54 +247,26 @@
                                     <div class="progress content-group-sm">
                                         <div class="progress-bar progress-bar-warning progress-bar-striped active"
                                              style="width: 100%">
+                                            <style>
+                                                .progress-bar-warning {
+                                                    background-color: #f0ad4e;
+                                                }
+                                            </style>
                                             <span class="sr-only">100% Complete (success)</span>
                                         </div>
                                     </div>
+
+                                    <!--<div class="pull-right" style="padding-top: 20px">-->
+                                        <!--<a href="tiversa_generate_file_list.html"><button class="btn btn-block">Generate File List</button></a>-->
+                                    <!--</div>-->
+
                                 </div>
                             </div>
                             <!-- /progress bar contextual alternatives -->
                         </div>
 
-                    </div>
-                </div>
-                <!-- /ratio panel -->
-
-                <!-- location panel -->
-                <div class="panel">
-                    <div class="panel-heading">
-                        <h3 class="panel-title text-bold">Location Comparison</h3>
-                        <div class="heading-elements">
-                            <ul class="icons-list">
-                                <li><a data-action="collapse"></a></li>
-                                <li><a data-action="reload"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="panel-body">
-                        <table id="product_4_table2" class="table">
-                            <h4><code>Top Similar IP "75.185.167.245"</code></h4>
-                            <thead class="thead-inverse">
-                                <tr>
-                                    <th>IP</th>
-                                    <th>Country</th>
-                                    <th>City, State</th>
-                                    <th>Latitude</th>
-                                    <th>Longitude</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>75.185.167.245</td>
-                                    <td>United States</td>
-                                    <td>Beachwood, Ohio</td>
-                                    <td>41.4645</td>
-                                    <td>-81.50873</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <!-- infected ip list-->
                         <table id="product_4_table" class="table">
-                            <h4><code>Current IP "24.166.118.231"</code></h4>
                             <thead class="thead-inverse">
                             <tr>
                                 <th>IP</th>
@@ -380,27 +286,36 @@
                             </tr>
                             </tbody>
                         </table>
-                    </div>
-                </div>
-                <!-- /location panel -->
+                        <!-- /infected ip list-->
 
-                <!-- button -->
-                <div class="pull-right">
-                    <!--<button type="button" class="btn btn-primary">Find Similar</button>-->
-                    <button id="exportButton" class="btn btn-info"><span
-                            class="fa fa-file-pdf-o"></span> Export to PDF
-                    </button>
+                    </div>
+
+                    <div class="panel-footer">
+                        <div class="pull-right">
+                            <button type="button" class="btn btn-primary" id="findSimilar"> Find Similar</button>
+                            <script>
+                                $(document).ready(function() {
+                                    $("#findSimilar").click(function(){
+                                        self.location='product_4_detail_2.html';
+                                    });
+                                });
+                            </script>
+                            <button class="btn btn-info"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
+                            <a href="tiversa_generate_file_list.html"><button class="btn btn-default">Generate File List</button></a>
+                        </div>
+                    </div>
+
                 </div>
-                <!-- /button -->
+                <!-- /Infection Type pie chart and progress bar -->
+
 
             </div>
             <!-- /main content -->
-
         </div>
         <!-- /page content -->
-
     </div>
-    <!-- /page container -->
+    <!-- /Page container -->
+
 
     <!-- Footer -->
     <div class="navbar navbar-default navbar-fixed-bottom footer  bg-indigo">
