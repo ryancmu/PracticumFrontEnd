@@ -218,6 +218,9 @@ $(function () {
                 t1.selectAll(".d3-line").attr("d", line);
                 t1.selectAll(".d3-city").attr("transform", transform);
                 t1.selectAll(".d3-axis-vertical").call(yAxis);
+
+                // Last transition the points
+
             }
 
             // Transform text
