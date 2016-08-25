@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tiversa&trade; - Offender List Detail</title>
+    <title>Tiversa&trade; - Offender List</title>
 
     <!-- Global stylesheets -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet"
@@ -14,7 +14,6 @@
     <link href="assets/css/core.css" rel="stylesheet" type="text/css">
     <link href="assets/css/components.css" rel="stylesheet" type="text/css">
     <link href="assets/css/colors.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/client_dashboard/client_dashboard.css" rel="stylesheet" type="text/css">
     <!-- /global stylesheets -->
 
     <!-- Core JS files -->
@@ -27,32 +26,15 @@
     <script type="text/javascript" src="assets/js/plugins/ui/fab.min.js"></script>
     <!-- /core JS files -->
 
-    <!-- Theme JS files -->
+    <!-- search JS File --->
+    <script type="text/javascript" src="assets/js/searchBy.js"></script>
+    <!-- !searchBy JS File --->
+
+
     <script type="text/javascript" src="assets/js/core/app.js"></script>
     <script type="text/javascript" src="assets/js/plugins/ui/ripple.min.js"></script>
-    <!-- /theme JS files -->
 
-    <!-- Product 1 JS files -->
-    <script type="text/javascript" src="assets/js/product_1.js"></script>
-    <link rel="stylesheet" type="text/css"
-          href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css"/>
-    <script type="text/javascript"
-            src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
-    <script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/jszip.min.js"></script>
-    <!-- /Product 1 JS files -->
 
-    <!--eChart JS files -->
-    <script type="text/javascript" src="assets/js/plugins/visualization/echarts/echarts.js"></script>
-    <!--/eChart JS files -->
-
-    <!-- Detail JS Files-->
-    <script type="text/javascript" src="assets/js/offender/offender_default_lineChart.js"></script>
-    <!-- /Detail JS Files-->
-
-    <!--percentage-->
-    <script type="text/javascript" src="assets/js/plugins/loaders/progressbar.min.js"></script>
-    <script type="text/javascript" src="assets/js/pages/components_loaders.js"></script>
-    <!--percentage-->
 </head>
 
 <body class="navbar-bottom">
@@ -156,8 +138,7 @@
         <!--Tab-->
         <div class="navbar-collapse collapse" id="navbar-second-toggle">
             <ul class="nav navbar-nav navbar-nav-material">
-                <li><a href="tiversa_dashboard.html"><i class="glyphicon-dashboard position-left"></i>
-                    Dashboard</a></li>
+                <li><a href="tiversa_dashboard.html"><i class="glyphicon-dashboard position-left"></i> Dashboard</a></li>
                 <li><a href="tiversa_client_lists.html"><i class="icon-user position-left"></i> Client Lists </a></li>
                 <li><a href="tiversa_malware_map.html"><i class="icon-map position-left"></i> Malware Map</a></li>
                 <li><a href="tiversa_malware_analysis.html"><i class="icon-statistics position-left"></i> Malware
@@ -168,7 +149,7 @@
                         $("#search").hide();
                         var showSearch = false;
                         $("#searchdiv").click(function () {
-                            if (showSearch == false) {
+                            if(showSearch == false){
                                 $("#search").show();
                                 showSearch = true;
                             } else {
@@ -192,131 +173,108 @@
 
     <!-- Page content -->
     <div class="page-content">
+
         <!-- Main content -->
         <div class="content-wrapper">
 
-            <!-- Infection Type pie chart and progress bar -->
+            <!-- Put all your code here -->
             <div class="panel">
                 <div class="panel-heading">
-                    <!--<h5 class="panel-title text-size-large text-bold">Behavior of "24.166.118.231"</h5>-->
-                    <h4 class="text-center"><code>Behavior of "24.166.118.231"</code></h4>
-                    <div class="heading-elements">
-                        <ul class="icons-list">
-                            <li><a data-action="collapse"></a></li>
-                            <li><a data-action="reload"></a></li>
-                        </ul>
-                    </div>
+                    <h3 class="heading-text text-bold">Similar IPs</h3>
                 </div>
 
                 <div class="panel-body">
-                    <div class="row" style="padding-bottom: 50px">
-                        <div class="col-lg-6">
-                            <div class="chart-container">
-                                <!--<div class="chart has-fixed-height" id="connect_column"></div>-->
-                                <div class="chart has-fixed-height" id="p4detailline"></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-1">
-                        </div>
-
-                        <!-- Progress bar contextual alternatives -->
-                        <div class="col-md-4">
-                            <div class="border-top-primary">
-                                <div class="text-center">
-                                    <h4 class="no-margin text-semibold"></h4>
-                                    <p class="content-group-sm text-muted"></p>
-                                </div>
-
-                                <p class="text-semibold">SHA1 / Count: 6.67%</p>
-                                <div class="progress content-group-sm">
-                                    <div class="progress-bar progress-bar-danger progress-bar-striped active"
-                                         style="width: 6.7%">
-                                        <span class="sr-only">5% Complete (danger)</span>
-                                    </div>
-                                </div>
-
-                                <p class="text-semibold">Infection / SHA1: 0.0041%</p>
-                                <div class="progress content-group-sm">
-
-                                    <div class="progress-bar progress-bar-striped active" style="width: 1%">
-                                        <span class="sr-only">1% Complete</span>
-                                    </div>
-                                </div>
-
-                                <p class="text-semibold">SHA1 / File Name : 100%</p>
-                                <div class="progress content-group-sm">
-                                    <div class="progress-bar progress-bar-warning progress-bar-striped active"
-                                         style="width: 100%">
-                                        <style>
-                                            .progress-bar-warning {
-                                                background-color: #f0ad4e;
-                                            }
-                                        </style>
-                                        <span class="sr-only">100% Complete (success)</span>
-                                    </div>
-                                </div>
-
-                                <!--<div class="pull-right" style="padding-top: 20px">-->
-                                <!--<a href="tiversa_generate_file_list.html"><button class="btn btn-block">Generate File List</button></a>-->
-                                <!--</div>-->
-
-                            </div>
-                        </div>
-                        <!-- /progress bar contextual alternatives -->
-                    </div>
-
-                    <!-- infected ip list-->
-                    <table id="product_4_table" class="table">
+                    <table class="table table-hover text-size-large">
                         <thead class="thead-inverse">
                         <tr>
                             <th>IP</th>
-                            <th>Country</th>
-                            <th>City, State</th>
-                            <th>Latitude</th>
-                            <th>Longitude</th>
+                            <th>Location (State, Country)</th>
+                            <th>Score</th>
+                            <th>Compare</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
-                            <td>24.166.118.231</td>
-                            <td>United States</td>
-                            <td>Cuyahoga Falls, Ohio</td>
-                            <td>41.13394</td>
-                            <td>-81.48456</td>
+                            <td>75.185.167.245</td>
+                            <td>Ohio, United States</td>
+                            <td>1</td>
+                            <td><button class="btn btn-xs btn-primary" id="btn_compare1">Compare</button></td>
+                            <script>
+                                $(document).ready(function() {
+                                    $("#btn_compare1").click(function(){
+                                        self.location='product_4_detail_2.html';
+                                    });
+                                });
+                            </script>
+                        </tr>
+                        <tr>
+                            <td>94.79.4.186</td>
+                            <td>Ohio, United States</td>
+                            <td>1</td>
+                            <td><button class="btn btn-xs btn-primary" id="btn_compare2">Compare</button></td>
+                        </tr>
+                        <tr>
+                            <td>92.84.166.65</td>
+                            <td>Ohio, United States</td>
+                            <td>1</td>
+                            <td><button class="btn btn-xs btn-primary" id="btn_compare2">Compare</button></td>
+                        </tr>
+                        <tr>
+                            <td>81.109.254.1</td>
+                            <td>Ohio, United States</td>
+                            <td>1</td>
+                            <td><button class="btn btn-xs btn-primary" id="btn_compare2">Compare</button></td>
+                        </tr>
+                        <tr>
+                            <td>92.84.182.64</td>
+                            <td>Ohio, United States</td>
+                            <td>1</td>
+                            <td><button class="btn btn-xs btn-primary" id="btn_compare2">Compare</button></td>
+                        </tr>
+                        <tr>
+                            <td>86.62.107.242</td>
+                            <td>Ohio, United States</td>
+                            <td>1</td>
+                            <td><button class="btn btn-xs btn-primary" id="btn_compare2">Compare</button></td>
+                        </tr>
+                        <tr>
+                            <td>188.243.191.182</td>
+                            <td>Ohio, United States</td>
+                            <td>1</td>
+                            <td><button class="btn btn-xs btn-primary" id="btn_compare2">Compare</button></td>
+                        </tr>
+                        <tr>
+                            <td>93.100.64.219</td>
+                            <td>Ohio, United States</td>
+                            <td>1</td>
+                            <td><button class="btn btn-xs btn-primary" id="btn_compare2">Compare</button></td>
                         </tr>
                         </tbody>
                     </table>
-                    <!-- /infected ip list-->
 
                 </div>
 
                 <div class="panel-footer">
-                    <div class="pull-right">
-                        <button type="button" class="btn btn-primary" id="findSimilar"> Find Similar IPs</button>
-                        <script>
-                            $(document).ready(function() {
-                                $("#findSimilar").click(function(){
-                                    self.location='product4_similarlist.html';
-                                });
-                            });
-                        </script>
-                        <button class="btn btn-info"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
-                        <!--<a href="tiversa_generate_file_list.html"><button class="btn btn-default">Generate File List</button></a>-->
-                    </div>
+                    <ul class="pagination pull-right">
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">...</a></li>
+                        <li><a href="#">&gt;</a></li>
+                    </ul>
                 </div>
 
             </div>
-            <!-- /Infection Type pie chart and progress bar -->
-
+            <!-- /put all your code here -->
 
         </div>
         <!-- /main content -->
+
     </div>
     <!-- /page content -->
-</div>
-<!-- /Page container -->
 
+</div>
+<!-- /page container -->
 
 <!-- Footer -->
 <div class="navbar navbar-default navbar-fixed-bottom footer  bg-indigo">

@@ -136,7 +136,7 @@ $(function () {
 
                 // Add series
                 series: [{
-                    name: 'Protocol',
+                    name: 'Infection',
                     type: 'pie',
                     radius: '60%',
                     center: ['50%', '57.5%'],
