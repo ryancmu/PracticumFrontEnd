@@ -145,6 +145,26 @@ $(function () {
                 //.text(city);
 
 
+            // Add tooltip
+            var tip = d3.tip()
+                .attr('class', 'd3-tip')
+                .html(function(d) {
+                    var dt = (d.date.getMonth() + 1) + '-' + d.date.getDate() + '-' + d.date.getFullYear();
+                    return 'Date: ' + dt + '<br />File Count: ' + d[city];
+                });
+
+            svg.call(tip);
+
+            // Add points
+            svg.selectAll("dot")
+                .data(data)
+                .enter().append("circle")
+                .attr("r", 2)
+                .attr("cx", function(d) { return x(d.date); })
+                .attr("cy", function(d) { return y(d[city]); })
+                .on('mouseover', tip.show)
+                .on('mouseout', tip.hide);
+
             // Append axes
             // ------------------------------
 
