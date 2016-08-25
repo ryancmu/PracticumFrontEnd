@@ -686,6 +686,53 @@ function digitalText(text, element, delay)
     }
 }
 
+function createLegend() {
+
+    var svgLegend = d3.select("#legendDiv")
+        .append("svg")
+        .attr("width", "100%")
+        .attr("height", "100%");
+
+    var x=document.getElementById("legendDiv").offsetWidth;
+    var y=document.getElementById("legendDiv").offsetHeight;
+
+
+
+    var legendCircle = svgLegend.append("circle")
+        .attr("cx",x*0.2)
+        .attr("cy",y*0.15)
+        .attr("r", 10)
+        .attr("stroke", "red")
+        .attr("stroke-width", 3)
+        .attr("fill", "none");
+
+    var legendRectangle = svgLegend.append("rect")
+        .attr("x",x*0.2-9)
+        .attr("y",y*0.40)
+        .attr("width", 18)
+        .attr("height", 18)
+        .attr("stroke", "yellow")
+        .attr("stroke-width", 3)
+        .attr("fill", "none");
+
+
+    var width = 12;
+    var yW = width * 0.5;
+    var xW = width * 0.866;
+    var x1 = x*0.2-xW;
+    var y1 = y*0.8+yW;
+    var x2 = x*0.2+xW;
+    var y2 = y*0.8+yW;
+    var x3 = x*0.2;
+    var y3 = y*0.8-width;
+
+    var legendTriangle = svgLegend.append("polygon")
+        .attr("fill", "none")
+        .attr("stroke", "#00CD00")
+        .attr("stroke-width",3)
+        .attr("points",""+x1+","+y1+","+x2+","+y2+","+x3+","+y3+"");
+}
+
 function tableTicker() {
     $(function() {
         $('#tableData').vTicker('init', {
@@ -704,3 +751,4 @@ function tableTicker() {
     start();
     // digitalText("United States", "SourceValue");
     tableTicker();
+createLegend();
