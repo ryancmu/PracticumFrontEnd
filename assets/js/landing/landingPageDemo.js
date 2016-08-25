@@ -10,7 +10,7 @@ function viewPortValues() {
     offsetX = document.getElementById("svgDiv").offsetWidth;
     offsetY = document.getElementById("svgDiv").offsetHeight;
 
-    locations = [[offsetX*0.06, offsetY*0.25, 1, "USA","assets/images/flags/us.png"], [offsetX*0.15, offsetY*0.4, 1, "USA","assets/images/flags/us.png"], [offsetX*0.23, offsetY*0.422, 1, "USA","assets/images/flags/us.png"], [offsetX*0.27, offsetY*0.37, 1, "USA", "assets/images/flags/us.png"], [offsetX*0.2, offsetY*0.48, 2, "Mexico","assets/images/flags/mx.png"],
+    locations = [[offsetX*0.2, offsetY*0.38, 1, "USA","assets/images/flags/us.png"], [offsetX*0.15, offsetY*0.4, 1, "USA","assets/images/flags/us.png"], [offsetX*0.23, offsetY*0.422, 1, "USA","assets/images/flags/us.png"], [offsetX*0.275, offsetY*0.39, 1, "USA", "assets/images/flags/us.png"], [offsetX*0.2, offsetY*0.48, 2, "Mexico","assets/images/flags/mx.png"],
         [offsetX*0.17, offsetY*0.34, 3, "Canada","assets/images/flags/ca.png"], [offsetX*0.24, offsetY*0.34, 3, "Canada","assets/images/flags/ca.png"], [offsetX*0.30, offsetY*0.32, 3, "Canada", "assets/images/flags/ca.png"],
         [offsetX*0.17, offsetY*0.34, 3, "Canada","assets/images/flags/ca.png"],
         [offsetX*0.3, offsetY*0.58, 4, "Venezuela","assets/images/flags/ve.png"],
@@ -46,7 +46,7 @@ function viewPortValues() {
 
 viewPortValues();
 
-var color = ["#946746","#8f9747","#4da751","#759747","#3ac9c9", "#00b7f0","#FF8600","#603311", "#FF6103", "#FF3D0D", "#FFD700","#99CC32"];
+var color = ["#8f9747","#4da751","#759747","#3ac9c9", "#00b7f0","#FF8600","#603311", "#FF6103", "#FF3D0D", "#FFD700","#99CC32"];
 var portNumber = [1025, 65535];
 var infection = ["Trojan-Skelky","Trojan-FHNH", "JS-Nemucod","Android/Fictus.A","Generic VB.c","W32/Vbbot","W32/Spybot.bfr!IO","ZvuZona","Artemis!7AE","Exploit-SWF.x","Artemis!A857A4E","BrowseFox-FUT","W32/Spybot.bfr!","W32/Spybot.bfr!1D","W32/Spybot.bfr!KT"];
 var userAgent = ["Direct Connect","Lime Wire", "Shareaza","Frost Wire", "Direct Connect","Dexter Wire", "BitRope P2P", "Direct Connect","Bear Share Turbo", "Emerald", "Direct Connect"];
@@ -92,10 +92,10 @@ function type3AnimationLayer1(sourceX, sourceY, endX, endY, delay, randomColor) 
         .attr("stroke", color[randomColor])
         .attr("stroke-width", 2);
 
-    randomDelay = Math.floor((Math.random()*(8)) + 0);
+    randomDelay = Math.floor((Math.random()*(5)) + 0);
 
     circle.transition()
-        .delay(delay*1000+randomDelay*100)
+        .delay(delay*800+randomDelay*100)
         .attr("cx", endX)
         .attr("cy", endY)
         .duration(1000)
@@ -237,7 +237,7 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
     var distance = Math.sqrt( Math.pow((startX - endX), 2) + Math.pow((startY - endY), 2) );
     var speed = 170;
     var duration = distance/speed;
-    duration = 0.65;
+    duration = 0.7;
 
     myCircle1.transition()
         .attr("cx", endX)
@@ -526,6 +526,9 @@ var locationArray = [locations1, locations2, locations3, locations4, locations5,
 var type2LocationArray = [type2Locations1, type2Locations2, type2Locations3, type2Locations4, type2Locations5, type2Locations6, type2Locations7, type2Locations8, type2Locations9, type2Locations10];
 var type3LocationArray = [type3Locations1, type3Locations2, type3Locations3, type3Locations4, type3Locations5, type3Locations6, type3Locations7, type3Locations8, type3Locations9, type3Locations10];
 
+// locationArray =[locations1];
+// type2LocationArray =[type2Locations1];
+// type3LocationArray=[type3Locations1];
 
 var tempCount = 0;
 function combineAnimation(locations1, type) {
@@ -639,7 +642,7 @@ function init() {
     //     type3AnimationInit(type3LocationArray[count], "type3");
     //     count++;
 
-    var caseNo = Math.floor((Math.random()*(3)) + 1);
+    var caseNo = Math.floor((Math.random()*(5)) + 1);
 
     switch (caseNo) {
         case 1:
@@ -659,6 +662,7 @@ function init() {
             combineAnimation(type2LocationArray[randomLocation], "type2");
             break;
         case 5:
+            combineAnimation(locationArray[randomLocation], "type1");
             combineAnimation(type2LocationArray[randomLocation], "type2");
             type3AnimationInit(type3LocationArray[randomLocation], "type3");
             break;
@@ -682,6 +686,53 @@ function digitalText(text, element, delay)
     }
 }
 
+function createLegend() {
+
+    var svgLegend = d3.select("#legendDiv")
+        .append("svg")
+        .attr("width", "100%")
+        .attr("height", "100%");
+
+    var x=document.getElementById("legendDiv").offsetWidth;
+    var y=document.getElementById("legendDiv").offsetHeight;
+
+
+
+    var legendCircle = svgLegend.append("circle")
+        .attr("cx",x*0.2)
+        .attr("cy",y*0.15)
+        .attr("r", 10)
+        .attr("stroke", "red")
+        .attr("stroke-width", 3)
+        .attr("fill", "none");
+
+    var legendRectangle = svgLegend.append("rect")
+        .attr("x",x*0.2-9)
+        .attr("y",y*0.40)
+        .attr("width", 18)
+        .attr("height", 18)
+        .attr("stroke", "yellow")
+        .attr("stroke-width", 3)
+        .attr("fill", "none");
+
+
+    var width = 12;
+    var yW = width * 0.5;
+    var xW = width * 0.866;
+    var x1 = x*0.2-xW;
+    var y1 = y*0.8+yW;
+    var x2 = x*0.2+xW;
+    var y2 = y*0.8+yW;
+    var x3 = x*0.2;
+    var y3 = y*0.8-width;
+
+    var legendTriangle = svgLegend.append("polygon")
+        .attr("fill", "none")
+        .attr("stroke", "#00CD00")
+        .attr("stroke-width",3)
+        .attr("points",""+x1+","+y1+","+x2+","+y2+","+x3+","+y3+"");
+}
+
 function tableTicker() {
     $(function() {
         $('#tableData').vTicker('init', {
@@ -700,3 +751,4 @@ function tableTicker() {
     start();
     // digitalText("United States", "SourceValue");
     tableTicker();
+createLegend();
