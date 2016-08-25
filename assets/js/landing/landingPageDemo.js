@@ -217,7 +217,7 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
         .attr("fill",color[randomColor])
 
 
-    var strokeWidth = Math.floor((Math.random()*3) + 1);
+    var strokeWidth = Math.floor((Math.random()*3) + 2);
     // var lineColor = "#00b7f0";
     var lineColor = color[randomColor];
     if(type.localeCompare("type1")==0) {
@@ -280,7 +280,7 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
             if(tempCount === totalLocationcount) {
 
                 line.transition()
-                    .delay(2500)
+                    .delay(1500)
                     .each("end", function() {
                         // console.log("temp count");
                         if(type.localeCompare("type1")==0) {
@@ -493,9 +493,9 @@ var locations10 = [[27],
     ]
 ];
 
-var locationArray = [locations1,locations2,locations3,locations4,locations5,locations6,locations7];
-var type2LocationArray = [type2Locations1,type2Locations2,type2Locations3, type2Locations4, type2Locations5,type2Locations6,type2Locations7];
-var type3LocationArray = [type3Locations1, type3Locations2, type3Locations3, type3Locations4, type3Locations5, type3Locations6, type3Locations7];
+var locationArray = [locations8];
+var type2LocationArray = [type2Locations7];
+var type3LocationArray = [type3Locations7];
 
 
 var tempCount = 0;
@@ -611,8 +611,8 @@ function init() {
     //     count++;
 
     combineAnimation(locationArray[randomLocation], "type1");
-    combineAnimation(type2LocationArray[randomLocation], "type2");
-    type3AnimationInit(type3LocationArray[randomLocation], "type3");
+    // combineAnimation(type2LocationArray[randomLocation], "type2");
+    // type3AnimationInit(type3LocationArray[randomLocation], "type3");
 }
 function start() {
     setTimeout(init, 500);
