@@ -10,7 +10,7 @@ function viewPortValues() {
     offsetX = document.getElementById("svgDiv").offsetWidth;
     offsetY = document.getElementById("svgDiv").offsetHeight;
 
-    locations = [[offsetX*0.06, offsetY*0.25, 1, "USA","assets/images/flags/us.png"], [offsetX*0.15, offsetY*0.4, 1, "USA","assets/images/flags/us.png"], [offsetX*0.2, offsetY*0.4, 1, "USA","assets/images/flags/us.png"], [offsetX*0.27, offsetY*0.4, 1, "USA", "assets/images/flags/us.png"], [offsetX*0.2, offsetY*0.48, 2, "Mexico","assets/images/flags/mx.png"],
+    locations = [[offsetX*0.06, offsetY*0.25, 1, "USA","assets/images/flags/us.png"], [offsetX*0.15, offsetY*0.4, 1, "USA","assets/images/flags/us.png"], [offsetX*0.23, offsetY*0.422, 1, "USA","assets/images/flags/us.png"], [offsetX*0.27, offsetY*0.37, 1, "USA", "assets/images/flags/us.png"], [offsetX*0.2, offsetY*0.48, 2, "Mexico","assets/images/flags/mx.png"],
         [offsetX*0.17, offsetY*0.34, 3, "Canada","assets/images/flags/ca.png"], [offsetX*0.24, offsetY*0.34, 3, "Canada","assets/images/flags/ca.png"], [offsetX*0.30, offsetY*0.32, 3, "Canada", "assets/images/flags/ca.png"],
         [offsetX*0.17, offsetY*0.34, 3, "Canada","assets/images/flags/ca.png"],
         [offsetX*0.3, offsetY*0.58, 4, "Venezuela","assets/images/flags/ve.png"],
@@ -164,7 +164,7 @@ function type3AnimationInit(location, type) {
     }
 
     for(var i=1; i<location.length;i++) {
-        var randomValue = Math.floor((Math.random()*(4)) + 3);
+        var randomValue = Math.floor((Math.random()*(3)) + 2);
         for(j=1; j<=randomValue; j++) {
             type3AnimationLayer1(locations[location[0]][0], locations[location[0]][1], locations[location[i]][0], locations[location[i]][1], j/2, 1);
         }
@@ -276,15 +276,15 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
                 .attr("cy", endY)
                 .attr("r",3)
                 .attr("fill", "red");
-            console.log("tempCount="+tempCount+" totalCount="+totalLocationcount);
+            // console.log("tempCount="+tempCount+" totalCount="+totalLocationcount);
             if(tempCount === totalLocationcount) {
 
                 line.transition()
                     .delay(2500)
                     .each("end", function() {
-                        console.log("temp count");
+                        // console.log("temp count");
                         if(type.localeCompare("type1")==0) {
-                            console.log("temp count type1");
+                            // console.log("temp count type1");
                             svg.selectAll("line").remove();
                             svg.selectAll("circle").remove();
                             svg.selectAll("polygon").remove();
@@ -371,42 +371,99 @@ var type2Locations2 =   [[9],
                             [10],[11],[12],[13],[4],[8],[3]
                         ];
 
+var type3Locations2 = [[34],[32],[36],[37],[14],[3],[23]];
+
 var locations3 = [[30],
-    [[22],
-        [8],[3],[1],[10],[11]
+    [[23],
+        [[20],
+            [15],[17],[19]
+        ],
+        [21],[22]
     ],
-    [23],[16],[36],[25],[38]
+    [16],[36],[25],[38]
 ];
 
-var locations4 = [[26],
-    [25],[36],[38],[15],[18],[22],[23],[1],[2],[3],[4],[8],[6]
-];
+var type2Locations3 =   [[2],
+                            [1],[3],[4],[6],[11]
+                        ];
+
+var type3Locations3 = [[14],[3],[4],[20],[22],[26],[27]];
+
+var locations4 =    [[26],
+                        [[25],
+                            [16],[14]
+                        ],
+                        [27],
+                        [[28],
+                            [[30],
+                                [29],[31]
+                            ],
+                            [[32],
+                                [33],
+                                [[34],
+                                    [36],[38]
+                                ]
+                            ]
+                        ]
+                    ];
+
+var type2Locations4 =   [[29],
+                            [20],[22],[23],[15],[11],[9]
+                        ];
+
+var type3Locations4 = [[20],[20],[21],[23],[2],[3],[38]];
 
 var locations5 = [[28],
-    [[26],
-        [16],[25]
-    ],
-    [[27],
-        [36],[37]
-    ],
-    [[19],
-        [[22],
-            [7],[3],[9],[11]
-        ],
-        [15]
-    ]
-];
-var locations6 = [[3],
-    [4],[1],[8],[6],[7],[10],[11],[12],[21],[16],[36]
-];
+                        [[26],
+                            [16],[25]
+                        ],
+                        [[27],
+                            [36],[37]
+                        ],
+                        [[19],
+                            [[22],
+                                [7],[9],[11]
+                            ],
+                            [15]
+                        ]
+                    ];
+
+var type2Locations5 =   [[3],
+                            [1],[2],[6],[8],[10],[14]
+                        ];
+
+var type3Locations5 = [[30],[1],[2],[3],[16],[10],[13],[38]];
+
+var locations6 =    [[3],
+                        [[4],
+                            [[10],
+                                [11],[12],[9]
+                            ]
+                        ],
+                        [1],[8],[6],[7],
+                        [[21],
+                            [22],[23]
+                        ]
+                    ];
+
+var type2Locations6 =   [[26],
+                            [15],[17],[19],[25],[29],[28],[27]
+                        ];
+
+var type3Locations6 = [[30],[2],[3],[16],[14],[36],[38],[20],[23],[21],[22]];
 
 var locations7 = [[14],
     [9],[10],[13],
     [[3],[4],[1],[8]],
     [[22],[23],[19],[15]],
-    [[25],[16],[29],[28],[27],[35]],
-    [34],[36]
+    [[25],[16],[28],[27],[35]],[36]
 ];
+
+var type2Locations7 =   [[30],
+                            [32],[26],[17]
+                        ];
+
+var type3Locations7 = [[33],[26],[30],[22],[20],[23],[1],[2],[3],[10]];
 
 var locations8 = [[14],
     [15],[18],[20],[21],
@@ -436,9 +493,9 @@ var locations10 = [[27],
     ]
 ];
 
-var locationArray = [locations2];
-var type2LocationArray = [type2Locations2];
-var type3LocationArray = [type3Locations1];
+var locationArray = [locations1,locations2,locations3,locations4,locations5,locations6,locations7];
+var type2LocationArray = [type2Locations1,type2Locations2,type2Locations3, type2Locations4, type2Locations5,type2Locations6,type2Locations7];
+var type3LocationArray = [type3Locations1, type3Locations2, type3Locations3, type3Locations4, type3Locations5, type3Locations6, type3Locations7];
 
 
 var tempCount = 0;
@@ -528,6 +585,7 @@ function combineAnimation(locations1, type) {
 }
 
 var totalLocationcount = 0;
+
 function totalCountofLocation(location) {
     for(var i=0; i<location.length; i++) {
         if(location.length==1) {
@@ -539,8 +597,18 @@ function totalCountofLocation(location) {
     }
 }
 
+var count =0;
 function init() {
     var randomLocation = Math.floor((Math.random()*(locationArray.length)) + 0);
+    // console.log("randomLocation="+randomLocation);
+
+    // if(count===7) {
+    //     count=0;
+    // }
+    //     combineAnimation(locationArray[count], "type1");
+    //     combineAnimation(type2LocationArray[count], "type2");
+    //     type3AnimationInit(type3LocationArray[count], "type3");
+    //     count++;
 
     combineAnimation(locationArray[randomLocation], "type1");
     combineAnimation(type2LocationArray[randomLocation], "type2");
@@ -574,7 +642,7 @@ function tableTicker() {
 
 
     display_c();
-    seeLocations(locations);
+    // seeLocations(locations);
     start();
     // digitalText("United States", "SourceValue");
     tableTicker();
