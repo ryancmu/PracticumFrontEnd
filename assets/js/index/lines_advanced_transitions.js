@@ -35,7 +35,7 @@ $(function () {
 
 
         // City name
-        var city = "California";
+        var city = "Ohio";
 
         // Format data
         parseDate = d3.time.format("%Y%m%d").parse;
