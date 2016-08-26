@@ -46,7 +46,7 @@ function viewPortValues() {
 
 viewPortValues();
 
-var color = ["#8f9747","#4da751","#759747","#3ac9c9", "#00b7f0","#FF8600","#603311", "#FF6103", "#FF3D0D", "#FFD700","#99CC32"];
+var color = ["#8f9747","#4da751","#759747","#3ac9c9", "#00b7f0","#FF8600","#8E44AD", "#FF6103", "#FF3D0D", "#FFD700","#99CC32"];
 var portNumber = [1025, 65535];
 var infection = ["Trojan-Skelky","Trojan-FHNH", "JS-Nemucod","Android/Fictus.A","Generic VB.c","W32/Vbbot","W32/Spybot.bfr!IO","ZvuZona","Artemis!7AE","Exploit-SWF.x","Artemis!A857A4E","BrowseFox-FUT","W32/Spybot.bfr!","W32/Spybot.bfr!1D","W32/Spybot.bfr!KT"];
 var userAgent = ["Direct Connect","Lime Wire", "Shareaza","Frost Wire", "Direct Connect","Dexter Wire", "BitRope P2P", "Direct Connect","Bear Share Turbo", "Emerald", "Direct Connect"];
@@ -218,12 +218,11 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
 
 
     var strokeWidth = Math.floor((Math.random()*3) + 2);
-    strokeWidth = 2;
+    strokeWidth = 1.5;
     // var lineColor = "#00b7f0";
+
     var lineColor = color[randomColor];
-    if(type.localeCompare("type1")==0) {
-        lineColor = color[randomColor];
-    }
+
     var line = svg.append("line")
         .attr("x1", startX)
         .attr("y1", startY)
@@ -232,6 +231,10 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
         // .attr("stroke-dasharray", 5)
         .attr("stroke", lineColor)
         .attr("stroke-width", strokeWidth);
+
+    if(type.localeCompare("type2")==0) {
+        line.attr("stroke-dasharray", 3);
+    }
 
 
     var distance = Math.sqrt( Math.pow((startX - endX), 2) + Math.pow((startY - endY), 2) );
@@ -353,21 +356,21 @@ var type2Locations1 =   [[29],
 var type3Locations1 = [[14],[11],[35],[37],[38]];
 
 var locations2 = [[18],
-    [[15],
-        [25]
-    ],
-    [17],[19],
-    [[20],
-        [23],[24]
-    ],
-    [21], [22],
-    [[29],
-        [26],[31],[16],
-        [[28],
-            [27],[33]
-        ]
-    ]
-];
+                    [[15],
+                        [25]
+                    ],
+                    [17],[19],
+                    [[20],
+                        [23],[24]
+                    ],
+                    [21],
+                    [[29],
+                        [26],[31],[16],
+                        [[28],
+                            [27],[33]
+                        ]
+                    ]
+                ];
 
 var type2Locations2 =   [[9],
                             [10],[11],[12],[13],[4],[8],[3]
@@ -376,14 +379,14 @@ var type2Locations2 =   [[9],
 var type3Locations2 = [[34],[32],[36],[37],[14],[3],[23]];
 
 var locations3 = [[30],
-    [[23],
-        [[20],
-            [15],[17],[19]
-        ],
-        [21],[22]
-    ],
-    [16],[36],[25],[38]
-];
+            [[23],
+                [[20],
+                    [15],[17],[19]
+                ],
+                [21],[22]
+            ],
+            [16],[36]
+        ];
 
 var type2Locations3 =   [[2],
                             [1],[3],[4],[6],[11]
@@ -455,32 +458,26 @@ var type2Locations6 =   [[26],
 var type3Locations6 = [[30],[2],[3],[16],[14],[36],[38],[20],[23],[21],[22]];
 
 var locations7 = [[14],
-    [9],[10],[13],
-    [[3],[4],[1],[8]],
-    [[22],[23],[19],[15]],
-    [[25],[16],[28],[27],[35]],[36]
-];
+                    [11],[[12],[9],[10],[13]],
+                    [[3],[4],[1],[8],[6],[7]],
+                    [[22],[23],[19],[15]]
+                ];
 
 var type2Locations7 =   [[30],
-                            [32],[26],[17]
+                            [32],[26],[17],[29],[27],[16],[19]
                         ];
 
 var type3Locations7 = [[33],[26],[30],[22],[20],[23],[1],[2],[3],[10]];
 
 
 var locations8 = [[14],
-    [15],
-    [[18],
-        [20],[21]
-    ],
-    [[22],
-        [2],[7]
-    ],
-    [16],[30],[26],
-    [[27],
-        [25],[31],[32],[34]
-    ]
-];
+                    [[18],
+                        [20],[21],[22],[15]
+                    ],
+                    [[27],
+                        [25],[31],[32],[34],[30]
+                    ]
+                ];
 
 var type2Locations8 =   [[12],
                             [9],[10],[11],[13]
@@ -488,7 +485,7 @@ var type2Locations8 =   [[12],
 
 var type3Locations8 = [[19],[1],[2],[3],[8],[23],[22],[36],[25]];
 
-var locations9 = [  [25],
+var locations9 =    [[25],
                         [29],[26],
                         [[27],
                             [35],[33],[34],
@@ -522,13 +519,13 @@ var type2Locations10 =   [[29],
                         ];
 var type3Locations10 = [[21],[1],[2],[3],[14],[4],[26],[28]];
 
-var locationArray = [locations1, locations2, locations3, locations4, locations5, locations6, locations7, locations8, locations9, locations10];
-var type2LocationArray = [type2Locations1, type2Locations2, type2Locations3, type2Locations4, type2Locations5, type2Locations6, type2Locations7, type2Locations8, type2Locations9, type2Locations10];
-var type3LocationArray = [type3Locations1, type3Locations2, type3Locations3, type3Locations4, type3Locations5, type3Locations6, type3Locations7, type3Locations8, type3Locations9, type3Locations10];
+// var locationArray = [locations1, locations2, locations3, locations4, locations5, locations6, locations7, locations8, locations9, locations10];
+// var type2LocationArray = [type2Locations1, type2Locations2, type2Locations3, type2Locations4, type2Locations5, type2Locations6, type2Locations7, type2Locations8, type2Locations9, type2Locations10];
+// var type3LocationArray = [type3Locations1, type3Locations2, type3Locations3, type3Locations4, type3Locations5, type3Locations6, type3Locations7, type3Locations8, type3Locations9, type3Locations10];
 
-// locationArray =[locations1];
-// type2LocationArray =[type2Locations1];
-// type3LocationArray=[type3Locations1];
+locationArray =[locations7];
+type2LocationArray =[type2Locations7];
+type3LocationArray=[type3Locations7];
 
 var tempCount = 0;
 function combineAnimation(locations1, type) {
@@ -609,8 +606,19 @@ function combineAnimation(locations1, type) {
 
     }
 
+    var type1Color = Math.floor((Math.random()*(color.length-1)) + 0);
+
     for(var i=1; i<locations1.length; i++) {
-        var randomColor = Math.floor((Math.random()*(color.length)) + 0);
+
+        var randomColor = Math.floor((Math.random()*(color.length-1)) + 0);
+
+        // if(type.localeCompare("type1")==0) {
+        //     if(type1Color>=color.length-3) {
+        //         randomColor = Math.floor((Math.random()*(type1Color)) + (type1Color-2));
+        //     } else {
+        //         randomColor = Math.floor((Math.random()*(type1Color+2)) + (type1Color));
+        //     }
+        // }
         circleShotAnimation(locations[locations1[0]][0], locations[locations1[0]][1],
             locations[locations1[i][0]][0], locations[locations1[i][0]][1], randomColor, locations1[i], type);
     }
@@ -631,7 +639,7 @@ function totalCountofLocation(location) {
 
 var count =0;
 function init() {
-    var randomLocation = Math.floor((Math.random()*(locationArray.length)) + 0);
+    var randomLocation = Math.floor((Math.random()*(locationArray.length-1)) + 0);
     // console.log("randomLocation="+randomLocation);
 
     // if(count===7) {
@@ -644,33 +652,33 @@ function init() {
 
     var caseNo = Math.floor((Math.random()*(5)) + 1);
 
-    switch (caseNo) {
-        case 1:
-            combineAnimation(locationArray[randomLocation], "type1");
-            break;
-        case 2:
-            combineAnimation(locationArray[randomLocation], "type1");
-            type3AnimationInit(type3LocationArray[randomLocation], "type3");
-            break;
-        case 3:
-            combineAnimation(locationArray[randomLocation], "type1");
-            combineAnimation(type2LocationArray[randomLocation], "type2");
-            type3AnimationInit(type3LocationArray[randomLocation], "type3");
-            break;
-        case 4:
-            combineAnimation(locationArray[randomLocation], "type1");
-            combineAnimation(type2LocationArray[randomLocation], "type2");
-            break;
-        case 5:
-            combineAnimation(locationArray[randomLocation], "type1");
-            combineAnimation(type2LocationArray[randomLocation], "type2");
-            type3AnimationInit(type3LocationArray[randomLocation], "type3");
-            break;
-    }
+    // switch (caseNo) {
+    //     case 1:
+    //         combineAnimation(locationArray[randomLocation], "type1");
+    //         break;
+    //     case 2:
+    //         combineAnimation(locationArray[randomLocation], "type1");
+    //         type3AnimationInit(type3LocationArray[randomLocation], "type3");
+    //         break;
+    //     case 3:
+    //         combineAnimation(locationArray[randomLocation], "type1");
+    //         combineAnimation(type2LocationArray[randomLocation], "type2");
+    //         type3AnimationInit(type3LocationArray[randomLocation], "type3");
+    //         break;
+    //     case 4:
+    //         combineAnimation(locationArray[randomLocation], "type1");
+    //         combineAnimation(type2LocationArray[randomLocation], "type2");
+    //         break;
+    //     case 5:
+    //         combineAnimation(locationArray[randomLocation], "type1");
+    //         combineAnimation(type2LocationArray[randomLocation], "type2");
+    //         type3AnimationInit(type3LocationArray[randomLocation], "type3");
+    //         break;
+    // }
 
-    // combineAnimation(locationArray[randomLocation], "type1");
-    // combineAnimation(type2LocationArray[randomLocation], "type2");
-    // type3AnimationInit(type3LocationArray[randomLocation], "type3");
+    combineAnimation(locationArray[randomLocation], "type1");
+    combineAnimation(type2LocationArray[randomLocation], "type2");
+    type3AnimationInit(type3LocationArray[randomLocation], "type3");
 }
 function start() {
     setTimeout(init, 500);
@@ -747,7 +755,7 @@ function tableTicker() {
 
 
     display_c();
-    // seeLocations(locations);
+    seeLocations(locations);
     start();
     // digitalText("United States", "SourceValue");
     tableTicker();
