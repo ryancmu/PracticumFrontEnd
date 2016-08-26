@@ -18,7 +18,7 @@ $(function () {
     });
 
     // Initialize chart
-    chainedTransitions('#d3-chained-transitions', 400);
+    chainedTransitions('#d3-chained-transitions', 500);
 
     // Chart setup
     function chainedTransitions(element, height) {
@@ -35,7 +35,7 @@ $(function () {
 
 
         // City name
-        var city = "Ohio";
+        var city = "California";
 
         // Format data
         parseDate = d3.time.format("%Y%m%d").parse;
@@ -159,7 +159,7 @@ $(function () {
             svg.selectAll("dot")
                 .data(data)
                 .enter().append("circle")
-                .attr("r", 2)
+                .attr("r", 2.5)
                 .attr("cx", function(d) { return x(d.date); })
                 .attr("cy", function(d) { return y(d[city]); })
                 .on('mouseover', tip.show)
@@ -197,18 +197,19 @@ $(function () {
             d3.selectAll(".chained").on("change", change);
 
             // Set timeout for auto change
-            var timeout = setTimeout(function() {
-                d3.select("input[value=\"Ohio\"]").property("checked", true).each(change);
-                $.uniform.update();
-            }, 2000);
+            // var timeout = setTimeout(function() {
+            //     d3.select("input[value=\"California\"]").property("checked", true).each(change);
+            //     $.uniform.update();
+            // }, 2000);
 
             // Change function
             function change() {
-                clearTimeout(timeout);
+               // clearTimeout(timeout);
                 city = this.value;
 
                 // First transition the line & label to the new city.
-                var t0 = svg.transition().duration(750);
+                var t0 = svg.transition().duration(500);
+                svg.selectAll("circle").remove();
                 t0.selectAll(".d3-line").attr("d", line);
                 t0.selectAll(".d3-city").attr("transform", transform);//.text(city);
 
@@ -220,7 +221,17 @@ $(function () {
                 t1.selectAll(".d3-axis-vertical").call(yAxis);
 
                 // Last transition the points
-
+                // Add points
+                // var t2 = t1.transition();
+                // var t2 = t1.transition();
+                svg.selectAll("dot")
+                    .data(data)
+                    .enter().append("circle")
+                    .attr("r", 2.5)
+                    .attr("cx", function(d) { return x(d.date); })
+                    .attr("cy", function(d) { return y(d[city]); })
+                    .on('mouseover', tip.show)
+                    .on('mouseout', tip.hide);
             }
 
             // Transform text
