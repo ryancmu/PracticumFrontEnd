@@ -333,21 +333,21 @@ function circleShotAnimation(startX, startY, endX, endY, randomColor, locations1
 }
 
 var locations1 = [[0],
-    [[1],
-        [[2],
-            [3],[6],[7]
-        ],
-        [[4],
-            [9],[10],[12],[13]
-        ]
-    ],
-    [[8],
-        [22],
-        [[23],
-            [20],[24]
-        ]
-    ]
-];
+                    [[1],
+                        [[2],
+                            [3],[6],[7]
+                        ],
+                        [[4],
+                            [9],[10],[12],[13]
+                        ]
+                    ],
+                    [[8],
+                        [22],
+                        [[23],
+                            [20],[24]
+                        ]
+                    ]
+                ];
 
 var type2Locations1 =   [[29],
                             [19],[15],[25],[26],[27],[32],[33]
@@ -379,14 +379,14 @@ var type2Locations2 =   [[9],
 var type3Locations2 = [[34],[32],[36],[37],[14],[3],[23]];
 
 var locations3 = [[30],
-            [[23],
-                [[20],
-                    [15],[17],[19]
-                ],
-                [21],[22]
-            ],
-            [16],[36]
-        ];
+                    [[23],
+                        [[20],
+                            [15],[17],[19]
+                        ],
+                        [21],[22]
+                    ],
+                    [16],[36]
+                ];
 
 var type2Locations3 =   [[2],
                             [1],[3],[4],[6],[11]
@@ -517,15 +517,60 @@ var locations10 =   [[27],
 var type2Locations10 =   [[29],
                             [30],[19],[20],[23]
                         ];
+
 var type3Locations10 = [[21],[1],[2],[3],[14],[4],[26],[28]];
 
-// var locationArray = [locations1, locations2, locations3, locations4, locations5, locations6, locations7, locations8, locations9, locations10];
-// var type2LocationArray = [type2Locations1, type2Locations2, type2Locations3, type2Locations4, type2Locations5, type2Locations6, type2Locations7, type2Locations8, type2Locations9, type2Locations10];
-// var type3LocationArray = [type3Locations1, type3Locations2, type3Locations3, type3Locations4, type3Locations5, type3Locations6, type3Locations7, type3Locations8, type3Locations9, type3Locations10];
+var locations11 =   [[29],
+                        [[3],[7],[[2],[1],[0],[4]],[6]],[[17],[[15],[16],[25]],[18],[19]]
+                    ];
 
-locationArray =[locations7];
-type2LocationArray =[type2Locations7];
-type3LocationArray=[type3Locations7];
+var type2Locations11 =  [[26],
+                            [25],[27],[36],[28],[14],[22],[30]
+                        ];
+
+var type3Locations11 = [[30],[1],[2],[3],[20],[21],[18],[22],[23],[0],[9]];
+
+var locations12 =   [[29],
+                        [[18],[[2],[1],[0]],[[3],[6],[7]],[[4],[9],[10],[12]],[[21],[20],[23]]],
+                        [[16],[15],[17],[25]]
+                    ];
+
+var type2Locations12 =  [[30],
+                            [14],[31],[32],[26],[28],[30],[36],[33]
+                        ];
+
+var type3Locations12 = [[26],[1],[2],[3],[20],[21],[18],[22],[23],[36],[37],[25]];
+
+var locations13 =   [[29],
+                        [[17],[15],[[16],[25],[26],[27]],[9]],
+                        [[20],[22],[23],[18],[19]]
+                    ];
+
+var type2Locations13 =  [[36],
+                            [37],[38],[35],[25],[14],[30],[36],[33]
+                        ];
+
+var type3Locations13 = [[12],[1],[2],[3],[10],[13]];
+
+var locations14 =   [[30],
+                        [[16],[25],[14]],
+                        [[23],[[20],[15],[17],[19]],[21],[22],[24]],
+                        [[28],[26],[27],[32],[33]]
+                    ];
+
+var type2Locations14 =  [[0],
+                            [1],[2],[3],[4],[7],[8]
+                        ];
+
+var type3Locations14 = [[9],[1],[2],[3],[0],[22],[23],[13],[12]];
+
+var locationArray = [locations1, locations2, locations3, locations4, locations5, locations6, locations7, locations8, locations9, locations10,locations11,locations12,locations13,locations14];
+var type2LocationArray = [type2Locations1, type2Locations2, type2Locations3, type2Locations4, type2Locations5, type2Locations6, type2Locations7, type2Locations8, type2Locations9, type2Locations10,type2Locations11,type2Locations12,type2Locations13,type2Locations14];
+var type3LocationArray = [type3Locations1, type3Locations2, type3Locations3, type3Locations4, type3Locations5, type3Locations6, type3Locations7, type3Locations8, type3Locations9, type3Locations10,type3Locations11,type3Locations12,type3Locations13,type3Locations14];
+
+// locationArray =[locations14];
+// type2LocationArray =[type2Locations14];
+// type3LocationArray=[type3Locations14];
 
 var tempCount = 0;
 function combineAnimation(locations1, type) {
@@ -652,33 +697,33 @@ function init() {
 
     var caseNo = Math.floor((Math.random()*(5)) + 1);
 
-    // switch (caseNo) {
-    //     case 1:
-    //         combineAnimation(locationArray[randomLocation], "type1");
-    //         break;
-    //     case 2:
-    //         combineAnimation(locationArray[randomLocation], "type1");
-    //         type3AnimationInit(type3LocationArray[randomLocation], "type3");
-    //         break;
-    //     case 3:
-    //         combineAnimation(locationArray[randomLocation], "type1");
-    //         combineAnimation(type2LocationArray[randomLocation], "type2");
-    //         type3AnimationInit(type3LocationArray[randomLocation], "type3");
-    //         break;
-    //     case 4:
-    //         combineAnimation(locationArray[randomLocation], "type1");
-    //         combineAnimation(type2LocationArray[randomLocation], "type2");
-    //         break;
-    //     case 5:
-    //         combineAnimation(locationArray[randomLocation], "type1");
-    //         combineAnimation(type2LocationArray[randomLocation], "type2");
-    //         type3AnimationInit(type3LocationArray[randomLocation], "type3");
-    //         break;
-    // }
+    switch (caseNo) {
+        case 1:
+            combineAnimation(locationArray[randomLocation], "type1");
+            break;
+        case 2:
+            combineAnimation(locationArray[randomLocation], "type1");
+            type3AnimationInit(type3LocationArray[randomLocation], "type3");
+            break;
+        case 3:
+            combineAnimation(locationArray[randomLocation], "type1");
+            combineAnimation(type2LocationArray[randomLocation], "type2");
+            type3AnimationInit(type3LocationArray[randomLocation], "type3");
+            break;
+        case 4:
+            combineAnimation(locationArray[randomLocation], "type1");
+            combineAnimation(type2LocationArray[randomLocation], "type2");
+            break;
+        case 5:
+            combineAnimation(locationArray[randomLocation], "type1");
+            combineAnimation(type2LocationArray[randomLocation], "type2");
+            type3AnimationInit(type3LocationArray[randomLocation], "type3");
+            break;
+    }
 
-    combineAnimation(locationArray[randomLocation], "type1");
-    combineAnimation(type2LocationArray[randomLocation], "type2");
-    type3AnimationInit(type3LocationArray[randomLocation], "type3");
+    // combineAnimation(locationArray[randomLocation], "type1");
+    // combineAnimation(type2LocationArray[randomLocation], "type2");
+    // type3AnimationInit(type3LocationArray[randomLocation], "type3");
 }
 function start() {
     setTimeout(init, 500);
@@ -755,8 +800,8 @@ function tableTicker() {
 
 
     display_c();
-    seeLocations(locations);
+    // seeLocations(locations);
     start();
     // digitalText("United States", "SourceValue");
     tableTicker();
-createLegend();
+    createLegend();
