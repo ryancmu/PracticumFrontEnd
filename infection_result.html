@@ -189,78 +189,13 @@
                 </div>
 
                 <div class="panel-body">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="chart-container has-scroll">
-                                <div class="chart has-fixed-height has-minimum-width" id="basic_pie_infection"></div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <table class="table table-hover table-striped table-bordered text-size-large">
-                                <thead class="thead-inverse">
-                                    <tr>
-                                        <th class="col-md-5">Infection Type</th>
-                                        <th class="col-md-4">File Count</th>
-                                        <th class="col-md-3 text-center">Search By</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="col-md-5"><span class="label bg-purple">BackDoor</span></td>
-                                        <td class="col-md-4">15,221</td>
-                                        <td class="col-md-3 text-center"><input type="checkbox" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-5"><span class="label bg-orange">GenericR</span></td>
-                                        <td class="col-md-4">704</td>
-                                        <td class="col-md-3 text-center"><input type="checkbox" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-5"><span class="label bg-blue">W32/HLLP</span></td>
-                                        <td class="col-md-4">643</td>
-                                        <td class="col-md-3 text-center"><input type="checkbox" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-5"><span class="label bg-slate">W32/Sality</span></td>
-                                        <td class="col-md-4">561</td>
-                                        <td class="col-md-3 text-center"><input type="checkbox" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td class="col-md-5"><span class="label bg-green">Generic BackDoor</span></td>
-                                        <td class="col-md-4">354</td>
-                                        <td class="col-md-3 text-center"><input type="checkbox" /></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <!--<ul class="pagination pull-right">-->
-                                <!--<li class="active"><a href="#">1</a></li>-->
-                                <!--<li><a href="#">2</a></li>-->
-                                <!--<li><a href="#">3</a></li>-->
-                                <!--<li><a href="#">...</a></li>-->
-                                <!--<li><a href="#">&gt;</a></li>-->
-                            <!--</ul>-->
-                            <br />
 
-                            <button id="btn_search_all_files" class="btn btn-md btn-primary pull-right">Search All Files</button>
-                            <script>
-                                $(document).ready(function() {
-                                    $("#btn_search_all_files").click(function(){
-                                        self.location='sha1_result.html';
-                                    });
-                                });
-                            </script>
-                        </div>
-                        <!--/col-6 -->
-                    </div>
-                    <!-- /Row-->
-
-                    <br/>
                     <div class="row">
-                        <div class="panel-heading">
+                        <!--<div class="panel-heading">-->
                             <h3 class="panel-title text-center text-bold">Infected IP List</h3>
-                        </div>
-
-                        <table class="table table-hover table-bordered table-striped text-size-large">
+                        <!--</div>-->
+                        <br/>
+                        <table class="table table-hover table-bordered text-size-large">
                             <thead class="thead-inverse">
                             <tr>
                                 <th>IP</th>
@@ -304,7 +239,7 @@
                                 <td><a id="detail3" data-toggle="modal" data-target=".detail3-modal-lg">Detail</a></td>
                             </tr>
                             <tr>
-                                <td>19.329.91.78</td>
+                                <td>19.32.91.78</td>
                                 <td>1,082</td>
                                 <td>
                                     <span class="label bg-purple">BackDoor</span>
@@ -491,11 +426,93 @@
                         <!-- /Modal -->
                     </div>
 
+                    <br/>
+
+                    <!-- /Row-->
+
                 </div>
 
-                <div class="panel-footer">
-                </div>
             </div>
+
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3 class="heading-text text-bold">
+                        <!--Infection List-->
+                    </h3>
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="chart-container has-scroll">
+                                <div class="chart has-fixed-height has-minimum-width" id="basic_pie_infection"></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <!--<div class="panel-heading">-->
+                                <h4 class="panel-title text-center text-bold">Infection List</h4>
+                            <!--</div>-->
+                            <br />
+                            <table class="table table-hover table-bordered text-size-large">
+                                <thead class="thead-inverse">
+                                <tr>
+                                    <th class="col-md-5">Infection Type</th>
+                                    <th class="col-md-4">File Count</th>
+                                    <th class="col-md-3 text-center">Search By</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="col-md-5"><span class="label bg-purple">BackDoor</span></td>
+                                    <td class="col-md-4">15,221</td>
+                                    <td class="col-md-3 text-center"><input type="checkbox" /></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-5"><span class="label bg-orange">GenericR</span></td>
+                                    <td class="col-md-4">704</td>
+                                    <td class="col-md-3 text-center"><input type="checkbox" /></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-5"><span class="label bg-blue">W32/HLLP</span></td>
+                                    <td class="col-md-4">643</td>
+                                    <td class="col-md-3 text-center"><input type="checkbox" /></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-5"><span class="label bg-slate">W32/Sality</span></td>
+                                    <td class="col-md-4">561</td>
+                                    <td class="col-md-3 text-center"><input type="checkbox" /></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-md-5"><span class="label bg-green">Generic BackDoor</span></td>
+                                    <td class="col-md-4">354</td>
+                                    <td class="col-md-3 text-center"><input type="checkbox" /></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <!--<ul class="pagination pull-right">-->
+                            <!--<li class="active"><a href="#">1</a></li>-->
+                            <!--<li><a href="#">2</a></li>-->
+                            <!--<li><a href="#">3</a></li>-->
+                            <!--<li><a href="#">...</a></li>-->
+                            <!--<li><a href="#">&gt;</a></li>-->
+                            <!--</ul>-->
+                            <br />
+
+                            <button id="btn_search_all_files" class="btn btn-md btn-primary pull-right">Search All Files</button>
+                            <script>
+                                $(document).ready(function() {
+                                    $("#btn_search_all_files").click(function(){
+                                        self.location='sha1_result.html';
+                                    });
+                                });
+                            </script>
+                        </div>
+                        <!--/col-6 -->
+                    </div>
+                </div>
+
+            </div>
+
             <!-- /put all your code here -->
 
         </div>
