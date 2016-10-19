@@ -813,7 +813,7 @@ function tableTicker() {
 }
 
 
-    display_c();
+    display_clock();
     // seeLocations(locations);
     start();
     // digitalText("United States", "SourceValue");
